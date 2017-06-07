@@ -6,6 +6,8 @@
 %Feel free to modify this code as you see fit.
 %Please contact Ian Black (blackia@oregonstate.edu) with any questions, comments, or concerns.
 
+%To change units of values, look in equations.
+
 [filename, pathname] = uigetfile({'*.csv';'*.txt'},'Select OpenCTD Data'); %Open a search window.
 filepath=fullfile(pathname,filename);   %Holds location of chosen file.
 Data=readtable(filepath,'Delimiter',',','Format','%{MM/dd/uuuu}D %{HH:mm:ss}D %f %f %f','HeaderLines',7,'ReadVariableNames',false); 
