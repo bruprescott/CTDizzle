@@ -16,8 +16,8 @@ It is your responsibility to ensure that all parts are compatible with your setu
 ## Pinouts
 VCC is always 3.3v.
 
-!|DeadOn RTC|Qduino Mini|	!|Table|Table|	
-!|:------------:|:------------:|	!|:------------:|:------------:|	
+|DeadOn RTC|Qduino Mini|	
+|:------------:|:------------:|	
 |GND|GND|	
 |VCC|VCC|	
 |SQW|Not Applicable|	
@@ -25,6 +25,7 @@ VCC is always 3.3v.
 |MISO|D14 (MISO)|	
 |MOSI|D16 (MOSI)|	
 |SS|D5|	
+Note: SQW is not used unless you want to implement an alarm function.
 
 |MicroSD Transflash|Qduino Mini|
 |:--------------------:|:--------------------:|
@@ -35,35 +36,34 @@ VCC is always 3.3v.
 |VCC|VCC|
 |DI|D16 (MOSI)|
 |CS|D4|
+Note: CD is not used unless you want to implement a card detect function.
 
-microSD Transflash	Qduino
-CD*	Not Applicable
-DO	D14 (MISO)
-GND	GND
-SCK	D15 (SCLK)
-VCC	VCC
-DI	D16 (MOSI)
-CS	D4
-* The CD pin does not need to be hooked up to the Qduino unless the
- user needs to add a card detect function. 
+|TSYS01|Qduino Mini|	
+|:------------:|:------------:|	
+|Red|VCC|	
+|Black|GND|	
+|Green|D3 (SCL)|	
+|White|D2 (SDA)|	
 
-Temperature Sensor	Qduino
-Red	VCC
-Black	GND
-Green	D3 (SCL)
-White	D2 (SDA)
+|MS5837|Qduino Mini|	
+|:------------:|:------------:|	
+|Red|VCC|	
+|Black|GND|	
+|Green|D3 (SCL)|	
+|White|D2 (SDA)|	
 
-Pressure Sensor	Qduino
-Red	VCC
-Black	GND
-Green	D3 (SCL)
-White	D2 (SDA)
+|EC EZO|Qduino Mini|	
+|:------------:|:------------:|	
+|Tx|D8|	
+|Rx|D9|	
+|VCC|VCC|	
+|GND|GND|	
 
-Atlas Scientific EC EZO	Qduino
-Tx	D8
-Rx	D9
-VCC	VCC
-GND	GND
+|K1.0 Probe|Qduino Mini|	
+|:------------:|:------------:|	
+|Red|PRB1|	
+|Black|PRB2|	
+Note: This only applies if you decide to cut the probe cable.
 
 Atlas K1.0 Probe	Atlas EC EZO
 Red*	PRB1
