@@ -29,7 +29,7 @@ void setup() {      //Start your engines.
   Wire.begin();
   
   if (SD.begin(4)) {  //If an SD card is detected on pin 4.
-  char filename[]= "rawCTD00.CSV";
+  char filename[]= "rawCTD00.CSV"; 
   for(uint8_t i=0;i<100;i++){
     filename[6]=i/10+'0';
     filename[7]=i%10+'0';
@@ -86,7 +86,7 @@ void loop() {     //And around we go.
     datafile.println(psensor.pressure());   //Print pressure to SD card.
     datafile.flush();   //Close the file.
 
-    Serial.print(EC);
+    Serial.print(EC); //Serial print everything for QC purposes.
     Serial.print(",");
     Serial.print(tsensor.temperature());
     Serial.print(",");
