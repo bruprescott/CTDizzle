@@ -75,13 +75,9 @@ Note: This only applies if you decide to cut the probe cable.
 
 
 
+## Build Instructions
 
- 
-
-
-Build Instructions
-
-Step 1: Setting Up Arduino and the Qduino Mini
+### Step 1: Setting Up Arduino and the Qduino Mini
 	The Arduino Integrated Development Environment (IDE) is simple to use. It is recommended that the user maintain the default directories that the Arduino IDE download wizard creates. To install Arduino…
 a)	Go to https://www.arduino.cc/en/main/software.
 b)	Select the Windows Installer version.
@@ -105,7 +101,8 @@ c)	Under file system, select FAT32. Select Start.
 d)	Navigate to your microSD card in Windows Explorer.
 e)	Create a new text file named “datalog.txt” and save it to the microSD card.
 f)	If desired, create additional folders to save sketches and old data.
-Step 2: Setting Up the Required Libraries
+
+### Step 2: Setting Up the Required Libraries
 	Several libraries are needed to allow the OpenCTD operating code to work. They can either be found within the Arduino IDE or downloaded from GitHub. Libraries native within the IDE are automatically included by the operating code and no further steps are necessary. The following instructions show how to download and access the third party libraries. 
 
 Native Libraries	Third Party Libraries
@@ -143,7 +140,7 @@ e)	Select browse.
 f)	Navigate to Windows (C:) > Program Files (x86) > Arduino > libraries. Click on select folder.
 g)	The SparkFunDS3234RTC library can now be included by the operating code. Note that during upload, the Arduino IDE may classify the DeadOn RTC library as “Uncategorized”. The library should still function if this occurs.
 
-Step 3: Preliminary Soldering and Breadboard Setup
+### Step 3: Preliminary Soldering and Breadboard Setup
 	It is necessary to prepare several electronic components and sensors with some preliminary soldering. 
 •	The temperature and pressure sensors come default with a DF13-type connector. This connector is not needed and can be removed unless the user desire to implement the connectors in the build. After removing the connector, carefully strip away ~1cm at the end of each wire.
 •	At this point, the conductivity probe is connected to the EC EZO by a BNC connector. As the breadboard setup is temporary, it is not necessary to cut the cable at this moment. If the user desires the conductivity probe be permanently potted in the casing, it is not necessary to cut the BNC connector. Cutting the cable prior to testing the probe will void any warranty and return policy that Atlas Scientific may have. 
@@ -249,7 +246,7 @@ A finished OpenCTD.
 
 
 
-Deployment Procedure
+## Deployment Procedure
 The device should be fully assembled and the proper sampling regime selected prior to reaching the study site. 
 1.	Confirm all sensors, plugs, bulkheads, and end caps are tight and secure. 
 2.	Remove any sensor covers on the conductivity, temperature, and pressure sensors.
@@ -259,7 +256,7 @@ a.	The Atlas Scientific EC EZO LED should begin to alternate between green and c
 If profiling with the unit, it is suggested that it be left in the top few meters of the water column for approximately ten minutes to allow for equilibrium. Once ready to profile, bring the unit to just below the surface, and allow it to descend at a rate around 0.25 m/s (~1 fathom every 10 seconds). The unit is only capable of sampling at a maximum of 1 Hz. 
 If planning to leave the unit at a particular site for an extended period of time, it is recommended that the user ensure that the device is properly secured and ON prior to leaving the site. 
 
-Recovery Procedure
+## Recovery Procedure
 1.	After recovering the unit, turn the main switch counter-clockwise until the LEDs turn off (usually ½ to 1 rotation). Do not turn it any further.
 2.	Spray the unit down with fresh water if possible. 
 3.	If biofouling has accrued on the device, carefully remove the tape used to protect the case. If tape was not used to prevent biofouling, carefully use a soft bristle brush or plastic paint scraper to remove any fouling on the case. 
@@ -276,12 +273,12 @@ b.	If another in-situ deployment is planned, the battery will likely need to be 
 
 
 
-Battery Charging Procedure
+## Battery Charging Procedure
 	The Qduino Mini has the ability to charge a single-cell lithium ion battery when connected to a computer or microUSB adapter. The user can flash the FuelGauge sketch to the Qduino to have the charge percentage reported to the serial monitor to ensure that the battery is not connected to the charging system for too long. Simply plug in the battery to the Qduino and connect the unit to a computer via microUSB. It is recommended that the microSD card be removed during charging so as to not record unnecessary data.
 	The length of time a unit can be deployed is ultimately restricted by the battery used. Currently, a 3.7V 6000mAh LiPo will run the unit for approximately 170 hours. Battery life can be extended by turning off the LEDs on the EC EZO and the Qduino Mini. 
 
 
-Data Download and Analysis
+## Data Download and Analysis
 	Currently, the user is required to open the device to access the microSD card. Ensure that the unit is dry prior to deconstruction. Using a 2.5mm hex key, remove the six screws holding the switch and vent end cap in place. Carefully remove the wires connected to the switch. Pull the board far enough out of the case to access the microSD card. Remove the SD card, place in a SD card reader of choice, and plug into a computer.
 	Navigate to the SD card directory. At minimum, the top directory will contain a file labeled “LOGGER00.csv”. There may be other folders, but those will contain sketches or old data sets. There may be additional files in sequence with LOGGER00 if the device was turned on and off multiple times. Every time power is cycled, it creates a new file to log. This allows the user to create a single file for every profile.The csv file contains five columns. The following picture shows what the file may look like if using Microsoft Excel to view the raw data.
 
@@ -303,7 +300,7 @@ Note: The conductivity output in this figure is rubbish due to an improper calib
 
 
 
-OpenCTDPlotter
+### OpenCTDPlotter
 	The OpenCTDPlotter is proprietary MATLAB run standalone application. You do not need MATLAB to run this application, only a free runtime that can either be downloaded or installed with the package. Currently, it will take your raw data and convert temperature to Fahrenheit, pressure to depth, and all three sensor value to salinity and plot those values. Simply open the application, navigate to the file you want to access, and select open. It may take a minute to load.
 
  
@@ -317,24 +314,6 @@ You can save these by navigating to the File > Save As, for each window. It is i
 If you do not want to use the OpenCTDPlotter application, there are Microsoft Excel spreadsheets and R code available that perform the same conversion process. These require slightly more data manipulation by the user.  If you want a copy of the code for any of these, contact Ian Black.
 
 
-Additional Resources
-
-EC EZO Datasheet:
-https://www.atlas-scientific.com/_files/_datasheets/_circuit/EC_EZO_Datasheet.pdf
-
-TSYS01 Datasheet: http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FTSYS01%7FA%7Fpdf%7FEnglish%7FENG_DS_TSYS01_A.pdf%7FG-NICO-018
-
-MS5837 Datasheet:
-http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5837-30BA%7FB1%7Fpdf%7FEnglish%7FENG_DS_MS5837-30BA_B1.pdf%7FCAT-BLPS0017
-
-Watertight Enclosure Documentation:
-http://docs.bluerobotics.com/watertight-enclosures/
-
-MicroSD Transflash Breakout Documentation:
-https://github.com/sparkfun/microSD_Transflash_Breakout/tree/V_1.4
-
-DeadOn RTC Guide:
-https://learn.sparkfun.com/tutorials/deadon-rtc-breakout-hookup-guide
 
 
 	
