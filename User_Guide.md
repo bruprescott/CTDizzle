@@ -80,10 +80,10 @@ Note: This only applies if you decide to cut the probe cable.
 ### Step 1: Setting Up Arduino and the Qduino Mini
 The Arduino Integrated Development Environment (IDE) is simple to use. It is recommended that the user maintain the default directories that the Arduino IDE download wizard creates. To install Arduino…
 
-a)	Go to https://www.arduino.cc/en/main/software.
-b)	Select the Windows Installer version.
-c)	Follow the installation wizard.
-d)	Set up shortcuts as desired.
+i. Go to https://www.arduino.cc/en/main/software.
+ii. Select the Windows Installer version.
+iii. Follow the installation wizard.
+iv. Set up shortcuts as desired.
 
 The Qduino Mini is not an officially supported by Arduino. It is necessary to download the board package that is specific for the Qduino from the Sparkfun GitHub. WARNING: IF THIS STEP IS NOT COMPLETED, YOU RUN THE RISK OF BRICKING YOUR QDUINO WHEN ATTEMPTING TO UPLOAD.
 a)	Open the Arduino IDE.
