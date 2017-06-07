@@ -7,59 +7,25 @@ Oceanographic equipment is often expensive and inaccessible for students and cit
 Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD) if you want to build a cheaper device.
 Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the framework for the OpenCTD. 
 
-
-
 For questions or comments about this version, contact Ian Black at blackia@oregonstate.edu.
 
+**Before You Get Started**
+There are cheaper and/or better sensor options out there. This guide only works for parts listed in the Parts_List.
+It is your responsibility to ensure that all parts are compatible with your setup.
 
 
+## Pinouts
+VCC is always 3.3v.
 
+|DeadOn RTC|Qduino Mini|
+|GND|GND|
+|VCC|VCC|
+|SQW|Not Applicable|
+|CLK|D15 (SCLK)|
+|MISO|D14 (MISO)|
+|MOSI|D16 (MOSI)|
+|SS|D5|
 
-
-
-Parts
-Compatibility of parts not listed below is the responsibility of the embedded systems engineer.
-
-Item	Vendor	Part Number
-Qduino Mini	SparkFun	DEV-13614
-3.7v 6000mAh LiPo Battery	SparkFun	PRT-13856
-Conductivity Kit 1.0*	Atlas Scientific	EC-Kit-1.0
-Celsius Temperature Sensor	Blue Robotics	CELSIUS-SENSOR-R1
-Bar30 Pressure Sensor	Blue Robotics	BAR30-SENSOR-R1
-DeadOn RTC	SparkFun	BOB-10160
-microSD Transflash Breakout	SparkFun	BOB-00544
-3” Water Tight Enclosure**	Blue Robotics	WTE3-P-TUBE-8P75-R1
-Aluminum O-Ring Flange (x2)**	Blue Robotics	WTE3-M-FLANGE-SEAL-R1
-Aluminum End Cap w/holes (x2)**	Blue Robotics	WTE3-M-END-CAP-4-HOLE-R1
-Vent and Plug (x2)**	Blue Robotics	VENT-ASM-R1
-Water Enclosure Switch**	Blue Robotics	SWITCH-10-5A-R1
-Cable Penetrator Blank (x3)**	Blue Robotics	PENETRATOR-BLANK-10-25-A-R2
-12mm Lithium Coin Cell	SparkFun	PRT-00337
-Snappable Protoboard	SparkFun	PRT-13268
-Breakaway Header – Straight (x3)	SparkFun	PRT-00116
-MicroSD Card with Adapter – 8GB	SparkFun	COM-11609
-*The Atlas Scientific Kit comes with everything needed to set up and calibrate the conductivity probe.
-** The Blue Robotics items come with the necessary O-Rings.
-
-Consumables
-Item	Vendor	Part Number
-Potting Kit	Blue Robotics	TOOL-POTTING-KIT-R1
-Loctite Waterproof 2-Ton Epoxy	Blue Robotics	LOCTITE-MARINE-EPOXY
-Heat Shrink Kit	SparkFun	PRT-09353
-Solid Core Hook-up Wire Kit - 22AWG	SparkFun	PRT-11367
-Desiccant – 20g	Amazon	
-Molykote 55 O-Ring Silicone Grease	Amazon	
-
-
-Tools
-Soldering Station
-2.5mm Hex Wrench
-Flat-head Screwdriver
-Forceps
-Third Hand
-Optional: Multimeter
-Optional: O-Ring Pick or Toothpick
-Optional: Curved Hemostats
 
 
 
