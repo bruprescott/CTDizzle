@@ -80,29 +80,32 @@ Note: This only applies if you decide to cut the probe cable.
 ### Step 1: Setting Up Arduino and the Qduino Mini
 The Arduino Integrated Development Environment (IDE) is simple to use. It is recommended that the user maintain the default directories that the Arduino IDE download wizard creates. To install Arduino…
 
-i. Go to https://www.arduino.cc/en/main/software.
-ii. Select the Windows Installer version.
-iii. Follow the installation wizard.
-iv. Set up shortcuts as desired.
+1. Go to https://www.arduino.cc/en/main/software.
+2. Select the Windows Installer version.
+3. Follow the installation wizard.
+4. Set up shortcuts as desired.
 
 The Qduino Mini is not an officially supported by Arduino. It is necessary to download the board package that is specific for the Qduino from the Sparkfun GitHub. WARNING: IF THIS STEP IS NOT COMPLETED, YOU RUN THE RISK OF BRICKING YOUR QDUINO WHEN ATTEMPTING TO UPLOAD.
-a)	Open the Arduino IDE.
-b)	Navigate to File > Preferences
-c)	In Additional Board URLs, add the following link:
+
+1. Open the Arduino IDE.
+2. Navigate to File > Preferences
+3. In Additional Board URLs, add the following link:
 https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manager/package_sparkfun_index.json
-d)	Navigate to Tools > Board > Boards Manager.
-e)	In the Boards Manage window, search for SparkFun AVR Boards. Install SparkFun AVR Boards.
-f)	Navigate to Tools > Boards > Qduino Mini. Refer to the above WARNING.
-g)	Connect your Qduino Mini to your computer via microUSB. Turn on the Qduino.
-h)	Navigate to Tools > Port. Select the available COM port. Make a note of which port is selected and which USB port you are using on your computer. If using a different USB port for later uploads, your port will need to be changed to what is available. 
+4. Navigate to Tools > Board > Boards Manager.
+5. In the Boards Manage window, search for SparkFun AVR Boards. Install SparkFun AVR Boards.
+6. Navigate to Tools > Boards > Qduino Mini. Refer to the above WARNING.
+7. Connect your Qduino Mini to your computer via microUSB. Turn on the Qduino.
+8. Navigate to Tools > Port. Select the available COM port. Make a note of which port is selected and which USB port you are using on your computer. If using a different USB port for later uploads, your port will need to be changed to what is available. 
+
 Your Qduino Mini should now be upload ready. This will be tested after installing additional libraries.
 It is also necessary to format the microSD card that will be used to store the data. 
-a)	Insert your microSD card into a USB adapter and plug into your computer.
-b)	Navigate to Windows Explorer, right click your microUSB card and select format.
-c)	Under file system, select FAT32. Select Start.
-d)	Navigate to your microSD card in Windows Explorer.
-e)	Create a new text file named “datalog.txt” and save it to the microSD card.
-f)	If desired, create additional folders to save sketches and old data.
+
+1. Insert your microSD card into a USB adapter and plug into your computer.
+2. Navigate to Windows Explorer, right click your microUSB card and select format.
+3. Under file system, select FAT32. Select Start.
+4. Navigate to your microSD card in Windows Explorer.
+5. Create a new text file named “datalog.txt” and save it to the microSD card.
+6. If desired, create additional folders to save sketches and old data.
 
 ### Step 2: Setting Up the Required Libraries
 	Several libraries are needed to allow the OpenCTD operating code to work. They can either be found within the Arduino IDE or downloaded from GitHub. Libraries native within the IDE are automatically included by the operating code and no further steps are necessary. The following instructions show how to download and access the third party libraries. 
