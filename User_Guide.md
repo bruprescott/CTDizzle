@@ -1,12 +1,10 @@
-WORK IN PROGRESS 
+# WORK IN PROGRESS 
 	
 
+## Introduction
+Oceanographic equipment is often expensive and inaccessible for students and citizen oceanographers. The OpenCTD allows individuals to collect conductivity, temperature, and depth data with a cheap and easy-to-build device. It isn’t suitable for scientific research yet, but that doesn’t mean it won’t provide you with information about the ocean! 
 
-Introduction
-	Oceanographic equipment is often expensive and inaccessible for students and citizen oceanographers. The OpenCTD allows individuals to collect conductivity, temperature, and depth data with a cheap and easy-to-build device. It isn’t suitable for scientific research yet, but that doesn’t mean it won’t provide you with information about the ocean! Most materials can be sourced from a few online vendors and no expensive tools or equipment are needed. You can build this OpenCTD on your dining room table over a weekend!
-
-If you want to follow the original build guide to build a cheaper OpenCTD, it can be found at: https://github.com/OceanographyforEveryone/OpenCTD
-
+Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD) if you want to build a cheaper device.
 Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the framework for the OpenCTD. 
 
 
