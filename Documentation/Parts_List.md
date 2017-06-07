@@ -36,8 +36,9 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 
 #### Tools List
 |Tool|Note|
-|Needle Hemostats|
-|2.5mm Hex Wrench|
+|:---|:---|
+|Needle Hemostats|Flat edges won't mar items as much|
+|2.5mm Hex Wrench|Used for end cap installation/removal|
 |Solder Station|
 |Multimeter|
 |Breadboard|
