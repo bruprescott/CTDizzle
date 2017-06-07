@@ -1,6 +1,5 @@
 # WORK IN PROGRESS 
 	
-
 ## Introduction
 Oceanographic equipment is often expensive and inaccessible for students and citizen oceanographers. The OpenCTD allows individuals to collect conductivity, temperature, and depth data with a cheap and easy-to-build device. It isn’t suitable for scientific research yet, but that doesn’t mean it won’t provide you with information about the ocean! 
 
@@ -14,6 +13,7 @@ It is your responsibility to ensure that all parts are compatible with your setu
 
 
 ## Pinouts
+
 VCC is always 3.3v.
 
 |DeadOn RTC|Qduino Mini|	
@@ -28,6 +28,7 @@ VCC is always 3.3v.
 
 Note: SQW is not used unless you want to implement an alarm function.
 
+
 |MicroSD Transflash|Qduino Mini|
 |:--------------------:|:--------------------:|
 |CD|Not Applicable|
@@ -40,12 +41,14 @@ Note: SQW is not used unless you want to implement an alarm function.
 
 Note: CD is not used unless you want to implement a card detect function.
 
+
 |TSYS01 Temperature Sensor|Qduino Mini|	
 |:------------:|:------------:|	
 |Red|VCC|	
 |Black|GND|	
 |Green|D3 (SCL)|	
 |White|D2 (SDA)|	
+
 
 |MS5837 Pressure Sensor|Qduino Mini|	
 |:------------:|:------------:|	
@@ -54,6 +57,7 @@ Note: CD is not used unless you want to implement a card detect function.
 |Green|D3 (SCL)|	
 |White|D2 (SDA)|	
 
+
 |EC EZO|Qduino Mini|	
 |:------------:|:------------:|	
 |Tx|D8|	
@@ -61,7 +65,8 @@ Note: CD is not used unless you want to implement a card detect function.
 |VCC|VCC|	
 |GND|GND|	
 
-|K1.0 Probe|Qduino Mini|	
+
+|EC K1.0 Probe|Qduino Mini|	
 |:------------:|:------------:|	
 |Red|PRB1|	
 |Black|PRB2|	
