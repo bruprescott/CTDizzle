@@ -8,6 +8,7 @@ Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/Open
 Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the framework for the OpenCTD. 
 
 **Before You Get Started**
+
 There are cheaper and/or better sensor options out there. This guide only works for parts listed in the Parts_List.
 It is your responsibility to ensure that all parts are compatible with your setup.
 
@@ -15,32 +16,20 @@ It is your responsibility to ensure that all parts are compatible with your setu
 ## Pinouts
 VCC is always 3.3v.
 
-|DeadOn RTC|Qduino Mini|
-|:------------:|:------------:|
-|GND|GND|
-|VCC|VCC|
-|SQW|Not Applicable|
-|CLK|D15 (SCLK)|
-|MISO|D14 (MISO)|
-|MOSI|D16 (MOSI)|
-|SS|D5|
+|DeadOn RTC|Qduino Mini|	|MicroSD Transflash|Qduino Mini|
+|:------------:|:------------:|	|:--------------------:|:--------------------:|
+|GND|GND|	|CD|Not Applicable|
+|VCC|VCC|	|DO|D14 (MISO)|	
+|SQW|Not Applicable|	|GND|GND|
+|CLK|D15 (SCLK)|	|SCK|D15 (SCLK)|
+|MISO|D14 (MISO)|	|VCC|VCC|
+|MOSI|D16 (MOSI)|	|DI|D16 (MOSI)|
+|SS|D5|	|CS|D4|
 
 
 
 
-Pinouts
-VCC is always 3.3v.
 
-DeadOn RTC	Qduino Mini
-GND	GND
-VCC	VCC
-SQW*	Not Applicable
-CLK	D15 (SCLK)
-MISO	D14 (MISO)
-MOSI	D16 (MOSI)
-SS	D5
-*The SWQ pin is not necessary to hook up to the Qduino unless the user
- plans to create an alarm system. The SQW pin can be user-defined.
 
 microSD Transflash	Qduino
 CD*	Not Applicable
