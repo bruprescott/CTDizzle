@@ -37,7 +37,7 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |[Masking Tape](https://www.amazon.com/3M-Masking-Stick-Surfaces-60-Yard/dp/B00004Z4AY/ref=sr_1_3?s=hi&ie=UTF8&qid=1496867660&sr=1-3&keywords=Green+masking+tape)|Amazon|$5.31
 |Sandpaper|
 |[Black Tape](https://www.amazon.com/Scotch-Electrical-75-Inch-66-Foot-0-007-Inch/dp/B00004WCCL/ref=sr_1_1?ie=UTF8&qid=1496867818&sr=8-1&keywords=3m+electrical+tape)|Amazon|$6.77
-|[Calibration Solution K1.0 Set](https://www.atlas-scientific.com/product_pages/chemicals/ec-1_0.)hAmazon|$5.31tml)|Atlas-Scientific|$11|Already included in K1.0 kit, but it doesn't hurt to have extra on hand|
+|[Calibration Solution K1.0 Set](https://www.atlas-scientific.com/product_pages/chemicals/ec-1_0.html)|Amazon|$5.31|Atlas-Scientific|$11|Already included in K1.0 kit, but it doesn't hurt to have extra on hand|
 
 
 #### Tools List
@@ -56,7 +56,7 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |microUSB Cable|Data-capable Android phone charger works too|
 
 
-#### Recommended Items
+#### Not Necessary But Helpful Items
 |Item|Vendor|Price|Note|
 |:---|:---|:---|:---|
 |[Potting Kit](http://www.bluerobotics.com/store/tools/tool-potting-kit-r1/)|Blue Robotics|$10|
