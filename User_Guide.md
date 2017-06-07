@@ -16,11 +16,11 @@ It is your responsibility to ensure that all parts are compatible with your setu
 
 VCC is always 3.3v.
 
-|DeadOn RTC|Qduino Mini|		!Note: SQW is not used unless you want to implement an alarm function.
+|DeadOn RTC|Qduino Mini|	
 |:------------:|:------------:|		
 |GND|GND|	
 |VCC|VCC|	
-|SQW|Not Applicable|	
+|SQW|Not Applicable|Note: SQW is not used unless you want to implement an alarm function.
 |CLK|D15 (SCLK)|	
 |MISO|D14 (MISO)|	
 |MOSI|D16 (MOSI)|	
@@ -31,7 +31,7 @@ VCC is always 3.3v.
 
 |MicroSD Transflash|Qduino Mini|
 |:--------------------:|:--------------------:|
-|CD|Not Applicable|
+|CD|Not Applicable|Note: CD is not used unless you want to implement a card detect function.
 |DO|D14 (MISO)|	
 |GND|GND|
 |SCK|D15 (SCLK)|
@@ -39,7 +39,7 @@ VCC is always 3.3v.
 |DI|D16 (MOSI)|
 |CS|D4|
 
-Note: CD is not used unless you want to implement a card detect function.
+
 
 
 |TSYS01 Temperature Sensor|Qduino Mini|	
@@ -68,10 +68,10 @@ Note: CD is not used unless you want to implement a card detect function.
 
 |EC K1.0 Probe|Qduino Mini|	
 |:------------:|:------------:|	
-|Red|PRB1|	
+|Red|PRB1|Note: This only applies if you decide to cut the probe cable.	
 |Black|PRB2|	
 
-Note: This only applies if you decide to cut the probe cable.
+
 
 
 
