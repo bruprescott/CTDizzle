@@ -16,8 +16,8 @@ It is your responsibility to ensure that all parts are compatible with your setu
 ## Pinouts
 VCC is always 3.3v.
 
-|DeadOn RTC|Qduino Mini|	
-|:------------:|:------------:|	
+!|DeadOn RTC|Qduino Mini|	!|Table|Table|	
+!|:------------:|:------------:]	!|:------------:|:------------:|	
 |GND|GND|	
 |VCC|VCC|	
 |SQW|Not Applicable|	
