@@ -77,7 +77,8 @@ VCC is always 3.3v.
 
 ## Build Instructions
 
-### Step 1: Setting Up Arduino and the Qduino Mini
+### Setup
+#### Setting Up Arduino
 The Arduino Integrated Development Environment (IDE) is simple to use. It is recommended that the user maintain the default directories that the Arduino IDE download wizard creates. To install Arduino…
 
 1. Go to https://www.arduino.cc/en/main/software.
@@ -85,6 +86,7 @@ The Arduino Integrated Development Environment (IDE) is simple to use. It is rec
 3. Follow the installation wizard.
 4. Set up shortcuts as desired.
 
+#### Setting up the Qduino Mini
 The Qduino Mini is not an officially supported by Arduino. It is necessary to download the board package that is specific for the Qduino from the Sparkfun GitHub. WARNING: IF THIS STEP IS NOT COMPLETED, YOU RUN THE RISK OF BRICKING YOUR QDUINO WHEN ATTEMPTING TO UPLOAD.
 
 1. Open the Arduino IDE.
@@ -96,8 +98,9 @@ https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manag
 6. Navigate to Tools > Boards > Qduino Mini. Refer to the above WARNING.
 7. Connect your Qduino Mini to your computer via microUSB. Turn on the Qduino.
 8. Navigate to Tools > Port. Select the available COM port. Make a note of which port is selected and which USB port you are using on your computer. If using a different USB port for later uploads, your port will need to be changed to what is available. 
-
 Your Qduino Mini should now be upload ready. This will be tested after installing additional libraries.
+
+#### Formatting the SD Card
 It is also necessary to format the microSD card that will be used to store the data. 
 
 1. Insert your microSD card into a USB adapter and plug into your computer.
@@ -107,43 +110,50 @@ It is also necessary to format the microSD card that will be used to store the d
 5. Create a new text file named “datalog.txt” and save it to the microSD card.
 6. If desired, create additional folders to save sketches and old data.
 
-### Step 2: Setting Up the Required Libraries
-	Several libraries are needed to allow the OpenCTD operating code to work. They can either be found within the Arduino IDE or downloaded from GitHub. Libraries native within the IDE are automatically included by the operating code and no further steps are necessary. The following instructions show how to download and access the third party libraries. 
+#### Setting Up the Required Libraries
+Several libraries are needed to allow the OpenCTD operating code to work. They can either be found within the Arduino IDE or downloaded from GitHub. Libraries native within the IDE are automatically included by the operating code and no further steps are necessary. The following instructions show how to download and access the third party libraries. 
 
-Native Libraries	Third Party Libraries
-SPI	Qduino
-SoftwareSerial	TSYS01
-Wire	MS5837
-SD	SparkFunDS3234RTC
+|Native Libraries|Third Party Libraries|
+|:---:|:---:|
+|SPI|Qduino|
+|SoftwareSerial|TSYS01|
+|Wire|MS5837|
+|SD|SparkFunDS3234RTC|
 
 The Qduino library is automatically made available through Step 1. 
 
+##### TSYS01 Temperature Sensor Library
 The temperature sensor requires the TSYS01 library. To access the library:
-a)	Go to https://github.com/bluerobotics/BlueRobotics_TSYS01_Library
-b)	Select the Clone or download button. Click on Download Zip.
-c)	Navigate to your downloads folder through Windows Explorer.
-d)	Right click on the BlueRobotics_TSYS01_Library-master folder. Select extract all.
-e)	Select browse.
-f)	Navigate to Windows (C:) > Program Files (x86) > Arduino > libraries. Click on select folder.
-g)	The TSYS01 library can now be included by the operating code.
+1.	Go to https://github.com/bluerobotics/BlueRobotics_TSYS01_Library
+2.	Select the Clone or download button. Click on Download Zip.
+3.	Navigate to your downloads folder through Windows Explorer.
+4.	Right click on the BlueRobotics_TSYS01_Library-master folder. Select extract all.
+5.	Select browse.
+6.	Navigate to Windows (C:) > Program Files (x86) > Arduino > libraries. Click on select folder.
+7.	The TSYS01 library can now be included by the operating code.
 
+##### MS5837 Pressure Sensor Library
 The pressure sensor requires the MS5837 library. To access the library:
-a)	Go to https://github.com/bluerobotics/BlueRobotics_MS5837_Library
-b)	Select the Clone or download button. Click on Download Zip.
-c)	Navigate to your downloads folder through Windows Explorer.
-d)	Right click on the BlueRobotics_MS5837_Library-master folder. Select extract all.
-e)	Select browse.
-f)	Navigate to Windows (C:) > Program Files (x86) > Arduino > libraries. Click on select folder.
-g)	The MS5837 library can now be included by the operating code.
+1.	Go to https://github.com/bluerobotics/BlueRobotics_MS5837_Library
+2.	Select the Clone or download button. Click on Download Zip.
+3.	Navigate to your downloads folder through Windows Explorer.
+4.	Right click on the BlueRobotics_MS5837_Library-master folder. Select extract all.
+5.	Select browse.
+6.	Navigate to Windows (C:) > Program Files (x86) > Arduino > libraries. Click on select folder.
+7.	The MS5837 library can now be included by the operating code.
 
+##### DeadOn RTC Library
 The DeadOn RTC requires the SparkFunDS3234RTC library. To access the library:
-a)	Go to https://github.com/sparkfun/SparkFun_DS3234_RTC_Arduino_Library
-b)	Select the Clone or download button. Click on Download Zip.
-c)	Navigate to your downloads folder through Windows Explorer.
-d)	Right click on the SparkFun_DS3234_RTC_Arduino_Library-master folder. Select extract all.
-e)	Select browse.
-f)	Navigate to Windows (C:) > Program Files (x86) > Arduino > libraries. Click on select folder.
-g)	The SparkFunDS3234RTC library can now be included by the operating code. Note that during upload, the Arduino IDE may classify the DeadOn RTC library as “Uncategorized”. The library should still function if this occurs.
+1.	Go to https://github.com/sparkfun/SparkFun_DS3234_RTC_Arduino_Library
+2.	Select the Clone or download button. Click on Download Zip.
+3.	Navigate to your downloads folder through Windows Explorer.
+4.	Right click on the SparkFun_DS3234_RTC_Arduino_Library-master folder. Select extract all.
+5.	Select browse.
+6.	Navigate to Windows (C:) > Program Files (x86) > Arduino > libraries. Click on select folder.
+7.	The SparkFunDS3234RTC library can now be included by the operating code. Note that during upload, the Arduino IDE may classify the DeadOn RTC library as “Uncategorized”. The library should still function if this occurs.
+
+
+
 
 ### Step 3: Preliminary Soldering and Breadboard Setup
 	It is necessary to prepare several electronic components and sensors with some preliminary soldering. 
