@@ -1,4 +1,4 @@
-Here is a list of parts used to build the CTDizzle Mk3, their vendor location, and the approximate cost for each item. You can probably find them elsewhere for cheaper. Prices do not include shipping.
+Here is a list of parts used to build the CTDizzle Mk3, their vendor location, and the approximate cost for each item. You can probably find them elsewhere for cheaper and in less quantity. Some items from this list were chosen to allow the building of multiple OpenCTDs. Prices do not include shipping.
 
 Please note that you can adapt the CTDizzle to use sensors and boards of your own choosing, but it is your responsibility to ensure that they are compatible. 
 
@@ -27,17 +27,17 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 #### Consumables List
 |Item|Vendor|Price|Note|
 |:---|:---|:---|:---|
-|Breakaway Header - Straight (x4)|SparkFun|$6|
-|2-Ton Marine Epoxy|Amazon|
-|22 AWG - Solid Core Wire|SparkFun|$16.95|
-|Heat Shrink Kit|SparkFun|$7.95|
+|[Breakaway Header - Straight (x3)](https://www.sparkfun.com/products/116)|SparkFun|$4.50|You'll have extras|
+|[2-Ton Marine Epoxy (x6)](https://www.amazon.com/dp/B00JN4SL3C/ref=twister_B06ZZ6NM7S?_encoding=UTF8&th=1)|Amazon|$28.80|Amount used is up to you.
+|[Assorted 22 AWG - Soli)d Core Wire](https://www.sparkfun.com/products/11367)|SparkFun|$16.95|
+|[Heat Shrink Kit](https://www.sparkfun.com/products/9353)|SparkFun|$7.95|
 |[Silicon Grease](http://www.bluerobotics.com/store/tools/tool-silicone-grease-10g-r1/)|Blue Robotics|$3|
-|Solder|Amazon|
-|Desiccant Packs (10g)|Amazon|
-|Masking Tape|
+|[Kester 44 Solder](https://www.amazon.com/Kester-Rosin-Core-Solder-Spool/dp/B00068IJWC/ref=sr_1_4?ie=UTF8&qid=1496867514&sr=8-4&keywords=kester+44)|Amazon|$33.43|1 lb of solder. Not necessary unless you want to solder more than the OpenCTD.
+|[Desiccant Packs (10g)](https://www.amazon.com/Desiccant-Indicating-Chloride-Moisture-Absorbent/dp/B01MPYB16J/ref=sr_1_1?s=hi&ie=UTF8&qid=1496867597&sr=1-1&keywords=10g+desiccant)|Amazon|$8.99|Plenty of replacements.
+|[Masking Tape](https://www.amazon.com/3M-Masking-Stick-Surfaces-60-Yard/dp/B00004Z4AY/ref=sr_1_3?s=hi&ie=UTF8&qid=1496867660&sr=1-3&keywords=Green+masking+tape)|Amazon|$5.31
 |Sandpaper|
-|Black Tape|
-|[Calibration Solution K1.0 Set](https://www.atlas-scientific.com/product_pages/chemicals/ec-1_0.html)|Atlas-Scientific|$11|Already included in K1.0 kit, but it doesn't hurt to have extra on hand|
+|[Black Tape](https://www.amazon.com/Scotch-Electrical-75-Inch-66-Foot-0-007-Inch/dp/B00004WCCL/ref=sr_1_1?ie=UTF8&qid=1496867818&sr=8-1&keywords=3m+electrical+tape)|Amazon|$6.77
+|[Calibration Solution K1.0 Set](https://www.atlas-scientific.com/product_pages/chemicals/ec-1_0.)hAmazon|$5.31tml)|Atlas-Scientific|$11|Already included in K1.0 kit, but it doesn't hurt to have extra on hand|
 
 
 #### Tools List
