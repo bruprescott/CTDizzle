@@ -10,4 +10,4 @@ It also houses all of the resources and documentation I have used while building
 - Contains MATLAB and R scripts that will plot your data.
 
 #### Documentation
-- Contains the user guide and additional resources.
+- Contains the user guide, parts list, and links to additional resources.
