@@ -7,8 +7,6 @@ Oceanographic equipment is often expensive and inaccessible for students and cit
 Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD) if you want to build a cheaper device.
 Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the framework for the OpenCTD. 
 
-For questions or comments about this version, contact Ian Black at blackia@oregonstate.edu.
-
 **Before You Get Started**
 There are cheaper and/or better sensor options out there. This guide only works for parts listed in the Parts_List.
 It is your responsibility to ensure that all parts are compatible with your setup.
@@ -18,6 +16,7 @@ It is your responsibility to ensure that all parts are compatible with your setu
 VCC is always 3.3v.
 
 |DeadOn RTC|Qduino Mini|
+|:------------:|:------------:|
 |GND|GND|
 |VCC|VCC|
 |SQW|Not Applicable|
