@@ -1,6 +1,7 @@
 Here is a list of parts used to build the CTDizzle Mk3. This list also contains the vendor location and the approximate cost of each item.
 Please note that you can adapt the CTDizzle to use sensors and boards of your own choosing, but it is your responsibility to ensure that they are compatible. 
 
+#### Parts List
 |Part|Vendor|Price|Note|
 |:---|:---|:---|:---|
 |[Qduino Mini](https://www.sparkfun.com/products/13614)|SparkFun|$29.95|
@@ -16,27 +17,39 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |Aluminum End Cap - Blank (x2)|Blue Robotics|$20|Needs holes drilled for sensors.
 |Vent and Plug|Blue Robotics|$8|
 |Water Tight Enclosure Switch|Blue Robotics|$14|
-|Snappable Protoboard|SparkFun|7.95|
+|Snappable Protoboard|SparkFun|$7.95|
 |4-Pin JST SM Plug Set|adafruit|
 |2-Pin JST SM Plug Set|adafruit|
 |JST-PH Battery Extension Cable|adafruit|
+|[MicroSD Card with Adapter](https://www.sparkfun.com/products/11609)|SparkFun|$13.95|
+
+#### Consumables List
+|Item|Vendor|Price|Note|
+|:---|:---|:---|:---|
+|Breakaway Header - Straight (x4)|SparkFun|$6|
+|2-Ton Marine Epoxy|Amazon|
+|22 AWG - Solid Core Wire|SparkFun|$16.95|
+|Heat Shrink Kit|SparkFun|$7.95|
+|Silicon Grease|Blue Robotics|
+|Solder|Amazon|
+|Desiccant Packs (10g)|Amazon|
+
+#### Tools List
+|Tool|Note|
+|Needle Hemostats|
+|2.5mm Hex Wrench|
+|Solder Station|
+|Multimeter|
+|Breadboard|
+|Jumper Wires|
+
+#### Recommended Items
+|Item|Vendor|Price|Note|
+|:---|:---|:---|:---|
+|Potting Kit|Blue Robotics|$10|
+|Third Hand|SparkFun|
 
 
-
-
-
-
-Consumables
-Silicon Grease
-2-Ton Marine Epoxy
-22 AWG - Solid Core Wire
-
-
-Tools
-Third Hand
-Forceps
-Needle Hemostats
-2.5mm Hex Wrench
 
 
 
