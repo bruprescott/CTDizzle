@@ -16,8 +16,8 @@ It is your responsibility to ensure that all parts are compatible with your setu
 
 VCC is always 3.3v.
 
-|DeadOn RTC|Qduino Mini|	
-|:------------:|:------------:|	
+|DeadOn RTC|Qduino Mini|	Note: SQW is not used unless you want to implement an alarm function.
+|:------------:|:------------:|		
 |GND|GND|	
 |VCC|VCC|	
 |SQW|Not Applicable|	
@@ -26,7 +26,7 @@ VCC is always 3.3v.
 |MOSI|D16 (MOSI)|	
 |SS|D5|	
 
-Note: SQW is not used unless you want to implement an alarm function.
+
 
 
 |MicroSD Transflash|Qduino Mini|
