@@ -1,6 +1,7 @@
 %If viewing this in MATLAB, use the "deploytool" command to create a standalone application.
-%The executable does not require MATLAB to run, but you will need to install the free MCR runtime.
-%This script will plot profiles, time-seri of your raw OpenCTD data.
+%The returned executable does not require MATLAB to run, but you will need to install the free MCR runtime.
+%This script will plot profiles, time-series, and a table of salinity and temperature data by fathom.
+%Plots and converted data are saved automatically by date and time in a script created folder in the C: drive.
 %Your data must be in the form of "MM/dd/uuuu,HH:mm:ss,EC,T,P"
 %Feel free to modify this code as you see fit.
 %Please contact Ian Black (blackia@oregonstate.edu) with any questions, comments, or concerns.
