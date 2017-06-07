@@ -25,6 +25,7 @@ VCC is always 3.3v.
 |MISO|D14 (MISO)|	
 |MOSI|D16 (MOSI)|	
 |SS|D5|	
+
 Note: SQW is not used unless you want to implement an alarm function.
 
 |MicroSD Transflash|Qduino Mini|
@@ -36,16 +37,17 @@ Note: SQW is not used unless you want to implement an alarm function.
 |VCC|VCC|
 |DI|D16 (MOSI)|
 |CS|D4|
+
 Note: CD is not used unless you want to implement a card detect function.
 
-|TSYS01|Qduino Mini|	
+|TSYS01 Temperature Sensor|Qduino Mini|	
 |:------------:|:------------:|	
 |Red|VCC|	
 |Black|GND|	
 |Green|D3 (SCL)|	
 |White|D2 (SDA)|	
 
-|MS5837|Qduino Mini|	
+|MS5837 Pressure Sensor|Qduino Mini|	
 |:------------:|:------------:|	
 |Red|VCC|	
 |Black|GND|	
@@ -63,12 +65,10 @@ Note: CD is not used unless you want to implement a card detect function.
 |:------------:|:------------:|	
 |Red|PRB1|	
 |Black|PRB2|	
+
 Note: This only applies if you decide to cut the probe cable.
 
-Atlas K1.0 Probe	Atlas EC EZO
-Red*	PRB1
-Black*	PRB2
-* It does not matter which probe lead is attached to PRB1 or PRB2.
+
 
 
  
