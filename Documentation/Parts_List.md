@@ -1,4 +1,4 @@
-Here is a list of parts used to build the CTDizzle Mk3, their vendor location, and the approximate cost for each item. You can probably find them elsewhere for cheaper.
+Here is a list of parts used to build the CTDizzle Mk3, their vendor location, and the approximate cost for each item. You can probably find them elsewhere for cheaper. Prices do not include shipping.
 
 Please note that you can adapt the CTDizzle to use sensors and boards of your own choosing, but it is your responsibility to ensure that they are compatible. 
 
@@ -15,7 +15,7 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |[microSD Transflash Breakout](https://www.sparkfun.com/products/544)|SparkFun|$3.95|
 |[3" Water Tight Enclosure - 6"](https://www.bluerobotics.com/store/watertight-enclosures/wte3-p-tube-custom-r1/)|Blue Robotics|$35|Needs to be custom ordered.
 |[Aluminum O-Ring Flange (x2)](https://www.bluerobotics.com/store/watertight-enclosures/o-ring-flange-3-series/)|Blue Robotics|$48|
-|[Aluminum End Cap - Blank (x2)](https://www.bluerobotics.com/store/watertight-enclosures/wte3-m-end-cap-r1/)|Blue Robotics|$20|Needs holes drilled for sensors.
+|[Aluminum End Cap - Blank (x2)](https://www.bluerobotics.com/store/watertight-enclosures/wte3-m-end-cap-r1/)|Blue Robotics|$20|Needs holes drilled for sensors. You can also buy end caps with holes pre-drilled. You will still need to drill out one of the holes for the conductivity sensor.
 |[Vent and Plug](https://www.bluerobotics.com/store/watertight-enclosures/vent-asm-r1/)|Blue Robotics|$8|
 |[Water Tight Enclosure Switch](http://www.bluerobotics.com/store/electronics/switch-10-5a-r1/)|Blue Robotics|$14|
 |[Snappable Protoboard](https://www.sparkfun.com/products/13268)|SparkFun|$7.95|
@@ -34,6 +34,11 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |[Silicon Grease](http://www.bluerobotics.com/store/tools/tool-silicone-grease-10g-r1/)|Blue Robotics|$3|
 |Solder|Amazon|
 |Desiccant Packs (10g)|Amazon|
+|Masking Tape|
+|Sandpaper|
+|Black Tape|
+|[Calibration Solution K1.0 Set](https://www.atlas-scientific.com/product_pages/chemicals/ec-1_0.html)|Atlas-Scientific|$11|Already included in K1.0 kit, but it doesn't hurt to have extra on hand|
+
 
 #### Tools List
 |Tool|Note|
@@ -44,6 +49,12 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |Multimeter|
 |Breadboard|
 |Jumper Wires|
+|Wire Stripper|
+|Drill|Used for drilling holes in end caps.
+|Drillbit - 10mm|Size for Blue Robotics parts|
+|Drillbit - 12mm|Size for Atlas Scientific EC Probe|
+|microUSB Cable|Data-capable Android phone charger works too|
+
 
 #### Recommended Items
 |Item|Vendor|Price|Note|
