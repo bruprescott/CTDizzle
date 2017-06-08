@@ -53,11 +53,11 @@ CD is not needed unless you want to implement a card detect function.
 |GND|GND|	
 
 
-|EC K1.0 Probe|Qduino Mini|	
+|Atlas-Scientific EC K1.0 Probe|Qduino Mini|	
 |:------------:|:------------:|
 |Red|PRB1|	
 |Black|PRB2|	
 
-Wire-PRB orientation does not matter.
+Wire-PRB orientation does not matter. If using a probe from a different manufacturer, you will need to first test the connectivity to determine which wires to use. 
 
 
