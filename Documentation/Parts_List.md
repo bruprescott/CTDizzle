@@ -29,7 +29,7 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |:---|:---|:---|:---|
 |[Breakaway Header - Straight (x3)](https://www.sparkfun.com/products/116)|SparkFun|$4.50|You'll have extras|
 |[2-Ton Marine Epoxy (x6)](https://www.amazon.com/dp/B00JN4SL3C/ref=twister_B06ZZ6NM7S?_encoding=UTF8&th=1)|Amazon|$28.80|Amount used is up to you.
-|[Assorted 22 AWG - Soli)d Core Wire](https://www.sparkfun.com/products/11367)|SparkFun|$16.95|
+|[Assorted 22 AWG - Solid Core Wire](https://www.sparkfun.com/products/11367)|SparkFun|$16.95|
 |[Heat Shrink Kit](https://www.sparkfun.com/products/9353)|SparkFun|$7.95|
 |[Silicon Grease](http://www.bluerobotics.com/store/tools/tool-silicone-grease-10g-r1/)|Blue Robotics|$3|
 |[Kester 44 Solder](https://www.amazon.com/Kester-Rosin-Core-Solder-Spool/dp/B00068IJWC/ref=sr_1_4?ie=UTF8&qid=1496867514&sr=8-4&keywords=kester+44)|Amazon|$33.43|1 lb of solder. Not necessary unless you want to solder more than the OpenCTD.
