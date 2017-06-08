@@ -6,74 +6,10 @@ Oceanographic equipment is often expensive and inaccessible for students and cit
 Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD) if you want to build a cheaper device.
 Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the framework for the OpenCTD. 
 
-**Before You Get Started**
+### Before You Get Started
 
 There are cheaper and/or better sensor options out there. This guide only works for parts listed in the Parts_List.
 It is your responsibility to ensure that all parts are compatible with your setup. This build guide also assumes that you are running everything off of Windows. 
-
-
-
-## Pinouts
-
-VCC is always 3.3v.
-
-|DeadOn RTC|Qduino Mini|	
-|:------------:|:------------:|		
-|GND|GND|	
-|VCC|VCC|	
-|SQW|Not Applicable|
-|CLK|D15 (SCLK)|	
-|MISO|D14 (MISO)|	
-|MOSI|D16 (MOSI)|	
-|SS|D5|	
-
-
-
-
-|MicroSD Transflash|Qduino Mini|
-|:--------------------:|:--------------------:|
-|CD|Not Applicable|
-|DO|D14 (MISO)|	
-|GND|GND|
-|SCK|D15 (SCLK)|
-|VCC|VCC|
-|DI|D16 (MOSI)|
-|CS|D4|
-
-
-
-
-|TSYS01 Temperature Sensor|Qduino Mini|	
-|:------------:|:------------:|	
-|Red|VCC|	
-|Black|GND|	
-|Green|D3 (SCL)|	
-|White|D2 (SDA)|	
-
-
-|MS5837 Pressure Sensor|Qduino Mini|	
-|:------------:|:------------:|	
-|Red|VCC|	
-|Black|GND|	
-|Green|D3 (SCL)|	
-|White|D2 (SDA)|	
-
-
-|EC EZO|Qduino Mini|	
-|:------------:|:------------:|	
-|Tx|D8|	
-|Rx|D9|	
-|VCC|VCC|	
-|GND|GND|	
-
-
-|EC K1.0 Probe|Qduino Mini|	
-|:------------:|:------------:|
-|Red|PRB1|	
-|Black|PRB2|	
-
-
-
 
 
 ## Build Instructions
@@ -157,32 +93,34 @@ The DeadOn RTC requires the SparkFunDS3234RTC library. To access the library:
 ### Board Prep
 It is necessary to prepare several electronic components and sensors with some preliminary soldering. 
 - Solder breakaway header strips to boards that require them. (Qduino, Transflash, RTC)
-- If you think you might want to shorten the conductivity probe cable, now is the time do it. Make sure you have what you need!
-- If you think you might not use the DF13 connects on the temperature and pressure sensors, now is a good time to cut them off.
+- It is recommended you keep the BNC connectors on the kit for testing and calibration. If you think you might want to shorten the conductivity probe cable, you can do that later. Make sure you enough!
+- If you think you might not use the DF13 connects on the temperature and pressure sensors, now is a good time to cut them off. Carefully strip away ~1cm of insulation.
+- The following pictures show the use of JST connectors to allow easy removal of the sensors from the main protoboard. If you are using these connectors, now is a good time to solder to the sensors. Make sure to remember which wires you solder to the JST pins!
 
 ### Breadboard and Testing Setup
 Set up the Qduino Mini, Transflash, RTC, and EC EZO on the breadboard. 
-1. Following the pinout list above, connect the Transflash and RTC to the Qduino.
+1. Following the pinout list, connect the Transflash and RTC to the Qduino.
   - Install your microSD card and 12mm coin cell. 
   - Connect the Qduino to your computer. Turn it on and upload the CTDizzle_Mk3.3 code. 
+   - Navigate to File > Open. Open the file named “OpenCTD_Mk3_OpCode”. Select upload.
   - In the serial monitor, you should see Qduino begin to spit out information. There won't be any data because you haven't hooked up the sensors yet!
 	
 2. Connect the temperature and pressure sensors to the Qduino.
-	i. It is okay to solder the green wires together (same goes for the white wires). Each device has a unique address that allows the Qduino to differentiate between the two.
-	ii. Fire up the Qduino again and check the output. You should now see temperature and pressure in the serial monitor.
+  - It is okay to solder the green wires together (same goes for the white wires). Each device has a unique address that allows the Qduino to differentiate between the two.
+  - Fire up the Qduino again and check the output. You should now see temperature and pressure in the serial monitor. 
+  
+3. Connect the EC probe to the EC EZO, then the EC EZO to the Qduino.
+  - Once connected, fire up the Qduino. You should see an EC value of 0.00 when the probe is in open air. 
+  - You may notice that on a power cycle, the first reported line will not show an EC value. This is because the EC EZO is still warming up. You will need to clean you data.
+
+4. Once you have all the sensors and parts connected, ensure that the data output appears reasonable. The date and time should be representative of the current date and time. EC should be zero, temperature should be representative of the ambient temperature of the room you are in, and pressure should be ~1013 if you are near sea level. 
+  - If date and time are not accurate, check your pinouts. You may also need to ensure the autotime function is uncommented in the operating code. 
+
+5. Now is a good time to calibrate the conductivity sensor. Follow along with the calibration procedure found in Documentation (in progress).
+  - It is recommended that you do not cut the probe cable until after calibration. Cutting the cable prior to testing the probe will void any warranty and return policy that Atlas Scientific may have. 
 
 
-	It is necessary to prepare several electronic components and sensors with some preliminary soldering. 
-•	The temperature and pressure sensors come default with a DF13-type connector. This connector is not needed and can be removed unless the user desire to implement the connectors in the build. After removing the connector, carefully strip away ~1cm at the end of each wire.
-•	At this point, the conductivity probe is connected to the EC EZO by a BNC connector. As the breadboard setup is temporary, it is not necessary to cut the cable at this moment. If the user desires the conductivity probe be permanently potted in the casing, it is not necessary to cut the BNC connector. Cutting the cable prior to testing the probe will void any warranty and return policy that Atlas Scientific may have. 
-•	Solder the appropriate header pins to the Qduino, DeadOn RTC, and microSD Transflash. 
-•	 If a faster charge rate is desired, the user can solder the SJ1 pad on the backside of the Qduino. This changes the charge rate from 100 mA to 500 mA.
-•	Using the pinout section as a guide, attach all electronic parts to the Qduino Mini via jumper wires.
 
-Step 4: Breadboard Testing
-	Install your formatted microSD card, 12mm coin cell, and battery. After your breadboard has been set up, you can now turn on the Qduino and upload the operating code. 
-
-Navigate to File > Open. Open the file named “OpenCTD_Mk3_OpCode”. Select upload.
 
 In the Arduino IDE, navigate to Tools > Serial Monitor. Immediately, you should see a string of numbers separated by commas. The data represents…
 
