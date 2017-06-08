@@ -157,13 +157,19 @@ The DeadOn RTC requires the SparkFunDS3234RTC library. To access the library:
 ### Board Prep
 It is necessary to prepare several electronic components and sensors with some preliminary soldering. 
 - Solder breakaway header strips to boards that require them. (Qduino, Transflash, RTC)
+- If you think you might want to shorten the conductivity probe cable, now is the time do it. Make sure you have what you need!
+- If you think you might not use the DF13 connects on the temperature and pressure sensors, now is a good time to cut them off.
 
-### Breadboard Setup
+### Breadboard and Testing Setup
 Set up the Qduino Mini, Transflash, RTC, and EC EZO on the breadboard. 
 1. Following the pinout list above, connect the Transflash and RTC to the Qduino.
-	a. Connect the Qduino to your computer. Turn it on and upload the CTDizzle_Mk3.3 code. 
-	b. In the serial monitor, you should see Qduino begin to spit out information. There won't be any data because you haven't hooked up the sensors yet!
+	i. Install your microSD card and 12mm coin cell. 
+	ii.Connect the Qduino to your computer. Turn it on and upload the CTDizzle_Mk3.3 code. 
+	iii. In the serial monitor, you should see Qduino begin to spit out information. There won't be any data because you haven't hooked up the sensors yet!
+	
 2. Connect the temperature and pressure sensors to the Qduino.
+	i. It is okay to solder the green wires together (same goes for the white wires). Each device has a unique address that allows the Qduino to differentiate between the two.
+	ii. Fire up the Qduino again and check the output. You should now see temperature and pressure in the serial monitor.
 
 
 	It is necessary to prepare several electronic components and sensors with some preliminary soldering. 
