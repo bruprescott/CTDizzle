@@ -1,0 +1,61 @@
+## Pinouts
+
+VCC is always 3.3v.
+
+|DeadOn RTC|Qduino Mini|	
+|:------------:|:------------:|		
+|GND|GND|	
+|VCC|VCC|	
+|SQW|Not Applicable|
+|CLK|D15 (SCLK)|	
+|MISO|D14 (MISO)|	
+|MOSI|D16 (MOSI)|	
+|SS|D5|	
+
+
+
+
+|MicroSD Transflash|Qduino Mini|
+|:--------------------:|:--------------------:|
+|CD|Not Applicable|
+|DO|D14 (MISO)|	
+|GND|GND|
+|SCK|D15 (SCLK)|
+|VCC|VCC|
+|DI|D16 (MOSI)|
+|CS|D4|
+
+
+
+
+|TSYS01 Temperature Sensor|Qduino Mini|	
+|:------------:|:------------:|	
+|Red|VCC|	
+|Black|GND|	
+|Green|D3 (SCL)|	
+|White|D2 (SDA)|	
+
+
+|MS5837 Pressure Sensor|Qduino Mini|	
+|:------------:|:------------:|	
+|Red|VCC|	
+|Black|GND|	
+|Green|D3 (SCL)|	
+|White|D2 (SDA)|	
+
+
+|EC EZO|Qduino Mini|	
+|:------------:|:------------:|	
+|Tx|D8|	
+|Rx|D9|	
+|VCC|VCC|	
+|GND|GND|	
+
+
+|EC K1.0 Probe|Qduino Mini|	
+|:------------:|:------------:|
+|Red|PRB1|	
+|Black|PRB2|	
+
+
+
