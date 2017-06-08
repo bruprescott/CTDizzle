@@ -1,10 +1,10 @@
 ## README
 
-!(..CTDizzle/master/Documentation/Images/20170517_185546.jpg)
+!(https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170517_185546.jpg)
 
 
 This repository contains the code and build guide used for the CTDizzle Mk3.
-It also houses all of the resources and documentation that may be helpful during the build process.
+It also houses all of the resources ahttps://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170517_185546.jpgnd documentation that may be helpful during the build process.
 
 
 #### Arduino Files
