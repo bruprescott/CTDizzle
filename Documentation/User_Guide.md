@@ -7,7 +7,6 @@ Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/Open
 Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the framework for the OpenCTD. 
 
 **Before You Get Started**
-
 There are cheaper and/or better sensor options out there. This guide only works for parts listed in the Parts_List.
 It is your responsibility to ensure that all parts are compatible with your setup.
 
