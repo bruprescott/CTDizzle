@@ -119,23 +119,30 @@ Set up the Qduino Mini, Transflash, RTC, and EC EZO on the breadboard.
   - It is recommended that you do not cut the probe cable until after calibration. Cutting the cable prior to testing the probe will void any warranty and return policy that Atlas Scientific may have. 
 
 
-
-
+### Reading Data in the Serial Monitor
 In the Arduino IDE, navigate to Tools > Serial Monitor. Immediately, you should see a string of numbers separated by commas. The data represents…
 
-Date (MM/DD/YY) , Time (HH:mm:ss) , Conductivity (uS/cm) , Temperature (C) , Pressure (mbar)
+_Date (MM/DD/YY) , Time (HH:mm:ss) , Conductivity (uS/cm) , Temperature (C) , Pressure (mbar)
 
- 
+- The date should be representative of the date that your computer is set to. The time should be close to the time that your computer is set to, but may be behind by about 30 seconds. This is due to upload delay. If your time is drastically off or incoherent, remove the battery and power cycle the system. 
 
-The date should be representative of the date that your computer is set to. The time should be close to the time that your computer is set to, but may be behind by about 30 seconds. This is due to upload delay. If your time is drastically off or incoherent, remove the battery and power cycle the system. 
+- The conductivity value should be zero or near zero if already calibrated. If it is not present in the output, try switching the Tx and Rx lines. Alternatively, you can change the pins in the code. Note in the above image, the EC is missing in the first line. It takes time for the EC circuit to initialize and thus is missing for the first sample.
 
-The conductivity value should be zero or near zero if already calibrated. If it is not present in the output, try switching the Tx and Rx lines. Alternatively, you can change the pins in the code. Note in the above image, the EC is missing in the first line. It takes time for the EC circuit to initialize and thus is missing for the first sample.
+- The temperature should be representative of the ambient temperature of the room you are performing the test in. It may be handy to have a thermometer nearby to check this. The temperature probe is factory calibrated, but if further calibration is needed, a two-point calibration is recommended.
 
-The temperature should be representative of the ambient temperature of the room you are performing the test in. It may be handy to have a thermometer nearby to check this. The temperature probe is factory calibrated, but if further calibration is needed, a two-point calibration is recommended.
+- The pressure sensor should be spitting out values between 1000 and 1030 depending on your elevation. If you are near sea level, the value should be within a few millibars of 1013. The pressure sensor is factory calibrated, but if values appear to be drastically off (e.g. 86000 or -6000), first check your pinout connections. If still incorrect, contact the manufacturer. 
 
-The pressure sensor should be spitting out values between 1000 and 1030 depending on your elevation. If you are near sea level, the value should be within a few millibars of 1013. The pressure sensor is factory calibrated, but if values appear to be drastically off (e.g. 86000 or -6000), first check your pinout connections. If still incorrect, contact the manufacturer. 
+
 
 If the output seems reasonable, the EC probe can now be calibrated. There are two methods for calibrating the conductivity probe of the unit. The first method is a single point calibration, which is discouraged. The second method is a two point calibration and provides much more accurate data. For best results, it is recommended that you calibrate the probe in a temperature controlled area as conductivity readings are highly dependent on temperature. Refer to the EC_Cal Procedure for a two-point calibration method. Once calibrated, cables can be cut and soldered as necessary.
+
+### Case Construction and Potting
+Once everything checks out and your breadboard tests are successful, you can begin to put the pressure case togethe
+
+## Final Soldering
+
+
+
 Step 5: Case Construction and Potting
 Clean each end of the acrylic tube case and aluminum flanges with Kimwipes and isopropyl alcohol. Grease the appropriate O-rings for the flange. Install these O-rings and insert the flanges into the case. Set this setup aside and cover with Kimwipes to prevent dust accumulation.
 
@@ -259,10 +266,10 @@ Currently, the user is required to open the device to access the data. This is d
 5. Once you are finished looking at the data, delete the RAWCTD files in the main directory of the SD card. This keeps things from getting cluttered. 
 6. Reinstall the microSD card and end cap. If you think the O-rings look a little dirty, clean and reapply silicone grease before continuing. 
 
-### Reading raw data.
+### Reading Raw Data
 RAWCTD files are comma-seperated. Data will appear in five columns in the order of...
 
-'MM/DD/YYYY , HH:mm:ss , Conductivity (µS/cm) , Temperature (°C) , Pressure (mbar)'
+_MM/DD/YYYY , HH:mm:ss , Conductivity (µS/cm) , Temperature (°C) , Pressure (mbar)
 
 
 
