@@ -31,24 +31,23 @@ The Qduino Mini is not an officially supported by Arduino. It is necessary to do
 3. In Additional Board URLs, add the following link:
 https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manager/package_sparkfun_index.json
 4. Navigate to Tools > Board > Boards Manager.
-5. In the Boards Manage window, search for SparkFun AVR Boards. Install SparkFun AVR Boards.
-6. Navigate to Tools > Boards > Qduino Mini. **Any other selection will brick your Qduino.**
-7. Connect your Qduino Mini to your computer via microUSB. Turn on the Qduino.
-8. Navigate to Tools > Port. Select the available COM port. Make a note of which port is selected and which USB port you are using on your computer. If using a different USB port for later uploads, your port will need to be changed to what is available. 
+5. In the Boards Manager window, search for SparkFun AVR Boards. Install SparkFun AVR Boards.
+6. Navigate to Tools > Boards > Qduino Mini. **Any other board selection will brick your Qduino.**
+7. Connect your Qduino Mini to the computer via microUSB. Turn on the Qduino.
+8. Navigate to Tools > Port. Select the available COM port. Make a note of which port is selected and which USB port you are using on your computer. If using a different USB port for later uploads, your com port will need to be changed to what is available. 
 Your Qduino Mini should now be upload ready. This will be tested after installing additional libraries.
 
 #### Formatting the SD Card
 It is also necessary to format the microSD card that will be used to store the data. 
 
-1. Insert your microSD card into a USB adapter and plug into your computer.
+1. Insert your microSD card into a USB adapter and plug into the computer.
 2. Navigate to Windows Explorer, right click your microUSB card and select format.
-3. Under file system, select FAT32. Select Start.
-4. Navigate to your microSD card in Windows Explorer.
-5. Create a new text file named “datalog.txt” and save it to the microSD card.
-6. If desired, create additional folders to save sketches and old data.
+3. Under file system, select FAT32. Select Start. A
+4. Your card should now be formatted. 
+5. OPTIONAL: Navigate to your SD card through Windows Explorer. If desired create and additional folder to save old data. 
 
 #### Setting Up the Required Libraries
-Several libraries are needed to allow the OpenCTD operating code to work. They can either be found within the Arduino IDE or downloaded from GitHub. Libraries native within the IDE are automatically included by the operating code and no further steps are necessary. The following instructions show how to download and access the third party libraries. 
+Several libraries are needed to allow the OpenCTD operating code to work. These libraries allow communication with the sensors and allow the use of unique commands. They can either be found within the Arduino IDE or downloaded from GitHub. Libraries native within the IDE are automatically included by the operating code and no further steps are necessary to include them. The following instructions show how to download and access the third party libraries. 
 
 |Native Libraries|Third Party Libraries|
 |:---:|:---:|
@@ -87,14 +86,14 @@ The DeadOn RTC requires the SparkFunDS3234RTC library. To access the library:
 4.	Right click on the SparkFun_DS3234_RTC_Arduino_Library-master folder. Select extract all.
 5.	Select browse.
 6.	Navigate to Windows (C:) > Program Files (x86) > Arduino > libraries. Click on select folder.
-7.	The SparkFunDS3234RTC library can now be included by the operating code. Note that during upload, the Arduino IDE may classify the DeadOn RTC library as “Uncategorized”. The library should still function if this occurs.
+7.	The SparkFunDS3234RTC library can now be included by the operating code. Note that during future uploads, the Arduino IDE may classify the DeadOn RTC library as “Uncategorized”. The library should still function even though this message appears.
 
 
 ### Board Prep
 It is necessary to prepare several electronic components and sensors with some preliminary soldering. 
 - Solder breakaway header strips to boards that require them. (Qduino, Transflash, RTC)
-- It is recommended you keep the BNC connectors on the kit for testing and calibration. If you think you might want to shorten the conductivity probe cable, you can do that later. Make sure you enough!
-- If you think you might not use the DF13 connects on the temperature and pressure sensors, now is a good time to cut them off. Carefully strip away ~1cm of insulation.
+- It is recommended you keep the BNC connectors on the EC kit for testing and calibration. If you think you might want to shorten the conductivity probe cable, you can do that later. Make sure you enough though!
+- If you think you might not use the DF13 connects on the temperature and pressure sensors, now is a good time to cut them off. Carefully strip away ~1cm of insulation. Tin the ends to prevent stray wires.
 - The following pictures show the use of JST connectors to allow easy removal of the sensors from the main protoboard. If you are using these connectors, now is a good time to solder to the sensors. Make sure to remember which wires you solder to the JST pins!
 
 ### Breadboard and Testing Setup
