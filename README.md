@@ -17,4 +17,4 @@ It also houses all of the resources and documentation that may be helpful during
 - Contains MATLAB and R scripts that will plot your data.
 
 #### Documentation
-- Contains the user guide, parts list, and links to additional resources.
+- Contains the user guide, parts list, pinout guide, and links to additional resources.
