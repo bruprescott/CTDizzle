@@ -8,7 +8,7 @@ Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providin
 
 ### Before You Get Started
 
-There are cheaper and/or better sensor options out there. This guide only works for parts listed in the Parts_List.
+There are likely cheaper and/or better sensor options out there. This guide only works for parts listed in the Parts_List.
 It is your responsibility to ensure that all parts are compatible with your setup. This build guide also assumes that you are running everything off of Windows. 
 
 
@@ -218,11 +218,11 @@ A finished OpenCTD.
 The device should be fully assembled and the proper sampling regime selected prior to reaching the study site. 
 1.	Confirm all sensors, plugs, bulkheads, and end caps are tight and secure. 
 2.	Remove any sensor covers on the conductivity, temperature, and pressure sensors.
-3.	Turn the external switch clockwise until it can turn no further. The unit should now turn ON.
-a.	The Atlas Scientific EC EZO LED should begin to alternate between green and cyan, indicating that the conductivity sensor is now sampling. If the EZO remains green, it is not continuously sampling and the deployment should be postponed until the proper code is uploaded. If the EZO is consistently flashing a red LED in between green and cyan, it is possible there is ground fault or communication error in the system and connections should be checked. You may notice that the EZO flashes red a couple times after start-up. This indicates that the EZO is unable to process incoming requests until it has completed its boot sequence.
+3.	Turn the external switch clockwise until it can turn no further. The unit should now turn ON. 
+  - The Atlas Scientific EC EZO LED should begin to alternate between green and cyan, indicating that the conductivity sensor is now sampling. If the EZO remains green, it is not continuously sampling and the deployment should be postponed until the proper code is uploaded. If the EZO is consistently flashing a red LED in between green and cyan, it is possible there is ground fault or communication error in the system and connections should be checked. You may notice that the EZO flashes red a couple times after start-up. This indicates that the EZO is unable to process incoming requests until it has completed its boot sequence.
 4.	If step 3 is satisfied, then you can begin deployment!
-If profiling with the unit, it is suggested that it be left in the top few meters of the water column for approximately ten minutes to allow for equilibrium. Once ready to profile, bring the unit to just below the surface, and allow it to descend at a rate around 0.25 m/s (~1 fathom every 10 seconds). The unit is only capable of sampling at a maximum of 1 Hz. 
-If planning to leave the unit at a particular site for an extended period of time, it is recommended that the user ensure that the device is properly secured and ON prior to leaving the site. 
+  - If profiling with the unit, it is suggested that it be left in the top few meters of the water column for approximately ten minutes to allow for equilibrium. Once ready to profile, bring the unit to just below the surface, and allow it to descend at a rate around 0.25 m/s (~1 fathom every 10 seconds). The unit is only capable of sampling at a maximum of 1 Hz. 
+  - If planning to leave the unit at a particular site for an extended period of time, it is recommended that the user ensure that the device is properly secured and ON prior to leaving the site. 
 
 ## Recovery Procedure
 1.	After recovering the unit, turn the main switch counter-clockwise until the LEDs turn off (usually ½ to 1 rotation). Do not turn it any further.
@@ -259,10 +259,11 @@ Currently, the user is required to open the device to access the data. This is d
 5. Once you are finished looking at the data, delete the RAWCTD files in the main directory of the SD card. This keeps things from getting cluttered. 
 6. Reinstall the microSD card and end cap. If you think the O-rings look a little dirty, clean and reapply silicone grease before continuing. 
 
-### What does the data mean?
+### Reading raw data.
 RAWCTD files are comma-seperated. Data will appear in five columns in the order of...
 
 'MM/DD/YYYY , HH:mm:ss , Conductivity (µS/cm) , Temperature (°C) , Pressure (mbar)'
+
 
 
 
