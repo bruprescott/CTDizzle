@@ -7,8 +7,10 @@ Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/Open
 Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the framework for the OpenCTD. 
 
 **Before You Get Started**
+
 There are cheaper and/or better sensor options out there. This guide only works for parts listed in the Parts_List.
 It is your responsibility to ensure that all parts are compatible with your setup.
+
 
 
 ## Pinouts
@@ -77,7 +79,7 @@ VCC is always 3.3v.
 ## Build Instructions
 
 ### Setup
-#### Setting Up Arduino
+#### Setting Up the Arduino IDE
 The Arduino Integrated Development Environment (IDE) is simple to use. It is recommended that the user maintain the default directories that the Arduino IDE download wizard creates. To install Arduino…
 
 1. Go to https://www.arduino.cc/en/main/software.
@@ -152,9 +154,8 @@ The DeadOn RTC requires the SparkFunDS3234RTC library. To access the library:
 7.	The SparkFunDS3234RTC library can now be included by the operating code. Note that during upload, the Arduino IDE may classify the DeadOn RTC library as “Uncategorized”. The library should still function if this occurs.
 
 
+### Breadboard Setup
 
-
-### Step 3: Preliminary Soldering and Breadboard Setup
 	It is necessary to prepare several electronic components and sensors with some preliminary soldering. 
 •	The temperature and pressure sensors come default with a DF13-type connector. This connector is not needed and can be removed unless the user desire to implement the connectors in the build. After removing the connector, carefully strip away ~1cm at the end of each wire.
 •	At this point, the conductivity probe is connected to the EC EZO by a BNC connector. As the breadboard setup is temporary, it is not necessary to cut the cable at this moment. If the user desires the conductivity probe be permanently potted in the casing, it is not necessary to cut the BNC connector. Cutting the cable prior to testing the probe will void any warranty and return policy that Atlas Scientific may have. 
