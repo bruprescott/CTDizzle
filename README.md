@@ -1,6 +1,6 @@
 ## README
 
-!(https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170517_185546.jpg)
+![CTDizzle](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170517_185546.jpg)
 
 
 This repository contains the code and build guide used for the CTDizzle Mk3.
