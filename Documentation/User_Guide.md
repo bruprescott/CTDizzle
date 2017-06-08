@@ -309,7 +309,8 @@ The length of time a unit can be deployed is ultimately restricted by the batter
 ## Data Download and Analysis
 
 ### Accessing and Plotting the Data
-Currently, the user is required to open the device to access the data. This is done by removing the switch and vent endcap and removing the microSD card. 
+Currently, the user is required to open the device to access the data. This is done by removing the switch and vent endcap and removing the microSD card. Take care when removing the end cap, as it is important to keep the O-rings clean. **Make sure the device is dry before continuing.**
+
 1. Connect the microSD card to your computer using an adapter.
 2. Transfer the RAWCTD files you are interested in to your computer. It may be necessary to open these to check for dates and times.
 3. Save all the files on the SD card to a seperate folder on the SD card labeled "Old Data".
@@ -318,7 +319,8 @@ Currently, the user is required to open the device to access the data. This is d
   - Through the provided R script.
   - Through the provided Microsoft Excel spreadsheet (in progress).
   - Through your processing program of choice. RAWCTD files are comma-seperated.
-5. Once you are finished looking at the data, delete the RAWCTD files in the main directory of the SD card. THis keeps things from getting cluttered. 
+5. Once you are finished looking at the data, delete the RAWCTD files in the main directory of the SD card. This keeps things from getting cluttered. 
+6. Reinstall the microSD card and end cap. If you think the O-rings look a little dirty, clean and reapply silicone grease before continuing. 
 
 ### What does the data mean?
 RAWCTD files are comma-seperated. Data will appear in five columns in the order of...
@@ -326,9 +328,6 @@ RAWCTD files are comma-seperated. Data will appear in five columns in the order 
 'MM/DD/YYYY , HH:mm:ss , Conductivity (µS/cm) , Temperature (°C) , Pressure (mbar)'
 
 
-
- 
-Note: The conductivity output in this figure is rubbish due to an improper calibration. Typical ocean/estuary conductivity readings range between 20000 to 38000 uS/cm.
 
 
 
