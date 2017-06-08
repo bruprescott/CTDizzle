@@ -24,7 +24,7 @@ The Arduino Integrated Development Environment (IDE) is simple to use. It is rec
 4. Set up shortcuts as desired.
 
 #### Setting up the Qduino Mini
-The Qduino Mini is not an officially supported by Arduino. It is necessary to download the board package that is specific for the Qduino from the Sparkfun GitHub. WARNING: IF THIS STEP IS NOT COMPLETED, YOU RUN THE RISK OF BRICKING YOUR QDUINO WHEN ATTEMPTING TO UPLOAD.
+The Qduino Mini is not an officially supported by Arduino. It is necessary to download the board package that is specific for the Qduino from the Sparkfun GitHub. **IF THIS STEP IS NOT COMPLETED, YOU RUN THE RISK OF BRICKING YOUR QDUINO WHEN ATTEMPTING TO UPLOAD.**
 
 1. Open the Arduino IDE.
 2. Navigate to File > Preferences
@@ -32,7 +32,7 @@ The Qduino Mini is not an officially supported by Arduino. It is necessary to do
 https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manager/package_sparkfun_index.json
 4. Navigate to Tools > Board > Boards Manager.
 5. In the Boards Manage window, search for SparkFun AVR Boards. Install SparkFun AVR Boards.
-6. Navigate to Tools > Boards > Qduino Mini. Refer to the above WARNING.
+6. Navigate to Tools > Boards > Qduino Mini. **Any other selection will brick your Qduino.**
 7. Connect your Qduino Mini to your computer via microUSB. Turn on the Qduino.
 8. Navigate to Tools > Port. Select the available COM port. Make a note of which port is selected and which USB port you are using on your computer. If using a different USB port for later uploads, your port will need to be changed to what is available. 
 Your Qduino Mini should now be upload ready. This will be tested after installing additional libraries.
