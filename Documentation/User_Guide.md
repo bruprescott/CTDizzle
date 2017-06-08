@@ -163,9 +163,9 @@ It is necessary to prepare several electronic components and sensors with some p
 ### Breadboard and Testing Setup
 Set up the Qduino Mini, Transflash, RTC, and EC EZO on the breadboard. 
 1. Following the pinout list above, connect the Transflash and RTC to the Qduino.
-	-Install your microSD card and 12mm coin cell. 
-	-Connect the Qduino to your computer. Turn it on and upload the CTDizzle_Mk3.3 code. 
-	-In the serial monitor, you should see Qduino begin to spit out information. There won't be any data because you haven't hooked up the sensors yet!
+  - Install your microSD card and 12mm coin cell. 
+  - Connect the Qduino to your computer. Turn it on and upload the CTDizzle_Mk3.3 code. 
+  - In the serial monitor, you should see Qduino begin to spit out information. There won't be any data because you haven't hooked up the sensors yet!
 	
 2. Connect the temperature and pressure sensors to the Qduino.
 	i. It is okay to solder the green wires together (same goes for the white wires). Each device has a unique address that allows the Qduino to differentiate between the two.
