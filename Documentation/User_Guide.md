@@ -291,58 +291,45 @@ If planning to leave the unit at a particular site for an extended period of tim
 1.	After recovering the unit, turn the main switch counter-clockwise until the LEDs turn off (usually ½ to 1 rotation). Do not turn it any further.
 2.	Spray the unit down with fresh water if possible. 
 3.	If biofouling has accrued on the device, carefully remove the tape used to protect the case. If tape was not used to prevent biofouling, carefully use a soft bristle brush or plastic paint scraper to remove any fouling on the case. 
-a.	For the sensors, use a soft bristle toothbrush or sponge to remove any biofouling. Do not use a brush on the conductivity probe head. Do not insert anything into the conductivity cell. Use freshwater and/or canned air to clean sensors.
+  - For the sensors, use a soft bristle toothbrush or sponge to remove any biofouling. **Do not use a brush on the conductivity probe head. Do not insert anything into the conductivity cell.** Use freshwater and/or canned air to clean sensors.
 4.	Dry the device.
 5.	Replace all sensor caps.
 6.	The device can be deployed again if the user desires.
-a.	If the unit is primarily used for profiling, the device is ready to go once the user decides to collect data again. If there is concern that the battery may be low, refer to the Battery Charging Procedure.
-b.	If another in-situ deployment is planned, the battery will likely need to be charged or replaced. Refer to the Battery Charging Procedure if charging is needed. Refer to the Battery Replacement Procedure if battery replacement is needed. 
-
-
-
-
-
-
+  - If the unit is primarily used for profiling, the device is ready to go once the user decides to collect data again. If there is concern that the battery may be low, refer to the Battery Charging Procedure.
+  - If another stationary deployment is planned, the battery will likely need to be charged or replaced. Refer to the Battery Charging Procedure if charging is needed. Refer to the Battery Replacement Procedure if battery replacement is needed. 
 
 ## Battery Charging Procedure
-	The Qduino Mini has the ability to charge a single-cell lithium ion battery when connected to a computer or microUSB adapter. The user can flash the FuelGauge sketch to the Qduino to have the charge percentage reported to the serial monitor to ensure that the battery is not connected to the charging system for too long. Simply plug in the battery to the Qduino and connect the unit to a computer via microUSB. It is recommended that the microSD card be removed during charging so as to not record unnecessary data.
-	The length of time a unit can be deployed is ultimately restricted by the battery used. Currently, a 3.7V 6000mAh LiPo will run the unit for approximately 170 hours. Battery life can be extended by turning off the LEDs on the EC EZO and the Qduino Mini. 
+The Qduino Mini has the ability to charge a single-cell lithium ion battery when connected to a computer or microUSB outlet adapter. The user can flash the FuelGauge sketch (found in examples folder) to the Qduino to have the charge percentage reported to the serial monitor to ensure that the battery is not connected to the charging system for too long. Simply plug in the battery to the Qduino and connect the unit to a computer via microUSB. If already hooked up to the OpenCTD system, it is recommended that the microSD card be removed during charging so as to not record unnecessary data. 
+
+By default, the Qduino charges batters at 100 mA. To increase the charge rate to 500 mA, you can solder the SJ1 pad on the backside of the Qduino.
+
+The length of time a unit can be deployed is ultimately restricted by the battery used. Currently, a 3.7V 6000mAh LiPo will run the unit for approximately 160 hours. Battery life can be extended by turning off the LEDs on the EC EZO and the Qduino Mini. 
 
 
 ## Data Download and Analysis
-	Currently, the user is required to open the device to access the microSD card. Ensure that the unit is dry prior to deconstruction. Using a 2.5mm hex key, remove the six screws holding the switch and vent end cap in place. Carefully remove the wires connected to the switch. Pull the board far enough out of the case to access the microSD card. Remove the SD card, place in a SD card reader of choice, and plug into a computer.
-	Navigate to the SD card directory. At minimum, the top directory will contain a file labeled “LOGGER00.csv”. There may be other folders, but those will contain sketches or old data sets. There may be additional files in sequence with LOGGER00 if the device was turned on and off multiple times. Every time power is cycled, it creates a new file to log. This allows the user to create a single file for every profile.The csv file contains five columns. The following picture shows what the file may look like if using Microsoft Excel to view the raw data.
 
-MM/DD/YYYY , HH:mm:ss , Conductivity (µS/cm) , Temperature (°C) , Pressure (mbar)
+### Accessing and Plotting the Data
+Currently, the user is required to open the device to access the data. This is done by removing the switch and vent endcap and removing the microSD card. 
+1. Connect the microSD card to your computer using an adapter.
+2. Transfer the RAWCTD files you are interested in to your computer. It may be necessary to open these to check for dates and times.
+3. Save all the files on the SD card to a seperate folder on the SD card labeled "Old Data".
+4. There are several methods to process and analyze the data...
+  - Through the provided MATLAB script.
+  - Through the provided R script.
+  - Through the provided Microsoft Excel spreadsheet (in progress).
+  - Through your processing program of choice. RAWCTD files are comma-seperated.
+5. Once you are finished looking at the data, delete the RAWCTD files in the main directory of the SD card. THis keeps things from getting cluttered. 
+
+### What does the data mean?
+RAWCTD files are comma-seperated. Data will appear in five columns in the order of...
+
+'MM/DD/YYYY , HH:mm:ss , Conductivity (µS/cm) , Temperature (°C) , Pressure (mbar)'
+
+
 
  
 Note: The conductivity output in this figure is rubbish due to an improper calibration. Typical ocean/estuary conductivity readings range between 20000 to 38000 uS/cm.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-### OpenCTDPlotter
-	The OpenCTDPlotter is proprietary MATLAB run standalone application. You do not need MATLAB to run this application, only a free runtime that can either be downloaded or installed with the package. Currently, it will take your raw data and convert temperature to Fahrenheit, pressure to depth, and all three sensor value to salinity and plot those values. Simply open the application, navigate to the file you want to access, and select open. It may take a minute to load.
-
- 
-
-After selecting open, three windows will appear. 
-•	One contains a table of data that has been converted. 
-•	Another contains time-series plots of temperature, salinity, and depth. 
-•	The last contains profile plots of temperature and salinity.
- 
-You can save these by navigating to the File > Save As, for each window. It is important that you change the Save as type to something like .jpg or .png.
-If you do not want to use the OpenCTDPlotter application, there are Microsoft Excel spreadsheets and R code available that perform the same conversion process. These require slightly more data manipulation by the user.  If you want a copy of the code for any of these, contact Ian Black.
 
 
 
