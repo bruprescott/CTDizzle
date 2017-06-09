@@ -246,17 +246,9 @@ A finished OpenCTD.
 
 
 ## Predeployment Procedure
-
-
- 
-
- 
-
-
-
-
-
-
+How you plan on deploying your OpenCTD plays a role in the sampling regime of the device. 
+- If you plan to take profiles, it should be set to sample as frequently as possible, which at this point is roughly 1 Hz.
+- If you plan to leave the OpenCTD in the same spot for several hours or days, it should be set to sample every minute to few minutes. Doing this will increase the battery life. Another way to increase the battery life is by turning off the EC EZO LEDs. Instructions on how to do this can be found in the EZ EZO Datasheet (in the Resources page). 
 
 ## Deployment Procedure
 The device should be fully assembled and the proper sampling regime selected prior to reaching the study site. 
@@ -272,12 +264,12 @@ The device should be fully assembled and the proper sampling regime selected pri
 1.	After recovering the unit, turn the main switch counter-clockwise until the EC EZO LEDs turn off (usually ½ to 1 rotation). Do not turn it any further or you may risk introducing water to the internals.
 2.	Spray the unit down with fresh water if possible. 
 3.	If biofouling has accrued on the device, carefully remove the tape used to protect the case. If tape was not used to prevent biofouling, carefully use a soft bristle brush or plastic paint scraper to remove any fouling on the case. 
-  - For the sensors, use a soft bristle toothbrush or sponge to remove any biofouling. **Do not use a brush on the conductivity probe head. Do not insert anything into the conductivity cell.** Use freshwater and/or canned air to clean sensors.
+  - For the sensors, use a soft bristle toothbrush or sponge to remove any biofouling. **Do not use a brush on the conductivity probe head.** If biofouling in the EC probe sensing area is non-compliant, you can place the probe in a 5% HCl solution and then use cotton swabs to remove obstructions. You can also try using freshwater or canned-air.
 4.	Dry the device.
 5.	Replace all sensor caps.
 6.	The device can be deployed again if the user desires.
   - If the unit is primarily used for profiling, the device is ready to go once the user decides to collect data again. If there is concern that the battery may be low, refer to the Battery Charging Procedure.
-  - If another stationary deployment is planned, the battery will likely need to be charged or replaced. Refer to the Battery Charging Procedure if charging is needed. Refer to the Battery Replacement Procedure if battery replacement is needed. 
+  - If another stationary deployment is planned, the battery will likely need to be charged or replaced. Refer to the Battery Charging Procedure if charging is needed.
 
 ## Battery Charging Procedure
 The Qduino Mini has the ability to charge a single-cell lithium ion battery when connected to a computer or microUSB outlet adapter. The user can flash the FuelGauge sketch (found in examples folder) to the Qduino to have the charge percentage reported to the serial monitor to ensure that the battery is not connected to the charging system for too long. Simply plug in the battery to the Qduino and connect the unit to a computer via microUSB. If already hooked up to the OpenCTD system, it is recommended that the microSD card be removed during charging so as to not record unnecessary data. 
