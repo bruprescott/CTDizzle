@@ -302,7 +302,9 @@ RAWCTD files are comma-seperated. Data will appear in five columns in the order 
 |MM/DD/YYYY|HH:mm:ss|Conductivity (µS/cm)|Temperature (°C)|Pressure (mbar)|
 |:---:|:---:|:---:|:---:|:---:|
 
-![CSVexample](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/CSVExample.png) _Example of data from a RAWCTD file._
+![CSVexample](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/CSVExample.png)
+
+_Example of data from a RAWCTD file. Note that the conductivity values are incorrect due to an improper calibration of the conductivity sensor._
 
 
 
