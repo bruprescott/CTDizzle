@@ -11,6 +11,7 @@ VCC is always 3.3v.
 |MISO|D14 (MISO)|	
 |MOSI|D16 (MOSI)|	
 |SS|D5|	
+
 ![RTC](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/RTC.jpg)
 SQW is not needed unless you want to implement an alarm function.
 
