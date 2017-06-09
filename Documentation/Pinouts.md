@@ -3,7 +3,7 @@
 VCC is always 3.3v.
 
 |DeadOn RTC|Qduino Mini|	
-|:------------:|:------------:|			, ![RTC](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/RTC.jpg)
+|:------------:|:------------:|	
 |GND|GND|	
 |VCC|VCC|	
 |SQW|Not Applicable|
