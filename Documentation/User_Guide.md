@@ -104,8 +104,8 @@ It is necessary to prepare several electronic components and sensors with some p
 Set up the Qduino Mini, Transflash, RTC, and EC EZO on the breadboard. 
 1. Following the pinout list, connect the Transflash and RTC to the Qduino.
   - Install your microSD card and 12mm coin cell. 
-  - Connect the Qduino to your computer. Turn it on and upload the CTDizzle_Mk3.3 code. 
-   - Navigate to File > Open. Open the file named “OpenCTD_Mk3_OpCode”. Select upload.
+  - Connect the Qduino to your computer. Turn it on and upload the operating code. 
+   - Navigate to File > Open. Open the file named “Mk3OpCode”. Select upload.
   - In the serial monitor, you should see Qduino begin to spit out information. There won't be any data because you haven't hooked up the sensors yet!
 	
 2. Connect the temperature and pressure sensors to the Qduino.
@@ -213,6 +213,7 @@ A finished OpenCTD.
 
 
 
+## Predeployment Procedure
 
 
  
@@ -227,16 +228,16 @@ A finished OpenCTD.
 
 ## Deployment Procedure
 The device should be fully assembled and the proper sampling regime selected prior to reaching the study site. 
-1.	Confirm all sensors, plugs, bulkheads, and end caps are tight and secure. 
+1.	Confirm all sensors, plugs, bulkheads, and end caps are secure. 
 2.	Remove any sensor covers on the conductivity, temperature, and pressure sensors.
 3.	Turn the external switch clockwise until it can turn no further. The unit should now turn ON. 
-  - The Atlas Scientific EC EZO LED should begin to alternate between green and cyan, indicating that the conductivity sensor is now sampling. If the EZO remains green, it is not continuously sampling and the deployment should be postponed until the proper code is uploaded. If the EZO is consistently flashing a red LED in between green and cyan, it is possible there is ground fault or communication error in the system and connections should be checked. You may notice that the EZO flashes red a couple times after start-up. This indicates that the EZO is unable to process incoming requests until it has completed its boot sequence.
+  - The Atlas Scientific EC EZO LED should begin to alternate between green and cyan, indicating that the conductivity sensor is now sampling. If the EZO remains green, it is not continuously sampling and the deployment should be postponed until the proper code is uploaded. If the EZO is consistently flashing a red LED in between green and cyan, it is possible there is ground fault or communication error in the system and connections should be checked. 
 4.	If step 3 is satisfied, then you can begin deployment!
-  - If profiling with the unit, it is suggested that it be left in the top few meters of the water column for approximately ten minutes to allow for equilibrium. Once ready to profile, bring the unit to just below the surface, and allow it to descend at a rate around 0.25 m/s (~1 fathom every 10 seconds). The unit is only capable of sampling at a maximum of 1 Hz. 
-  - If planning to leave the unit at a particular site for an extended period of time, it is recommended that the user ensure that the device is properly secured and ON prior to leaving the site. 
+  - If profiling with the unit, it is suggested that it be left in the top few meters of the water column for approximately ten minutes to allow for equilibrium. Once ready to profile, bring the unit to just below the surface, and allow it to descend at a rate around 0.25 m/s (~1 fathom every 10 seconds). The unit is only capable of sampling at a maximum of 1 Hz, so the slower the descent the better. 
+  - If planning to leave the unit at a particular site for an extended period of time, it is recommended that the user ensure that the device is properly secured and **ON** prior to leaving the site. 
 
 ## Recovery Procedure
-1.	After recovering the unit, turn the main switch counter-clockwise until the LEDs turn off (usually ½ to 1 rotation). Do not turn it any further.
+1.	After recovering the unit, turn the main switch counter-clockwise until the EC EZO LEDs turn off (usually ½ to 1 rotation). Do not turn it any further or you may risk introducing water to the internals.
 2.	Spray the unit down with fresh water if possible. 
 3.	If biofouling has accrued on the device, carefully remove the tape used to protect the case. If tape was not used to prevent biofouling, carefully use a soft bristle brush or plastic paint scraper to remove any fouling on the case. 
   - For the sensors, use a soft bristle toothbrush or sponge to remove any biofouling. **Do not use a brush on the conductivity probe head. Do not insert anything into the conductivity cell.** Use freshwater and/or canned air to clean sensors.
