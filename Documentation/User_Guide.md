@@ -142,13 +142,15 @@ _Note: The first line does not show EC because it takes time for the EC EZO to p
 ### Case Construction and Potting
 Once everything checks out and your breadboard tests are successful, you can begin to put the pressure case together.
 
-#### End Cap Prep
-If using a blank end cap, drill two 10mm holes into one of the two. This will be considered the end cap that will be used for the switch and vent. Make sure there is enough space to allow you to tighten the aluminum bulkheads with a wrench. 
+#### End Cap and Flange Prep
+If using a blank end cap, drill two 10mm holes into one of the caps. This will be considered the end cap that will be used for the switch and vent. Make sure there is enough space to allow you to tighten the aluminum bulkheads with a wrench. 
  
 ![Switch and Vent Endcap](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170605_104802_001.jpg)
 _Example of two holes drilled into an end cap._
 
-After you have drilled the holes, clean the end cap and flange with alcohol. Now you can install the aluminum bulkheads that comprise the switch and vent. You'll want to grease up the bulkhead O-ring before installation. Don't forget to tighten them down! Next, install the end cap on the flange. Don't forget to add a greased up O-ring! Tighten all of the screws in a star pattern.
+**Need diagram of sandpaper and flange**
+
+After you have drilled the holes, use a high grit sandpaper to scuff up the inside portion of the end cap and flange. Clean the end cap and flange with alcohol. Now you can install the aluminum bulkheads that comprise the switch and vent. You'll want to grease up the bulkhead O-ring before installation. Don't forget to tighten them down! Next, install the end cap on the flange. Don't forget to add a greased up O-ring! Tighten all of the screws in a star pattern.
 
 ![Endcap + Flange](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170605_151845.jpg)
 _Example of end cap and flange connected with bulkheads installed._
@@ -159,7 +161,11 @@ _Note: It is recommended that you use the potting kit to minimize mess and bubbl
 
 In the other end cap, drill two 10mm holes and one 12mm hole. To increase the internal space for the electrical compenents, it is recommended that you place the 12mm hole as close to the flange wall as possible, while still leaving a little space for epoxy to surround the EC probe. You can connect the end cap to the flange to act as a guide.
 
+**Picture of sensor end cap here**
 
+Use a high grit sandpaper to rough up the end cap and flange. Clean with alcohol. Install the temperature and pressure sensors in the 10mm holes. Next, install the end cap onto the flange. The next part is a little tricky.
+
+Insert the EC probe into the 12mm hole. Allow it to extend through until it is approximately even with the temperature probe height. Reinstall the rubber probe guard to prevent any epoxy or glue entering the sensor area. The probe may not fit perfectly within the hole, so it is recommended you attempt to make it as perpendicular with the end cap as possible, and then add a couple drops of superglue to hold it in place. You can use the acrylic tube as stand. Epoxy this end cap in a fashion similar to the previous end cap. As the EC probe now is a site for leaking, it is recommended that you use plenty of epoxy.
 
 
 
