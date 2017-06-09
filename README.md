@@ -14,7 +14,7 @@ It also houses all of the resources and documentation that may be helpful during
 - Contains the operating and calibration code.
 
 #### Data Processing
-- Contains MATLAB and R scripts that will plot your data.
+- Contains MATLAB and R scripts that will process and plot your data.
 
 #### Documentation
 - Contains the user guide, parts list, pinout guide, and links to additional resources.
