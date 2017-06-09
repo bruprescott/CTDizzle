@@ -129,6 +129,7 @@ In the Arduino IDE, navigate to Tools > Serial Monitor. Immediately, you should 
 _Date (MM/DD/YY) , Time (HH:mm:ss) , Conductivity (uS/cm) , Temperature (C) , Pressure (mbar)_
 
 ![Serial Monitor](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/SerialMonitor.png) 
+
 _Note: The first line does not show EC because it takes time for the EC EZO to process incoming setup commands. This happens every time the unit is power cycled. The provided processing materials will automatically remove this line, but you will need to remove it on your own otherwise._
 
 
