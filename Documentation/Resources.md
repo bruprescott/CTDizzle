@@ -17,6 +17,7 @@ This page will continue to be updated as new resources are discovered.
 - [DeadOn RTC Guide](https://learn.sparkfun.com/tutorials/deadon-rtc-breakout-hookup-guide)
 - [Adafruit Temp and Light Logger](https://github.com/adafruit/Light-and-Temp-logger)
 - [mbed SD Module Example](https://developer.mbed.org/cookbook/SD-Card-File-System)
+- [Atlas-Scientific Cable Cutting Guide](https://www.atlas-scientific.com/_files/_app_notes/how-to-properly-cut-probe-cables.pdf)
 
 ### Literature
 - [SeaBird Appnote 14](http://www.seabird.com/document/an14-1978-practical-salinity-scale)
