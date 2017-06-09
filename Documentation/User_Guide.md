@@ -126,7 +126,12 @@ Set up the Qduino Mini, Transflash, RTC, and EC EZO on the breadboard.
 ### Reading Data in the Serial Monitor
 In the Arduino IDE, navigate to Tools > Serial Monitor. Immediately, you should see a string of numbers separated by commas. The data represents…
 
-_Date (MM/DD/YY) , Time (HH:mm:ss) , Conductivity (uS/cm) , Temperature (C) , Pressure (mbar)
+![Serial Monitor](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/SerialMonitor.png)
+
+
+_Date (MM/DD/YY) , Time (HH:mm:ss) , Conductivity (uS/cm) , Temperature (C) , Pressure (mbar)_
+
+
 
 - The date should be representative of the date that your computer is set to. The time should be close to the time that your computer is set to, but may be behind by about 30 seconds. This is due to upload delay. If your time is drastically off or incoherent, remove the battery and power cycle the system. 
 
