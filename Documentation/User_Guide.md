@@ -306,7 +306,7 @@ After selecting open, another minute will pass by and three windows will pop up.
 
 ![Output](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/PlotterOutput.png)
 
-The application will also create a folder in your C: drive labeled "OpenCTD_Data". It will store the plots and tables you created and name them based on the date and time of the first line of the file. 
+The application will also create a folder in your C: drive labeled "OpenCTD_Data". It will store the plots and tables you created and name them based on the date and time of the first line of the file. For new plots it will create a new folder within OpenCTD_Data and name it based on the date and time. For the individual files, naming goes by Plot Type_MMDDYY-HHmmss.
 
 ![PlotterDirectory](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/DirectoryforPlotter.PNG)
 
