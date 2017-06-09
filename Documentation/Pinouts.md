@@ -2,12 +2,12 @@
 
 VCC is always 3.3v.
 
-|DeadOn RTC|Qduino Mini|	, ![RTC](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/RTC.jpg)
+|DeadOn RTC|Qduino Mini|	
 |:------------:|:------------:|		
 |GND|GND|	
 |VCC|VCC|	
 |SQW|Not Applicable|
-|CLK|D15 (SCLK)|	
+|CLK|D15 (SCLK)|	, ![RTC](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/RTC.jpg)
 |MISO|D14 (MISO)|	
 |MOSI|D16 (MOSI)|	
 |SS|D5|	
