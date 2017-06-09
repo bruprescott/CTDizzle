@@ -101,7 +101,8 @@ It is necessary to prepare several electronic components and sensors with some p
 - The following pictures show the use of JST connectors to allow easy removal of the sensors from the main protoboard. If you are using these connectors, now is a good time to solder to the sensors. Make sure to remember which wires you solder to the JST pins!
 
 ### Breadboard and Testing Setup
-Set up the Qduino Mini, Transflash, RTC, and EC EZO on the breadboard. 
+Set up the Qduino Mini, Transflash, RTC, and EC EZO on the breadboard. **If you change the pinouts in the physical build or the code, it is recommended that you record these changes.**
+
 1. Following the pinout list, connect the Transflash and RTC to the Qduino.
   - Install your microSD card and 12mm coin cell. 
   - Connect the Qduino to your computer. Navigate to File > Open. Open the file named “Mk3OpCode”. Select upload.
@@ -143,7 +144,7 @@ _Note: The first line does not show EC because it takes time for the EC EZO to p
 Once everything checks out and your breadboard tests are successful, you can begin to put the pressure case together.
 
 #### End Cap and Flange Prep
-If using a blank end cap, drill two 10mm holes into one of the caps. This will be considered the end cap that will be used for the switch and vent. Make sure there is enough space to allow you to tighten the aluminum bulkheads with a wrench. 
+If using a blank end cap, drill two 10mm holes into one of the caps. This will be considered the end cap that will be used for the switch and vent. Make sure there is enough space in between the holes to allow you to tighten the aluminum bulkheads with a wrench. 
  
 ![Switch and Vent Endcap](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170605_104802_001.jpg)
 _Example of two holes drilled into an end cap._
@@ -165,77 +166,56 @@ In the other end cap, drill two 10mm holes and one 12mm hole. To increase the in
 
 Use a high grit sandpaper to rough up the end cap and flange. Clean with alcohol. Install the temperature and pressure sensors in the 10mm holes. Next, install the end cap onto the flange. The next part is a little tricky.
 
-Insert the EC probe into the 12mm hole. Allow it to extend through until it is approximately even with the temperature probe height. Reinstall the rubber probe guard to prevent any epoxy or glue entering the sensor area. The probe may not fit perfectly within the hole, so it is recommended you attempt to make it as perpendicular with the end cap as possible, and then add a couple drops of superglue to hold it in place. You can use the acrylic tube as stand. Epoxy this end cap in a fashion similar to the previous end cap. As the EC probe now is a site for leaking, it is recommended that you use plenty of epoxy.
+Insert the EC probe into the 12mm hole. Allow it to extend through until it is approximately even with the temperature probe height. Reinstall the rubber probe guard to prevent any epoxy or glue entering the sensor area. The probe may not fit perfectly within the hole, so it is recommended you attempt to make it as perpendicular with the end cap as possible, and then add a couple drops of superglue to hold it in place. You can use the acrylic tube as stand. Epoxy this end cap in a fashion similar to the previous end cap. As the EC probe now is a site for leaking, it is recommended that you use plenty of epoxy. Allow it to cure for 24 hours.
+
+
+### Protoboard Soldering
+It is recommended that you connect one component to the Qduino at a time and view the output in the serial monitor after each sensor installation. It may be easiest to start with the SD module, then the RTC, Atlas EC EZO, and then the sensors. 
+
+Trim the protoboard so that it will fit within the internal dimensions of the main tube. Align the components as you see fit. Carefully tack a couple pins of each compenent to the protoboard to keep them in place. Cut lengths of solid core wire to bridge between the corresponding pins for each of your boards. This is where the needle hemostats come in handy. Also note that you can attach the matching pins of the RTC and Transflash together. Both of these use Serial Peripheral Interface (SPI) to communicate with the Qduino, but there is enough of a delay between operations that they can use the same pins.
+
+It isn't necessary, but installing a quick disconnect for the sensors helps when you need to reprogram, charge, or pull data from the protoboard. You can solder one half of the 4-pin JST connector to the temperature and pressure sensors and the other half to the Qduino. Make sure you have the correct pin orientation!
+
+Now is the time to decide if you want to cut the EC probe cable. Leaving the BNC connector has a couple advantages. It makes it easier to disconnect from the protoboard and there is no confusion over the probe communication. A downside to this is that there is a lot of excess cable. There is probably room for this excess cable in the internal space, but it may be cramped. 
+
+- If you decide to cut the cable, follow the Atlas-Scientific guide to cable cutting. Recall that Atlas-Scientific will not accept returns of probes with cut capbles. Once cut, solder one half of the 2-pin JST connector to the probe leads, and the other half to the corresponding pins on the EC EZO. 
+
+**Picture of possible protoboard set up here**
+
+#### Switch Bridge Extension
+It is not recommended that you cut the battery cables to install the switch, as this may have an impact on the charging of the battery. Instead, use a JST extension cable to tie the switch into. First, cut the ground line of the extension cable at roughly the midpoint. Solder a switch lead onto each end of the ground line. 
+- Take care when soldering, as the wire will heat up quickly when maintaining contact with the soldering iron. This may result in deformation of the JST connector and you will not be able to use it. 
+
+
+**Picture of JST extension here**
 
 
 
 
-
-
-
-
-
-## Final Soldering
-
-
-
-Step 5: Case Construction and Potting
-Clean each end of the acrylic tube case and aluminum flanges with Kimwipes and isopropyl alcohol. Grease the appropriate O-rings for the flange. Install these O-rings and insert the flanges into the case. Set this setup aside and cover with Kimwipes to prevent dust accumulation.
-
-The aluminum bulkheads of the sensors and blanks easily mar when using unorthodox tools. It is recommended that you use a 14mm wrench or purchase the Blue Robotics wrench tool to tighten and remove them.
-
+**Picture of mess of wires here**
    
 
-At this stage, the user can decide if permanent potting is necessary. If the unit is subjected to conditions that warrant the replacement of sensors, it is recommended that user avoid permanently potting the sensors in place. 
 
-Designate one end cap as the switch and vent end cap and the other the sensor end cap, now referred to as endcap #1 and #2 respectively.  For endcap #1, install two blank plug bulkheads. Remember to grease the O-Rings prior to installation. Use two crescent wrenches to tighten the bulkheads. If you begin to strip the bulkheads, you have probably tightened them enough.
+
+### Final Case Construction
+After you have soldered everything and tested the data output, you can finish constructing the case.
+
+1. Ensure the flanges are clean. Grease the flange O-rings for the sensor end cap and install them.
+2. Install the sensor end cap onto the acrylic tube. 
+3. Sort the wires.
+4. Connect the Qduino to the battery via the JST extension. Ensure that the switch is off or removed. 
+5. Place a desiccant pack in the acrylic tube. 
+6. Connect your sensors to the protoboard. Place the protoboard and battery in the tube. It is recommended that you tape the battery to the protoboard. 
+7. Pack the acrylic tube with some sort of packing material if there is some play in the internal wiring and components. 
+8. Remove the purge plug from the switch and vent end cap. Install the switch and vent end cap on the acrylic tube.
+9. Reinstall the switch and plug. 
+10. Turn on the device and look for the LEDs on the EC EZO. 
+
+
 
  
 
-•	To pot the sensors in place, remove a flange from the case and connect to the end cap with sensors, ensuring the O-Ring is in place and that all six screws are tightened. 
-•	Using sand paper, rough up the aluminum surfaces for the upcoming epoxy step. Place the flange+sensor endcap vertical so that the sensors are pointed down. 
-•	Fill with Loctite 2-Ton Marine Epoxy up to the top of the bulkhead nuts. 
-•	Allow to cure overnight.
-•	The pressure and temperature sensor wires are exposed in the bulkheads. The user can decide to fix these in place with potting compound.
-•	After curing overnight, ensure that all seals seem appropriate. If there is concern of an improper seal, do not hesitate to add more potting compound. 
-
-Step 6: Final Soldering
-It is recommended that you connect one component to the Qduino at a time and test Qduino output after each component installation. It may be easiest to start with the SD module, then the RTC, Atlas EC EZO, and then the sensors. 
-
-Align the components on the protoboard as you see fit. Carefully tack a couple pins of each component to the protoboard to keep them in place. Cut lengths of solid core wire to bridge the corresponding pins for each of your boards. If you cut the EC probe cable, the wires do not have a designated PRB location and can be soldered to either PRB so long as the other one is soldered to the other PRB. You can solder the corresponding leads of the temperature and pressure sensors together prior to soldering to the Qduino. If using lead-free solder, take care with your placement of the soldering iron, as lead-free solder typically requires higher heat to flow.
-
-
- 
-
-
- 
- 
-
-Cut the ground line of the JST extension cable at the approximate midpoint. Solder a switch lead to both ends. 
-
- 
-
-
-
-
-
-
-Your final setup should look similar to this.
-
- 
-
-
-After everything is soldered and the unit turns on and collects data appropriately, you can finish constructing the case. 
-•	Grease the end cap O-Rings.
-•	Install the sensor end cap first. Tighten the M2 screws in a star pattern.
-•	Connect the switch leads to the switch on the other end cap. Turn the unit on and off with the switch to ensure it works.
-•	Prior to performing the final seal, pull the microSD card and ensure that it has been properly recording data. If so, delete the test files.
-•	Install the switch and vent end cap. Tighten the M2 screws in a star pattern.
-•	If desired, tape the unit with plumber’s tape to make cleaning easier in the future.
- 
- 
-
-A finished OpenCTD.
+**Picture of a finished OpenCTD here**
 
 
 
