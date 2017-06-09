@@ -295,6 +295,20 @@ If looking to plot the data on your own, it is important to realize that the pre
 
 Another option is to simply assume that atmospheric pressure is 1000 mbar. Doing this may force your depth calculations to be +/- 20cm off of the actual depth.
 
+### Using the MATLAB Plotter
+If you have access to MATLAB, simply run the script. If you do not have access to MATLAB, you can download the CTDPlotter application. It is a free MATLAB based application that only requires you to install a free MCR runtime. Both methods will give you the following results. It should be noted that the plotter is currently designed for use by fishermen in the U.S. Temperature has been converted to Fahrenheit and depth has been changed to fathoms. 
+
+If you run the application, it will take a minute or two for a search window to pop up. Here you can select the file you are interested in plotting. 
+
+![Pop Up](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/PlotterPopUp.png)
+
+After selecting open, another minute will pass by and three windows will pop up. One window is a representation of the data as a profile, another window shows the data over time, and the last is a table of the processed data.
+
+![Output](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/PlotterOutput.png)
+
+The application will also create a folder in your C: drive labeled "OpenCTD_Data". It will store the plots and tables you created and name them based on the date and time of the first line of the file. 
+
+![PlotterDirectory](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/DirectoryforPlotter.PNG)
 
 
 
