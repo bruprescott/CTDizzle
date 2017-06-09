@@ -291,8 +291,9 @@ RAWCTD files are comma-seperated. Data will appear in five columns in the order 
 
 _Example of data from a RAWCTD file. Note that the conductivity values are incorrect due to an improper calibration of the conductivity sensor._
 
+If looking to plot the data on your own, it is important to realize that the pressure measurements are representative of absolute pressure, which includes the atmospheric pressure component. To convert to gauge pressure, simply subtract atmospheric pressure from the absolute pressure. This can be done by assuming the first pressure value recorded is the atmospheric pressure (if you turn the unit on above the water. When you subtract this value, you may get a few negative pressure values in the beginning and end of your file. You will need to remove those lines from the file.
 
-
+Another option is to simply assume that atmospheric pressure is 1000 mbar. Doing this may force your depth calculations to be +/- 20cm off of the actual depth.
 
 
 
