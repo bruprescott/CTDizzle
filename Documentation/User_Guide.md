@@ -246,7 +246,7 @@ A finished OpenCTD.
 
 
 ## Predeployment Procedure
-How you plan on deploying your OpenCTD plays a role in the sampling regime of the device. 
+Deployment plan of your OpenCTD plays a role in the sampling regime.
 - If you plan to take profiles, it should be set to sample as frequently as possible, which at this point is roughly 1 Hz.
 - If you plan to leave the OpenCTD in the same spot for several hours or days, it should be set to sample every minute to few minutes. Doing this will increase the battery life. Another way to increase the battery life is by turning off the EC EZO LEDs. Instructions on how to do this can be found in the EZ EZO Datasheet (in the Resources page). 
 
