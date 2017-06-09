@@ -7,6 +7,8 @@
 #Feel free to alter it as you see fit.
 #For questions or comments, contact Ian Black (blackia@oregonstate.edu).
 
+#This assumes atmospheric pressure is 1000 mbar. Will change in the future.
+
 setwd('C:/OpenCTD_Data') #Set working directory to user-created folder in C drive named "OpenCTD_Data". You can still search for the file elsewhere through a search window per the script.
 originalcolumns <- c("Date","Time","Conductivity","Temperature","Pressure") #Establish column names for incoming file read.
 data <- read.csv(file.choose(),header=FALSE,skip=10,col.names=originalcolumns,stringsAsFactors=FALSE)   #Read user transferred datalog.txt from the user-defined working directory.
