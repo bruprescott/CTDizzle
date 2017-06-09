@@ -38,6 +38,8 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |Masking Tape|
 |Sandpaper|
 |Black Tape|
+|70% Isopropyl Alcohol|
+|Kimwipes|
 
 
 #### Tools List
@@ -50,7 +52,7 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |Breadboard|
 |Jumper Wires|
 |Wire Stripper|
-|Drill|
+|Drill or Mill|
 |Drillbit - 10mm|Size for Blue Robotics bulkheads|
 |Drillbit - 12mm|Size for Atlas Scientific EC Probe|
 |microUSB Cable|Data-capable Android phone charger works too.|
