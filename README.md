@@ -8,6 +8,13 @@ This repository contains the code and build guide used for the CTDizzle Mk3.
 It also houses all of the resources and documentation that may be helpful during the build process.
 
 
+### Specifications
+* Max Depth: 130m
+* EC Accuracy: <1% after calibration
+* Temperature Accuracy: +/- 0.1 C
+* Pressure Accuracy: +/- 100 mbar
+
+
 ### Directory Structure
 
 #### Arduino Files
