@@ -10,7 +10,7 @@ Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providin
 
 
 
-### Before You Get Started
+## Before You Get Started
 
 There are likely cheaper and/or better sensor options out there. This guide only works for parts listed in the Parts_List.
 It is your responsibility to ensure that all parts are compatible with your setup. This build guide also assumes that you are running everything off of Windows. 
