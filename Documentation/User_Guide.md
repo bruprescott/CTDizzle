@@ -104,8 +104,8 @@ It is necessary to prepare several electronic components and sensors with some p
 Set up the Qduino Mini, Transflash, RTC, and EC EZO on the breadboard. 
 1. Following the pinout list, connect the Transflash and RTC to the Qduino.
   - Install your microSD card and 12mm coin cell. 
-  - Connect the Qduino to your computer. Turn it on and upload the operating code. 
-   * Navigate to File > Open. Open the file named “Mk3OpCode”. Select upload.
+  - Connect the Qduino to your computer. Navigate to File > Open. Open the file named “Mk3OpCode”. Select upload.
+  - Navigate to Tools > Serial Monitor.
   - In the serial monitor, you should see Qduino begin to spit out information. There won't be any data because you haven't hooked up the sensors yet!
 	
 2. Connect the temperature and pressure sensors to the Qduino.
@@ -116,15 +116,8 @@ Set up the Qduino Mini, Transflash, RTC, and EC EZO on the breadboard.
   - Once connected, fire up the Qduino. You should see an EC value of 0.00 when the probe is in open air. 
   - You may notice that on a power cycle, the first reported line will not show an EC value. This is because the EC EZO is still warming up.
 
-4. Once you have all the sensors and parts connected, ensure that the data output appears reasonable. The date and time should be representative of the current date and time. EC should be zero, temperature should be representative of the ambient temperature of the room you are in, and pressure should be ~1013 if you are near sea level. 
-  - If date and time are not accurate, check your pinouts. You may also need to ensure the autotime function is uncommented in the operating code. Don't forget to comment out the rtc.update line and reupload, otherwise your RTC will reset time on each power cycle.
-
-5. Now is a good time to calibrate the conductivity sensor. Follow along with the calibration procedure found in Documentation (in progress).
-  - It is recommended that you do not cut the probe cable until after calibration. Cutting the cable prior to testing the probe will void any warranty and return policy that Atlas Scientific may have. 
-
-
-### Reading Data in the Serial Monitor
-In the Arduino IDE, navigate to Tools > Serial Monitor. Immediately, you should see a string of numbers separated by commas. The data represents…
+4. Once you have all the sensors and parts connected, ensure that the data output appears reasonable.
+	In the serial monitor, it will take the form of...
 
 _Date (MM/DD/YY) , Time (HH:mm:ss) , Conductivity (uS/cm) , Temperature (C) , Pressure (mbar)_
 
@@ -132,22 +125,49 @@ _Date (MM/DD/YY) , Time (HH:mm:ss) , Conductivity (uS/cm) , Temperature (C) , Pr
 
 _Note: The first line does not show EC because it takes time for the EC EZO to process incoming setup commands. This happens every time the unit is power cycled. The provided processing materials will automatically remove this line, but you will need to remove it on your own otherwise._
 
-
-
 - The date should be representative of the date that your computer is set to. The time should be close to the time that your computer is set to, but may be behind by about 30 seconds. This is due to upload delay. If your time is drastically off or incoherent, remove the battery and power cycle the system. 
 
-- The conductivity value should be zero or near zero if already calibrated. If it is not present in the output, try switching the Tx and Rx lines. Alternatively, you can change the pins in the code. Note in the above image, the EC is missing in the first line. It takes time for the EC circuit to initialize and thus is missing for the first sample.
+- The conductivity value should be zero. If it is not present in the output, try switching the Tx and Rx lines. Alternatively, you can change the pins in the code. Note in the above image, the EC is missing in the first line. It takes time for the EC circuit to initialize and thus is missing for the first sample.
 
 - The temperature should be representative of the ambient temperature of the room you are performing the test in. It may be handy to have a thermometer nearby to check this. The temperature probe is factory calibrated, but if further calibration is needed, a two-point calibration is recommended.
 
 - The pressure sensor should be spitting out values between 1000 and 1030 depending on your elevation. If you are near sea level, the value should be within a few millibars of 1013. The pressure sensor is factory calibrated, but if values appear to be drastically off (e.g. 86000 or -6000), first check your pinout connections. If still incorrect, contact the manufacturer. 
 
+5. Now is a good time to calibrate the conductivity sensor. Follow along with the calibration procedure found in Documentation (in progress).
+  - It is recommended that you do not cut the probe cable until after calibration, in the event that there may be a manufactuer defect. Cutting the cable prior to testing the probe will void any warranty and return policy that Atlas Scientific may have. 
+  - A two point calibration is highly encouraged. Conductivity is highly dependent on temperature, so it is recommended that you calibrate the probe in a temperature controlled area (such as a cafeteria refrigerator or cold storage room).
+  - After you have confirmed proper calibration of the probe, it should not need to be calibrated for another year. You can now cut the cable if you do not plan to implement the BNC connectors into your design. 
 
-
-If the output seems reasonable, the EC probe can now be calibrated. There are two methods for calibrating the conductivity probe of the unit. The first method is a single point calibration, which is discouraged. The second method is a two point calibration and provides much more accurate data. For best results, it is recommended that you calibrate the probe in a temperature controlled area as conductivity readings are highly dependent on temperature. Refer to the EC_Cal Procedure for a two-point calibration method. Once calibrated, cables can be cut and soldered as necessary.
 
 ### Case Construction and Potting
-Once everything checks out and your breadboard tests are successful, you can begin to put the pressure case togethe
+Once everything checks out and your breadboard tests are successful, you can begin to put the pressure case together.
+
+#### End Cap Prep
+If using a blank end cap, drill two 10mm holes into one of the two. This will be considered the end cap that will be used for the switch and vent. Make sure there is enough space to allow you to tighten the aluminum bulkheads with a wrench. 
+ 
+![Switch and Vent Endcap](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170605_104802_001.jpg)
+_Example of two holes drilled into an end cap._
+
+After you have drilled the holes, clean the end cap and flange with alcohol. Now you can install the aluminum bulkheads that comprise the switch and vent. You'll want to grease up the bulkhead O-ring before installation. Don't forget to tighten them down! Next, install the end cap on the flange. Don't forget to add a greased up O-ring! Tighten all of the screws in a star pattern.
+
+![Endcap + Flange](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170605_151845.jpg)
+_Example of end cap and flange connected with bulkheads installed._
+
+You can also epoxy this end cap if you want an additional seal. Here is an example. It is recommended that you wrap the outside of the flange with masking tape to prevent debris and epoxy from entering the O-ring grooves. Any slight deviation in the O-ring surface will increase the risk of leakage.
+![Epoxy Endcap](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170605_203238.jpg)
+_Note: It is recommended that you use the potting kit to minimize mess and bubbling. You will notice that there is some slight bubbling in the picture above. To get rid of bubble after placing the epoxy, you can put the end cap in a vacuum chamber._
+
+In the other end cap, drill two 10mm holes and one 12mm hole. To increase the internal space for the electrical compenents, it is recommended that you place the 12mm hole as close to the flange wall as possible, while still leaving a little space for epoxy to surround the EC probe. You can connect the end cap to the flange to act as a guide.
+
+
+
+
+
+
+
+
+
+
 
 ## Final Soldering
 
