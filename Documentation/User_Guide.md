@@ -269,20 +269,21 @@ The device should be fully assembled and the proper sampling regime selected pri
 5.	Replace all sensor caps.
 6.	The device can be deployed again if the user desires.
   - If the unit is primarily used for profiling, the device is ready to go once the user decides to collect data again. If there is concern that the battery may be low, refer to the Battery Charging Procedure.
-  - If another stationary deployment is planned, the battery will likely need to be charged or replaced. Refer to the Battery Charging Procedure if charging is needed.
+  - If another stationary deployment is planned, the battery will likely need to be charged or replaced. This requires the user to open up the device. 
 
 ## Battery Charging Procedure
-The Qduino Mini has the ability to charge a single-cell lithium ion battery when connected to a computer or microUSB outlet adapter. The user can flash the FuelGauge sketch (found in examples folder) to the Qduino to have the charge percentage reported to the serial monitor to ensure that the battery is not connected to the charging system for too long. Simply plug in the battery to the Qduino and connect the unit to a computer via microUSB. If already hooked up to the OpenCTD system, it is recommended that the microSD card be removed during charging so as to not record unnecessary data. 
+The Qduino Mini has the ability to charge a single-cell lithium ion battery when connected to a computer or microUSB outlet adapter. The user can flash the Qduino FuelGauge sketch (found in Arduino IDE examples folder) to the Qduino to have the charge percentage reported to the serial monitor to ensure that the battery is not connected to the charging system for too long. Simply plug in the battery to the Qduino and connect the unit to a computer via microUSB. Don't forget to remove the SD card, so as to not record any unnecessary data.
 
-By default, the Qduino charges batters at 100 mA. To increase the charge rate to 500 mA, you can solder the SJ1 pad on the backside of the Qduino.
+By default, the Qduino charges batteries at 100 mA. To increase the charge rate to 500 mA, you can solder the SJ1 pad on the backside of the Qduino.
 
-The length of time a unit can be deployed is ultimately restricted by the battery used. Currently, a 3.7V 6000mAh LiPo will run the unit for approximately 160 hours. Battery life can be extended by turning off the LEDs on the EC EZO and the Qduino Mini. 
+The length of time a unit can be deployed is ultimately restricted by the battery used. Currently, a 3.7V 6000mAh LiPo will run the unit for approximately 160 hours. Battery life can be extended by turning off the LEDs on the EC EZO or decreasing sampling frequency. 
 
 
 ## Data Download and Analysis
 
 ### Accessing and Plotting the Data
-Currently, the user is required to open the device to access the data. This is done by removing the switch and vent endcap and removing the microSD card. Take care when removing the end cap, as it is important to keep the O-rings clean. **Make sure the device is dry before continuing.**
+Currently, the user is required to open the device to access the data. **Make sure the device is dry before continuing.**
+This is done by removing the switch and vent endcap and removing the microSD card. Take care when removing the end cap, as it is important to keep the O-rings clean. 
 
 1. Connect the microSD card to your computer using an adapter.
 2. Transfer the RAWCTD files you are interested in to your computer. It may be necessary to open these to check for dates and times.
@@ -298,7 +299,12 @@ Currently, the user is required to open the device to access the data. This is d
 ### Reading Raw Data
 RAWCTD files are comma-seperated. Data will appear in five columns in the order of...
 
-_MM/DD/YYYY , HH:mm:ss , Conductivity (µS/cm) , Temperature (°C) , Pressure (mbar)
+|MM/DD/YYYY|HH:mm:ss|Conductivity (µS/cm)|Temperature (°C)|Pressure (mbar)|
+|:---:|:---:|:---:|:---:|:---:|
+
+![CSVexample](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/CSVExample.png) _Example of data from a RAWCTD file._
+
+
 
 
 
