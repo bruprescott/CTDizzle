@@ -56,7 +56,7 @@ Several libraries are needed to allow the OpenCTD operating code to work. These 
 |Wire|MS5837|
 |SD|SparkFunDS3234RTC|
 
-The Qduino library is automatically made available through Step 1. 
+The Qduino library is automatically made available through the previous step.
 
 ##### TSYS01 Temperature Sensor Library
 The temperature sensor requires the TSYS01 library. To access the library:
@@ -92,7 +92,7 @@ The DeadOn RTC requires the SparkFunDS3234RTC library. To access the library:
 ### Board Prep
 It is necessary to prepare several electronic components and sensors with some preliminary soldering. 
 - Solder breakaway header strips to boards that require them. (Qduino, Transflash, RTC)
-- It is recommended you keep the BNC connectors on the EC kit for testing and calibration. If you think you might want to shorten the conductivity probe cable, you can do that later. Make sure you enough though!
+- It is recommended you keep the BNC connectors on the EC kit for testing and calibration. If you think you might want to shorten the conductivity probe cable, you can do that later. Make sure you have enough though!
 - If you think you might not use the DF13 connects on the temperature and pressure sensors, now is a good time to cut them off. Carefully strip away ~1cm of insulation. Tin the ends to prevent stray wires.
 - The following pictures show the use of JST connectors to allow easy removal of the sensors from the main protoboard. If you are using these connectors, now is a good time to solder to the sensors. Make sure to remember which wires you solder to the JST pins!
 
