@@ -105,19 +105,19 @@ Set up the Qduino Mini, Transflash, RTC, and EC EZO on the breadboard.
 1. Following the pinout list, connect the Transflash and RTC to the Qduino.
   - Install your microSD card and 12mm coin cell. 
   - Connect the Qduino to your computer. Turn it on and upload the operating code. 
-   - Navigate to File > Open. Open the file named “Mk3OpCode”. Select upload.
+   * Navigate to File > Open. Open the file named “Mk3OpCode”. Select upload.
   - In the serial monitor, you should see Qduino begin to spit out information. There won't be any data because you haven't hooked up the sensors yet!
 	
 2. Connect the temperature and pressure sensors to the Qduino.
   - It is okay to solder the green wires together (same goes for the white wires). Each device has a unique address that allows the Qduino to differentiate between the two.
   - Fire up the Qduino again and check the output. You should now see temperature and pressure in the serial monitor. 
   
-3. Connect the EC probe to the EC EZO, then the EC EZO to the Qduino.
+3. Connect the EC probe to the EC EZO, then the EC EZO to the Qduino. (Using the BNC connector.)
   - Once connected, fire up the Qduino. You should see an EC value of 0.00 when the probe is in open air. 
-  - You may notice that on a power cycle, the first reported line will not show an EC value. This is because the EC EZO is still warming up. You will need to clean you data.
+  - You may notice that on a power cycle, the first reported line will not show an EC value. This is because the EC EZO is still warming up.
 
 4. Once you have all the sensors and parts connected, ensure that the data output appears reasonable. The date and time should be representative of the current date and time. EC should be zero, temperature should be representative of the ambient temperature of the room you are in, and pressure should be ~1013 if you are near sea level. 
-  - If date and time are not accurate, check your pinouts. You may also need to ensure the autotime function is uncommented in the operating code. 
+  - If date and time are not accurate, check your pinouts. You may also need to ensure the autotime function is uncommented in the operating code. Don't forget to comment out the rtc.update line and reupload, otherwise your RTC will reset time on each power cycle.
 
 5. Now is a good time to calibrate the conductivity sensor. Follow along with the calibration procedure found in Documentation (in progress).
   - It is recommended that you do not cut the probe cable until after calibration. Cutting the cable prior to testing the probe will void any warranty and return policy that Atlas Scientific may have. 
