@@ -1,5 +1,4 @@
-This will be updated as new resources are discovered.
-
+This page will continue to be updated as new resources are discovered.
 
 
 ### Datasheets and Part Documentation
