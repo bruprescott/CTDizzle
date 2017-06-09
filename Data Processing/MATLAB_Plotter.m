@@ -6,6 +6,8 @@
 %Feel free to modify this code as you see fit.
 %Please contact Ian Black (blackia@oregonstate.edu) with any questions, comments, or concerns.
 
+%This assumes atmospheric pressure is 1000 mbar. Will change in the future.
+
 %To change units of values, look in equations.
 
 [filename, pathname] = uigetfile({'*.csv';'*.txt'},'Select OpenCTD Data'); %Open a search window.
