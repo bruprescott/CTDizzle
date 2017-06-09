@@ -2,7 +2,7 @@
 
 VCC is always 3.3v.
 
-|DeadOn RTC|Qduino Mini|	
+|DeadOn RTC|Qduino Mini|	, ![RTC](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/RTC.jpg)
 |:------------:|:------------:|		
 |GND|GND|	
 |VCC|VCC|	
@@ -12,7 +12,6 @@ VCC is always 3.3v.
 |MOSI|D16 (MOSI)|	
 |SS|D5|	
 
-![RTC](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/RTC.jpg)
 SQW is not needed unless you want to implement an alarm function.
 
 
