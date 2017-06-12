@@ -1,6 +1,6 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
-1. [Introduction](Documentation/User_Guide.md#Introduction)
+1. [Introduction](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/User_Guide.md#Introduction)
 2. Build Instructions
 	- Software Setup
 		- Setting Up the Arduino IDE
