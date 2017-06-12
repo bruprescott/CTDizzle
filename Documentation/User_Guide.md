@@ -187,7 +187,7 @@ Now is the time to decide if you want to cut the EC probe cable. Leaving the BNC
 
 **Picture of possible protoboard set up here**
 
-#### Switch Bridge Extension
+#### Switch Cable Extension
 It is not recommended that you cut the battery cables to install the switch, as this may have an impact on the charging of the battery. Instead, use a JST extension cable to tie the switch into. First, cut the ground line of the extension cable at roughly the midpoint. Solder a switch lead onto each end of the ground line. 
 - Take care when soldering, as the wire will heat up quickly when maintaining contact with the soldering iron. This may result in deformation of the JST connector and you will not be able to use it. 
 
