@@ -1,25 +1,25 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
-Introduction
-Build Instructions
-	Software Setup
-		Setting Up the Arduino IDE
-		Setting Up the Qduino Mini
-		Formatting the SD Card
-		Setting up the Required Libraries
-	Board Preparation
-	Breadboard and Testing Setup
-		Calibrating the EC EZO
-	Case Construction and Potting
-		End Cap and Flange Preparation
-	Protoboard Soldering
-		Switch Cable Extension 
-Pre-deployment Procedure
-Deployment Procedure
-Recovery Procedure
-Battery Charging Procedure
-Data Download and Analysis
-Using the MATLAB Plotter
+1. Introduction
+2. Build Instructions
+	- Software Setup
+		- Setting Up the Arduino IDE
+		- Setting Up the Qduino Mini
+		- Formatting the SD Card
+		- Setting up the Required Libraries
+	- Board Preparation
+	- Breadboard and Testing Setup
+		- Calibrating the EC EZO
+	- Case Construction and Potting
+		- End Cap and Flange Preparation
+	- Protoboard Soldering
+		- Switch Cable Extension 
+3. Pre-deployment Procedure
+4. Deployment Procedure
+5. Recovery Procedure
+6. Battery Charging Procedure
+7. Data Download and Analysis
+8. Using the MATLAB Plotter
 	
 ## Introduction
 Oceanographic equipment is often expensive and inaccessible for students and citizen oceanographers. The OpenCTD allows individuals to collect conductivity, temperature, and depth data with a cheap and easy-to-build device. It is still being refined for use in scientific research, but it will still provide you with information that can be used in an education setting.
