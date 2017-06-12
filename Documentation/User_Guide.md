@@ -1,10 +1,31 @@
-# WORK IN PROGRESS 
+# USER GUIDE (WORK IN PROGRESS) 
+
+Introduction
+Build Instructions
+	Software Setup
+		Setting Up the Arduino IDE
+		Setting Up the Qduino Mini
+		Formatting the SD Card
+		Setting up the Required Libraries
+	Board Preparation
+	Breadboard and Testing Setup
+		Calibrating the EC EZO
+	Case Construction and Potting
+		End Cap and Flange Preparation
+	Protoboard Soldering
+		Switch Cable Extension 
+Pre-deployment Procedure
+Deployment Procedure
+Recovery Procedure
+Battery Charging Procedure
+Data Download and Analysis
+Using the MATLAB Plotter
 	
 ## Introduction
-Oceanographic equipment is often expensive and inaccessible for students and citizen oceanographers. The OpenCTD allows individuals to collect conductivity, temperature, and depth data with a cheap and easy-to-build device. It isn’t suitable for scientific research yet, but that doesn’t mean it won’t provide you with information about the ocean! 
+Oceanographic equipment is often expensive and inaccessible for students and citizen oceanographers. The OpenCTD allows individuals to collect conductivity, temperature, and depth data with a cheap and easy-to-build device. It is still being refined for use in scientific research, but it will still provide you with information that can be used in an education setting.
 
 Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD) if you want to build a lower cost device.
-Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the framework for the OpenCTD. 
+Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the initial framework for the OpenCTD. 
 
 ![Original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/ctds.jpg)
 _Examples of the original OpenCTD._
@@ -23,7 +44,7 @@ It is your responsibility to ensure that all parts are compatible with your setu
 
 ## Build Instructions
 
-### Setup
+### Software Setup
 #### Setting Up the Arduino IDE
 The Arduino Integrated Development Environment (IDE) is simple to use. It is recommended that the user maintain the default directories that the Arduino IDE download wizard creates. To install Arduino…
 
