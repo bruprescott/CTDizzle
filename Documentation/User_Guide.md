@@ -12,7 +12,7 @@
 		- Calibrating the EC EZO
 	- Case Construction and Potting
 		- End Cap and Flange Preparation
-	- Protoboard Soldering
+	- [Protoboard Soldering](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/User_Guide.md#L198)
 		- Switch Cable Extension 
 3. Pre-deployment Procedure
 4. Deployment Procedure
