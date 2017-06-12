@@ -1,6 +1,6 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
-1. [Introduction](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/User_Guide.md#L24)
+1. [Introduction](#L24)
 2. Build Instructions
 	- Software Setup
 		- Setting Up the Arduino IDE
@@ -12,12 +12,12 @@
 		- Calibrating the EC EZO
 	- Case Construction and Potting
 		- End Cap and Flange Preparation
-	- [Protoboard Soldering](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/User_Guide.md#L198)
+	- Protoboard Soldering
 		- Switch Cable Extension 
 3. Pre-deployment Procedure
 4. Deployment Procedure
 5. Recovery Procedure
-6. Battery Charging Procedure
+6. Battery Charging Procedurey
 7. Data Download and Analysis
 8. Using the MATLAB Plotter
 	
