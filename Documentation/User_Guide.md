@@ -1,27 +1,27 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
-1. [Introduction](#introduction)
-	- [Specifications](#specifications)
-	- [Before You Get Started](#before-you-get-started)
-2. [Build Instructions](#build-instructions)
-	- [Software Setup](#software-setup)
-		- Setting Up the Arduino IDE
-		- Setting Up the Qduino Mini
-		- Formatting the SD Card
-		- Setting up the Required Libraries
-	- Board Preparation
-	- Breadboard and Testing Setup
-		- Calibrating the EC EZO
-	- Case Construction and Potting
-		- End Cap and Flange Preparation
-	- Protoboard Soldering
-		- Switch Cable Extension 
-3. Pre-deployment Procedure
-4. Deployment Procedure
-5. Recovery Procedure
-6. Battery Charging Procedurey
-7. Data Download and Analysis
-8. Using the MATLAB Plotter
+1. [Introduction]
+	- [Specifications]
+	- [Before You Get Started]
+2. [Build Instructions]
+	- [Software Setup]
+		- [Setting Up the Arduino IDE]
+		- [Setting Up the Qduino Mini]
+		- [Formatting the SD Card]
+		- [Setting up the Required Libraries]
+	- [Board Preparation]
+	- [Breadboard and Testing Setup]
+		- [Calibrating the EC EZO]
+	- [Case Construction and Potting]
+		- [End Cap and Flange Preparation]
+	- [Protoboard Soldering]
+		- [Switch Cable Extension] 
+3. [Pre-deployment Procedure]
+4. [Deployment Procedure]
+5. [Recovery Procedure]
+6. [Battery Charging Procedure]
+7. [Data Download and Analysis]
+8. [Using the MATLAB Plotter]
 	
 ## Introduction
 
