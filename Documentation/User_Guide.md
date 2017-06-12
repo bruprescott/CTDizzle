@@ -1,6 +1,8 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
 1. [Introduction](#introduction)
+	- [Specifications](#specifications)
+	- [Before You Get Started](#before-you-get-started)
 2. [Build Instructions](#build-instructions)
 	- [Software Setup](#software-setup)
 		- Setting Up the Arduino IDE
@@ -34,10 +36,14 @@ _Examples of the original OpenCTD._
 ![CTDizzle](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170517_185546.jpg)
 _The CTDizzle Mk3_
 
+### Specifications
+* Max Depth: 130m
+* EC Accuracy: <1% after calibration
+* Temperature Accuracy: +/- 0.1 C
+* Pressure Accuracy: +/- 100 mbar
 
 
-
-## Before You Get Started
+### Before You Get Started
 
 There are likely cheaper and/or better sensor options out there. This guide only works for parts listed in the Parts_List.
 It is your responsibility to ensure that all parts are compatible with your setup. This build guide also assumes that you are running everything off of Windows. 
