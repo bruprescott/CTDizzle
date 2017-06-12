@@ -1,8 +1,8 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
-1. [Introduction](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/User_Guide.md#Introduction)
+1. [Introduction](#introduction)
 2. [Build Instructions](#build-instructions)
-	- Software Setup
+	- [Software Setup](#software-setup)
 		- Setting Up the Arduino IDE
 		- Setting Up the Qduino Mini
 		- Formatting the SD Card
