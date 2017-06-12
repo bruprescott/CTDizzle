@@ -1,7 +1,7 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
 1. [Introduction](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/User_Guide.md#Introduction)
-2. Build Instructions
+2. [Build Instructions](#build-instructions)
 	- Software Setup
 		- Setting Up the Arduino IDE
 		- Setting Up the Qduino Mini
@@ -21,7 +21,8 @@
 7. Data Download and Analysis
 8. Using the MATLAB Plotter
 	
-Introduction
+## Introduction
+
 Oceanographic equipment is often expensive and inaccessible for students and citizen oceanographers. The OpenCTD allows individuals to collect conductivity, temperature, and depth data with a cheap and easy-to-build device. It is still being refined for use in scientific research, but it will still provide you with information that can be used in an education setting.
 
 Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD) if you want to build a lower cost device.
