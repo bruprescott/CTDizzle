@@ -1,14 +1,15 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
 1. [Introduction]
-	- [Specifications]
 	- [Before You Get Started]
-2. [Build Instructions]
+2. [CTDizzle Mk3]
+	- [Specifications]
+3. [Build Instructions]
 	- [Software Setup]
-		- [Setting Up the Arduino IDE]
-		- [Setting Up the Qduino Mini]
-		- [Formatting the SD Card]
-		- [Setting up the Required Libraries]
+		- [Setting Up the Arduino IDE](#setting-up-the-arduino-IDE)
+		- [Setting Up the Qduino Mini](#setting-up-the-qduino-mini)
+		- [Formatting the SD Card](#formatting-the-sd-card)
+		- [Setting Up the Required Libraries](#setting-up-the-required-libraries)
 	- [Board Preparation]
 	- [Breadboard and Testing Setup]
 		- [Calibrating the EC EZO]
@@ -16,16 +17,16 @@
 		- [End Cap and Flange Preparation]
 	- [Protoboard Soldering]
 		- [Switch Cable Extension] 
-3. [Pre-deployment Procedure]
-4. [Deployment Procedure]
-5. [Recovery Procedure]
-6. [Battery Charging Procedure]
-7. [Data Download and Analysis]
-8. [Using the MATLAB Plotter]
+4. [Pre-deployment Procedure]
+5. [Deployment Procedure]
+6. [Recovery Procedure]
+7. [Battery Charging Procedure]
+8. [Data Download and Analysis]
+9. [Using the MATLAB Plotter]
 	
 ## Introduction
 
-Oceanographic equipment is often expensive and inaccessible for students and citizen oceanographers. The OpenCTD allows individuals to collect conductivity, temperature, and depth data with a cheap and easy-to-build device. It is still being refined for use in scientific research, but it will still provide you with information that can be used in an education setting.
+Oceanographic equipment is often expensive and inaccessible for students and citizen oceanographers. The OpenCTD helps reduce costs and allows individuals to collect conductivity, temperature, and depth data with an easy-to-build device. It is still being refined for use in scientific research, but in its current state it will give you data suitable for learning. 
 
 Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD) if you want to build a lower cost device.
 Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the initial framework for the OpenCTD. 
@@ -33,21 +34,25 @@ Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providin
 ![Original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/ctds.jpg)
 _Examples of the original OpenCTD._
 
+### Before You Get Started
+
+There are likely cheaper and/or better sensor options out there. This guide only works for parts listed in the Parts_List.
+It is your responsibility to ensure that all parts are compatible with your setup. This build guide also assumes that you are running everything off of Windows. 
+
+
+## The CTDizzle Mk3
+
 ![CTDizzle](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170517_185546.jpg)
 _The CTDizzle Mk3_
+
+This is the third rendition of the CTDizzle. Its construction is a little different than the original CTD, as it uses some different sensor and parts. It costs about 600 USD to construct and doesn't require any tools that can't be easily found at your local hardware store. If you have all the parts and tools on hand, you should be able to build it in a weekend!
 
 ### Specifications
 * Max Depth: 130m
 * EC Accuracy: <1% after calibration
 * Temperature Accuracy: +/- 0.1 C
 * Pressure Accuracy: +/- 100 mbar
-
-
-### Before You Get Started
-
-There are likely cheaper and/or better sensor options out there. This guide only works for parts listed in the Parts_List.
-It is your responsibility to ensure that all parts are compatible with your setup. This build guide also assumes that you are running everything off of Windows. 
-
+* Max Sampling Rate: 1 Hz
 
 ## Build Instructions
 
@@ -60,31 +65,37 @@ The Arduino Integrated Development Environment (IDE) is simple to use. It is rec
 3. Follow the installation wizard.
 4. Set up shortcuts as desired.
 
+
 #### Setting up the Qduino Mini
-The Qduino Mini is not an officially supported by Arduino. It is necessary to download the board package that is specific for the Qduino from the Sparkfun GitHub. **IF THIS STEP IS NOT COMPLETED, YOU RUN THE RISK OF BRICKING YOUR QDUINO WHEN ATTEMPTING TO UPLOAD.**
+The Qduino Mini is not officially supported by Arduino, but is instead maintained by SparkFun. It is necessary to download the board package that is specific for the Qduino from the Sparkfun GitHub. **IF THIS STEP IS NOT COMPLETED, YOU RUN THE RISK OF BRICKING YOUR QDUINO WHEN ATTEMPTING TO UPLOAD.**
 
 1. Open the Arduino IDE.
 2. Navigate to File > Preferences
 3. In Additional Board URLs, add the following link:
 https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manager/package_sparkfun_index.json
-4. Navigate to Tools > Board > Boards Manager.
-5. In the Boards Manager window, search for SparkFun AVR Boards. Install SparkFun AVR Boards.
-6. Navigate to Tools > Boards > Qduino Mini. **Any other board selection will brick your Qduino.**
-7. Connect your Qduino Mini to the computer via microUSB. Turn on the Qduino.
-8. Navigate to Tools > Port. Select the available COM port. Make a note of which port is selected and which USB port you are using on your computer. If using a different USB port for later uploads, your com port will need to be changed to what is available. 
-Your Qduino Mini should now be upload ready. This will be tested after installing additional libraries.
+4. Select OK.
+5. Check Display Line Numbers.
+6. Select OK.
+7. Navigate to Tools > Board > Boards Manager.
+8. In the Boards Manager window, search for "SparkFun AVR Boards". Install SparkFun AVR Boards.
+9. Navigate to Tools > Boards > Qduino Mini. **Any other board selection will brick your Qduino.**
+10. Connect your Qduino Mini to the computer via microUSB. Turn on the Qduino.
+11. Navigate to Tools > Port. Select the available COM port. Make a note of which port is selected and which USB port you are using on your computer. If using a different USB port for later uploads, your com port will need to be changed to what is available. 
+Your Qduino Mini should now be upload ready. This will be tested after installing additional libraries. 
+12. Turn off or disconnect the Qduino Mini from your computer. 
 
 #### Formatting the SD Card
 It is also necessary to format the microSD card that will be used to store the data. 
 
-1. Insert your microSD card into a USB adapter and plug into the computer.
-2. Navigate to Windows Explorer, right click your microUSB card and select format.
-3. Under file system, select FAT32. Select Start. A
-4. Your card should now be formatted. 
-5. OPTIONAL: Navigate to your SD card through Windows Explorer. If desired create and additional folder to save old data. 
+1. Insert the microSD card into a USB adapter and plug into a computer.
+2. Navigate to Windows Explorer, right click your microUSB card and select Format.
+3. Under file system, select FAT. 
+4. Select Start. 
+6. Your card should now be formatted. 
+7. OPTIONAL: Navigate to your SD card through Windows Explorer. If desired create and additional folder to save old data. 
 
 #### Setting Up the Required Libraries
-Several libraries are needed to allow the OpenCTD operating code to work. These libraries allow communication with the sensors and allow the use of unique commands. They can either be found within the Arduino IDE or downloaded from GitHub. Libraries native within the IDE are automatically included by the operating code and no further steps are necessary to include them. The following instructions show how to download and access the third party libraries. 
+Several libraries are needed to allow the OpenCTD operating code to work. These libraries allow communication with the sensors and the use of unique commands. They can either be found within the Arduino IDE or downloaded from GitHub. Libraries native within the IDE are automatically included by the IDE and no further steps are necessary to include them. The following instructions show how to download and access the third party libraries. 
 
 |Native Libraries|Third Party Libraries|
 |:---:|:---:|
@@ -93,7 +104,7 @@ Several libraries are needed to allow the OpenCTD operating code to work. These 
 |Wire|MS5837|
 |SD|SparkFunDS3234RTC|
 
-The Qduino library is automatically made available through the previous step.
+The Qduino library was automatically added during the Setting Up the Qduino Mini step.
 
 ##### TSYS01 Temperature Sensor Library
 The temperature sensor requires the TSYS01 library. To access the library:
