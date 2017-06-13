@@ -5,7 +5,7 @@
 2. [CTDizzle Mk3]
 	- [Specifications]
 3. [Build Instructions]
-	- [Software Setup]
+	- [Software Setup](#software-setup)
 		- [Setting Up the Arduino IDE](#setting-up-the-arduino-ide)
 		- [Setting Up the Qduino Mini](#setting-up-the-qduino-mini)
 		- [Formatting the SD Card](#formatting-the-sd-card)
