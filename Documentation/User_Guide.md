@@ -6,7 +6,7 @@
 	- [Specifications]
 3. [Build Instructions]
 	- [Software Setup]
-		- [Setting Up the Arduino IDE](#setting-up-the-arduino-IDE)
+		- [Setting Up the Arduino IDE](#setting-up-the-arduino-ide)
 		- [Setting Up the Qduino Mini](#setting-up-the-qduino-mini)
 		- [Formatting the SD Card](#formatting-the-sd-card)
 		- [Setting Up the Required Libraries](#setting-up-the-required-libraries)
