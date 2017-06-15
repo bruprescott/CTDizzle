@@ -195,10 +195,10 @@ If using a blank end cap, drill two 10mm holes into one of the caps. This will b
 ![Switch and Vent Endcap](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/HolesEndcap.jpg)
 _Example of two holes drilled into an end cap._
 
-After you have drilled the holes, use a high grit sandpaper to scuff up the inside portion of the end cap and flange. Clean the end cap and flange with alcohol. Now you can install the aluminum bulkheads that comprise the switch and vent. You'll want to grease up the bulkhead O-ring before installation. Don't forget to tighten them down! Next, install the end cap on the flange. Don't forget to add a greased up O-ring! Tighten all of the screws in a star pattern.
+Clean the end cap and flange with alcohol. Now you can install the aluminum bulkheads that comprise the switch and vent. You'll want to grease up the bulkhead O-ring before installation. Don't forget to tighten them down! Next, install the end cap on the flange. Don't forget to add a greased up O-ring! Tighten all of the screws in a star pattern. Next, use a high grit sandpaper to scuff up the inside portion of the end cap and flange.
 
 ![Endcap + Flange](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/NoEpoxySwitchVent.jpg)
-_Example of end cap and flange connected with bulkheads installed._
+_Example of end cap and flange connected with bulkheads installed. Now is a good time to use the sanpaper._
 
 You can also epoxy this end cap if you want an additional seal. Here is an example. It is recommended that you wrap the outside of the flange with masking tape to prevent debris and epoxy from entering the O-ring grooves. Any slight deviation in the O-ring surface will increase the risk of leakage.
 ![Epoxy Endcap](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/TapeFlange.jpg)
