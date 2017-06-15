@@ -142,7 +142,9 @@ It is necessary to prepare several electronic components and sensors with some p
 - Solder breakaway header strips to boards that require them. (Qduino, Transflash, RTC)
 - It is recommended you keep the BNC connectors on the EC kit for testing and calibration. If you think you might want to shorten the conductivity probe cable, you can do that later. Make sure you have enough though!
 - If you think you might not use the DF13 connects on the temperature and pressure sensors, now is a good time to cut them off. Carefully strip away ~1cm of insulation. Tin the ends to prevent stray wires.
-- The following pictures show the use of JST connectors to allow easy removal of the sensors from the main protoboard. If you are using these connectors, now is a good time to solder to the sensors. Make sure to remember which wires you solder to the JST pins!
+- Some of the pictures in this guide show the use of JST connectors to allow easy removal of the sensors from the main protoboard. If you are using these connectors, now is a good time to solder to the sensors. Make sure to remember which wires you solder to the JST pins!
+
+![QduinoSoldering](
 
 ### Breadboard and Testing Setup
 Set up the Qduino Mini, Transflash, RTC, and EC EZO on the breadboard. **If you change the pinouts in the physical build or the code, it is recommended that you record these changes.**
@@ -203,8 +205,6 @@ You can also epoxy this end cap if you want an additional seal. Here is an examp
 _Note: It is recommended that you use the potting kit to minimize mess and bubbling. You will notice that there is some slight bubbling in the picture above. To get rid of bubble after placing the epoxy, you can put the end cap in a vacuum chamber._
 
 In the other end cap, drill two 10mm holes and one 12mm hole. To increase the internal space for the electrical compenents, it is recommended that you place the 12mm hole as close to the flange wall as possible, while still leaving a little space for epoxy to surround the EC probe. You can connect the end cap to the flange to act as a guide.
-
-**Picture of sensor end cap here**
 
 Use a high grit sandpaper to rough up the end cap and flange. Clean with alcohol. Install the temperature and pressure sensors in the 10mm holes. Next, install the end cap onto the flange. The next part is a little tricky.
 
