@@ -2,7 +2,7 @@
 If you are looking for the build guide to the original OpenCTD, [it can be found here](https://github.com/OceanographyforEveryone/OpenCTD).
 
 ## CTDizzle Mk3
-![CTDizzle](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170517_185546.jpg)
+![CTDizzle](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Finished.jpg)
 
 This repository contains the code and build guide used for the CTDizzle Mk3.
 It also houses all of the resources and documentation that may be helpful during the build process.
