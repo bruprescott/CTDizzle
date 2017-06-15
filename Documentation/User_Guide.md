@@ -42,7 +42,7 @@ It is your responsibility to ensure that all parts are compatible with your setu
 
 ## The CTDizzle Mk3
 
-![CTDizzle](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170517_185546.jpg)
+![CTDizzle](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Finished.jpg)
 _The CTDizzle Mk3_
 
 This is the third rendition of the CTDizzle. Its construction is a little different than the original CTD, as it uses some different sensor and parts. It costs about 600 USD to construct and doesn't require any tools that can't be easily found at your local hardware store. If you have all the parts and tools on hand, you should be able to build it in a weekend!
@@ -190,18 +190,16 @@ Once everything checks out and your breadboard tests are successful, you can beg
 #### End Cap and Flange Prep
 If using a blank end cap, drill two 10mm holes into one of the caps. This will be considered the end cap that will be used for the switch and vent. Make sure there is enough space in between the holes to allow you to tighten the aluminum bulkheads with a wrench. 
  
-![Switch and Vent Endcap](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170605_104802_001.jpg)
+![Switch and Vent Endcap](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/HolesEndcap.jpg)
 _Example of two holes drilled into an end cap._
-
-**Need diagram of sandpaper and flange**
 
 After you have drilled the holes, use a high grit sandpaper to scuff up the inside portion of the end cap and flange. Clean the end cap and flange with alcohol. Now you can install the aluminum bulkheads that comprise the switch and vent. You'll want to grease up the bulkhead O-ring before installation. Don't forget to tighten them down! Next, install the end cap on the flange. Don't forget to add a greased up O-ring! Tighten all of the screws in a star pattern.
 
-![Endcap + Flange](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170605_151845.jpg)
+![Endcap + Flange](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/NoEpoxySwitchVent.jpg)
 _Example of end cap and flange connected with bulkheads installed._
 
 You can also epoxy this end cap if you want an additional seal. Here is an example. It is recommended that you wrap the outside of the flange with masking tape to prevent debris and epoxy from entering the O-ring grooves. Any slight deviation in the O-ring surface will increase the risk of leakage.
-![Epoxy Endcap](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/20170605_203238.jpg)
+![Epoxy Endcap](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/TapeFlange.jpg)
 _Note: It is recommended that you use the potting kit to minimize mess and bubbling. You will notice that there is some slight bubbling in the picture above. To get rid of bubble after placing the epoxy, you can put the end cap in a vacuum chamber._
 
 In the other end cap, drill two 10mm holes and one 12mm hole. To increase the internal space for the electrical compenents, it is recommended that you place the 12mm hole as close to the flange wall as possible, while still leaving a little space for epoxy to surround the EC probe. You can connect the end cap to the flange to act as a guide.
@@ -224,20 +222,19 @@ Now is the time to decide if you want to cut the EC probe cable. Leaving the BNC
 
 - If you decide to cut the cable, follow the Atlas-Scientific guide to cable cutting. Recall that Atlas-Scientific will not accept returns of probes with cut capbles. Once cut, solder one half of the 2-pin JST connector to the probe leads, and the other half to the corresponding pins on the EC EZO. 
 
-**Picture of possible protoboard set up here**
+![WiredProtoTop](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/WiredProtoTop.jpg)
+![WiredProtoBot](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Wiredproto.jpg)
+![WiredProtoExample](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Wiredproto2.jpg)
+![WiredProtoExample2](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/ProtoOverview.jpg)
+
 
 #### Switch Cable Extension
 It is not recommended that you cut the battery cables to install the switch, as this may have an impact on the charging of the battery. Instead, use a JST extension cable to tie the switch into. First, cut the ground line of the extension cable at roughly the midpoint. Solder a switch lead onto each end of the ground line. 
 - Take care when soldering, as the wire will heat up quickly when maintaining contact with the soldering iron. This may result in deformation of the JST connector and you will not be able to use it. 
 
+![JSTSwitch](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/SwitchCable.jpg)
 
-**Picture of JST extension here**
-
-
-
-
-**Picture of mess of wires here**
-   
+![MessOfWires](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Innards3.jpg)
 
 
 
@@ -256,10 +253,7 @@ After you have soldered everything and tested the data output, you can finish co
 10. Turn on the device and look for the LEDs on the EC EZO. 
 
 
-
- 
-
-**Picture of a finished OpenCTD here**
+![Completed](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Finished.jpg)
 
 
 
