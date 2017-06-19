@@ -6,7 +6,7 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |Part|Vendor|Price|Note|
 |:---|:---|:---|:---|
 |[Qduino Mini](https://www.sparkfun.com/products/13614)|SparkFun|$29.95|
-|[3.7V 6000mAh Li-Ion Battery](https://www.sparkfun.com/products/13856)|SparkFun|$29.95|Last for about 10 days if sampling at 1Hz|
+|[3.7V 6000mAh Li-Ion Battery](https://www.sparkfun.com/products/13856)|SparkFun|$29.95|Last for about 160 hours if sampling at 1Hz|
 |[Conductivity Kit 1.0](https://www.sparkfun.com/products/12908)|SparkFun|$195.71|Includes EC EZO, probe, and calibration solutions.|
 |[Celsius Fast-Response Temp Sensor](https://www.bluerobotics.com/store/electronics/celsius-sensor-r1/)|Blue Robotics|$56|+/- 0.1 C accuracy|
 |[Bar30 High-Res Depth Sensor](https://www.bluerobotics.com/store/electronics/bar30-sensor-r1/)|Blue Robotics|$68|
