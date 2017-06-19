@@ -53,6 +53,7 @@ This is the third rendition of the CTDizzle. Its construction is a little differ
 * Temperature Accuracy: +/- 0.1 C
 * Pressure Accuracy: +/- 100 mbar
 * Max Sampling Rate: 1 Hz
+* Battery Life: ~160 hours (3.7v 6000mAh)
 
 ## Build Instructions
 
@@ -142,9 +143,8 @@ It is necessary to prepare several electronic components and sensors with some p
 - Solder breakaway header strips to boards that require them. (Qduino, Transflash, RTC)
 - It is recommended you keep the BNC connectors on the EC kit for testing and calibration. If you think you might want to shorten the conductivity probe cable, you can do that later. Make sure you have enough though!
 - If you think you might not use the DF13 connects on the temperature and pressure sensors, now is a good time to cut them off. Carefully strip away ~1cm of insulation. Tin the ends to prevent stray wires.
-- Some of the pictures in this guide show the use of JST connectors to allow easy removal of the sensors from the main protoboard. If you are using these connectors, now is a good time to solder to the sensors. Make sure to remember which wires you solder to the JST pins!
+- Some of the pictures in this guide show the use of JST connectors to allow easy removal of the sensors from the main protoboard. If you are using these connectors, now is a good time to solder to the sensors. Remember which wires you solder to the JST pins!
 
-![QduinoSoldering](
 
 ### Breadboard and Testing Setup
 Set up the Qduino Mini, Transflash, RTC, and EC EZO on the breadboard. **If you change the pinouts in the physical build or the code, it is recommended that you record these changes.**
@@ -292,7 +292,7 @@ The device should be fully assembled and the proper sampling regime selected pri
 ## Battery Charging Procedure
 The Qduino Mini has the ability to charge a single-cell lithium ion battery when connected to a computer or microUSB outlet adapter. The user can flash the Qduino FuelGauge sketch (found in Arduino IDE examples folder) to the Qduino to have the charge percentage reported to the serial monitor to ensure that the battery is not connected to the charging system for too long. Simply plug in the battery to the Qduino and connect the unit to a computer via microUSB. Don't forget to remove the SD card, so as to not record any unnecessary data.
 
-By default, the Qduino charges batteries at 100 mA. To increase the charge rate to 500 mA, you can solder the SJ1 pad on the backside of the Qduino.
+By default, the Qduino charges batteries at 100 mA. To increase the charge rate to 500 mA, you can solder the SJ1 pad on the backside of the Qduino. It is also recommended that you do not charge the battery through the JST Switch Cable. It might be easier to have a dedicated battery charger.
 
 The length of time a unit can be deployed is ultimately restricted by the battery used. Currently, a 3.7V 6000mAh LiPo will run the unit for approximately 160 hours. Battery life can be extended by turning off the LEDs on the EC EZO or decreasing sampling frequency. 
 
