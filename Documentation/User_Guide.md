@@ -1,6 +1,7 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
 1. [Introduction]
+	- [Why Conductivity, Temperature, and Depth?]
 	- [Before You Get Started]
 2. [CTDizzle Mk3]
 	- [Specifications]
@@ -33,6 +34,11 @@ Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providin
 
 ![Original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/ctds.jpg)
 _Examples of the original OpenCTD._
+
+### Why Conductivity, Temperature, and Depth?
+
+[Insert science jargon here.]
+
 
 ### Before You Get Started
 
