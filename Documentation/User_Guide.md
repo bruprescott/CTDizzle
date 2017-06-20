@@ -24,6 +24,7 @@
 7. [Battery Charging Procedure]
 8. [Data Download and Analysis]
 9. [Using the MATLAB Plotter]
+10. [Index of Jargon]
 	
 ## Introduction
 
@@ -349,6 +350,20 @@ The application will also create a folder in your C: drive labeled "OpenCTD_Data
 
 ![PlotterDirectory](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/DirectoryforPlotter.PNG)
 
+
+## Index of Jargon
+
+|Term|Description|
+|:---:|:---|
+|BNC||
+|SPI||
+|I2C||
+|TX|
+|RX|
+|Conductivity||
+|Temperature||
+|Absolute Pressure||
+|Gauge Pressure||
 
 
 
