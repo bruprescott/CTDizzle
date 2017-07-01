@@ -18,13 +18,14 @@
 		- [End Cap and Flange Preparation]
 	- [Protoboard Soldering]
 		- [Switch Cable Extension] 
-4. [Pre-deployment Procedure]
-5. [Deployment Procedure]
-6. [Recovery Procedure]
-7. [Battery Charging Procedure]
-8. [Data Download and Analysis]
-9. [Using the MATLAB Plotter]
-10. [Index of Jargon]
+4. [Corrosion]
+5. [Pre-deployment Procedure]
+6. [Deployment Procedure]
+7. [Recovery Procedure]
+8. [Battery Charging Procedure]
+9. [Data Download and Analysis]
+10. [Using the MATLAB Plotter]
+11. [Index of Jargon]
 	
 ## Introduction
 
@@ -263,8 +264,9 @@ After you have soldered everything and tested the data output, you can finish co
 ![Completed](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Finished.jpg)
 
 
+## Corrosion
 
-
+The M2 screws used in the end caps are made of 316 SS and the housing they screw into is made of aluminum. When two dissimilar metals interact in seawater, galvanic corrosion can occur. The metal on the lower end of the galvanic scale (aluminum in this case) will begin to corrode after an extended period of time. Cathodic projections is one method to mitigating the corrosion of the end caps. This can be down by installing an anode (commonly made of zinc). If this is done, it is highly recommended that you add extra epoxy for added protection. Another option is to not use aluminum, but acrylic end caps (also manufactured by Blue Robotics). It may also be easiest to replace the 316SS M2 screws with the aluminum equivalent.
 
 
 
