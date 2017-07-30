@@ -29,7 +29,7 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |Item|Vendor|Price|Note|
 |:---|:---|:---|:---|
 |[Breakaway Header - Straight (x2)](https://www.sparkfun.com/products/116)|SparkFun|$3|
-|[2-Ton Marine Epoxy (x6)](https://www.amazon.com/dp/B00JN4SL3C/ref=twister_B06ZZ6NM7S?_encoding=UTF8&th=1)|Amazon|$28.80|Amount used is up to you. I recommend using at least two tubes per end cap.
+|[2-Ton Marine Epoxy (x6)](https://www.amazon.com/dp/B00JN4SL3C/ref=twister_B06ZZ6NM7S?_encoding=UTF8&th=1)|Amazon|$28.80|Amount used is up to you. I recommend using at least two tubes per end cap. **Next build is going to test out 75A urethane.**
 |[Assorted 22 AWG - Solid Core Wire](https://www.sparkfun.com/products/11367)|SparkFun|$16.95|
 |[Heat Shrink Kit](https://www.sparkfun.com/products/9353)|SparkFun|$7.95|
 |[Silicon Grease](http://www.bluerobotics.com/store/tools/tool-silicone-grease-10g-r1/)|Blue Robotics|$3|
