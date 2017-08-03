@@ -24,6 +24,9 @@
 7. [Recovery Procedure]
 8. [Battery Charging Procedure]
 9. [Data Download and Analysis]
+	- [The West Coast]
+	- [Yaquina Bay]
+	- [Oregon Shelf]
 10. [Using the MATLAB Plotter]
 11. [Index of Jargon]
 	
@@ -308,6 +311,7 @@ The length of time a unit can be deployed is ultimately restricted by the batter
 
 ## Data Download and Analysis
 
+
 ### Accessing and Plotting the Data
 Currently, the user is required to open the device to access the data. **Make sure the device is dry before continuing.**
 This is done by removing the switch and vent endcap and removing the microSD card. Take care when removing the end cap, as it is important to keep the O-rings clean. 
@@ -352,20 +356,39 @@ The application will also create a folder in your C: drive labeled "OpenCTD_Data
 
 ![PlotterDirectory](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/DirectoryforPlotter.PNG)
 
+### Is the data reasonable?
+
+#### The West Coast (Move this to case construction section).
+
+The west coast of the United States has one of the most adverse wave climates in the world. 
+
+#### In a Bay
+
+The OpenCTD is capable of observing changes over several days. The pressure sensor is capable of rectifying changes is tidal height and changes in temperature and salinity can be seen to follow. 
+
+Yaquina Bay is an excellent place to test the OpenCTD. Under the right conditions, the device can be used find the depth of the salt wedge, or the extent of the river plume in the bay. 
+
+Every couple of months students from Oregon State University will sample from the Yaquina Bay Bridge up to Toledo during various stages of the tidal cycle. The Oregon Coast Aquarium also continuosly collects salinity and temperature data on the water that is pumped in from the bay. 
+
+
+#### The Oregon Shelf
+
+
+
 
 ## Index of Jargon
 
+In no particular order...
+
 |Term|Description|
 |:---:|:---|
-|BNC||
-|SPI||
-|I2C||
-|TX|
-|RX|
-|Conductivity||
-|Temperature||
-|Absolute Pressure||
-|Gauge Pressure||
+|BNC|[Bayonet Neill-Concelmen connector](https://en.wikipedia.org/wiki/BNC_connector). Typically the terminator on a coaxial cable|
+|SPI|[Serial Peripheral Interface] (https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus). A synchronous serial communication interface typically used in short distance communication. One device is considered the master device and the others the slave. The slave select (SS) pin allows the microcontroller to select which device it talks to.|
+|I2C|[Inter-Integrated Circuit](https://en.wikipedia.org/wiki/I%C2%B2C). Often pronouced I-squared-C or I-two-C. It only uses two lines for communication but is communicates slower than SPI|
+|TX|Serial transmitter on a device. |
+|RX|Serial reciever on a device. |
+|Absolute Pressure|The OpenCTD measures absolute pressure. In the reported values, the atmospheric pressure is included. If your OpenCTD reads 1100 mbar, that does not mean it is at ~11 meter depth, but more likely ~1m assuming your atmospheric pressure is 1000 mbar.|
+|Gauge Pressure| To get gauge pressure, simply subtract atmospheric pressure from the absolute pressure.|
 
 
 
