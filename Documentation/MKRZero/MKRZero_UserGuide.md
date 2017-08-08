@@ -1,10 +1,10 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
-1. [Introduction](#Introduction)
+1. [Introduction](#introduction)
 	- [Why Conductivity, Temperature, and Depth?]
 	- [Before You Get Started](#before-you-get-started)
 2. [CTDizzle Mk3]
-	- [Specifications](#Specifications)
+	- [Specifications](#specifications)
 3. [Build Instructions]
 	- [Software Setup](#software-setup)
 		- [Setting Up the Arduino IDE](#setting-up-the-arduino-ide)
@@ -18,10 +18,10 @@
 		- [End Cap and Flange Preparation]
 	- [Protoboard Soldering]
 		- [Switch Cable Extension] 
-4. [Corrosion](#Corrosion)
-5. [Pre-deployment Procedure]
-6. [Deployment Procedure]
-7. [Recovery Procedure]
+4. [Corrosion](#corrosion)
+5. [Pre-deployment Procedure](#pre-deployment-procedure)
+6. [Deployment Procedure](#deployment-procedure)
+7. [Recovery Procedure](#recovery-procedure)
 8. [Battery Charging Procedure]
 9. [Data Download and Analysis]
 	- [The West Coast]
@@ -268,26 +268,25 @@ After you have soldered everything and tested the data output, you can finish co
 
 
 ## Corrosion
+The screws used in the end caps are made of 316 SS and the main body of the unit is made of anodized aluminum.
+When two dissimilar metals interact in seawater, galvanic corrosion can occur. The metal on the lower end of the galvanic scale (aluminum in this case) will begin to corrode after an extended period of time. Cathodic protection is one method to mitigating the corrosion of the end caps. This can be done by installing an anode (commonly made of zinc). 
 
-The M2 screws used in the end caps are made of 316 SS and the housing they screw into is made of aluminum. When two dissimilar metals interact in seawater, galvanic corrosion can occur. The metal on the lower end of the galvanic scale (aluminum in this case) will begin to corrode after an extended period of time. Cathodic projections is one method to mitigating the corrosion of the end caps. This can be down by installing an anode (commonly made of zinc). If this is done, it is highly recommended that you add extra epoxy for added protection. Another option is to not use aluminum, but acrylic end caps (also manufactured by Blue Robotics). It may also be easiest to replace the 316SS M2 screws with the aluminum equivalent.
-
-
-
+I am currently searching for a non-invasive way of adding a zinc anode to the device. Another option is to replace the stainless steel screws with the aluminum equivalent.
 
 
 ## Predeployment Procedure
-Deployment plan of your OpenCTD plays a role in the sampling regime.
-- If you plan to take profiles, it should be set to sample as frequently as possible, which at this point is roughly 1 Hz.
-- If you plan to leave the OpenCTD in the same spot for several hours or days, it should be set to sample every minute to few minutes. Doing this will increase the battery life. Another way to increase the battery life is by turning off the EC EZO LEDs. Instructions on how to do this can be found in the EZ EZO Datasheet (in the Resources page). 
+The deployment plan of your OpenCTD plays a role in the sampling regime.
+- If you plan to take profiles, it should be set to sample as frequently as possible.
+- If you plan to leave the OpenCTD in the same location for several hours or days, it should be set to sample every minute to few minutes. Doing this will increase the battery life. Another way to increase the battery life is by turning off the EC EZO LEDs. Instructions on how to do this can be found in the EZ EZO Datasheet.
 
 ## Deployment Procedure
 The device should be fully assembled and the proper sampling regime selected prior to reaching the study site. 
 1.	Confirm all sensors, plugs, bulkheads, and end caps are secure. 
 2.	Remove any sensor covers on the conductivity, temperature, and pressure sensors.
 3.	Turn the external switch clockwise until it can turn no further. The unit should now turn ON. 
-  - The Atlas Scientific EC EZO LED should begin to alternate between green and cyan, indicating that the conductivity sensor is now sampling. If the EZO remains green, it is not continuously sampling and the deployment should be postponed until the proper code is uploaded. If the EZO is consistently flashing a red LED in between green and cyan, it is possible there is ground fault or communication error in the system and connections should be checked. 
+  - If you are using an acrylic case, the EC EZO LED should begin to alternate between green and cyan, indicating that the conductivity sensor is now sampling. If the EZO remains green, it is not continuously sampling and the deployment should be postponed until the proper code is uploaded. If the EZO is consistently flashing a red LED in between green and cyan, it is possible there is ground fault or communication error in the system and connections should be checked. 
 4.	If step 3 is satisfied, then you can begin deployment!
-  - If profiling with the unit, it is suggested that it be left in the top few meters of the water column for approximately ten minutes to allow for equilibrium. Once ready to profile, bring the unit to just below the surface, and allow it to descend at a rate around 0.25 m/s (~1 fathom every 10 seconds). The unit is only capable of sampling at a maximum of 1 Hz, so the slower the descent the better. 
+  - If profiling with the unit, it is suggested that it be left in the top few meters of the water column for approximately five minutes to allow for equilibrium. Once ready to profile, bring the unit to just below the surface, and allow it to descend at a rate around 0.25 m/s (~1 fathom every 10 seconds). The unit is only capable of sampling at a maximum of 1 Hz, so the slower the descent the better. 
   - If planning to leave the unit at a particular site for an extended period of time, it is recommended that the user ensure that the device is properly secured and **ON** prior to leaving the site. 
 
 ## Recovery Procedure
@@ -299,7 +298,7 @@ The device should be fully assembled and the proper sampling regime selected pri
 5.	Replace all sensor caps.
 6.	The device can be deployed again if the user desires.
   - If the unit is primarily used for profiling, the device is ready to go once the user decides to collect data again. If there is concern that the battery may be low, refer to the Battery Charging Procedure.
-  - If another stationary deployment is planned, the battery will likely need to be charged or replaced. This requires the user to open up the device. 
+  - If another stationary deployment is planned, the battery will likely need to be charged or replaced. This requires the user to open up the device.
 
 ## Battery Charging Procedure
 The Qduino Mini has the ability to charge a single-cell lithium ion battery when connected to a computer or microUSB outlet adapter. The user can flash the Qduino FuelGauge sketch (found in Arduino IDE examples folder) to the Qduino to have the charge percentage reported to the serial monitor to ensure that the battery is not connected to the charging system for too long. Simply plug in the battery to the Qduino and connect the unit to a computer via microUSB. Don't forget to remove the SD card, so as to not record any unnecessary data.
