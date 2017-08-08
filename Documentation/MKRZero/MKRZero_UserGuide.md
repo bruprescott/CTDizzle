@@ -1,10 +1,10 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
-1. [Introduction]
+1. [Introduction](#Introduction)
 	- [Why Conductivity, Temperature, and Depth?]
-	- [Before You Get Started]
+	- [Before You Get Started](#before-you-get-started)
 2. [CTDizzle Mk3]
-	- [Specifications]
+	- [Specifications](#Specifications)
 3. [Build Instructions]
 	- [Software Setup](#software-setup)
 		- [Setting Up the Arduino IDE](#setting-up-the-arduino-ide)
@@ -18,7 +18,7 @@
 		- [End Cap and Flange Preparation]
 	- [Protoboard Soldering]
 		- [Switch Cable Extension] 
-4. [Corrosion]
+4. [Corrosion](#Corrosion)
 5. [Pre-deployment Procedure]
 6. [Deployment Procedure]
 7. [Recovery Procedure]
