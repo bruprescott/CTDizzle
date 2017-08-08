@@ -13,8 +13,9 @@ Does not consider latitudinal variation in gravity. Assumes g=9.806 m/s^2
 Assumes atmospheric pressure is 1000 mbar.
 These impact the depth and salinity calculations ever so slightly.
 
-Skip to line X for setup.
-Skip to line Y for loop.
+Skip to line 28 for common variables.
+Skip to line 93 for setup.
+Skip to line 139 for loop.
 */
 
 #include <SD.h>   //Used by SD module.
