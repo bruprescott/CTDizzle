@@ -31,7 +31,7 @@ Skip to line 232 for print_EC_data function.
 #define SD_chipselect 28    //Chip select for the MKRZero.
 #define g 9.806   //Gravity in m/s^2. Varies with latitude. Used in depth calculation.
 #define RTC_chipselect 5    //Chip select for the DeadOn RTC.
-#define AtmP 1000 //Atmospheric pressure in mbar.
+#define AtmP 1000 //Atmospheric pressure in mbar.  Used in depth calculation.
 //End of common variables. 
 
 String sensorstring = "";   //String used to hold data from the EC EZO.
