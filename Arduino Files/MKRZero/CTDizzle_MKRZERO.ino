@@ -13,9 +13,10 @@ Does not consider latitudinal variation in gravity. Assumes g=9.806 m/s^2
 Assumes atmospheric pressure is 1000 mbar.
 These impact the depth and salinity calculations ever so slightly.
 
-Skip to line 28 for common variables.
-Skip to line 93 for setup.
-Skip to line 139 for loop.
+Skip to line 29 for common variables.
+Skip to line 94 for setup.
+Skip to line 140 for loop.
+Skip to line 231 for print_EC_data funciton.
 */
 
 #include <SD.h>   //Used by SD module.
@@ -160,7 +161,7 @@ void loop() {     //And around we go.
   T=tsensor.temperature(); //Define the temperature as a floating point to make salinity calculation a little easier.
   delay(10);
 
-  R = ((f_ec/1000)/CStandard);    //PSS-78 calculations.
+  R = ((f_ec/1000)/CStandard);    //PSS-78 calculations. See AppNote 14 by SBE for more information.
   RpNumerator = (A1*GaugeP)*(A2*pow(GaugeP,2))+(A3*pow(GaugeP,3));
   RpDenominator = 1*(B1*T)+(B2*pow(T,2))+(B3*R)+(B4*T*R);
   Rp = 1+(RpNumerator/RpDenominator);
@@ -169,29 +170,29 @@ void loop() {     //And around we go.
   Salinity = (a0+(a1*pow(RT,0.5))+(a2*RT)+(a3*pow(RT,1.5))+(a4*pow(RT,2))+(a5*pow(RT,2.5)))+((T-15)/(1+k*(T-15)))*(b0+(b1*pow(RT,0.5))+(b2*RT)+(b3*pow(RT,1.5))+(b4*pow(RT,2))+(b5*pow(RT,2.5)));
   
    if (datafile) {
-    if(rtc.month()<10){
+    if(rtc.month()<10){ //If the month number is less than ten.
        datafile.print('0');}    //Print a zero for aesthetics.
     datafile.print(String(rtc.month()));    //Print month to SD card.
     datafile.print("/");
-    if(rtc.date()<10){
+    if(rtc.date()<10){    //If the date number is less than ten.
         datafile.print('0');} //Print a zero for aesthetics.
     datafile.print(String(rtc.date()));   //print date to SD card.
     datafile.print("/");
     datafile.print(String(rtc.year())); //Print year to SD card.
     datafile.print(",");   //Comma delimited.
-    if(rtc.hour()<10){
+    if(rtc.hour()<10){    //If the hour number is less than ten.
        datafile.print('0');}   //Print a zero for aesthetics.
     datafile.print(String(rtc.hour()));   //Print hour to SD card.
     datafile.print(":");
-    if(rtc.minute()<10){
+    if(rtc.minute()<10){    //If the minute number is less than ten.
         datafile.print('0');}  //Print a zero for aesthetics.
     datafile.print(String(rtc.minute()));
     datafile.print(":");
-    if(rtc.second()<10){
+    if(rtc.second()<10){    //If the second number is less than ten.
         datafile.print('0');}  //Print a zero for aesthetics.
     datafile.print(String(rtc.second())); //Print date to SD card.
     datafile.print(",");   //Comma delimited.
-    datafile.print(f_ec);   //Print the floating point EC.
+    datafile.print(f_ec);   //Print EC to SD card.
     datafile.print(",");
     datafile.print(tsensor.temperature());   //Print temperature to SD card.
     datafile.print(",");
@@ -204,6 +205,7 @@ void loop() {     //And around we go.
     datafile.println(Salinity);    //Print sketch derived salinity to SD card.
     datafile.flush();   //Close the file.
 
+    //For QC purposes.
     Serial.print(String(rtc.month()) + "/" + String(rtc.date()) + "/" + String(rtc.year())); //Print date to serial monitor.
     Serial.print(",");   //Comma delimited.
     Serial.print(String(rtc.hour()) + ":" + String(rtc.minute())+":"+String(rtc.second()));  //Print hours, minutes, seconds to serial monitor.
