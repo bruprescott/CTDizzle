@@ -301,12 +301,17 @@ The device should be fully assembled and the proper sampling regime selected pri
   - If another stationary deployment is planned, the battery will likely need to be charged or replaced. This requires the user to open up the device.
 
 ## Battery Charging Procedure
-The Qduino Mini has the ability to charge a single-cell lithium ion battery when connected to a computer or microUSB outlet adapter. The user can flash the Qduino FuelGauge sketch (found in Arduino IDE examples folder) to the Qduino to have the charge percentage reported to the serial monitor to ensure that the battery is not connected to the charging system for too long. Simply plug in the battery to the Qduino and connect the unit to a computer via microUSB. Don't forget to remove the SD card, so as to not record any unnecessary data.
+1. Turn off the device.
+2. Remove the switch/purge end cap. 
+3. Remove the main electronics board and disconnect the battery switch cable.
+4. Plug the battery directly into the MKRZero.
+5. Connect the MKRZero to your computer or compatible wall outlet.
 
-By default, the Qduino charges batteries at 100 mA. To increase the charge rate to 500 mA, you can solder the SJ1 pad on the backside of the Qduino. It is also recommended that you do not charge the battery through the JST Switch Cable. It might be easier to have a dedicated battery charger.
+The MKRZero has the ability to charge a single-cell lithium ion battery when connected to a computer or microUSB outlet adapter. Simply plug in the battery to the MKRZero and connect the unit to a computer via microUSB. An orange LED should appear, indicating that the battery is charging. Even though the battery has a built in overcharge and damage prevention circuit, it is important that you do not charger your battery for too long.
 
-The length of time a unit can be deployed is ultimately restricted by the battery used. Currently, a 3.7V 6000mAh LiPo will run the unit for approximately 160 hours. Battery life can be extended by turning off the LEDs on the EC EZO or decreasing sampling frequency. 
+It is recommended that you do not charge the battery through the JST switch cable, and only by plugging the battery directly into the MKRZero.
 
+I am currently working on a method that will allow you to determine the current charge on your battery.
 
 ## Data Download and Analysis
 
