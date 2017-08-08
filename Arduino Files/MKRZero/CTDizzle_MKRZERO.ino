@@ -16,7 +16,7 @@ These impact the depth and salinity calculations ever so slightly.
 Skip to line 29 for common variables.
 Skip to line 94 for setup.
 Skip to line 140 for loop.
-Skip to line 231 for print_EC_data funciton.
+Skip to line 231 for print_EC_data function.
 */
 
 #include <SD.h>   //Used by SD module.
