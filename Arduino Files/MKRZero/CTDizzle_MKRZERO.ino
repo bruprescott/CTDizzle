@@ -13,10 +13,10 @@ Does not consider latitudinal variation in gravity. Assumes g=9.806 m/s^2
 Assumes atmospheric pressure is 1000 mbar.
 These impact the depth and salinity calculations ever so slightly.
 
-Skip to line 29 for common variables.
-Skip to line 94 for setup.
-Skip to line 140 for loop.
-Skip to line 231 for print_EC_data function.
+Skip to line 30 for common variables.
+Skip to line 95 for setup.
+Skip to line 141 for loop.
+Skip to line 232 for print_EC_data function.
 */
 
 #include <SD.h>   //Used by SD module.
@@ -31,6 +31,7 @@ Skip to line 231 for print_EC_data function.
 #define SD_chipselect 28    //Chip select for the MKRZero.
 #define g 9.806   //Gravity in m/s^2. Varies with latitude. Used in depth calculation.
 #define RTC_chipselect 5    //Chip select for the DeadOn RTC.
+#define AtmP 1000 //Atmospheric pressure in mbar.
 //End of common variables. 
 
 String sensorstring = "";   //String used to hold data from the EC EZO.
@@ -152,7 +153,7 @@ void loop() {     //And around we go.
   }
 
   psensor.read();  //Read what the pressure is.
-  GaugeP=(psensor.pressure()-1000)/100;   //GaugeP is in decibars. Assumes atmospheric pressure is 1000 mbar.
+  GaugeP=(psensor.pressure()-AtmP)/100;   //GaugeP is in decibars. Assumes atmospheric pressure is 1000 mbar.
   delay(10);
   Depth = (((((COEFF1*GaugeP+COEFF2)*(GaugeP)-COEFF3)*(GaugeP)+COEFF4)*(GaugeP))/g);   //Depth is in meters.
   delay(10);
