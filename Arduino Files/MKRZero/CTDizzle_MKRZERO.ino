@@ -23,12 +23,12 @@ Skip to line 139 for loop.
 #include <Wire.h>   //Used by temperature and pressure sensors.
 #include "TSYS01.h" //Used by temperature sensor.
 #include "MS5837.h" //Used by pressure sensor.
-#include <SparkFunDS3234RTC.h>
+#include <SparkFunDS3234RTC.h> //Used by the RTC.
 
-//Common variables you are most likely to change based on your needs
-#define FluidDensity 1024   //Density in kg/m^3. This varies with water conditions and location.
+//Common variables you are most likely to change based on your needs.
+#define FluidDensity 1024   //Density in kg/m^3. This varies with water conditions and location. Used by pressure sensor.
 #define SD_chipselect 28    //Chip select for the MKRZero.
-#define g 9.806   //Gravity in m/s^2. Varies with latitude.
+#define g 9.806   //Gravity in m/s^2. Varies with latitude. Used in depth calculation.
 #define RTC_chipselect 5    //Chip select for the DeadOn RTC.
 //End of common variables. 
 
@@ -139,11 +139,11 @@ void setup() {      //Start your engines.
 void loop() {     //And around we go.
     rtc.update();   //Update the time.
     if (sensor_string_complete == true) {   //If a string has been sent by the EC EZO to the MKRZero...
-      if (isdigit(sensorstring[0]) == false) {  //If the first character in the string is a digit...   
-      Serial.println(sensorstring); //Send the string to the computer serial monitor. 
+      if (isdigit(sensorstring[0]) == false) {  //and if the first character in the string is a digit...   
+      Serial.println(sensorstring); //send the string to the computer serial monitor. 
       }
-      else {  //If the first character is not a digit.
-      print_EC_data(); //Then use the print_EC_data function.                              
+      else {  //If the first character is not a digit...
+      print_EC_data(); //then use the print_EC_data function.                              
       }
     delay(10);
     sensorstring = "";  //Clear the string.                           
@@ -204,9 +204,9 @@ void loop() {     //And around we go.
     datafile.println(Salinity);    //Print sketch derived salinity to SD card.
     datafile.flush();   //Close the file.
 
-    Serial.print(String(rtc.month()) + "/" + String(rtc.date()) + "/" + String(rtc.year())); //Print date to SD card.
+    Serial.print(String(rtc.month()) + "/" + String(rtc.date()) + "/" + String(rtc.year())); //Print date to serial monitor.
     Serial.print(",");   //Comma delimited.
-    Serial.print(String(rtc.hour()) + ":" + String(rtc.minute())+":"+String(rtc.second()));  //Print hours, minutes, seconds to SD card.
+    Serial.print(String(rtc.hour()) + ":" + String(rtc.minute())+":"+String(rtc.second()));  //Print hours, minutes, seconds to serial monitor.
     Serial.print(",");
     Serial.print(f_ec);   //Print the floating point EC to serial monitor.
     Serial.print(",");
@@ -221,17 +221,17 @@ void loop() {     //And around we go.
     Serial.println(Salinity);    //Print sketch derived salinity to serial monitor.
   }
   else{
-    Serial.println("Something went wrong.");    
+    Serial.println("Something went wrong.");  //If the file is not created or appended, display this message.
   }
   delay(960);
 }
 
 void print_EC_data(void) {   //Called to parse the incoming data. Strings come in the form of EC,TDS,SAL,GRAV.                   
   sensorstring.toCharArray(sensorstring_array, 30);   //Convert the string to a char array.
-  EC = strtok(sensorstring_array, ",");   //Parse the string at each comman.
+  EC = strtok(sensorstring_array, ",");   //Parse the string at each comma.
   TDS = strtok(NULL, ",");                          
   SAL = strtok(NULL, ",");                         
   GRAV = strtok(NULL, ",");                                      
   f_ec= atof(EC); //Convert EC to a floating point number to make salinity calculations a little easier.   
-  f_SAL=atof(SAL);                         
+  f_SAL=atof(SAL); //Convert EC EZO SAL to a floating point.                        
 }
