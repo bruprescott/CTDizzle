@@ -1,6 +1,10 @@
+#This brief R script will take your raw CTD data and create temperature and salinity downcast profiles.
+#For questions or suggestions, contact Ian Black (blackia@oregonstate.edu).
+#Feel free to modify this script as you see fit. 
+
 setwd('C:/OpenCTD_Data') #Set working directory to user-created folder in C drive named "OpenCTD_Data". You can still search for the file elsewhere through a search window per the script.
 originalcolumns <- c("Date","Time","Conductivity","Temperature","Pressure") #Establish column names for incoming file read.
-rawdata <- read.csv(file.choose(),header=FALSE,skip=3,col.names=originalcolumns,stringsAsFactors=FALSE)   #Read user transferred datalog.txt from the user-defined working directory.
+rawdata <- read.csv(file.choose(),header=FALSE,skip=3,col.names=originalcolumns,stringsAsFactors=FALSE)   #Read user transferred file from the user-defined working directory.
 #Removed the first three lines in case of gibberish from EC circuit.
 
 #Coefficients for Pressure to Depth Conversion (See AN69 by SeaBird Scientific)
@@ -30,9 +34,9 @@ Salinity=(a0+(a1*RT^0.5)+(a2*RT)+(a3*RT^1.5)+(a4*RT^2)+(a5*RT^2.5))+((rawdata[,4
 
 ConvertedData <- matrix(c(c(rawdata[,4]),c(Salinity),c(Depth)),ncol=3)
 Filter1 <- ConvertedData[-which(ConvertedData[,3]<=1.0),] #Remove top meter of data.
-MaxDepth <- which.max(Filter1[,3])
+MaxDepth <- which.max(Filter1[,3])    #Determine maximum depth reached.
 
-DowncastTemp <- matrix(Filter1[1:MaxDepth,1])
+DowncastTemp <- matrix(Filter1[1:MaxDepth,1]) #Create a new matrix with data only between the top and max depth.
 DowncastSal <- matrix(Filter1[1:MaxDepth,2])
 DowncastDepth <- matrix(Filter1[1:MaxDepth,3])
 
