@@ -1,13 +1,14 @@
 # README
 If you are looking for the build guide to the original OpenCTD, [it can be found here](https://github.com/OceanographyforEveryone/OpenCTD).
 
-## CTDizzle Mk3
+## CTDizzle
 ![CTDizzle](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Finished.jpg)
 
-This repository contains the code and build guide used for the CTDizzle Mk3.
-It also houses all of the resources and documentation that may be helpful during the build process.
 
-To get started, here is the [user guide](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/User_Guide.md).
+This repository contains the code, resources, and build guide used to build the CTDizzle based around the Arduino MKRZero.
+You can also found the legacy build guide for the Qduino version.
+
+To get started, navigate to Documentation > MKRZero > User Guide
 
 
 ### Directory Structure
