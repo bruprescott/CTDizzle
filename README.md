@@ -6,7 +6,7 @@ If you are looking for the build guide to the original OpenCTD, [it can be found
 
 
 This repository contains the code, resources, and build guide used to build the CTDizzle based around the Arduino MKRZero.
-You can also found the legacy build guide for the Qduino version.
+You can also find the legacy build guide for the Qduino version, but no additional updates will be made in the future..
 
 To get started, navigate to Documentation > MKRZero > User Guide
 
