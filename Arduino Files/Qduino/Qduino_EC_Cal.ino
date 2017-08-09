@@ -1,6 +1,9 @@
-//Adapted from the Atlas Scientific Sample Code by Oceanography For Everyone.
-//This sketch is used for communicating with and calibrating the Atlas-Scientific EC EZO.
-//The EC EZO may fail to read an initial "C,0", so it may need to be sent more than once to stop continuous reading mode.
+/* Version 1.1
+
+Adapted from the Atlas Scientific Sample Code by Oceanography For Everyone.
+This sketch is used for communicating with and calibrating the Atlas-Scientific EC EZO.
+The EC EZO may fail to read an initial "C,0", so it may need to be sent more than once to stop continuous reading mode.
+*/
 
 #include <SoftwareSerial.h>   //Allows communication with the EC EZO
 SoftwareSerial ecSerial(9,8); //Qduino RX, Qduino TX
