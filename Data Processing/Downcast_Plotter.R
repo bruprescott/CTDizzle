@@ -2,6 +2,10 @@
 #For questions or suggestions, contact Ian Black (blackia@oregonstate.edu).
 #Feel free to modify this script as you see fit. 
 
+#ISSUES
+#Does not consider the latitudinal variation in gravity.
+#Assumes that the first recorded pressure value is representative of the atmospheric pressure.
+
 setwd('C:/OpenCTD_Data') #Set working directory to user-created folder in C drive named "OpenCTD_Data". You can still search for the file elsewhere through a search window per the script.
 originalcolumns <- c("Date","Time","Conductivity","Temperature","Pressure") #Establish column names for incoming file read.
 rawdata <- read.csv(file.choose(),header=FALSE,skip=3,col.names=originalcolumns,stringsAsFactors=FALSE)   #Read user transferred file from the user-defined working directory.
