@@ -1,6 +1,7 @@
 %If viewing this in MATLAB, use the "deploytool" command to create a standalone application.
 %The executable does not require MATLAB to run, but you will need to install the free MCR runtime.
-%This script will plot profiles and time-series of your raw OpenCTD data.
+%This script will plot profiles and time-series of your raw OpenCTD data, as well as create a new csv of the converted data.
+%It saves all of this to a created OpenCTD_Data directory and labels everything by yearmonthdate_time.
 %Your data must be in the form of "MM/dd/uuuu,HH:mm:ss,EC,T,P"
 %Feel free to modify this code as you see fit.
 %Please contact Ian Black (blackia@oregonstate.edu) with any questions, comments, or concerns.
