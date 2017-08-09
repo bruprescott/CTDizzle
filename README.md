@@ -1,6 +1,8 @@
 # README
 If you are looking for the build guide to the original OpenCTD, [it can be found here](https://github.com/OceanographyforEveryone/OpenCTD).
 
+A lot of the information that pertains to the CTDizzle build can also be found on the OceanographyForEveryone GitHub, but you should check here first for updates.
+
 ## CTDizzle
 ![CTDizzle](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Finished.jpg)
 
