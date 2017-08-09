@@ -1,4 +1,5 @@
-/*
+/* Version 1.2
+
 This sketch is a combination of code written by the folks at Adafruit, Atlas-Scientific, Blue Robotics, Oceanography For Everyone, and SparkFun.
 It is used by the CTDizzle Mk4 and based around the Arduino MKRZero. 
 Contact Ian Black for questions or comments regarding this sketch. 
@@ -13,10 +14,10 @@ Does not consider latitudinal variation in gravity. Assumes g=9.806 m/s^2
 Assumes atmospheric pressure is 1000 mbar.
 These impact the depth and salinity calculations ever so slightly.
 
-Skip to line 30 for common variables.
-Skip to line 95 for setup.
-Skip to line 141 for loop.
-Skip to line 232 for print_EC_data function.
+Skip to line 31 for common variables.
+Skip to line 96 for setup.
+Skip to line 142 for loop.
+Skip to line 233 for print_EC_data function.
 */
 
 #include <SD.h>   //Used by SD module.
