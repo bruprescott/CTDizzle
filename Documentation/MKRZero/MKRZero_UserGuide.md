@@ -3,16 +3,16 @@
 1. [Introduction](#introduction)
 	- [Why Conductivity, Temperature, and Depth?]
 	- [Before You Get Started](#before-you-get-started)
-2. [CTDizzle Mk3]
+2. [The CTDizzle Mk4](#the-ctdizzle-mk4)
 	- [Specifications](#specifications)
-3. [Build Instructions]
+3. [Build Instructions](#build-instructions)
 	- [Software Setup](#software-setup)
 		- [Setting Up the Arduino IDE](#setting-up-the-arduino-ide)
-		- [Setting Up the Arduino MKRZero]
+		- [Setting Up the Arduino MKRZero](#setting-up-the-arduino-mkrzero)
 		- [Formatting the SD Card](#formatting-the-sd-card)
 		- [Setting Up the Required Libraries](#setting-up-the-required-libraries)
-	- [Board Preparation]
-	- [Breadboard and Testing Setup]
+	- [Breadboard Testing](#breadboard-testing)
+	- [Bench Test]
 		- [Calibrating the EC EZO]
 	- [Case Construction and Potting]
 		- [End Cap and Flange Preparation]
@@ -44,24 +44,29 @@ _Versions of the OpenCTD. Photo taken by Andrew Thaler._
 Temperature itself is an incredibly useful parameter as so many other ocean properties and phenomena rely on or are impacted by it.
 For example, temperature plays a role in how much gas (such as oxygen) seawater can hold, which in turn impacts productivity of fisheries along the Oregon coast. Similar to factors such as food availability, water movement, and predation; temperature also influences the growth rate, welfare, and reproductive potential of many organisms. Temperate is also one of the major factors that influences the density of seawater, which in turn plays a role in global water circulation. By monitoring ocean temperature over space and time, scientists are able to come up with connections between temperature and other aspects of the ocean.
 
-Conductivity by itself isn't a particularly useful parameter, but when combined with temperature and pressure through an empirical calculation, it allows one determine the salinity of the water. Salinity is essentially the concentration of dissolved salts and also plays a role in determining density. Saltier water is more dense than fresher water (assuming the temperature is the same for both).
+Conductivity by itself isn't a particularly useful, but when combined with temperature and pressure through an empirical calculation, it allows one determine the salinity of the water. Salinity is essentially the concentration of dissolved salts and also plays a role in determining density. Saltier water is more dense than fresher water (assuming the temperature is the same for both).
 
-In a two dimensional world (think latitude and longitude), the temperature and salinity of the surface ocean varies with location and time. In the Arctic, near Greenland, it is cold enough for sea ice to form. As the ice forms, the salinity of the water increases because the saltiness has no where to go, as a result, a mass of saltier, denser water begins to sink to the bottom of the ocean. Salinity and temperature also vary with depth!
+In a two dimensional world (think latitude and longitude), the temperature and salinity of the surface ocean varies with location and time. In the Arctic, near Greenland, it is cold enough for sea ice to form. As the ice forms, the salinity of the water increases because the saltiness has no where to go, as a result, a mass of saltier, denser water begins to sink to the bottom of the ocean. This water then begins a long journey to the Eastern Pacific, changing in temperature and salinity every so slightly. These values also vary with depth!
 
-The true depth of the ocean is difficult to measure. The average depth of the ocean is 4000m and the deepest part is roughly 11000m. That would be a long tape measure! Scientists have come up with a variety of methods for determining water depth, including sonar measurements, satellite altimetery, and pressure readings. The CTD uses pressure to determine water depth, which is 
+The true depth of the ocean is difficult to measure. The average depth of the ocean is 4000m and the deepest part is just under 11000m. That would be a long tape measure! Scientists have come up with a variety of methods for determining water depth, including sonar measurements, satellite altimetery, and pressure readings. The CTD uses pressure to determine water depth, which is easily calculated through an empirical formula.
+
+The CTD is the workhorse tool of oceanography. By building your own, I hope that you can gain an appreciation for the data, how it is collected, and what it tells us about our oceans.
 
 
 ### Before You Get Started
 
-There are likely cheaper and/or better sensor options out there. This guide only works for parts listed in the Parts_List.
-It is your responsibility to ensure that all parts are compatible with your setup. This build guide also assumes that you are running everything off of Windows. 
+This guide is intended to be used by students at Toledo High School and includes concepts and procedures to reflect that.
 
+This guide was designed so that you can build the CTDizzle with little to no experience with programming or tools. If you are confused on a topic, or require additional information, please do not hesitate to contact the author.
 
-## The CTDizzle Mk3
+There are likely cheaper and/or better sensor options out there. This guide only covers the parts outlined in the parts list. If you decide to use different sensors or parts, it is your responsibility to ensure that all parts are compatible with your setup.
 
+It should be noted that this guide assumes that you are running everything through Windows. As such, there is no Linux or mac OS support for the MATLAB and R processing scripts at this time. Please make sure that you are able to find an equivalent program for the steps that use third-party programs.
 
+## The CTDizzle Mk4
 
 This is the fourth rendition of the CTDizzle. Its construction is a little different than the original CTD, as it uses some different sensor and parts. It costs about 700 USD to construct and doesn't require any tools that can't be easily found at your local hardware store. If you have all the parts and tools on hand, you should be able to build it in a weekend!
+
 
 ### Specifications
 * Max Depth: 130m
@@ -70,6 +75,9 @@ This is the fourth rendition of the CTDizzle. Its construction is a little diffe
 * Pressure Accuracy: +/- 100 mbar
 * Max Sampling Rate: 1 Hz
 * Battery Life: ~ 100 hours (3.7v 4400mAh)
+
+Battery life ultimately depends on the battery that you use. It is recommended that you stick with the 3.7v LiPo family. 
+
 
 ## Build Instructions
 
@@ -83,7 +91,7 @@ The Arduino Integrated Development Environment (IDE) is simple to use. It is rec
 4. Set up shortcuts as desired.
 
 
-#### Setting up the Qduino Mini
+#### Setting up the MKRZero
 The MKRZero is officially supported by Arduino. The required package does not come pre-installed with the Arduino IDE, so you will need to install it using the Boards Manager.
 
 1. Open the Arduino IDE.
@@ -94,7 +102,7 @@ The MKRZero is officially supported by Arduino. The required package does not co
 6. Connect your MKRZero to your computer via microUSB. 
 7. Navigate to Tools > Port. Select the available COM Port. 
 
-Your MKRZero should now be upload ready. Disconnect from your computer if desired.
+Your MKRZero should now be upload ready. Disconnect from your computer if desired. It is recommended that you keep track of which USB port you plugged the MKRZero into. That way you don't have to worry about changing the com port every time you connect it to the computer.
 
 
 #### Formatting the SD Card
@@ -107,8 +115,10 @@ It is also necessary to format the microSD card that will be used to store the d
 6. Your card should now be formatted. 
 7. OPTIONAL: Navigate to your SD card through Windows Explorer. If desired create and additional folder to save old data. 
 
+Another option is to install the [SD Card Formatter](https://www.sdcard.org/downloads/formatter_4/) developed by the SD Association. If you think you might play around with a Raspberry Pi in the future, this application is particularly useful.
+
 #### Setting Up the Required Libraries
-Several libraries are needed to allow this OpenCTD operating code to work. These libraries allow communication with the sensors and the use of unique commands. They can either be found within the Arduino IDE or downloaded from GitHub. Libraries native within the IDE are automatically included by the IDE and no further steps are necessary to include them. The following instructions show how to download and access the third party libraries. 
+Several libraries are needed to allow the OpenCTD operating code to work. These libraries allow communication with the sensors and the use of unique commands. They can either be found within the Arduino IDE or downloaded from GitHub. Libraries native within the IDE are automatically included by the IDE and no further steps are necessary to include them. The following instructions show how to download and access the third party libraries. 
 
 |Native Libraries|Third Party Libraries|
 |:---:|:---:|
@@ -146,42 +156,47 @@ The DeadOn RTC requires the SparkFunDS3234RTC library. To access the library:
 6.	Navigate to Windows (C:) > Program Files (x86) > Arduino > libraries. Click on select folder.
 7.	The SparkFunDS3234RTC library can now be included by the operating code. Note that during future uploads, the Arduino IDE may classify the DeadOn RTC library as “Uncategorized”. The library should still function even though this message appears.
 
+If you are using different sensors, make sure to use the right libraries!
 
-### Board Prep
-It is necessary to prepare several electronic components and sensors with some preliminary soldering. 
-- Solder breakaway header strips to boards that require them. (MKRZero, RTC)
-- It is recommended you keep the BNC connectors on the EC kit for testing and calibration. If you think you might want to shorten the conductivity probe cable, you can do that later. Make sure you have enough though!
-- If you think you might not use the DF13 connects on the temperature and pressure sensors, now is a good time to cut them off. Carefully strip away ~1cm of insulation. Tin the ends to prevent strays.
-- Some of the pictures in this guide show the use of JST connectors to allow easy removal of the sensors from the main protoboard. If you are using these connectors, now is a good time to solder to the sensors. Remember which wires you solder to the JST pins!
-- The temperature and pressure sensors wires of the same color/type can be soldered together. Each device maintains a unique address that the microcontroller is capable of reading.
+### Breadboard Testing
+Most of the purchased parts should already be breadboard compatible, but there are a couple that you will need to solder header pins to.
+If you followed along with the parts list, you should have enough extra to practice soldering. Start by breaking off a strip of protoboard and 4 or five header pins from the main strip. Place the small header strip into the protoboard and practice connecting the two. You'll use less solder than you first expect and will happen pretty quickly!  Don't forget to check the you have the appropriate temperature for the solder you are using. Please use protective eyewear and appropriate clothing.
+
+Once you are confident with your newfound soldering skills, solder header pins to the DeadOn RTC and any other parts that need it.
+
+[Picture of DeadOn RTC with header pins here.]
+
+The next step is to remove the DF13 connectors on the temperature and pressure sensors. After you have removed them, carefully strip away ~1cm of insulation to expose the wire. 
+
+[Picture of exposed wire here.]
+
+Both the temperature and pressure sensors use the same communication protocol (I2C). In the final product, similar wires will be soldered to the same pin on the MKRZero. Each device has a unique address, so the MKRZero is capable of differentiating between the two. 
+After you have striped the wires, you can solder together the same colored wires of the sensors. It is recommended that you intertwine the wires to make things less messy. If you aren't confident in your soldering ability, feel free to practice with some other wire.
+
+[Picture of soldered wires here.]
+
+Now is the time to set things up on the breadboard!
+
+Place the MKRZero, EC EZO, and DeadOn RTC on the breadboard. Don't forget to install the SD card and coin cell!
+
+[Picture of prelim setup here].
+
+Next, connect everything together using the pinout guide.
+
+[Picture of setup here.]
 
 
+### Bench Test
 
-### Breadboard and Testing Setup
-Set up the MKRZero, RTC, and EC EZO on the breadboard. **If you change the pinouts in the physical build or the code, it is recommended that you record these changes.**
+Once you have the breadboard setup, connect your MKRZero to your computer and upload the MKRZero_OpCode.
 
-1. Following the pinout list, connect the RTC to the MKRZero.
-  - Install your microSD card and 12mm coin cell. 
-  - Connect the MKRZero to your computer. Navigate to File > Open. Open the file named “MKROpCode”. Select upload.
-  - Navigate to Tools > Serial Monitor.
-  - In the serial monitor, you should see MKRZero begin to spit out information. There won't be any data (except for date and time) because you haven't hooked up the sensors yet!
-	
-2. Connect the temperature and pressure sensors to the MKRZero.
-  - It is okay to solder the green wires together (same goes for the white wires). Each device has a unique address that allows the Qduino to differentiate between the two.
-  - Fire up the Qduino again and check the output. You should now see temperature and pressure in the serial monitor. 
-  
-3. Connect the EC probe to the EC EZO, then the EC EZO to the MKRZero. (Using the BNC connector.)
-  - Once connected, fire up the MKRZero. You should see an EC value of 0.00 when the probe is in open air. 
-  - You may notice that on a power cycle, the first reported line will not show an EC value. This is because the EC EZO is still warming up.
+[Picture of connection here.]
 
-4. Once you have all the sensors and parts connected, ensure that the data output appears reasonable.
-	In the serial monitor, it will take the form of...
+Open the serial monitor. If you have everything set up correctly, you should see data printing to the screen in the form of:
+Date (mm/dd/yyyy), Time (HH:mm:ss), EC (uS/cm), T (degC), P (mbar), SAL (EC EZO), Depth (Sketch), SAL (Sketch). 
 
-_Date (MM/DD/YY) , Time (HH:mm:ss) , Conductivity (uS/cm) , Temperature (C) , Pressure (mbar)_
+[Picture of output.]
 
-![Serial Monitor](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/SerialMonitor.png) 
-
-_Note: The first line does not show EC because it takes time for the EC EZO to process incoming setup commands. This happens every time the unit is power cycled. The provided processing materials will automatically remove this line, but you will need to remove it on your own otherwise._
 
 - The date should be representative of the date that your computer is set to. The time should be close to the time that your computer is set to, but may be behind by about 30 seconds. This is due to upload delay. If your time is drastically off or incoherent, remove the battery and power cycle the system. 
 
@@ -191,10 +206,14 @@ _Note: The first line does not show EC because it takes time for the EC EZO to p
 
 - The pressure sensor should be spitting out values between 1000 and 1050 depending on your elevation and sensor accuracy. If you are near sea level, the value should be within a few millibars of 1013. The pressure sensor is factory calibrated, but if values appear to be drastically off (e.g. 86000 or -6000), first check your pinout connections. If still incorrect, contact the manufacturer. 
 
-5. Now is a good time to calibrate the conductivity sensor. Follow along with the calibration procedure found in Documentation (in progress).
-  - It is recommended that you do not cut the probe cable until after calibration, in the event that there may be a manufactuer defect. Cutting the cable prior to testing the probe will void any warranty and return policy that Atlas Scientific may have. 
-  - A two point calibration is highly encouraged. Conductivity is highly dependent on temperature, so it is recommended that you calibrate the probe in a temperature controlled area (such as a cafeteria refrigerator or cold storage room).
-  - After you have confirmed proper calibration of the probe, it should not need to be calibrated for another year. You can now cut the cable if you do not plan to implement the BNC connectors into your design. 
+
+Calibrating the Conductivity Sensor
+
+Unlike the factory calibrated temperature and pressure sensors, the conductivity probe/circuit require a user calibration. First, you will need to leave you complete setup in a temperature controlled room over night (such as a cold storage room or cafeteria refrigerator).
+
+The next morning, take your calibration solutions, calibration procedure, and computer to your setup. Follow along with the calibration procedure found in the documentation folder (in progress). Conductivity is highly dependent on temperature, so it is important that you be as precise as possible! Using the provided plots, determine the temperature of the room and corresponding conductivity value to the nearest 100 uS/cm. Don't forget to bring a parka!
+
+After you have confirmed proper calibration of the probe, it should not need to be calibrated for another year. You can now cut the cable if you do not plan to implement the BNC connectors into your design. Please note that cutting the cable voids the Atlas-Scientific warranty, so it important to first test the probe to see if it works. 
 
 
 ### Case Construction and Potting
