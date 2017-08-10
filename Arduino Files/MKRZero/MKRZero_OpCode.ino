@@ -31,7 +31,7 @@ Skip to line 233 for print_EC_data function.
 #define FluidDensity 1024   //Density in kg/m^3. This varies with water conditions and location. Used by pressure sensor.
 #define SD_chipselect 28    //Chip select for the MKRZero.
 #define g 9.806   //Gravity in m/s^2. Varies with latitude. Used in depth calculation.
-#define RTC_chipselect 5    //Chip select for the DeadOn RTC.
+#define RTC_chipselect 7    //Chip select for the DeadOn RTC.
 #define AtmP 1000 //Atmospheric pressure in mbar.  Used in depth calculation.
 //End of common variables. 
 
