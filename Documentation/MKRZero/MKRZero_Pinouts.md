@@ -51,4 +51,4 @@ TX on one side connects to RX on the other. TX should never attach to TX.
 |Red|PRB1|	
 |Black|PRB2|	
 
-It is possible to use the BNC adapter in this build. 
+It is possible to use the BNC adapter in this build and is recommended.
