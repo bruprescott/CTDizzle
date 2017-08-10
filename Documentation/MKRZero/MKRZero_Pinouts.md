@@ -19,6 +19,8 @@ SQW is not needed unless you want to implement an alarm function.
 |:--------------------:|:--------------------:|
 |CS|28|
 
+SD capabilities are native to this board.
+
 |TSYS01 Temperature Sensor|MKRZero|	
 |:------------:|:------------:|	
 |Red|VCC|	
