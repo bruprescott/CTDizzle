@@ -36,8 +36,8 @@ Oceanographic equipment is often expensive and inaccessible for students and cit
 
 Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD) if you want to build a lower cost device out of easily accessible tools and materials. Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the initial framework for the OpenCTD. 
 
-![Original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/ctds.jpg)
-_Examples of the original OpenCTD._
+![Original OpenCTD](https://raw.githubusercontent.com/CTDizzle/CTDizzle/master/Documentation/Images/OpenCTDVersions.jpg)
+_Versions of the OpenCTD. Photo taken by Andrew Thaler._
 
 ### Why Conductivity, Temperature, and Depth?
 
