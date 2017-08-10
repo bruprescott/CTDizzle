@@ -1,5 +1,8 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
+
+<span style="color:blue">some *This is Blue italic.* text</span>
+
 1. [Introduction](#introduction)
 	- [Why Conductivity, Temperature, and Depth?]
 	- [Before You Get Started](#before-you-get-started)
