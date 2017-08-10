@@ -1,6 +1,6 @@
 Here is a list of parts used to build the CTDizzle Mk4, their vendor location, and the approximate cost for each item. You can probably find them elsewhere for cheaper and in less quantity. Some items from this list will provide enough parts for multiple CTDs. Prices do not include shipping, but I've done my best to select as few of vendors as possible.
 
-Please note that you can adapt the CTDizzle to use sensors and boards of your own choosing, but it is your responsibility to ensure that they are compatible. 
+Please note that you can adapt the CTDizzle to use sensors and boards of your own choosing, but it is your responsibility to ensure that they are compatible.
 
 #### Parts List
 |Part|Vendor|Price|Note|
@@ -25,7 +25,7 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 #### Consumables List
 |Item|Vendor|Price|Note|
 |:---|:---|:---|:---|
-|[Breakaway Header - Straight (x2)](https://www.sparkfun.com/products/116)|SparkFun|$3|
+|[Breakaway Header - Straight (x3)](https://www.sparkfun.com/products/116)|SparkFun|$4.50|
 |[2-Quart Urethane 75a](https://www.aeromarineproducts.com/product/urethane-75a-encapsulating-compound/)|AeroMarine|$65.00|If too spendy, try Loctite Marine 2-Ton Epoxy. Be careful to not create bubbles.
 |[Assorted 22 AWG - Solid Core Wire](https://www.sparkfun.com/products/11367)|SparkFun|$16.95|
 |[Heat Shrink Kit](https://www.sparkfun.com/products/9353)|SparkFun|$7.95|
