@@ -1,3 +1,5 @@
+### As of 10 August 2017, this document is no longer supported.
+
 Here is a list of parts used to build the CTDizzle Mk3, their vendor location, and the approximate cost for each item. You can probably find them elsewhere for cheaper and in less quantity. Some items from this list will provide enough parts for multiple CTDs. Prices do not include shipping.
 
 Please note that you can adapt the CTDizzle to use sensors and boards of your own choosing, but it is your responsibility to ensure that they are compatible. 
