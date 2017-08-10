@@ -1,7 +1,7 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
 
-<span style="color:blue">some *This is Blue italic.* text</span>
+Some Markdown text with <span style="color:blue">some *blue* text</span>.
 
 1. [Introduction](#introduction)
 	- [Why Conductivity, Temperature, and Depth?]
