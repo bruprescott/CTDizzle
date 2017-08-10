@@ -221,6 +221,13 @@ After you have confirmed proper calibration of the probe, it should not need to 
 ### Case Construction and Potting
 Once everything checks out and your breadboard tests are successful, you can begin to put the pressure case together.
 
+#### Switch/Purge End Cap Preparation
+Select one end cap and flange as your switch/purge end cap. Connect them together with the six M2 screws. Don't worry about installing the o-ring just yet. Once connected, use sandpaper to prepar the inner surface of the flange and end cap.
+
+
+
+
+
 #### End Cap and Flange Prep
 If you purchased the Blue Robotics case found in the MKR parts list, you will have two end caps with two holes. One end cap will house the temperature and conductivity sensor, and the other will house the pressure sensor and switch.
 For the end cap that you will use for the conductivity sensor, one of the holes will need to be drilled out to 12mm in order to accomodate the conducitivity probe. 
@@ -236,7 +243,7 @@ _Example of two holes drilled into an end cap._
 Clean the end cap and flange with alcohol. Now you can install the aluminum bulkheads that comprise the switch and vent. You'll want to grease up the bulkhead O-ring before installation. Don't forget to tighten them down! Next, install the end cap on the flange. Don't forget to add a greased up O-ring! Tighten all of the screws in a star pattern. Next, use a high grit sandpaper to scuff up the inside portion of the end cap and flange.
 
 ![Endcap + Flange](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/NoEpoxySwitchVent.jpg)
-_Example of end cap and flange connected with bulkheads installed. Now is a good time to use the sanpaper._
+_Example of end cap and flange connected with bulkheads installed. Now is a good time to use the sandpaper._
 
 You can also epoxy this end cap if you want an additional seal. Here is an example. It is recommended that you wrap the outside of the flange with masking tape to prevent debris and epoxy from entering the O-ring grooves. Any slight deviation in the O-ring surface will increase the risk of leakage.
 ![Epoxy Endcap](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/TapeFlange.jpg)
