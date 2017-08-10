@@ -1,3 +1,6 @@
+# As of 10 August 2017, this document is no longer being updated.
+
+
 ## Pinouts
 
 VCC is always 3.3v.
