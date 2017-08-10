@@ -57,7 +57,7 @@ For example, temperature plays a role in how much gas (such as oxygen) seawater 
 
 :+1: The true depth of the ocean is difficult to measure. The average depth of the ocean is 4000m and the deepest part is just under 11000m. That would be a long tape measure! Scientists have come up with a variety of methods for determining water depth, including sonar measurements, satellite altimetery, and pressure readings. The CTD uses pressure to determine water depth, which is easily calculated through an empirical formula.
 
-:+1: The CTD is the workhorse tool of oceanography. By building your own, I hope that you can gain an appreciation for the data, how it is collected, and what it tells us about our oceans.
+The CTD is the workhorse tool of oceanography. By building your own, I hope that you can gain an appreciation for the data, how it is collected, and what it tells us about our oceans.
 
 
 ### Before You Get Started
