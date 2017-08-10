@@ -1,5 +1,7 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
+:+1: This emoji indicates sections that are directed toward the students I will be working with during my research project.
+
 
 1. [Introduction](#introduction)
 	- [Why Conductivity, Temperature, and Depth?]
