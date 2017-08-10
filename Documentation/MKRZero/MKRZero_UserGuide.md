@@ -1,8 +1,6 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
 
-Some Markdown text with <span style="color:blue">some *blue* text</span>.
-
 1. [Introduction](#introduction)
 	- [Why Conductivity, Temperature, and Depth?]
 	- [Before You Get Started](#before-you-get-started)
