@@ -164,7 +164,7 @@ The DeadOn RTC requires the SparkFunDS3234RTC library. To access the library:
 If you are using different sensors, make sure to use the right libraries!
 
 ### Breadboard Testing
-:+1: Most of the purchased parts should already be breadboard compatible, but there are a couple that you will need to solder header pins to. If you followed along with the parts list, you should have enough extra to practice soldering. Start by breaking off a strip of protoboard and 4 or five header pins from the main strip. Place the small header strip into the protoboard and practice connecting the two. You'll use less solder than you first expect and will happen pretty quickly!  Don't forget to check the you have the appropriate temperature for the solder you are using. Please use protective eyewear and appropriate clothing. Once you are confident with your newfound soldering skills, solder header pins to the DeadOn RTC and any other parts that need it.
+:+1: Most of the  parts should already be breadboard compatible, but there are a couple that you will need to solder header pins to. If you followed along with the parts list, you should have enough extra to practice soldering. Start by breaking off a strip of protoboard and 4 or five header pins from the main strip. Place the small header strip into the protoboard and practice connecting the two. You'll use less solder than you first expect and will happen pretty quickly!  Don't forget to check the you have the appropriate temperature for the solder you are using. Please use protective eyewear and appropriate clothing. Once you are confident with your newfound soldering skills, solder header pins to the DeadOn RTC and any other parts that need it.
 
 [Picture of DeadOn RTC with header pins here.]
 
