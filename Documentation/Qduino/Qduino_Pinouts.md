@@ -1,4 +1,4 @@
-# As of 10 August 2017, this document is no longer being updated.
+## As of 10 August 2017, this document is no longer being updated.
 
 
 ## Pinouts
