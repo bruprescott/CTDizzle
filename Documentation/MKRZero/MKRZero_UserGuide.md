@@ -44,7 +44,7 @@ Oceanographic equipment is often expensive and inaccessible for students and cit
 Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD) if you want to build a lower cost device out of easily accessible tools and materials. Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the initial framework for the OpenCTD. 
 
 ![Original OpenCTD](https://raw.githubusercontent.com/CTDizzle/CTDizzle/master/Documentation/Images/OpenCTDVersions.jpg)
-_Versions of the OpenCTD. Photo taken by Andrew Thaler._
+_Variations of the original OpenCTD. Photo taken by Andrew Thaler._
 
 ### Why Conductivity, Temperature, and Depth?
 
@@ -222,9 +222,11 @@ After you have confirmed proper calibration of the probe, it should not need to 
 Once everything checks out and your breadboard tests are successful, you can begin to put the pressure case together.
 
 #### Switch/Purge End Cap Preparation
-Select one end cap and flange as your switch/purge end cap. Connect them together with the six M2 screws. Don't worry about installing the o-ring just yet. Once connected, use sandpaper to prepar the inner surface of the flange and end cap.
+Select one end cap and flange as your switch/purge end cap. Connect them together with the six M2 screws. Don't worry about installing the o-ring just yet. Once connected, use sandpaper to prepare the inner surface of the flange and end cap. After preparing the end cap, clean each surface with isopropyl alcohol. 
 
+[Picture of prepared end cap here.]
 
+Remove the face plate from the flange. Install the switch and pressure 
 
 
 
