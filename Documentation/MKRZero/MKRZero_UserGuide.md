@@ -1,6 +1,7 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
 :+1: This emoji indicates sections that are directed toward the students I will be working with during my research project.
+This guide is intended to be used by students at Toledo High School and includes concepts and procedures to reflect that.
 
 
 
@@ -47,21 +48,19 @@ _Versions of the OpenCTD. Photo taken by Andrew Thaler._
 
 ### Why Conductivity, Temperature, and Depth?
 
-Temperature itself is an incredibly useful parameter as so many other ocean properties and phenomena rely on or are impacted by it.
+:+1: Temperature itself is an incredibly useful parameter as so many other ocean properties and phenomena rely on or are impacted by it.
 For example, temperature plays a role in how much gas (such as oxygen) seawater can hold, which in turn impacts productivity of fisheries along the Oregon coast. Similar to factors such as food availability, water movement, and predation; temperature also influences the growth rate, welfare, and reproductive potential of many organisms. Temperate is also one of the major factors that influences the density of seawater, which in turn plays a role in global water circulation. By monitoring ocean temperature over space and time, scientists are able to come up with connections between temperature and other aspects of the ocean.
 
-Conductivity by itself isn't a particularly useful, but when combined with temperature and pressure through an empirical calculation, it allows one determine the salinity of the water. Salinity is essentially the concentration of dissolved salts and also plays a role in determining density. Saltier water is more dense than fresher water (assuming the temperature is the same for both).
+:+1: Conductivity by itself isn't a particularly useful, but when combined with temperature and pressure through an empirical calculation, it allows one determine the salinity of the water. Salinity is essentially the concentration of dissolved salts and also plays a role in determining density. Saltier water is more dense than fresher water (assuming the temperature is the same for both).
 
-In a two dimensional world (think latitude and longitude), the temperature and salinity of the surface ocean varies with location and time. In the Arctic, near Greenland, it is cold enough for sea ice to form. As the ice forms, the salinity of the water increases because the saltiness has no where to go, as a result, a mass of saltier, denser water begins to sink to the bottom of the ocean. This water then begins a long journey to the Eastern Pacific, changing in temperature and salinity every so slightly. These values also vary with depth!
+:+1: In a two dimensional world (think latitude and longitude), the temperature and salinity of the surface ocean varies with location and time. In the Arctic, near Greenland, it is cold enough for sea ice to form. As the ice forms, the salinity of the water increases because the saltiness has no where to go, as a result, a mass of saltier, denser water begins to sink to the bottom of the ocean. This water then begins a long journey to the Eastern Pacific, changing in temperature and salinity every so slightly. These values also vary with depth!
 
-The true depth of the ocean is difficult to measure. The average depth of the ocean is 4000m and the deepest part is just under 11000m. That would be a long tape measure! Scientists have come up with a variety of methods for determining water depth, including sonar measurements, satellite altimetery, and pressure readings. The CTD uses pressure to determine water depth, which is easily calculated through an empirical formula.
+:+1: The true depth of the ocean is difficult to measure. The average depth of the ocean is 4000m and the deepest part is just under 11000m. That would be a long tape measure! Scientists have come up with a variety of methods for determining water depth, including sonar measurements, satellite altimetery, and pressure readings. The CTD uses pressure to determine water depth, which is easily calculated through an empirical formula.
 
-The CTD is the workhorse tool of oceanography. By building your own, I hope that you can gain an appreciation for the data, how it is collected, and what it tells us about our oceans.
+:+1: The CTD is the workhorse tool of oceanography. By building your own, I hope that you can gain an appreciation for the data, how it is collected, and what it tells us about our oceans.
 
 
 ### Before You Get Started
-
-This guide is intended to be used by students at Toledo High School and includes concepts and procedures to reflect that.
 
 This guide was designed so that you can build the CTDizzle with little to no experience with programming or tools. If you are confused on a topic, or require additional information, please do not hesitate to contact the author.
 
@@ -165,10 +164,7 @@ The DeadOn RTC requires the SparkFunDS3234RTC library. To access the library:
 If you are using different sensors, make sure to use the right libraries!
 
 ### Breadboard Testing
-Most of the purchased parts should already be breadboard compatible, but there are a couple that you will need to solder header pins to.
-If you followed along with the parts list, you should have enough extra to practice soldering. Start by breaking off a strip of protoboard and 4 or five header pins from the main strip. Place the small header strip into the protoboard and practice connecting the two. You'll use less solder than you first expect and will happen pretty quickly!  Don't forget to check the you have the appropriate temperature for the solder you are using. Please use protective eyewear and appropriate clothing.
-
-Once you are confident with your newfound soldering skills, solder header pins to the DeadOn RTC and any other parts that need it.
+:+1: Most of the purchased parts should already be breadboard compatible, but there are a couple that you will need to solder header pins to. If you followed along with the parts list, you should have enough extra to practice soldering. Start by breaking off a strip of protoboard and 4 or five header pins from the main strip. Place the small header strip into the protoboard and practice connecting the two. You'll use less solder than you first expect and will happen pretty quickly!  Don't forget to check the you have the appropriate temperature for the solder you are using. Please use protective eyewear and appropriate clothing. Once you are confident with your newfound soldering skills, solder header pins to the DeadOn RTC and any other parts that need it.
 
 [Picture of DeadOn RTC with header pins here.]
 
@@ -213,11 +209,11 @@ Date (mm/dd/yyyy), Time (HH:mm:ss), EC (uS/cm), T (degC), P (mbar), SAL (EC EZO)
 - The pressure sensor should be spitting out values between 1000 and 1050 depending on your elevation and sensor accuracy. If you are near sea level, the value should be within a few millibars of 1013. The pressure sensor is factory calibrated, but if values appear to be drastically off (e.g. 86000 or -6000), first check your pinout connections. If still incorrect, contact the manufacturer. 
 
 
-Calibrating the Conductivity Sensor
+### Calibrating the Conductivity Sensor
 
-Unlike the factory calibrated temperature and pressure sensors, the conductivity probe/circuit require a user calibration. First, you will need to leave you complete setup in a temperature controlled room over night (such as a cold storage room or cafeteria refrigerator).
+:+1: Unlike the factory calibrated temperature and pressure sensors, the conductivity probe/circuit require a user calibration. First, you will need to leave you complete setup in a temperature controlled room over night (such as a cold storage room or cafeteria refrigerator).
 
-The next morning, take your calibration solutions, calibration procedure, and computer to your setup. Follow along with the calibration procedure found in the documentation folder (in progress). Conductivity is highly dependent on temperature, so it is important that you be as precise as possible! Using the provided plots, determine the temperature of the room and corresponding conductivity value to the nearest 100 uS/cm. Don't forget to bring a parka!
+ :+1: The next morning, take your calibration solutions, calibration procedure, and computer to your setup. Follow along with the calibration procedure found in the documentation folder (in progress). Conductivity is highly dependent on temperature, so it is important that you be as precise as possible! Using the provided plots, determine the temperature of the room and corresponding conductivity value to the nearest 100 uS/cm. Don't forget to bring a parka!
 
 After you have confirmed proper calibration of the probe, it should not need to be calibrated for another year. You can now cut the cable if you do not plan to implement the BNC connectors into your design. Please note that cutting the cable voids the Atlas-Scientific warranty, so it important to first test the probe to see if it works. 
 
@@ -299,7 +295,7 @@ After you have soldered everything and tested the data output, you can finish co
 
 
 ## Corrosion
-The screws used in the end caps are made of 316 SS and the main body of the unit is made of anodized aluminum.
+:+1: The screws used in the end caps are made of 316 SS and the main body of the unit is made of anodized aluminum.
 When two dissimilar metals interact in seawater, galvanic corrosion can occur. The metal on the lower end of the galvanic scale (aluminum in this case) will begin to corrode after an extended period of time. Cathodic protection is one method to mitigating the corrosion of the end caps. This can be done by installing an anode (commonly made of zinc). 
 
 I am currently searching for a non-invasive way of adding a zinc anode to the device. Another option is to replace the stainless steel screws with the aluminum equivalent.
@@ -332,7 +328,7 @@ The device should be fully assembled and the proper sampling regime selected pri
   - If another stationary deployment is planned, the battery will likely need to be charged or replaced. This requires the user to open up the device.
 
 ## Battery Charging Procedure
-1. Turn off the device.
+1. Turn off the CTD.
 2. Remove the switch/purge end cap. 
 3. Remove the main electronics board and disconnect the battery switch cable.
 4. Plug the battery directly into the MKRZero.
@@ -394,10 +390,12 @@ The application will also create a folder in your C: drive labeled "OpenCTD_Data
 ### Is the data reasonable?
 
 #### The West Coast (Move this to case construction section).
+:+1:
 
-The west coast of the United States has one of the most adverse wave climates in the world. 
 
-#### In a Bay
+#### Yaquina Bay
+
+:+1:
 
 The OpenCTD is capable of observing changes over several days. The pressure sensor is capable of rectifying changes is tidal height and changes in temperature and salinity can be seen to follow. 
 
@@ -408,7 +406,7 @@ Every couple of months students from Oregon State University will sample from th
 
 #### The Oregon Shelf
 
-
+:+1:
 
 
 ## Index of Jargon
@@ -417,7 +415,7 @@ In no particular order...
 
 |Term|Description|
 |:---:|:---|
-|BNC|[Bayonet Neill-Concelmen connector](https://en.wikipedia.org/wiki/BNC_connector). Typically the terminator on a coaxial cable|
+|BNC|[Bayonet Neill-Concelmen Connector](https://en.wikipedia.org/wiki/BNC_connector). Typically the terminator on a coaxial cable|
 |SPI|[Serial Peripheral Interface] (https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus). A synchronous serial communication interface typically used in short distance communication. One device is considered the master device and the others the slave. The slave select (SS) pin allows the microcontroller to select which device it talks to.|
 |I2C|[Inter-Integrated Circuit](https://en.wikipedia.org/wiki/I%C2%B2C). Often pronouced I-squared-C or I-two-C. It only uses two lines for communication but is communicates slower than SPI|
 |TX|Serial transmitter on a device. |
