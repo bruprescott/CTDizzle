@@ -32,17 +32,23 @@
 	
 ## Introduction
 
-Oceanographic equipment is often expensive and inaccessible for students and citizen oceanographers. The OpenCTD helps reduce costs and allows individuals to collect conductivity, temperature, and depth data with an easy-to-build device. It is still being refined for use in scientific research, but in its current state it will give you data suitable for learning. 
+Oceanographic equipment is often expensive and inaccessible for students and citizen oceanographers. The OpenCTD helps reduce costs and allows individuals to collect conductivity, temperature, and depth data with an easy-to-build device. It is still being refined and isn't quite ready for use in scientific research yet, but in its current stat it will give you data suitable for learning and teaching. 
 
-Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD) if you want to build a lower cost device.
-Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the initial framework for the OpenCTD. 
+Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD) if you want to build a lower cost device out of easily accessible tools and materials. Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the initial framework for the OpenCTD. 
 
 ![Original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/ctds.jpg)
 _Examples of the original OpenCTD._
 
 ### Why Conductivity, Temperature, and Depth?
 
-[Insert science jargon here.]
+Temperature itself is an incredibly useful parameter as so many other ocean properties and phenomena rely on or are impacted by it.
+For example, temperature plays a role in how much gas (such as oxygen) seawater can hold, which in turn impacts productivity of fisheries along the Oregon coast. Similar to factors such as food availability, water movement, and predation; temperature also influences the growth rate, welfare, and reproductive potential of many organisms. Temperate is also one of the major factors that influences the density of seawater, which in turn plays a role in global water circulation. By monitoring ocean temperature over space and time, scientists are able to come up with connections between temperature and other aspects of the ocean.
+
+Conductivity by itself isn't a particularly useful parameter, but when combined with temperature and pressure through an empirical calculation, it allows one determine the salinity of the water. Salinity is essentially the concentration of dissolved salts and also plays a role in determining density. Saltier water is more dense than fresher water (assuming the temperature is the same for both).
+
+In a two dimensional world (think latitude and longitude), the temperature and salinity of the surface ocean varies with location and time. In the Arctic, near Greenland, it is cold enough for sea ice to form. As the ice forms, the salinity of the water increases because the saltiness has no where to go, as a result, a mass of saltier, denser water begins to sink to the bottom of the ocean. Salinity and temperature also vary with depth!
+
+The true depth of the ocean is difficult to measure. The average depth of the ocean is 4000m and the deepest part is roughly 11000m. That would be a long tape measure! Scientists have come up with a variety of methods for determining water depth, including sonar measurements, satellite altimetery, and pressure readings. The CTD uses pressure to determine water depth, which is 
 
 
 ### Before You Get Started
