@@ -3,6 +3,9 @@
 :+1: This emoji indicates sections that are directed toward the students I will be working with during my research project.
 
 
+
+## Contents
+
 1. [Introduction](#introduction)
 	- [Why Conductivity, Temperature, and Depth?]
 	- [Before You Get Started](#before-you-get-started)
