@@ -1,7 +1,7 @@
 # USER GUIDE (WORK IN PROGRESS) 
 
 :+1: This emoji indicates sections that are directed toward the students I will be working with during my research project.
-This guide is intended to be used by students at Toledo High School and includes concepts and procedures to reflect that.
+
 
 
 
@@ -62,7 +62,7 @@ The CTD is the workhorse tool of oceanography. By building your own, I hope that
 
 ### Before You Get Started
 
-This guide was designed so that you can build the CTDizzle with little to no experience with programming or tools. If you are confused on a topic, or require additional information, please do not hesitate to contact the author.
+This guide was designed so that you can build this version of the OpenCTD with little to no experience with programming or tools. If you are confused on a topic, or require additional information, please do not hesitate to contact the author.
 
 There are likely cheaper and/or better sensor options out there. This guide only covers the parts outlined in the parts list. If you decide to use different sensors or parts, it is your responsibility to ensure that all parts are compatible with your setup.
 
@@ -74,7 +74,7 @@ This is the fourth rendition of the CTDizzle. Its construction is a little diffe
 
 
 ### Specifications
-* Max Depth: 130m
+* Max Depth: 120m
 * EC Accuracy: <1% after calibration
 * Temperature Accuracy: +/- 0.1 C
 * Pressure Accuracy: +/- 100 mbar
@@ -97,7 +97,7 @@ The Arduino Integrated Development Environment (IDE) is simple to use. It is rec
 
 
 #### Setting up the MKRZero
-The MKRZero is officially supported by Arduino. The required package does not come pre-installed with the Arduino IDE, so you will need to install it using the Boards Manager.
+The MKRZero is designed and officially supported by Arduino. The required package does not come pre-installed with the Arduino IDE, so you will need to install it using the Boards Manager.
 
 1. Open the Arduino IDE.
 2. Navigate to Tools > Board > Board Manager
@@ -178,27 +178,26 @@ After you have striped the wires, you can solder together the same colored wires
 [Picture of soldered wires here.]
 
 Now is the time to set things up on the breadboard!
-
 Place the MKRZero, EC EZO, and DeadOn RTC on the breadboard. Don't forget to install the SD card and coin cell!
 
-[Picture of prelim setup here].
+[Picture of setup here].
 
 Next, connect everything together using the pinout guide.
 
-[Picture of setup here.]
+[Picture of setup with jumper wires here.]
+
 
 
 ### Bench Test
 
-Once you have the breadboard setup, connect your MKRZero to your computer and upload the MKRZero_OpCode.
+Once you have the breadboard setup, connect your MKRZero to the computer and upload the MKRZero_OpCode.
 
-[Picture of connection here.]
+[Picture of whole setup here.]
 
 Open the serial monitor. If you have everything set up correctly, you should see data printing to the screen in the form of:
 Date (mm/dd/yyyy), Time (HH:mm:ss), EC (uS/cm), T (degC), P (mbar), SAL (EC EZO), Depth (Sketch), SAL (Sketch). 
 
 [Picture of output.]
-
 
 - The date should be representative of the date that your computer is set to. The time should be close to the time that your computer is set to, but may be behind by about 30 seconds. This is due to upload delay. If your time is drastically off or incoherent, remove the battery and power cycle the system. 
 
@@ -206,83 +205,82 @@ Date (mm/dd/yyyy), Time (HH:mm:ss), EC (uS/cm), T (degC), P (mbar), SAL (EC EZO)
 
 - The temperature should be representative of the ambient temperature of the room you are performing the test in. It may be handy to have a thermometer nearby to check this. The temperature probe is factory calibrated, but if further calibration is needed, a two-point calibration is recommended.
 
-- The pressure sensor should be spitting out values between 1000 and 1050 depending on your elevation and sensor accuracy. If you are near sea level, the value should be within a few millibars of 1013. The pressure sensor is factory calibrated, but if values appear to be drastically off (e.g. 86000 or -6000), first check your pinout connections. If still incorrect, contact the manufacturer. 
+- The pressure sensor should be spitting out values between 1000 and 1050 depending on your elevation and sensor accuracy. If you are near sea level, the value should be within a few millibars of 1020. The pressure sensor is factory calibrated, but if values appear to be drastically off (e.g. 86000 or -6000), first check your pinout connections. If still incorrect, contact the manufacturer. 
 
 
 ### Calibrating the Conductivity Sensor
 
-:+1: Unlike the factory calibrated temperature and pressure sensors, the conductivity probe/circuit require a user calibration. First, you will need to leave you complete setup in a temperature controlled room over night (such as a cold storage room or cafeteria refrigerator).
+:+1: Unlike the factory calibrated temperature and pressure sensors, the conductivity probe/circuit require a user calibration. First, you will need to leave your complete setup and calibration solutions in a temperature controlled room over night (such as a cold storage room or cafeteria refrigerator).
 
- :+1: The next morning, take your calibration solutions, calibration procedure, and computer to your setup. Follow along with the calibration procedure found in the documentation folder (in progress). Conductivity is highly dependent on temperature, so it is important that you be as precise as possible! Using the provided plots, determine the temperature of the room and corresponding conductivity value to the nearest 100 uS/cm. Don't forget to bring a parka!
+[Picture of calibration setup here.]
 
-After you have confirmed proper calibration of the probe, it should not need to be calibrated for another year. You can now cut the cable if you do not plan to implement the BNC connectors into your design. Please note that cutting the cable voids the Atlas-Scientific warranty, so it important to first test the probe to see if it works. 
+ :+1: The next morning, take your calibration procedure and computer to your setup. Follow along with the calibration procedure found in the documentation folder (in progress). Conductivity is highly dependent on temperature, so it is important that you be as precise as possible! Using the provided plots, determine the temperature of the room and corresponding conductivity value to the nearest 100 uS/cm. Don't forget to bring a parka!
+
+After you have confirmed proper calibration of the probe, it won't need another calibration for a year. You can now cut the cable if you do not plan to implement the BNC connectors into your design. Please note that cutting the cable voids the Atlas-Scientific warranty, so it important to first test the probe to see if it works. 
 
 
 ### Case Construction and Potting
 Once everything checks out and your breadboard tests are successful, you can begin to put the pressure case together.
 
 #### Switch/Purge End Cap Preparation
-Select one end cap and flange as your switch/purge end cap. Connect them together with the six M2 screws. Don't worry about installing the o-ring just yet. Once connected, use sandpaper to prepare the inner surface of the flange and end cap. After preparing the end cap, clean each surface with isopropyl alcohol. 
+Select one end cap and flange as your switch/purge end cap. Connect them together with the six M2 screws. Don't worry about installing the o-ring just yet. Once connected, use sandpaper to prepare the inner surface of the flange and end cap. After preparing the end cap, clean each surface with isopropyl alcohol. By scuffing up the internal surface, you are increading the bonding capacity of the urethane you will later apply.
 
 [Picture of prepared end cap here.]
 
 Remove the face plate from the flange. Install the switch and pressure 
 
+[Picture of installed bulkheads here.]
+
+#### Conductivity and Pressure Sensor End Cap
+
+Next, do the same thing with the other end cap. The conductivity sensor has too large a diameter for the pre-drilled holes, so you will need to drill out one of the holes to 12mm diameter.
+
+[Picture of drilled out hole here.]
 
 
-#### End Cap and Flange Prep
-If you purchased the Blue Robotics case found in the MKR parts list, you will have two end caps with two holes. One end cap will house the temperature and conductivity sensor, and the other will house the pressure sensor and switch.
-For the end cap that you will use for the conductivity sensor, one of the holes will need to be drilled out to 12mm in order to accomodate the conducitivity probe. 
+After you have prepared each end cap, you can re-connect them to the flanges. Make sure everything is clean. Wrap the O-Ring grooves of the flange in masking tape to prevent any spillage from the next step.
 
-Install the end caps onto the flanges without the o-ring. Using sandpaper, scuff up the internal surface of the end cap and flange. This will increase the bonding capacity of the urethane with the surface.
+#### Applying the Urethane
 
+:+1: The urethane you are using is called Urethane 75a. It is specifically designed for potting of electronics and cables that are placed in seawater.
 
-If using a blank end cap, drill two 10mm holes into one of the caps. This will be considered the end cap that will be used for the switch and vent. Make sure there is enough space in between the holes to allow you to tighten the aluminum bulkheads with a wrench. 
- 
-![Switch and Vent Endcap](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/HolesEndcap.jpg)
-_Example of two holes drilled into an end cap._
+[Picture of Urethane station here.]
 
-Clean the end cap and flange with alcohol. Now you can install the aluminum bulkheads that comprise the switch and vent. You'll want to grease up the bulkhead O-ring before installation. Don't forget to tighten them down! Next, install the end cap on the flange. Don't forget to add a greased up O-ring! Tighten all of the screws in a star pattern. Next, use a high grit sandpaper to scuff up the inside portion of the end cap and flange.
+Prior to mixing the urethane, it is important to have your vacuum (if you are going to use one) and stand ready for use. It is recommended that you use a vacuum chamber to remove any bubbles during the curing process.
 
-![Endcap + Flange](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/NoEpoxySwitchVent.jpg)
-_Example of end cap and flange connected with bulkheads installed. Now is a good time to use the sandpaper._
+Once you have your end caps setup, make sure that the wires are out of the way. Mix the two urethane components together in a 1:1 ratio. Start by mixing 1 cup of each at a time.
 
-You can also epoxy this end cap if you want an additional seal. Here is an example. It is recommended that you wrap the outside of the flange with masking tape to prevent debris and epoxy from entering the O-ring grooves. Any slight deviation in the O-ring surface will increase the risk of leakage.
-![Epoxy Endcap](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/TapeFlange.jpg)
-_Note: It is recommended that you use the potting kit to minimize mess and bubbling. You will notice that there is some slight bubbling in the picture above. To get rid of bubble after placing the epoxy, you can put the end cap in a vacuum chamber._
+[Picture of mixture here.]
 
-In the other end cap, drill two 10mm holes and one 12mm hole. To increase the internal space for the electrical compenents, it is recommended that you place the 12mm hole as close to the flange wall as possible, while still leaving a little space for epoxy to surround the EC probe. You can connect the end cap to the flange to act as a guide.
+Next, pour the urethane into each end cap until it reaches the brim of the flange. Turn on the vacuum chamber for about three minutes. Remove any remaining bubbles with a toothpick.
 
-Use a high grit sandpaper to rough up the end cap and flange. Clean with alcohol. Install the temperature and pressure sensors in the 10mm holes. Next, install the end cap onto the flange. The next part is a little tricky.
+[Picture of urethane and end caps here.]
 
-Insert the EC probe into the 12mm hole. Allow it to extend through until it is approximately even with the temperature probe height. Reinstall the rubber probe guard to prevent any epoxy or glue entering the sensor area. The probe may not fit perfectly within the hole, so it is recommended you attempt to make it as perpendicular with the end cap as possible, and then add a couple drops of superglue to hold it in place. You can use the acrylic tube as stand. Epoxy this end cap in a fashion similar to the previous end cap. As the EC probe now is a site for leaking, it is recommended that you use plenty of epoxy. Allow it to cure for 24 hours.
+Allow to cure for 24 hours. 
 
 
 ### Protoboard Soldering
-It is recommended that you connect one component to the Qduino at a time and view the output in the serial monitor after each sensor installation. It may be easiest to start with the SD module, then the RTC, Atlas EC EZO, and then the sensors. 
 
-Trim the protoboard so that it will fit within the internal dimensions of the main tube. Align the components as you see fit. Carefully tack a couple pins of each compenent to the protoboard to keep them in place. Cut lengths of solid core wire to bridge between the corresponding pins for each of your boards. This is where the needle hemostats come in handy. Also note that you can attach the matching pins of the RTC and Transflash together. Both of these use Serial Peripheral Interface (SPI) to communicate with the Qduino, but there is enough of a delay between operations that they can use the same pins.
+While your end caps are curing, you can begin to solder the electrical components together.
 
-It isn't necessary, but installing a quick disconnect for the sensors helps when you need to reprogram, charge, or pull data from the protoboard. You can solder one half of the 4-pin JST connector to the temperature and pressure sensors and the other half to the Qduino. Make sure you have the correct pin orientation!
+First, orient the MKRZero on the protoboard so that the SD card faces the switch end cap. Below that, install the RTC, and below the RTC, install the EC EZO.  Using 22 AWG solid core wire, solder wires to the corresponding pins of the MKRZero, RTC, and EC EZO. It is recommended that you test this setup in case there are any ground faults.
+
+[Picture of main protoboard here.]
+
+It isn't necessary, but installing a quick disconnect for the sensors helps when you need to reprogram, charge, or pull data from the protoboard. If desired, you can also solder the temperature and pressure JST plugs to the MKRZero. Make a note of which wire goes where, because after your urethane is done curing, you will want to make sure you have the right wires hooked up!
+
+[Picture of main protoboard with JST here.]
 
 Now is the time to decide if you want to cut the EC probe cable. Leaving the BNC connector has a couple advantages. It makes it easier to disconnect from the protoboard and there is no confusion over the probe communication. A downside to this is that there is a lot of excess cable. There is probably room for this excess cable in the internal space, but it may be cramped. 
 
-- If you decide to cut the cable, follow the Atlas-Scientific guide to cable cutting. Recall that Atlas-Scientific will not accept returns of probes with cut capbles. Once cut, solder one half of the 2-pin JST connector to the probe leads, and the other half to the corresponding pins on the EC EZO. 
-
-![WiredProtoTop](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/WiredProtoTop.jpg)
-![WiredProtoBot](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Wiredproto.jpg)
-![WiredProtoExample](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Wiredproto2.jpg)
-![WiredProtoExample2](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/ProtoOverview.jpg)
+- If you decide to cut the cable, follow the Atlas-Scientific guide to cable cutting. Recall that Atlas-Scientific will not accept returns of probes with cut cables. Once cut, solder one half of the 2-pin JST connector to the probe leads, and the other half to the corresponding pins on the EC EZO. 
 
 
 #### Switch Cable Extension
-It is not recommended that you cut the battery cables to install the switch, as this may have an impact on the charging of the battery. Instead, use a JST extension cable to tie the switch into. First, cut the ground line of the extension cable at roughly the midpoint. Solder a switch lead onto each end of the ground line. 
+In order to externally turn off the OpenCTD, we need to install a switch. It is not recommended that you cut the battery cables to install the switch, as this may have an impact on the charging of the battery. Instead, use a JST extension cable to tie the switch into. First, cut the ground line of the extension cable at roughly the midpoint. Solder a switch lead onto each end of the ground line. 
 - Take care when soldering, as the wire will heat up quickly when maintaining contact with the soldering iron. This may result in deformation of the JST connector and you will not be able to use it. 
 
-![JSTSwitch](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/SwitchCable.jpg)
-
-![MessOfWires](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Innards3.jpg)
-
+[Picture of extension here.]
 
 
 ### Final Case Construction
@@ -291,23 +289,19 @@ After you have soldered everything and tested the data output, you can finish co
 1. Ensure the flanges are clean. Grease the flange O-rings for the sensor end cap and install them.
 2. Install the sensor end cap onto the acrylic tube. 
 3. Sort the wires.
-4. Connect the Qduino to the battery via the JST extension. Ensure that the switch is off or removed. 
-5. Place a desiccant pack in the acrylic tube. 
+4. Connect the MKRZero to the battery via the JST extension. Ensure that the switch is off or removed. 
+5. Place a desiccant pack in the pressure case. 
 6. Connect your sensors to the protoboard. Place the protoboard and battery in the tube. It is recommended that you tape the battery to the protoboard. 
-7. Pack the acrylic tube with some sort of packing material if there is some play in the internal wiring and components. 
+7. Pack the aluminum tube with some sort of packing material if there is some play in the internal wiring and components. 
 8. Remove the purge plug from the switch and vent end cap. Install the switch and vent end cap on the acrylic tube.
 9. Reinstall the switch and plug. 
 10. Turn on the device and look for the LEDs on the EC EZO. 
 
-
-![Completed](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Finished.jpg)
-
+[Picture of completed device here.]
 
 ## Corrosion
 :+1: The screws used in the end caps are made of 316 SS and the main body of the unit is made of anodized aluminum.
 When two dissimilar metals interact in seawater, galvanic corrosion can occur. The metal on the lower end of the galvanic scale (aluminum in this case) will begin to corrode after an extended period of time. Cathodic protection is one method to mitigating the corrosion of the end caps. This can be done by installing an anode (commonly made of zinc). 
-
-I am currently searching for a non-invasive way of adding a zinc anode to the device. Another option is to replace the stainless steel screws with the aluminum equivalent.
 
 
 ## Predeployment Procedure
