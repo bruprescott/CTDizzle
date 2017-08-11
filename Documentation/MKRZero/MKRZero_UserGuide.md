@@ -8,8 +8,8 @@
 ## Contents
 
 1. [Introduction](#introduction)
-	- [Why Conductivity, Temperature, and Depth?]
 	- [Before You Get Started](#before-you-get-started)
+	- [Why Conductivity, Temperature, and Depth?]
 2. [The CTDizzle Mk4](#the-ctdizzle-mk4)
 	- [Specifications](#specifications)
 3. [Build Instructions](#build-instructions)
@@ -46,6 +46,17 @@ Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/Open
 ![Original OpenCTD](https://raw.githubusercontent.com/CTDizzle/CTDizzle/master/Documentation/Images/OpenCTDVersions.jpg)
 _Variations of the original OpenCTD. Photo taken by Andrew Thaler._
 
+
+
+### Before You Get Started
+
+This guide was designed so that you can build this version of the OpenCTD with little to no experience with programming or tools. If you are confused on a topic, or require additional information, please do not hesitate to contact the author.
+
+There are likely cheaper and/or better sensor options out there. This guide only covers the parts outlined in the parts list. If you decide to use different sensors or parts, it is your responsibility to ensure that all parts are compatible with your setup.
+
+It should be noted that this guide assumes that you are running everything through Windows. As such, there is no Linux or mac OS support for the MATLAB and R processing scripts at this time. Please make sure that you are able to find an equivalent program for the steps that use third-party programs.
+
+
 ### Why Conductivity, Temperature, and Depth?
 
 :+1: Temperature itself is an incredibly useful parameter as so many other ocean properties and phenomena rely on or are impacted by it.
@@ -60,13 +71,6 @@ For example, temperature plays a role in how much gas (such as oxygen) seawater 
 The CTD is the workhorse tool of oceanography. By building your own, I hope that you can gain an appreciation for the data, how it is collected, and what it tells us about our oceans.
 
 
-### Before You Get Started
-
-This guide was designed so that you can build this version of the OpenCTD with little to no experience with programming or tools. If you are confused on a topic, or require additional information, please do not hesitate to contact the author.
-
-There are likely cheaper and/or better sensor options out there. This guide only covers the parts outlined in the parts list. If you decide to use different sensors or parts, it is your responsibility to ensure that all parts are compatible with your setup.
-
-It should be noted that this guide assumes that you are running everything through Windows. As such, there is no Linux or mac OS support for the MATLAB and R processing scripts at this time. Please make sure that you are able to find an equivalent program for the steps that use third-party programs.
 
 ## The CTDizzle Mk4
 
