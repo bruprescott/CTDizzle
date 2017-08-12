@@ -41,10 +41,12 @@ SD capabilities are native to this board.
 |:------------:|:------------:|	
 |Tx|13|	
 |Rx|14|	
-|VCC|VCC|	
+|VCC|5v|	
 |GND|GND|	
 
 TX on one side connects to RX on the other. TX should never attach to TX.
+If connecting VCC to VCC, the EC EZO may report undervoltage. You can connect the VCC of the EC EZO to the 5v pin on the MKRZero.
+
 
 |Atlas-Scientific EC K1.0 Probe|EC EZO|	
 |:------------:|:------------:|
