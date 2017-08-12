@@ -252,7 +252,7 @@ After you have prepared each end cap, you can re-connect them to the flanges. Ma
 
 Prior to mixing the urethane, it is important to have your vacuum (if you are going to use one) and stand ready for use. It is recommended that you use a vacuum chamber to remove any bubbles during the curing process.
 
-Once you have your end caps setup, make sure that the wires are out of the way. Mix the two urethane components together in a 1:1 ratio. Start by mixing 1 cup of each at a time.
+Once you have your end caps setup, make sure that the wires are out of the way. Mix the two urethane components together in a 1:1 ratio. Start by mixing 1 cup of each at a time. Here are some (videos)[https://www.masterbond.com/resources/video-library?tid=354] on how to mix and apply two part epoxies.
 
 [Picture of mixture here.]
 
