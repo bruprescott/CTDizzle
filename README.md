@@ -1,7 +1,7 @@
 # README
-If you are looking for the build guide to the original OpenCTD created by OceanographyForEveryone, [it can be found here](https://github.com/OceanographyforEveryone/OpenCTD).
+If you are looking for the build guide to the original OceanographyForEveryone OpenCTD, [it can be found here](https://github.com/OceanographyforEveryone/OpenCTD).
 
-The CTDizzle and OpenCTD have a lot in common, and some of the information is shared between the two GitHub accounts. However, you should check here first for updates on the CTDizzle.
+The CTDizzle and OpenCTD have a lot in common, and some information is shared between the two GitHub accounts. However, you should check here first CTDizzle updates.
 
 
 ## CTDizzle
@@ -21,4 +21,4 @@ To get started, navigate to Documentation > MKRZero > User Guide
 - Contains MATLAB and R scripts that will process and plot your data.
 
 #### Documentation
-- Contains the user guide, parts list, pinout guide, and links to additional resources.
+- Contains the user guide, parts list, pinout guide, and links to additional resources for each board.
