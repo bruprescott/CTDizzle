@@ -6,8 +6,7 @@ Contact Ian Black for questions or comments regarding this sketch.
 Email: blackia@oregonstate.edu
 
 This sketch will print data to a .CSV with 8 columns:
-Date , Time , EC , T , P , Sal(EZO derived) , Depth(sketch derived) , Sal(sketch derived) 
-Salinity is printed twice for comparison between the EC EZO derived and sketch derived values.
+Date , Time , EC , T , P , , Depth(sketch derived) , Sal(sketch derived) 
 
 ISSUES
 Does not consider latitudinal variation in gravity. Assumes g=9.806 m/s^2 
