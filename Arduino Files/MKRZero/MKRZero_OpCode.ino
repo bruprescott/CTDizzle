@@ -1,4 +1,4 @@
-/* Version 1.2
+/*Version 1.7
 
 This sketch is a combination of code written by the folks at Adafruit, Atlas-Scientific, Blue Robotics, Oceanography For Everyone, and SparkFun.
 It is used by the CTDizzle Mk4 and based around the Arduino MKRZero. 
@@ -14,10 +14,9 @@ Does not consider latitudinal variation in gravity. Assumes g=9.806 m/s^2
 Assumes atmospheric pressure is 1000 mbar.
 These impact the depth and salinity calculations ever so slightly.
 
-Skip to line 31 for common variables.
-Skip to line 96 for setup.
-Skip to line 142 for loop.
-Skip to line 233 for print_EC_data function.
+Skip to line 28 for common variables.
+Skip to line 93 for setup.
+Skip to line 139 for loop.
 */
 
 #include <SD.h>   //Used by SD module.
@@ -25,25 +24,21 @@ Skip to line 233 for print_EC_data function.
 #include <Wire.h>   //Used by temperature and pressure sensors.
 #include "TSYS01.h" //Used by temperature sensor.
 #include "MS5837.h" //Used by pressure sensor.
-#include <SparkFunDS3234RTC.h> //Used by the RTC.
+#include <SparkFunDS3234RTC.h>
 
 //Common variables you are most likely to change based on your needs.
-#define FluidDensity 1024   //Density in kg/m^3. This varies with water conditions and location. Used by pressure sensor.
+#define FluidDensity 1024   //Density in kg/m^3. This varies with water conditions and location.
 #define SD_chipselect 28    //Chip select for the MKRZero.
-#define g 9.806   //Gravity in m/s^2. Varies with latitude. Used in depth calculation.
+#define g 9.806   //Gravity in m/s^2. Varies with latitude.
 #define RTC_chipselect 7    //Chip select for the DeadOn RTC.
-#define AtmP 1000 //Atmospheric pressure in mbar.  Used in depth calculation.
 //End of common variables. 
 
-String sensorstring = "";   //String used to hold data from the EC EZO.
-boolean sensor_string_complete = false;   //Have we received all of the data from the EC EZO?
-char sensorstring_array[30];  //Creates a char array.
-char *EC; //Char pointer used in string parsing.
-char *TDS;    
-char *SAL;  
-char *GRAV;   
-float f_ec;   //Turns EC into a floating point for calculations. 
-float f_SAL;  //Turns SAL into a floating point for calculations.                      
+float EC_float = 0; //Visit Atlas-Scientific for documentation on EZ EZO.
+char EC_data[48];
+byte received_from_sensor = 0;
+byte string_received = 0;
+char *EC; //Char pointer used in string parsing.  
+float f_ec;  //Turns SAL into a floating point for calculations.    
 #define A1 2.070*pow(10,-5)  //Following variables are used to calculate salinity.
 #define A2 -6.370*pow(10,-10)  //Based on PSS-78. See AppNote 14 by SBE for more info. 
 #define A3 3.989*pow(10,-15)
@@ -120,8 +115,7 @@ void setup() {      //Start your engines.
     Serial.println("No SD card detected. Check your setup."); //Display this message if the card is not detected.
     return; //And then exit setup.
   }
-  
-  sensorstring.reserve(30);   //Some bytes are reserved to receive data from the EC EZO.    
+    
   delay(100);     //Wait 100 milliseconds before continuing. 
   
   tsensor.init();   //Initialize the temperature sensor.
@@ -132,38 +126,36 @@ void setup() {      //Start your engines.
   psensor.setModel(MS5837::MS5837_30BA);    //Define the model of the pressure sensor.
   psensor.setFluidDensity(FluidDensity); //Set approximate fluid density for pressure sensor. Varies with location.
 
-  rtc.autoTime();   //After an initial upload, the RTC will keep the same time as your computer. Comment out this line and re-upload to have the RTC maintain time.
+  //rtc.autoTime();   //After an initial upload, the RTC will keep the same time as your computer. Comment out this line and re-upload to have the RTC maintain time.
   
-  delay(690);   //Wait 700 milliseconds before continuing.
-} //Setup time is approximately 2 seconds.
+  delay(1690);   //Wait 1690 milliseconds before continuing.
+} //Setup time is approximately 3 seconds.
 
 
 
 void loop() {     //And around we go.
     rtc.update();   //Update the time.
-    if (sensor_string_complete == true) {   //If a string has been sent by the EC EZO to the MKRZero...
-      if (isdigit(sensorstring[0]) == false) {  //and if the first character in the string is a digit...   
-      Serial.println(sensorstring); //send the string to the computer serial monitor. 
-      }
-      else {  //If the first character is not a digit...
-      print_EC_data(); //then use the print_EC_data function.                              
-      }
-    delay(10);
-    sensorstring = "";  //Clear the string.                           
-    sensor_string_complete = false; //Reset the indicator flag.                  
-  }
+    
+    if (Serial1.available()>0){
+      received_from_sensor=Serial1.readBytesUntil(13,EC_data,48);
+      EC_data[received_from_sensor]=0;
+    }
+    if ((EC_data[0] >= 48) && (EC_data[0] <= 57)){
+      print_EC_data(); //If incoming EZO data is a digit and not a letter, parse it. 
+    }
 
   psensor.read();  //Read what the pressure is.
-  GaugeP=(psensor.pressure()-AtmP)/100;   //GaugeP is in decibars. Assumes atmospheric pressure is 1000 mbar.
+  GaugeP=(psensor.pressure()-1000)/100;   //GaugeP is in decibars. Assumes atmospheric pressure is 1000 mbar.
   delay(10);
   Depth = (((((COEFF1*GaugeP+COEFF2)*(GaugeP)-COEFF3)*(GaugeP)+COEFF4)*(GaugeP))/g);   //Depth is in meters.
   delay(10);
-  
+
   tsensor.read();  //Read what the temperature is and hold it.
   T=tsensor.temperature(); //Define the temperature as a floating point to make salinity calculation a little easier.
   delay(10);
 
-  R = ((f_ec/1000)/CStandard);    //PSS-78 calculations. See AppNote 14 by SBE for more information.
+
+  R = ((f_ec/1000)/CStandard);    //PSS-78 calculations.
   RpNumerator = (A1*GaugeP)*(A2*pow(GaugeP,2))+(A3*pow(GaugeP,3));
   RpDenominator = 1*(B1*T)+(B2*pow(T,2))+(B3*R)+(B4*T*R);
   Rp = 1+(RpNumerator/RpDenominator);
@@ -171,43 +163,41 @@ void loop() {     //And around we go.
   RT=R/(rT*Rp);
   Salinity = (a0+(a1*pow(RT,0.5))+(a2*RT)+(a3*pow(RT,1.5))+(a4*pow(RT,2))+(a5*pow(RT,2.5)))+((T-15)/(1+k*(T-15)))*(b0+(b1*pow(RT,0.5))+(b2*RT)+(b3*pow(RT,1.5))+(b4*pow(RT,2))+(b5*pow(RT,2.5)));
   
+
    if (datafile) {
-    if(rtc.month()<10){ //If the month number is less than ten.
+    if(rtc.month()<10){
        datafile.print('0');}    //Print a zero for aesthetics.
     datafile.print(String(rtc.month()));    //Print month to SD card.
     datafile.print("/");
-    if(rtc.date()<10){    //If the date number is less than ten.
+    if(rtc.date()<10){
         datafile.print('0');} //Print a zero for aesthetics.
     datafile.print(String(rtc.date()));   //print date to SD card.
     datafile.print("/");
     datafile.print(String(rtc.year())); //Print year to SD card.
     datafile.print(",");   //Comma delimited.
-    if(rtc.hour()<10){    //If the hour number is less than ten.
+    if(rtc.hour()<10){
        datafile.print('0');}   //Print a zero for aesthetics.
     datafile.print(String(rtc.hour()));   //Print hour to SD card.
     datafile.print(":");
-    if(rtc.minute()<10){    //If the minute number is less than ten.
+    if(rtc.minute()<10){
         datafile.print('0');}  //Print a zero for aesthetics.
     datafile.print(String(rtc.minute()));
     datafile.print(":");
-    if(rtc.second()<10){    //If the second number is less than ten.
+    if(rtc.second()<10){
         datafile.print('0');}  //Print a zero for aesthetics.
     datafile.print(String(rtc.second())); //Print date to SD card.
     datafile.print(",");   //Comma delimited.
-    datafile.print(f_ec);   //Print EC to SD card.
+    datafile.print(f_ec);   //Print the floating point EC.
     datafile.print(",");
     datafile.print(tsensor.temperature());   //Print temperature to SD card.
     datafile.print(",");
     datafile.print(psensor.pressure());   //Print pressure to SD card.
-    datafile.print(",");
-    datafile.print(f_SAL);    //Print EC EZO SAL to SD card.
     datafile.print(",");
     datafile.print(Depth);    //Print depth to SD card.
     datafile.print(",");
     datafile.println(Salinity);    //Print sketch derived salinity to SD card.
     datafile.flush();   //Close the file.
 
-    //For QC purposes.
     Serial.print(String(rtc.month()) + "/" + String(rtc.date()) + "/" + String(rtc.year())); //Print date to serial monitor.
     Serial.print(",");   //Comma delimited.
     Serial.print(String(rtc.hour()) + ":" + String(rtc.minute())+":"+String(rtc.second()));  //Print hours, minutes, seconds to serial monitor.
@@ -218,11 +208,10 @@ void loop() {     //And around we go.
     Serial.print(",");
     Serial.print(psensor.pressure());   //Print pressure to serial monitor.
     Serial.print(",");
-    Serial.print(f_SAL);    //Print EC EZO SAL to serial monitor.
-    Serial.print(",");
     Serial.print(Depth);    //Print depth to serial monitor.
     Serial.print(",");
     Serial.println(Salinity);    //Print sketch derived salinity to serial monitor.
+
   }
   else{
     Serial.println("Something went wrong.");  //If the file is not created or appended, display this message.
@@ -230,12 +219,7 @@ void loop() {     //And around we go.
   delay(960);
 }
 
-void print_EC_data(void) {   //Called to parse the incoming data. Strings come in the form of EC,TDS,SAL,GRAV.                   
-  sensorstring.toCharArray(sensorstring_array, 30);   //Convert the string to a char array.
-  EC = strtok(sensorstring_array, ",");   //Parse the string at each comma.
-  TDS = strtok(NULL, ",");                          
-  SAL = strtok(NULL, ",");                         
-  GRAV = strtok(NULL, ",");                                      
-  f_ec= atof(EC); //Convert EC to a floating point number to make salinity calculations a little easier.   
-  f_SAL=atof(SAL); //Convert EC EZO SAL to a floating point.                        
+void print_EC_data(void) {   //Called to parse the incoming data. Strings come in the form of EC,TDS,SAL,GRAV.  
+  EC = strtok(EC_data, ",");                                     
+  f_ec= atof(EC); //Convert EC to a floating point number to make salinity calculations a little easier.           
 }
