@@ -25,6 +25,7 @@ To get started, navigate to Documentation > MKRZero > User Guide.
 
 ## Changelog
 
+|Date|Note|
 |:---:|:---|
  |02/17/17| Added temperature compensation for EC EZO.|
  |04/14/17| Data now output in .CSV instead of .TXT.
