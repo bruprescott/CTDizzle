@@ -1,15 +1,7 @@
 # Welcome!
-If you are looking for the build guide to the original OceanographyForEveryone OpenCTD, [it can be found here](https://github.com/OceanographyforEveryone/OpenCTD).
+If you are looking for the build guide to the original OpenCTD, it can be found at the [Oceanography For Everyone GitHub](https://github.com/OceanographyforEveryone/OpenCTD).
 
-The CTDizzle and OpenCTD have a lot in common, and some information is shared between the two GitHub accounts. However, you should check here first for CTDizzle updates.
-
-
-## CTDizzle
-![CTDizzle](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Finished.jpg)
-
-This repository contains the code, resources, and build guide for the CTDizzle based around the MKRZero.
-You can also find the legacy build guide for the Qduino version, but no additional updates will be made for that setup. If you have questions about the Qduino build, feel free to ask.
-
+The CTDizzle and OpenCTD have a lot in common. Some information, code, and scripts are shared between the two GitHub accounts. You should check here first for CTDizzle updates. This repository contains the code, resources, and build guide for the CTDizzle based around the MKRZero. You can also find the legacy build guide for the Qduino version, but no additional updates will be made for that setup. 
 
 ## Changelog
 
@@ -26,8 +18,8 @@ You can also find the legacy build guide for the Qduino version, but no addition
  
  
 ## Planned Updates
-- Density output in raw files.
-- Sound velocity output in raw files.
+- Density output in RAWCTD files.
+- Sound velocity output in RAWCTD files.
 - GUI for the MATLAB tool.
 - Downcast for MATLAB tool.
 - Smooth out plots for MATLAB tool.
