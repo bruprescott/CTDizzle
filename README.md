@@ -25,7 +25,7 @@ To get started, navigate to Documentation > MKRZero > User Guide.
 
 ## Changelog
 
-|:---:|:...|
+|:---:|:---|
  |02/17/17| Added temperature compensation for EC EZO.
  |04/14/17| Data now output in .CSV instead of .TXT.
  |05/20/17| Added new file creation on power cycle. Data files are now named RAWCTDXX.csv (where XX is a number in sequence starting at 00).
