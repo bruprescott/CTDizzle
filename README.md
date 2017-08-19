@@ -24,21 +24,16 @@ To get started, navigate to Documentation > MKRZero > User Guide.
 - Contains the user guide, parts list, pinout guide, and links to additional resources for each board.
 
 ## Changelog
- 02/17/17 - Added temperature compensation for EC EZO.
- 
- 04/14/17 - Data now output in .CSV instead of .TXT.
- 
- 05/20/17 - Added new file creation on power cycle. Data files are now named RAWCTDXX.csv (where XX is a number in sequence starting at 00).
- 
- 07/17/17 - Removed temperature compensation for EC EZO due to bad readings.
- 
- 08/06/17 - Added downcast filter for R script.
- 
- 08/10/17 - Officially switched to MKRZero. No more planned updates for Qduino build. Edited parts list and pinout guide to reflect change.
- 
- 08/11/17 - Added depth and salinity calculations to MKRZero_OpCode.
- 
- 08/19/17 - Changed atmospheric pressure assumption to 1013 mbar.
+
+|:---:|:...|
+ |02/17/17| Added temperature compensation for EC EZO.
+ |04/14/17| Data now output in .CSV instead of .TXT.
+ |05/20/17| Added new file creation on power cycle. Data files are now named RAWCTDXX.csv (where XX is a number in sequence starting at 00).
+ |07/17/17| Removed temperature compensation for EC EZO due to bad readings.
+ |08/06/17| Added downcast filter for R script.
+ |08/10/17| Officially switched to MKRZero. No more planned updates for Qduino build. Edited parts list and pinout guide to reflect change.
+ |08/11/17| Added depth and salinity calculations to MKRZero_OpCode.
+ |08/19/17| Changed atmospheric pressure assumption to 1013 mbar.
  
  
 ## Future Updates
