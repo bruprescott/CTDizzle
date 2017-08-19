@@ -7,21 +7,9 @@ The CTDizzle and OpenCTD have a lot in common, and some information is shared be
 ## CTDizzle
 ![CTDizzle](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/Finished.jpg)
 
-This repository contains the code, resources, and build guide used to build the CTDizzle based around the Arduino MKRZero.
+This repository contains the code, resources, and build guide for the CTDizzle based around the MKRZero.
 You can also find the legacy build guide for the Qduino version, but no additional updates will be made for that setup. If you have questions about the Qduino build, feel free to ask.
 
-To get started, navigate to Documentation > MKRZero > User Guide.
-
-### Directory Structure
-
-#### Arduino Files
-- Contains the operating and calibration code for each board.
-
-#### Data Processing
-- Contains MATLAB and R scripts that will process and plot your data.
-
-#### Documentation
-- Contains the user guide, parts list, pinout guide, and links to additional resources for each board.
 
 ## Changelog
 
@@ -33,11 +21,11 @@ To get started, navigate to Documentation > MKRZero > User Guide.
  |07/17/17| Removed temperature compensation for EC EZO due to bad readings.
  |08/06/17| Added downcast filter for R script.
  |08/10/17| Officially switched to MKRZero. No more planned updates for Qduino build. Edited parts list and pinout guide to reflect change.
- |08/11/17| Added depth and salinity calculations to MKRZero_OpCode.
+ |08/11/17| Added depth and salinity calculations to MKRZero_OpCode. Updated MATLAB tool.
  |08/19/17| Changed atmospheric pressure assumption to 1013 mbar.
  
  
-## Future Updates
+## Planned Updates
 - Density output in raw files.
 - Sound velocity output in raw files.
 - GUI for the MATLAB tool.
