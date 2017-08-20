@@ -1,6 +1,6 @@
 # CTDizzle User Manual
 
-:+1: This emoji indicates sections that are directed toward the students I will be working with during my research project. Many of these sections may include information that is specific to the Oregon coast.
+:+1: This emoji indicates sections that are directed toward the high school students I will be working with during my research project. Many of these sections may include information that is specific to the Oregon coast.
 
 
 ## Contents
@@ -27,11 +27,12 @@
 6. [Pre-deployment Procedure](#pre-deployment-procedure)
 7. [Deployment Procedure](#deployment-procedure)
 8. [Recovery Procedure](#recovery-procedure)
-9. [Battery Charging Procedure]
-10. [Data Download and Analysis]
-	- [The West Coast]
-	- [Yaquina Bay]
-	- [Oregon Shelf]
+9. [Battery Charging Procedure](#battery-charging-procedure)
+10. [Data Download and Analysis](#data-download-and-analysis)
+	- [Accessing and Plotting the Data](#accessing-and-plotting-the-data)
+	-[Is the Data Reasonable?](#is-the-data-reasonable?)
+		- [Yaquina Bay](#example:-yaquina-bay)
+		- [Oregon Shelf](#example:-the-oregon-shelf]
 11. [Using the MATLAB Plotter]
 
 
@@ -387,8 +388,12 @@ This is done by removing the switch and vent endcap and removing the microSD car
 5. Once you are finished looking at the data, delete the RAWCTD files in the main directory of the SD card. This keeps things from getting cluttered. 
 6. Reinstall the microSD card and end cap. If you think the O-rings look a little dirty, clean and apply silicone grease before continuing. 
 
-### Reading Raw Data
-If looking to plot the data on your own, it is important to realize that the pressure measurements are representative of absolute pressure, which includes the atmospheric pressure component. To convert to gauge pressure, simply subtract atmospheric pressure from the absolute pressure. This can be done by assuming the first pressure value recorded is the atmospheric pressure (if you turn the unit on above the water. When you subtract this value, you may get a few negative pressure values in the beginning and end of your file. You will need to remove those lines from the file.
+
+### :+1: Is the data reasonable? (In Progress)
+
+#### Example: Yaquina Bay
+
+#### Example: The Oregon Shelf
 
 
 ### Using the MATLAB Plotter (In Progress)
@@ -398,11 +403,6 @@ It should be noted that the plotter is currently designed for use by fishermen i
 
 
 
-### :+1: Is the data reasonable? (In Progress)
-
-#### Example: Yaquina Bay
-
-#### The Oregon Shelf
 
 
 
