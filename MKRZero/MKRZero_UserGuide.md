@@ -4,6 +4,9 @@
 
 
 ## Contents
+
+Some sections are still in progress.
+
 1. [Links to Other Documentation](#links)
 2. [Introduction](#introduction)
 	- [Before You Get Started](#before-you-get-started)
@@ -394,12 +397,6 @@ This is done by removing the switch and vent endcap and removing the microSD car
 #### Example: Yaquina Bay
 
 #### Example: The Oregon Shelf
-
-
-### Using the MATLAB Plotter (In Progress)
-If you have access to MATLAB, simply run the script. If you do not have access to MATLAB, you can download the plotter application. It is a free MATLAB-based application that only requires you to install a free MCR runtime. 
-
-It should be noted that the plotter is currently designed for use by fishermen in the U.S. Temperature has been converted to Fahrenheit and depth has been changed to fathoms. 
 
 
 
