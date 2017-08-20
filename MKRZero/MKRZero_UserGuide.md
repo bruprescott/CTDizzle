@@ -1,91 +1,94 @@
-# USER GUIDE (WORK IN PROGRESS) 
+# CTDizzle User Manual
 
-:+1: This emoji indicates sections that are directed toward the students I will be working with during my research project.
-
-
+:+1: This emoji indicates sections that are directed toward the students I will be working with during my research project. Many of these sections may include information that is specific to the Oregon Coast.
 
 
 ## Contents
-
-1. [Introduction](#introduction)
+1. [Links to Other Documentation](#links)
+2. [Introduction](#introduction)
 	- [Before You Get Started](#before-you-get-started)
-	- [Why Conductivity, Temperature, and Depth?]
-2. [The CTDizzle Mk4](#the-ctdizzle-mk4)
-	- [Specifications](#specifications)
-3. [Build Instructions](#build-instructions)
-	- [Software Setup](#software-setup)
-		- [Setting Up the Arduino IDE](#setting-up-the-arduino-ide)
-		- [Setting Up the Arduino MKRZero](#setting-up-the-arduino-mkrzero)
-		- [Formatting the SD Card](#formatting-the-sd-card)
-		- [Setting Up the Required Libraries](#setting-up-the-required-libraries)
-	- [Breadboard Testing](#breadboard-testing)
+	- [Why Conductivity, Temperature, and Depth?](#why-conductivity,-temperature,-and-depth?)
+	- [The CTDizzle Mk4](#the-ctdizzle-mk4)
+	- [Specifications](#specification)
+4. [Build Instructions]
+	- [Software Setup]
+		- [Setting Up the Arduino IDE]
+		- [Setting Up the Arduino MKRZero]
+		- [Formatting the SD Card]
+		- [Setting Up the Required Libraries]
+	- [Breadboard Testing]
 	- [Bench Test]
 		- [Calibrating the EC EZO]
 	- [Case Construction and Potting]
 		- [End Cap and Flange Preparation]
 	- [Protoboard Soldering]
 		- [Switch Cable Extension] 
-4. [Corrosion](#corrosion)
-5. [Pre-deployment Procedure](#pre-deployment-procedure)
-6. [Deployment Procedure](#deployment-procedure)
-7. [Recovery Procedure](#recovery-procedure)
-8. [Battery Charging Procedure]
-9. [Data Download and Analysis]
+5. [Corrosion](#corrosion)
+6. [Pre-deployment Procedure](#pre-deployment-procedure)
+7. [Deployment Procedure](#deployment-procedure)
+8. [Recovery Procedure](#recovery-procedure)
+9. [Battery Charging Procedure]
+10. [Data Download and Analysis]
 	- [The West Coast]
 	- [Yaquina Bay]
 	- [Oregon Shelf]
-10. [Using the MATLAB Plotter]
-11. [Index of Jargon]
+11. [Using the MATLAB Plotter]
+
+
+## Links
+[Parts List]()
+[Code]()
+[Pinout Guide]()
+[Resources and Literature]()
+
 	
 ## Introduction
 
-Oceanographic equipment is often expensive and inaccessible for students and citizen oceanographers. The OpenCTD helps reduce costs and allows individuals to collect conductivity, temperature, and depth data with an easy-to-build device. It is still being refined and isn't quite ready for use in scientific research yet, but in its current stat it will give you data suitable for learning and teaching. 
+Oceanographic equipment is often expensive and inaccessible for students and citizen scientists. The OpenCTD is a relatively cheap, buildable device that allows individuals to easily collect conductivity, temperature, and pressure data. It is still being refined and doesn't quite produce research quality data, but in its current state it is a great tool for teaching and learning. 
 
-Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD) if you want to build a lower cost device out of easily accessible tools and materials. Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the initial framework for the OpenCTD. 
+Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD) if you want to build a lower cost device using easily accessible materials and tools. Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the initial framework for the OpenCTD. 
 
 ![Original OpenCTD](https://raw.githubusercontent.com/CTDizzle/CTDizzle/master/Documentation/Images/OpenCTDVersions.jpg)
 _Variations of the original OpenCTD. Photo taken by Andrew Thaler._
 
 
-
 ### Before You Get Started
 
-This guide was designed so that you can build this version of the OpenCTD with little to no experience with programming or tools. If you are confused on a topic, or require additional information, please do not hesitate to contact the author.
+This guide was written so that you can build your very own CTDizzle. If you are confused on a topic, or require additional information, please do not hesitate to contact the author.
 
-There are likely cheaper and/or better sensor options out there. This guide only covers the parts outlined in the parts list. If you decide to use different sensors or parts, it is your responsibility to ensure that all parts are compatible with your setup.
+There are likely cheaper and better sensor options out there. This guide only covers the parts outlined in the parts list. If you decide to use different sensors or parts, it is your responsibility to ensure that all parts are compatible with your setup.
 
 It should be noted that this guide assumes that you are running everything through Windows. As such, there is no Linux or mac OS support for the MATLAB and R processing scripts at this time. Please make sure that you are able to find an equivalent program for the steps that use third-party programs.
 
 
-### Why Conductivity, Temperature, and Depth?
+### :+1: Why Conductivity, Temperature, and Depth?
 
-:+1: Temperature itself is an incredibly useful parameter as so many other ocean properties and phenomena rely on or are impacted by it.
-For example, temperature plays a role in how much gas (such as oxygen) seawater can hold, which in turn impacts productivity of fisheries along the Oregon coast. Similar to factors such as food availability, water movement, and predation; temperature also influences the growth rate, welfare, and reproductive potential of many organisms. Temperate is also one of the major factors that influences the density of seawater, which in turn plays a role in global water circulation. By monitoring ocean temperature over space and time, scientists are able to come up with connections between temperature and other aspects of the ocean.
+Temperature itself is incredibly useful as so many other ocean properties and phenomena are impacted by it.
+One study suggests that rockfish prefer to hang out in a certain water temperature range. Commercial trawls in Alaska and Oregon have reported a greater abundance of the fish in temperatures ranging between 4 and 7 degC ([Vestfals, 2010](http://ir.library.oregonstate.edu/xmlui/handle/1957/12047?show=full)). Many other studies show that temperature also impacts the growth rate, welfare, and reproductive potential of other marine organisms. Temperature also influences factors such as water density, pH, and how much gas seawater can hold. By monitoring ocean temperature over space and time, scientists are able to come up with connections between temperature and other aspects of our oceans.
 
-:+1: Conductivity by itself isn't a particularly useful, but when combined with temperature and pressure through an empirical calculation, it allows one determine the salinity of the water. Salinity is essentially the concentration of dissolved salts and also plays a role in determining density. Saltier water is more dense than fresher water (assuming the temperature is the same for both).
+Conductivity by itself isn't a particularly useful, but when combined with temperature and pressure through some empirical calculations, you can get values such as salinity, density, and sound velocity. Salinity is essentially the concentration of dissolved salts in the water. Salty, cold water is more dense than fresh, warm water, and this is easily seen in the Columbia River plume. During the winter, the Columbia River outputs a lot of freshwater. This freshwater can form a layer that is about 20m thick and extends almost 300km offshore([Saldias et al, 2016](http://onlinelibrary.wiley.com/doi/10.1002/2015JC011431/full)). The density of this plume is low enough that there have been cases where gliders have become stuck between the layers!
 
-:+1: At the surface, the temperature and salinity of the ocean varies with location and time. In the Arctic, near Greenland, it is cold enough for sea ice to form. As the ice forms, the salinity of the water increases because the saltiness has no where to go, as a result, a mass of saltier, denser water begins to sink to the bottom of the ocean. This water then begins a long journey to the Eastern Pacific, changing in temperature and salinity every so slightly. These values also vary with depth!
+Depth is sometimes difficult to measure. The average depth of the ocean is 4000m, with the deepest part reaching almost 11000m. That would be a long tape measure! Scientists have come up with a variety of methods for measuring depth, such as sonar measurments, satellite altimetry, and pressure readings. The CTD uses pressure to determine water depth, which is easily calculated through an empirical formula.
 
-:+1: The true depth of the ocean is difficult to measure. The average depth of the ocean is 4000m and the deepest part is just under 11000m. That would be a long tape measure! Scientists have come up with a variety of methods for determining water depth, including sonar measurements, satellite altimetery, and pressure readings. The CTD uses pressure to determine water depth, which is easily calculated through an empirical formula.
-
-The CTD is the workhorse tool of oceanography. By building your own, I hope that you can gain an appreciation for the data, how it is collected, and what it tells us about our oceans.
+The CTD is the workhorse tool of oceanography. By building your own, I hope that you gain an appreciation for the science, how it is collected and used, and what it tells us about our oceans.
 
 
+### The CTDizzle Mk4
 
-## The CTDizzle Mk4
+This is the fourth rendition of the CTDizzle. Its construction is a little different from the original CTD, as it uses some different sensors and parts. It costs about 700 USD to build and doesn't require any tools that can't be easily found at your local hardware store. If you have all the parts and tools on hand, you should be able to build it in a weekend!
 
-This is the fourth rendition of the CTDizzle. Its construction is a little different than the original CTD, as it uses some different sensor and parts. It costs about 700 USD to construct and doesn't require any tools that can't be easily found at your local hardware store. If you have all the parts and tools on hand, you should be able to build it in a weekend!
+Currently, the Mk4 has been constructed using the Blue Robotics 2" and 3" watertight enclosures. Each size has its advantages and disadvantages. The 2" version is much smaller, but there isn't a lot of wiggle room within the case, so upgrades and additions are much more difficult. The 3" version has a lot of internal room, so you can use a larger battery or add another sensor, but it takes up much more space if you plan to attach the device to an ROV or crab pot. 
 
 
 ### Specifications
 * Max Depth: 120m
-* EC Accuracy: <1% after calibration
+* Conductivity Accuracy: <1% after calibration
 * Temperature Accuracy: +/- 0.1 C
 * Pressure Accuracy: +/- 100 mbar
 * Max Sampling Rate: 1 Hz
-* Battery Life: ~ 100 hours (3.7v 4400mAh)
+* Battery Life: ~ 100 hours
 
-Battery life ultimately depends on the battery that you use. It is recommended that you stick with the 3.7v LiPo family. 
+Battery life ultimately depends on the battery that you use. This build uses a 3.7v 44000 mAh LiPo, but you can find larger or smaller batteries that will fit your needs. It is recommended that you stick with the 3.7v LiPo JST-PH connector family. 
 
 
 ## Build Instructions
