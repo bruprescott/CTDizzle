@@ -183,6 +183,7 @@ If you are using different sensors, make sure to use the right libraries!
 ### Breadboard Testing
 
 Tools: Soldering Iron, Hemostats, Wire Strippers, Breadboard, Third Hand
+
 Protective Equipment: Eye Protection, Nitrile Gloves
 
 :+1: Most of the parts are already breadboard compatible, but you will need to solder header pins to the DeadOn RTC. If you aren't familiar with soldering, take the time to practice with some header pins and protoboard. There should be enough extra. You'll use less solder than you first expect and it will happen pretty quickly. Once you think you are ready, solder some header pins to the DeadOn RTC! It isn't necessary, but if you want your solder job to be nice and shiny, you can use a soft bristle brush and some alcohol to wipe away the excess flux. 
@@ -213,19 +214,19 @@ Open the serial monitor (Ctrl+M). If you have everything set up correctly, you s
 Date (mm/dd/yyyy), Time (HH:mm:ss), Conductivity (uS/cm), Temperature (degC), Absolute Pressure (mbar), Salinty (PSU,circuit), Depth (m), Salinity (PSU,sketch) 
 
 ![Picture of output.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SerialOutput.PNG)
-*Salinity is printed twice for comparision between EC EZO and sketch derived values.*
+*Salinity is printed twice for comparision between EC EZO and sketch derived values. Initial tests suggest that the differences is significant.*
 
+The date should be representative of the date that your computer is set to. The time should be close to the time that your computer is set to, but may be behind by about 30 seconds. This is due to upload delay. If your time is drastically off or incoherent, remove the battery and power cycle the system. Note that the autotime function will need to be commented out of the code for the final sketch upload or else your CTD will revert to the same time on a power cycle.
 
+The conductivity value should be zero. If it is not present in the output, try switching the Tx and Rx lines. Alternatively, you can change the pins in the code. Note in the above image the EC is reporting a nonzero value due to noise. Noisiness can be test by placing the probe in some tap water. 
 
+The temperature should be representative of the ambient temperature of the room you are performing the test in. It may be handy to have a thermometer nearby to check this. The temperature probe is factory calibrated, but if further calibration is needed, a two-point calibration is recommended.
 
+The pressure sensor should be spitting out values between 1000 and 1050 depending on your elevation and sensor accuracy. At sea level, atmospheric pressure is around 1013 mbar. The pressure sensor is factory calibrated, but if values appear to be drastically off, first check your pinout connections. If still incorrect, contact the manufacturer. 
 
-- The date should be representative of the date that your computer is set to. The time should be close to the time that your computer is set to, but may be behind by about 30 seconds. This is due to upload delay. If your time is drastically off or incoherent, remove the battery and power cycle the system. 
+Depth is sketch-derived using the empirical equation outlined in [UNESCO Marine 44](http://unesdoc.unesco.org/images/0005/000598/059832eb.pdf). For the CTDizzle, there is no consideration for latitude, so gravity is assumed to be 9.806 m/s^2. It is also assumed that atmospheric pressure is 1013 mbar.
 
-- The conductivity value should be zero. If it is not present in the output, try switching the Tx and Rx lines. Alternatively, you can change the pins in the code. Note in the above image, the EC is missing in the first line. It takes time for the EC circuit to initialize and thus is missing for the first sample.
-
-- The temperature should be representative of the ambient temperature of the room you are performing the test in. It may be handy to have a thermometer nearby to check this. The temperature probe is factory calibrated, but if further calibration is needed, a two-point calibration is recommended.
-
-- The pressure sensor should be spitting out values between 1000 and 1050 depending on your elevation and sensor accuracy. If you are near sea level, the value should be within a few millibars of 1020. The pressure sensor is factory calibrated, but if values appear to be drastically off (e.g. 86000 or -6000), first check your pinout connections. If still incorrect, contact the manufacturer. 
+Salinity is also sketch-derived per the same paper. 
 
 
 ### Calibrating the Conductivity Sensor
@@ -233,7 +234,7 @@ Date (mm/dd/yyyy), Time (HH:mm:ss), Conductivity (uS/cm), Temperature (degC), Ab
 Tools: Small Plastic Cup (x2)
 Protective Equipment: Nitrile Gloves
 
-:+1: Unlike the factory calibrated temperature and pressure sensors, the conductivity probe/circuit require a user calibration. First, you will need to leave your complete setup and calibration solutions in a temperature controlled room over night (such as a cold storage room or cafeteria refrigerator).
+:+1: Unlike the factory calibrated temperature and pressure sensors, the conductivity kit requires a user calibration. First, you will need to leave your complete setup and calibration solutions in a temperature controlled room over night (such as a cold storage room or cafeteria refrigerator).
 
 [Picture of calibration setup here.]
 
