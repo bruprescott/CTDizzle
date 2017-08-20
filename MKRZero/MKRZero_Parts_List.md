@@ -50,8 +50,9 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |Jumper Wires|
 |Wire Stripper|
 |Drill or Mill|
-|Drillbit - 12mm|Size for Atlas Scientific EC Probe|
+|Drillbit - 15/32"|Size for Atlas Scientific EC Probe|
 |microUSB Cable|Data-capable Android phone charger works too.|
+|Round File|Used to size drilled hole.|
 
 
 #### Not Necessary But Helpful Items
