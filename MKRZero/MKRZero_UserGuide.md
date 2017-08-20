@@ -1,11 +1,11 @@
 # CTDizzle User Manual
 
-:+1: This emoji indicates sections that are directed toward the high school students I will be working with during my research project. Many of these sections may include information that is specific to the Oregon coast.
+:+1: This emoji indicates sections that are directed toward the high school students I will be working with during my research project. Many sections will have information that is relevant to the Oregon coast.
+
+Some sections are still in progress.
 
 
 ## Contents
-
-Some sections are still in progress.
 
 1. [Links to Other Documentation](#links)
 2. [Introduction](#introduction)
@@ -48,7 +48,7 @@ Some sections are still in progress.
 
 [Resources and Literature](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Resources.md)
 
-[Cal Procedure](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/EC_Cal_Procedure.docx)
+[EC Cal Procedure](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/EC_Cal_Procedure.docx)
 
 	
 ## Introduction
@@ -242,7 +242,7 @@ Protective Equipment: Nitrile Gloves
 
 [Picture of calibration setup here.]
 
- :+1: The next morning, take your calibration procedure and computer to your setup. Follow along with the calibration procedure found in the documentation folder (in progress). Conductivity is highly dependent on temperature, so it is important that you be as precise as possible! Using the provided plots, determine the temperature of the room and corresponding conductivity value to the nearest 100 uS/cm. Don't forget to bring a parka!
+ :+1: The next morning, take your calibration procedure and computer to your setup. Follow along with the calibration procedure found in the documentation folder Conductivity is highly dependent on temperature, so it is important that you be as precise as possible! Using the provided plots, determine the temperature of the room and corresponding conductivity value to the nearest 100 uS/cm. Don't forget to bring a parka!
 
 After you have confirmed proper calibration of the probe, it won't need another calibration for a year. You can now cut the cable if you do not plan to implement the BNC connectors into your design. Please note that cutting the cable voids the Atlas-Scientific warranty, so it important to first test the probe to see if it works. 
 
@@ -261,26 +261,36 @@ Remove the face plate from the flange. Install the switch and pressure
 
 #### Conductivity and Pressure Sensor End Cap
 
-Next, do the same thing with the other end cap. The conductivity sensor has too large a diameter for the pre-drilled holes, so you will need to drill out one of the holes to 12mm diameter.
+Tools: Sandpaper, Round File
+
+Protective Equipment: Nitriles Gloves
+
+Next, do the same thing with the other end cap. The conductivity sensor has too large a diameter for the pre-drilled holes, so you will need to drill out one of the holes to 15/32". It may be a tight fit for the probe, so use a round file to make it the right size.
 
 [Picture of drilled out hole here.]
 
 
-After you have prepared each end cap, you can re-connect them to the flanges. Make sure everything is clean. Wrap the O-Ring grooves of the flange in masking tape to prevent any spillage from the next step.
+After you have prepared each end cap, you can re-connect them to the flanges. Make sure everything is clean. Wrap the O-Ring grooves of the flange in tape to prevent any spillage from the next step.
 
 #### Applying the Urethane
+
+Tools: Plastic Cups, Stirring Stick
+
+Protective Equipment: Nitrile Gloves, Safety Mask
 
 :+1: The urethane you are using is called Urethane 75a. It is specifically designed for potting of electronics and cables that are placed in seawater.
 
 [Picture of Urethane station here.]
 
-Prior to mixing the urethane, it is important to have your vacuum (if you are going to use one) and stand ready for use. It is recommended that you use a vacuum chamber to remove any bubbles during the curing process.
+In seperate cups, pour equal amounts of each urethane component. You should use a minimum of three ounces of each. Using less may not be enough to generate the exothermic reaction needed for the curing process. Pour two components into one cup. Slowly mix with the stirring stick for two minutes and take care not to introduce bubbles. You will have five total minutes of working time. At around three minutes, the mixture will become thicker and more difficult to pour.
 
-Once you have your end caps setup, make sure that the wires are out of the way. Mix the two urethane components together in a 1:1 ratio. Start by mixing 1 cup of each at a time. Here are some (videos)[https://www.masterbond.com/resources/video-library?tid=354] on how to mix and apply two part epoxies.
+To get rid of bubbles, you can use a vacuum chamber.
+
+Here are some (videos)[https://www.masterbond.com/resources/video-library?tid=354] on how to mix and apply two part epoxies.
 
 [Picture of mixture here.]
 
-Next, pour the urethane into each end cap until it reaches the brim of the flange. Turn on the vacuum chamber for about three minutes. Remove any remaining bubbles with a toothpick.
+Next, pour the urethane into each end cap until it reaches the brim of the flange. 
 
 [Picture of urethane and end caps here.]
 
