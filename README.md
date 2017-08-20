@@ -11,7 +11,7 @@ The CTDizzle and OpenCTD have a lot in common. Some information, code, and scrip
 |Date|Note|
 |:---:|:---|
  |11/12/16| Switch from DS18B20 to TSYS01. Switch from 14Bar to 30Bar. Switch from HI Probe to Atlas-Scientific kit.
- |11/13/16| Added RTC.|
+ |11/13/16| Added RTC. Switch from PVC to Blue Robotics case.
  |02/17/17| Added temperature compensation for EC EZO.|
  |04/14/17| Data now output in .CSV instead of .TXT.
  |05/20/17| Added new file creation on power cycle. Data files are now named RAWCTDXX.csv (where XX is a number in sequence starting at 00).
