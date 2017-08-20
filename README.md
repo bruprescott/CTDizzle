@@ -3,7 +3,7 @@ If you are looking for the build guide to the original OpenCTD, it can be found 
 
 The CTDizzle and OpenCTD have a lot in common. Some information, code, and scripts are shared between the two GitHub accounts. You should check here first for CTDizzle updates. This repository contains the code, resources, and build guide for the CTDizzle based around the MKRZero. You can also find the legacy build guide for the Qduino version, but no additional updates will be made for that setup. 
 
-[BothVersions](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/BothVersions.jpg)
+![BothVersions](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/BothVersions.jpg)
 
 
 ## Log
