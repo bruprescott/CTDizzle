@@ -36,10 +36,15 @@
 
 
 ## Links
-[Parts List]()
-[Code]()
-[Pinout Guide]()
-[Resources and Literature]()
+[Parts List](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Parts_List.md)
+
+[Code](https://github.com/CTDizzle/CTDizzle/tree/master/MKRZero/ArduinoFiles)
+
+[Pinout Guide](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Pinouts.md)
+
+[Resources and Literature](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Resources.md)
+
+[Cal Procedure]
 
 	
 ## Introduction
