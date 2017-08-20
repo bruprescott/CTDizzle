@@ -177,20 +177,20 @@ If you are using different sensors, make sure to use the right libraries!
 
 ### Breadboard Testing
 
+Tools: Soldering Iron, Hemostats, Wire Strippers, Breadboard, Third Hand
+Protective Equipment: Eye Protection, Nitrile Gloves
 
-
-
-
-:+1: Most of the  parts should already be breadboard compatible, but there are a couple that you will need to solder header pins to. If you followed along with the parts list, you should have enough extra to practice soldering. Start by breaking off a strip of protoboard and 4 or five header pins from the main strip. Place the small header strip into the protoboard and practice connecting the two. You'll use less solder than you first expect and will happen pretty quickly!  Don't forget to check the you have the appropriate temperature for the solder you are using. Please use protective eyewear and appropriate clothing. Once you are confident with your newfound soldering skills, solder header pins to the DeadOn RTC and any other parts that need it.
+:+1: Most of the parts are already breadboard compatible, but you will need to solder header pins to the DeadOn RTC. If you aren't familiar with soldering, take the time to practice with some header pins and protoboard. There should be enough extra. You'll use less solder than you first expect and it will happen pretty quickly. Once you think you are ready, solder some header pins to the DeadOn RTC! It isn't necessary, but if you want your solder job to be nice and shiny, you can use a soft bristle brush and some alcohol to wipe away the excess flux. 
 
 [Picture of DeadOn RTC with header pins here.]
 
-The next step is to remove the DF13 connectors on the temperature and pressure sensors. After you have removed them, carefully strip away ~1cm of insulation to expose the wire. 
+Next you need to prepare the temperature and pressure sensors. Remove the DF13 connects from each sensor. Then strip away roughly 1cm of insulation on each of the wires. Tin the ends of the wires to prevent loose strands. 
+
 
 [Picture of exposed wire here.]
 
-Both the temperature and pressure sensors use the same communication protocol (I2C). In the final product, similar wires will be soldered to the same pin on the MKRZero. Each device has a unique address, so the MKRZero is capable of differentiating between the two. 
-After you have striped the wires, you can solder together the same colored wires of the sensors. It is recommended that you intertwine the wires to make things less messy. If you aren't confident in your soldering ability, feel free to practice with some other wire.
+:+1: Both the temperature and pressure sensors use I2C to communicate with the MKRZero. In the final product, similar wires will be soldered to the same pin. Each device has a unique address, so the MKRZero is capable of differentiating between the two. 
+After you have striped the wires, you can solder together the same colored wires of the sensors. It is recommended that you intertwine the wires to make things less messy. If you aren't confident with your soldering ability yet, feel free to practice with some other wire.
 
 [Picture of soldered wires here.]
 
@@ -199,7 +199,7 @@ Place the MKRZero, EC EZO, and DeadOn RTC on the breadboard. Don't forget to ins
 
 [Picture of setup here].
 
-Next, connect everything together using the pinout guide.
+Connect everything together as outlined in the pinout guide. After you double check you connections it is time to fire it up!
 
 [Picture of setup with jumper wires here.]
 
@@ -211,10 +211,15 @@ Once you have the breadboard setup, connect your MKRZero to the computer and upl
 
 [Picture of whole setup here.]
 
-Open the serial monitor. If you have everything set up correctly, you should see data printing to the screen in the form of:
-Date (mm/dd/yyyy), Time (HH:mm:ss), EC (uS/cm), T (degC), P (mbar), SAL (EC EZO), Depth (Sketch), SAL (Sketch). 
+Open the serial monitor (Ctrl+M). If you have everything set up correctly, you should see data printing to the screen in the form of:
+Date (mm/dd/yyyy), Time (HH:mm:ss), EC (uS/cm), T (degC), P (mbar), Depth (Sketch), SAL (Sketch). 
 
 [Picture of output.]
+
+
+
+
+
 
 - The date should be representative of the date that your computer is set to. The time should be close to the time that your computer is set to, but may be behind by about 30 seconds. This is due to upload delay. If your time is drastically off or incoherent, remove the battery and power cycle the system. 
 
@@ -226,6 +231,9 @@ Date (mm/dd/yyyy), Time (HH:mm:ss), EC (uS/cm), T (degC), P (mbar), SAL (EC EZO)
 
 
 ### Calibrating the Conductivity Sensor
+
+Tools: Small Plastic Cup (x2)
+Protective Equipment: Nitrile Gloves
 
 :+1: Unlike the factory calibrated temperature and pressure sensors, the conductivity probe/circuit require a user calibration. First, you will need to leave your complete setup and calibration solutions in a temperature controlled room over night (such as a cold storage room or cafeteria refrigerator).
 
