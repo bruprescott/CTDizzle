@@ -10,12 +10,12 @@
 	- [Why Conductivity, Temperature, and Depth?](#why-conductivity,-temperature,-and-depth?)
 	- [The CTDizzle Mk4](#the-ctdizzle-mk4)
 	- [Specifications](#specifications)
-4. [Build Instructions]
-	- [Software Setup]
-		- [Setting Up the Arduino IDE]
-		- [Setting Up the Arduino MKRZero]
-		- [Formatting the SD Card]
-		- [Setting Up the Required Libraries]
+4. [Build Instructions](#build-instruction)
+	- [Software Setup](#software-setup)
+		- [Setting Up the Arduino IDE](#setting-up-the-arduino-ide)
+		- [Setting Up the Arduino MKRZero](#setting-up-the-arduino-mkrzero)
+		- [Formatting the SD Card](#formatting-the-sd-card)
+		- [Setting Up the Required Libraries](#setting-up-the-required-libraries)
 	- [Breadboard Testing]
 	- [Bench Test]
 		- [Calibrating the EC EZO]
@@ -45,7 +45,7 @@
 
 [Resources and Literature](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Resources.md)
 
-[Cal Procedure]
+[Cal Procedure](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/EC_Cal_Procedure.docx)
 
 	
 ## Introduction
@@ -83,7 +83,7 @@ The CTD is the workhorse tool of oceanography. By building your own, I hope that
 
 This is the fourth rendition of the CTDizzle. Its construction is a little different from the original CTD, as it uses some different sensors and parts. It costs about 700 USD to build and doesn't require any tools that can't be easily found at your local hardware store. If you have all the parts and tools on hand, you should be able to build it in a weekend!
 
-:+1: Currently, the Mk4 has been constructed using the Blue Robotics 2" and 3" watertight enclosures. Each size has its advantages and disadvantages. The 2" version is much smaller, but there isn't a lot of wiggle room within the case, so upgrades and additions are much more difficult. The 3" version has a lot of internal room, so you can use a larger battery or add another sensor, but it takes up much more space if you plan to attach the device to a ROV or crab pot. 
+:+1: The Mk4 has been constructed using the Blue Robotics 2" and 3" watertight enclosures. Each size has its advantages and disadvantages. The 2" version is much smaller, but there isn't a lot of wiggle room within the case, so upgrades and additions are much more difficult. The 3" version has a lot of internal room, so you can use a larger battery or add another sensor, but it takes up much more space if you plan to attach the device to a ROV or crab pot. 
 
 
 ### Specifications
