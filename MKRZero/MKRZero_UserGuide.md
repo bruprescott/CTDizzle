@@ -324,35 +324,38 @@ After you have soldered everything and tested the data output, you can finish co
 [Picture of completed device here.]
 
 ## Corrosion
-:+1: The screws used in the end caps are made of 316 SS and the main body of the unit is made of anodized aluminum.
+:+1: The screws used in the end caps are made of 316 SS and the main body of the unit is made of aluminum.
 When two dissimilar metals interact in seawater, galvanic corrosion can occur. The metal on the lower end of the galvanic scale (aluminum in this case) will begin to corrode after an extended period of time. Cathodic protection is one method to mitigating the corrosion of the end caps. This can be done by installing an anode (commonly made of zinc). 
 
 
 ## Predeployment Procedure
 The deployment plan of your OpenCTD plays a role in the sampling regime.
 - If you plan to take profiles, it should be set to sample as frequently as possible.
-- If you plan to leave the OpenCTD in the same location for several hours or days, it should be set to sample every minute to few minutes. Doing this will increase the battery life. Another way to increase the battery life is by turning off the EC EZO LEDs. Instructions on how to do this can be found in the EZ EZO Datasheet.
+- If you plan to leave the OpenCTD in the same location for several hours or days, it should be set to sample every minute to fifteen minutes. Doing this will increase the battery life. Another way to increase the battery life is by turning off the EC EZO LEDs. Instructions on how to do this can be found in the EZ EZO Datasheet.
 
 ## Deployment Procedure
 The device should be fully assembled and the proper sampling regime selected prior to reaching the study site. 
 1.	Confirm all sensors, plugs, bulkheads, and end caps are secure. 
 2.	Remove any sensor covers on the conductivity, temperature, and pressure sensors.
 3.	Turn the external switch clockwise until it can turn no further. The unit should now turn ON. 
-  - If you are using an acrylic case, the EC EZO LED should begin to alternate between green and cyan, indicating that the conductivity sensor is now sampling. If the EZO remains green, it is not continuously sampling and the deployment should be postponed until the proper code is uploaded. If the EZO is consistently flashing a red LED in between green and cyan, it is possible there is ground fault or communication error in the system and connections should be checked. 
-4.	If step 3 is satisfied, then you can begin deployment!
-  - If profiling with the unit, it is suggested that it be left in the top few meters of the water column for approximately five minutes to allow for equilibrium. Once ready to profile, bring the unit to just below the surface, and allow it to descend at a rate around 0.25 m/s (~1 fathom every 10 seconds). The unit is only capable of sampling at a maximum of 1 Hz, so the slower the descent the better. 
-  - If planning to leave the unit at a particular site for an extended period of time, it is recommended that the user ensure that the device is properly secured and **ON** prior to leaving the site. 
+
+If profiling with the unit, it is suggested that it be left in the top few meters of the water column for approximately five minutes to allow for equilibrium. Once ready to profile, bring the unit to just below the surface, and allow it to descend at a rate around 0.25 m/s (~1 fathom every 10 seconds). The unit is only capable of sampling at a maximum of 1 Hz, so the slower the descent the better. 
+
+If planning to leave the unit at a particular site for an extended period of time, it is recommended that the user ensure that the device is properly secured and **ON** prior to leaving the site. 
 
 ## Recovery Procedure
 1.	After recovering the unit, turn the main switch counter-clockwise until the EC EZO LEDs turn off (usually ½ to 1 rotation). Do not turn it any further or you may risk introducing water to the internals.
 2.	Spray the unit down with fresh water if possible. 
 3.	If biofouling has accrued on the device, carefully remove the tape used to protect the case. If tape was not used to prevent biofouling, carefully use a soft bristle brush or plastic paint scraper to remove any fouling on the case. 
-  - For the sensors, use a soft bristle toothbrush or sponge to remove any biofouling. **Do not use a brush on the conductivity probe head.** If biofouling in the EC probe sensing area is non-compliant, you can place the probe in a 5% HCl solution and then use cotton swabs to remove obstructions. You can also try using freshwater or canned-air.
+
+For the sensors, use a soft bristle toothbrush or sponge to remove any biofouling. **Do not use a brush on the conductivity probe head.** If biofouling in the EC probe sensing area is non-compliant, you can place the probe in a 5% HCl solution and then use cotton swabs to remove obstructions. You can also try using freshwater or canned-air.
+
 4.	Dry the device.
 5.	Replace all sensor caps.
-6.	The device can be deployed again if the user desires.
-  - If the unit is primarily used for profiling, the device is ready to go once the user decides to collect data again. If there is concern that the battery may be low, refer to the Battery Charging Procedure.
-  - If another stationary deployment is planned, the battery will likely need to be charged or replaced. This requires the user to open up the device.
+
+If the unit is primarily used for profiling, the device is ready to go once the user decides to collect data again. If there is concern that the battery may be low, refer to the Battery Charging Procedure.
+
+If another stationary deployment is planned, the battery will likely need to be charged or replaced. This requires the user to open up the device.
 
 ## Battery Charging Procedure
 1. Turn off the CTD.
@@ -361,11 +364,10 @@ The device should be fully assembled and the proper sampling regime selected pri
 4. Plug the battery directly into the MKRZero.
 5. Connect the MKRZero to your computer or compatible wall outlet.
 
-The MKRZero has the ability to charge a single-cell lithium ion battery when connected to a computer or microUSB outlet adapter. Simply plug in the battery to the MKRZero and connect the unit to a computer via microUSB. An orange LED should appear, indicating that the battery is charging. Even though the battery has a built in overcharge and damage prevention circuit, it is important that you do not charger your battery for too long.
+The MKRZero has the ability to charge a single-cell lithium ion battery when connected to a computer or microUSB outlet adapter. Simply plug in the battery to the MKRZero and connect the unit to a computer via microUSB. An orange LED should appear, indicating that the battery is charging. Even though the battery has a built in overcharge and damage prevention circuit, it is important that you do not charge your battery for too long.
 
-It is recommended that you do not charge the battery through the JST switch cable, and only by plugging the battery directly into the MKRZero.
+It is recommended that you do not charge the battery through the JST switch cable.
 
-I am currently working on a method that will allow you to determine the current charge on your battery.
 
 ## Data Download and Analysis
 
@@ -375,7 +377,7 @@ Currently, the user is required to open the device to access the data. **Make su
 This is done by removing the switch and vent endcap and removing the microSD card. Take care when removing the end cap, as it is important to keep the O-rings clean. 
 
 1. Connect the microSD card to your computer using an adapter.
-2. Transfer the RAWCTD files you are interested in to your computer. It may be necessary to open these to check for dates and times.
+2. Transfer the RAWCTD files you are interested in to your computer. It may be necessary to open these to check for dates and times. One way to differentiate between actual data and a test file is the file size.
 3. Save all the files on the SD card to a seperate folder on the SD card labeled "Old Data".
 4. There are several methods to process and analyze the data...
   - Through the provided MATLAB script.
@@ -383,74 +385,24 @@ This is done by removing the switch and vent endcap and removing the microSD car
   - Through the provided Microsoft Excel spreadsheet (in progress).
   - Through your processing program of choice. RAWCTD files are comma-seperated.
 5. Once you are finished looking at the data, delete the RAWCTD files in the main directory of the SD card. This keeps things from getting cluttered. 
-6. Reinstall the microSD card and end cap. If you think the O-rings look a little dirty, clean and reapply silicone grease before continuing. 
+6. Reinstall the microSD card and end cap. If you think the O-rings look a little dirty, clean and apply silicone grease before continuing. 
 
 ### Reading Raw Data
-RAWCTD files are comma-seperated. Data will appear in five columns in the order of...
-
-|MM/DD/YYYY|HH:mm:ss|Conductivity (µS/cm)|Temperature (°C)|Pressure (mbar)|
-|:---:|:---:|:---:|:---:|:---:|
-
-![CSVexample](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/CSVExample.png)
-
-_Example of data from a RAWCTD file. Note that the conductivity values are incorrect due to an improper calibration of the conductivity sensor._
-
 If looking to plot the data on your own, it is important to realize that the pressure measurements are representative of absolute pressure, which includes the atmospheric pressure component. To convert to gauge pressure, simply subtract atmospheric pressure from the absolute pressure. This can be done by assuming the first pressure value recorded is the atmospheric pressure (if you turn the unit on above the water. When you subtract this value, you may get a few negative pressure values in the beginning and end of your file. You will need to remove those lines from the file.
 
-Another option is to simply assume that atmospheric pressure is 1000 mbar. Doing this may force your depth calculations to be +/- 20cm off of the actual depth.
 
-### Using the MATLAB Plotter
-If you have access to MATLAB, simply run the script. If you do not have access to MATLAB, you can download the CTDPlotter application. It is a free MATLAB based application that only requires you to install a free MCR runtime. Both methods will give you the following results. It should be noted that the plotter is currently designed for use by fishermen in the U.S. Temperature has been converted to Fahrenheit and depth has been changed to fathoms. 
+### Using the MATLAB Plotter (In Progress)
+If you have access to MATLAB, simply run the script. If you do not have access to MATLAB, you can download the plotter application. It is a free MATLAB-based application that only requires you to install a free MCR runtime. 
 
-If you run the application, it will take a minute or two for a search window to pop up. Here you can select the file you are interested in plotting. 
-
-![Pop Up](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/PlotterPopUp.png)
-
-After selecting open, another minute will pass by and three windows will pop up. One window is a representation of the data as a profile, another window shows the data over time, and the last is a table of the processed data.
-
-![Output](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/PlotterOutput.png)
-
-The application will also create a folder in your C: drive labeled "OpenCTD_Data". It will store the plots and tables you created and name them based on the date and time of the first line of the file. For new plots it will create a new folder within OpenCTD_Data and name it based on the date and time. For the individual files, naming goes by Plot Type_MMDDYY-HHmmss.
-
-![PlotterDirectory](https://github.com/CTDizzle/CTDizzle/blob/master/Documentation/Images/DirectoryforPlotter.PNG)
-
-### Is the data reasonable?
-
-#### The West Coast (Move this to case construction section).
-:+1:
+It should be noted that the plotter is currently designed for use by fishermen in the U.S. Temperature has been converted to Fahrenheit and depth has been changed to fathoms. 
 
 
-#### Yaquina Bay
 
-:+1:
+### :+1: Is the data reasonable? (In Progress)
 
-The OpenCTD is capable of observing changes over several days. The pressure sensor is capable of rectifying changes is tidal height and changes in temperature and salinity can be seen to follow. 
-
-Yaquina Bay is an excellent place to test the OpenCTD. Under the right conditions, the device can be used find the depth of the salt wedge, or the extent of the river plume in the bay. 
-
-Every couple of months students from Oregon State University will sample from the Yaquina Bay Bridge up to Toledo during various stages of the tidal cycle. The Oregon Coast Aquarium also continuosly collects salinity and temperature data on the water that is pumped in from the bay. 
-
+#### Example: Yaquina Bay
 
 #### The Oregon Shelf
-
-:+1:
-
-
-## Index of Jargon
-
-In no particular order...
-
-|Term|Description|
-|:---:|:---|
-|BNC|[Bayonet Neill-Concelmen Connector](https://en.wikipedia.org/wiki/BNC_connector). Typically the terminator on a coaxial cable|
-|SPI|[Serial Peripheral Interface] (https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus). A synchronous serial communication interface typically used in short distance communication. One device is considered the master device and the others the slave. The slave select (SS) pin allows the microcontroller to select which device it talks to.|
-|I2C|[Inter-Integrated Circuit](https://en.wikipedia.org/wiki/I%C2%B2C). Often pronouced I-squared-C or I-two-C. It only uses two lines for communication but is communicates slower than SPI|
-|TX|Serial transmitter on a device. |
-|RX|Serial reciever on a device. |
-|Absolute Pressure|The OpenCTD measures absolute pressure. In the reported values, the atmospheric pressure is included. If your OpenCTD reads 1100 mbar, that does not mean it is at ~11 meter depth, but more likely ~1m assuming your atmospheric pressure is 1000 mbar.|
-|Gauge Pressure| To get gauge pressure, simply subtract atmospheric pressure from the absolute pressure.|
-
-
 
 
 
