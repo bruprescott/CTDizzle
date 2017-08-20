@@ -1,6 +1,6 @@
 # CTDizzle User Manual
 
-:+1: This emoji indicates sections that are directed toward the students I will be working with during my research project. Many of these sections may include information that is specific to the Oregon Coast.
+:+1: This emoji indicates sections that are directed toward the students I will be working with during my research project. Many of these sections may include information that is specific to the Oregon coast.
 
 
 ## Contents
@@ -9,7 +9,7 @@
 	- [Before You Get Started](#before-you-get-started)
 	- [Why Conductivity, Temperature, and Depth?](#why-conductivity,-temperature,-and-depth?)
 	- [The CTDizzle Mk4](#the-ctdizzle-mk4)
-	- [Specifications](#specification)
+	- [Specifications](#specifications)
 4. [Build Instructions]
 	- [Software Setup]
 		- [Setting Up the Arduino IDE]
@@ -204,21 +204,16 @@ Place the MKRZero, EC EZO, and DeadOn RTC on the breadboard. Don't forget to ins
 ![Picture of setup here](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/BareBreadboard.jpg)
 *Board setup before all the messy jumper wires.*
 
-Connect everything together as outlined in the pinout guide. After you double check you connections it is time to fire it up!
+Connect everything together as outlined in the pinout guide. After you double check you connections it is time to fire it up!Connect your MKRZero to the computer and upload the MKRZero_OpCode.
 
 ![Picture of setup with jumper wires here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/MessyWires.jpg)
 *Board setup with jumper wires.*
 
-
-### Bench Test
-
-Once you have the breadboard setup, connect your MKRZero to the computer and upload the MKRZero_OpCode.
-
 Open the serial monitor (Ctrl+M). If you have everything set up correctly, you should see data printing to the screen in the form of:
-Date (mm/dd/yyyy), Time (HH:mm:ss), EC (uS/cm), T (degC), P (mbar), Depth (Sketch), SAL (Sketch). 
+Date (mm/dd/yyyy), Time (HH:mm:ss), Conductivity (uS/cm), Temperature (degC), Absolute Pressure (mbar), Salinty (PSU,circuit), Depth (m), Salinity (PSU,sketch) 
 
-[Picture of output.]
-
+![Picture of output.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SerialOutput.PNG)
+*Salinity is printed twice for comparision between EC EZO and sketch derived values.*
 
 
 
