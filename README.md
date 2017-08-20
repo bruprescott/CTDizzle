@@ -22,4 +22,4 @@ The CTDizzle and OpenCTD have a lot in common. Some information, code, and scrip
 - Sound velocity output in RAWCTD files.
 - GUI for the MATLAB tool.
 - Downcast for MATLAB tool.
-- Smooth out plots for MATLAB tool.
+- Cleaner plots.
