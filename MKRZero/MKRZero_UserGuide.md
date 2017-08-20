@@ -54,7 +54,7 @@ Oceanographic equipment is often expensive and inaccessible for students and cit
 
 Check out the [original OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD) if you want to build a lower cost device using easily accessible materials and tools. Many thanks to Andrew Thaler, Kersey Sturdivant, and Russell Neches for providing the initial framework for the OpenCTD. 
 
-![Original OpenCTD](https://raw.githubusercontent.com/CTDizzle/CTDizzle/master/Documentation/Images/OpenCTDVersions.jpg)
+![Original OpenCTD](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/OpenCTDVersions.jpg)
 _Variations of the original OpenCTD. Photo taken by Andrew Thaler._
 
 
