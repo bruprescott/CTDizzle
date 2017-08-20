@@ -187,34 +187,32 @@ Protective Equipment: Eye Protection, Nitrile Gloves
 
 :+1: Most of the parts are already breadboard compatible, but you will need to solder header pins to the DeadOn RTC. If you aren't familiar with soldering, take the time to practice with some header pins and protoboard. There should be enough extra. You'll use less solder than you first expect and it will happen pretty quickly. Once you think you are ready, solder some header pins to the DeadOn RTC! It isn't necessary, but if you want your solder job to be nice and shiny, you can use a soft bristle brush and some alcohol to wipe away the excess flux. 
 
-[Picture of DeadOn RTC with header pins here.]
+![Picture of DeadOn RTC with header pins here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SolderedRTC.jpg)
+*DeadOn RTC with soldered headers.*
 
 Next you need to prepare the temperature and pressure sensors. Remove the DF13 connects from each sensor. Then strip away roughly 1cm of insulation on each of the wires. Tin the ends of the wires to prevent loose strands. 
 
-
-[Picture of exposed wire here.]
+![Picture of exposed wire here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Pressure.jpg)
+*Trimmed pressure sensor wires.*
 
 :+1: Both the temperature and pressure sensors use I2C to communicate with the MKRZero. In the final product, similar wires will be soldered to the same pin. Each device has a unique address, so the MKRZero is capable of differentiating between the two. 
 After you have striped the wires, you can solder together the same colored wires of the sensors. It is recommended that you intertwine the wires to make things less messy. If you aren't confident with your soldering ability yet, feel free to practice with some other wire.
 
-[Picture of soldered wires here.]
-
 Now is the time to set things up on the breadboard!
 Place the MKRZero, EC EZO, and DeadOn RTC on the breadboard. Don't forget to install the SD card and coin cell!
 
-[Picture of setup here].
+![Picture of setup here](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/BareBreadboard.jpg)
+*Board setup before all the messy jumper wires.*
 
 Connect everything together as outlined in the pinout guide. After you double check you connections it is time to fire it up!
 
-[Picture of setup with jumper wires here.]
-
+![Picture of setup with jumper wires here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/MessyWires.jpg)
+*Board setup with jumper wires.*
 
 
 ### Bench Test
 
 Once you have the breadboard setup, connect your MKRZero to the computer and upload the MKRZero_OpCode.
-
-[Picture of whole setup here.]
 
 Open the serial monitor (Ctrl+M). If you have everything set up correctly, you should see data printing to the screen in the form of:
 Date (mm/dd/yyyy), Time (HH:mm:ss), EC (uS/cm), T (degC), P (mbar), Depth (Sketch), SAL (Sketch). 
