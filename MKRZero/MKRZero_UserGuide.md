@@ -66,7 +66,7 @@ It should be noted that this guide assumes that you are running everything throu
 Temperature itself is incredibly useful as so many other ocean properties and phenomena are impacted by it.
 One study suggests that rockfish prefer to hang out in a certain water temperature range. Commercial trawls in Alaska and Oregon have reported a greater abundance of the fish in temperatures ranging between 4 and 7 degC ([Vestfals, 2010](http://ir.library.oregonstate.edu/xmlui/handle/1957/12047?show=full)). Many other studies show that temperature also impacts the growth rate, welfare, and reproductive potential of other marine organisms. Temperature also influences factors such as water density, pH, and how much gas seawater can hold. By monitoring ocean temperature over space and time, scientists are able to come up with connections between temperature and other aspects of our oceans.
 
-Conductivity by itself isn't a particularly useful, but when combined with temperature and pressure through some empirical calculations, you can get values such as salinity, density, and sound velocity. Salinity is essentially the concentration of dissolved salts in the water. Salty, cold water is more dense than fresh, warm water, and this is easily seen in the Columbia River plume. During the winter, the Columbia River outputs a lot of freshwater. This freshwater can form a layer that is about 20m thick and extends almost 300km offshore([Saldias et al, 2016](http://onlinelibrary.wiley.com/doi/10.1002/2015JC011431/full)). The density of this plume is low enough that there have been cases where gliders have become stuck between the layers!
+Conductivity by itself isn't a particularly useful, but when combined with temperature and pressure through some empirical calculations, you can get values such as salinity, density, and sound velocity. Salinity is essentially the concentration of dissolved salts in the water. Salty, cold water is more dense than fresh, warm water, and this is easily seen in the Columbia River plume. During the winter, the Columbia River outputs a lot of freshwater. This freshwater can form a layer that is about 20m thick and extends almost 300km offshore ([Saldias et al, 2016](http://onlinelibrary.wiley.com/doi/10.1002/2015JC011431/full)). The density of this plume is low enough that there have been cases where gliders have become stuck between the layers!
 
 Depth is sometimes difficult to measure. The average depth of the ocean is 4000m, with the deepest part reaching almost 11000m. That would be a long tape measure! Scientists have come up with a variety of methods for measuring depth, such as sonar measurments, satellite altimetry, and pressure readings. The CTD uses pressure to determine water depth, which is easily calculated through an empirical formula.
 
@@ -77,7 +77,7 @@ The CTD is the workhorse tool of oceanography. By building your own, I hope that
 
 This is the fourth rendition of the CTDizzle. Its construction is a little different from the original CTD, as it uses some different sensors and parts. It costs about 700 USD to build and doesn't require any tools that can't be easily found at your local hardware store. If you have all the parts and tools on hand, you should be able to build it in a weekend!
 
-Currently, the Mk4 has been constructed using the Blue Robotics 2" and 3" watertight enclosures. Each size has its advantages and disadvantages. The 2" version is much smaller, but there isn't a lot of wiggle room within the case, so upgrades and additions are much more difficult. The 3" version has a lot of internal room, so you can use a larger battery or add another sensor, but it takes up much more space if you plan to attach the device to an ROV or crab pot. 
+:+1: Currently, the Mk4 has been constructed using the Blue Robotics 2" and 3" watertight enclosures. Each size has its advantages and disadvantages. The 2" version is much smaller, but there isn't a lot of wiggle room within the case, so upgrades and additions are much more difficult. The 3" version has a lot of internal room, so you can use a larger battery or add another sensor, but it takes up much more space if you plan to attach the device to a ROV or crab pot. 
 
 
 ### Specifications
@@ -95,7 +95,7 @@ Battery life ultimately depends on the battery that you use. This build uses a 3
 
 ### Software Setup
 #### Setting Up the Arduino IDE
-The Arduino Integrated Development Environment (IDE) is simple to use. It is recommended that the user maintain the default directories that the Arduino IDE download wizard creates. To install Arduino…
+The Arduino Integrated Development Environment (IDE) is simple to use. It is recommended that you maintain the default directories that the Arduino IDE download wizard creates. To install Arduino…
 
 1. Go to https://www.arduino.cc/en/main/software.
 2. Select the Windows Installer version.
@@ -104,17 +104,17 @@ The Arduino Integrated Development Environment (IDE) is simple to use. It is rec
 
 
 #### Setting up the MKRZero
-The MKRZero is designed and officially supported by Arduino. The required package does not come pre-installed with the Arduino IDE, so you will need to install it using the Boards Manager.
+The MKRZero was designed and is officially supported by Arduino. The required package does not come pre-installed with the Arduino IDE, so you will need to install it using the Boards Manager.
 
 1. Open the Arduino IDE.
 2. Navigate to Tools > Board > Board Manager
-3. Search for Arduino SAMD Boards. Select Install.
+3. Search for "Arduino SAMD Boards". Select Install.
 4. After it has installed, navigate to Tools > Boards. 
 5. Select MKRZero.
 6. Connect your MKRZero to your computer via microUSB. 
 7. Navigate to Tools > Port. Select the available COM Port. 
 
-Your MKRZero should now be upload ready. Disconnect from your computer if desired. It is recommended that you keep track of which USB port you plugged the MKRZero into. That way you don't have to worry about changing the com port every time you connect it to the computer.
+Your MKRZero should now be upload ready. It is recommended that you keep track of which USB port you plugged the MKRZero into. That way you don't have to worry about changing the com port every time you connect it to the computer.
 
 
 #### Formatting the SD Card
@@ -127,10 +127,11 @@ It is also necessary to format the microSD card that will be used to store the d
 6. Your card should now be formatted. 
 7. OPTIONAL: Navigate to your SD card through Windows Explorer. If desired create and additional folder to save old data. 
 
-Another option is to install the [SD Card Formatter](https://www.sdcard.org/downloads/formatter_4/) developed by the SD Association. If you think you might play around with a Raspberry Pi in the future, this application is particularly useful.
+Another option is to install the [SD Card Formatter](https://www.sdcard.org/downloads/formatter_4/) developed by the SD Association. This application is particularly useful if you like to tinker with the Raspberry Pi.
+
 
 #### Setting Up the Required Libraries
-Several libraries are needed to allow the OpenCTD operating code to work. These libraries allow communication with the sensors and the use of unique commands. They can either be found within the Arduino IDE or downloaded from GitHub. Libraries native within the IDE are automatically included by the IDE and no further steps are necessary to include them. The following instructions show how to download and access the third party libraries. 
+Several libraries are needed to allow the CTDizzle operating code to work. These libraries allow communication with the sensors and the use of unique commands. They can either be found within the Arduino IDE or downloaded from GitHub. Libraries native within the IDE are automatically included by the IDE and no further steps are necessary to include them. The following instructions show how to download and access the third party libraries. 
 
 |Native Libraries|Third Party Libraries|
 |:---:|:---:|
@@ -138,9 +139,10 @@ Several libraries are needed to allow the OpenCTD operating code to work. These 
 |Wire|MS5837|
 |SD|SparkFunDS3234RTC|
 
+
 ##### TSYS01 Temperature Sensor Library
 The temperature sensor requires the TSYS01 library. To access the library:
-1.	Go to https://github.com/bluerobotics/BlueRobotics_TSYS01_Library
+1.	Go to https://github.com/bluerobotics/BlueRobotics_TSYS01_Library.
 2.	Select the Clone or download button. Click on Download Zip.
 3.	Navigate to your downloads folder through Windows Explorer.
 4.	Right click on the BlueRobotics_TSYS01_Library-master folder. Select extract all.
@@ -148,9 +150,10 @@ The temperature sensor requires the TSYS01 library. To access the library:
 6.	Navigate to Windows (C:) > Program Files (x86) > Arduino > libraries. Click on select folder.
 7.	The TSYS01 library can now be included by the operating code.
 
+
 ##### MS5837 Pressure Sensor Library
 The pressure sensor requires the MS5837 library. To access the library:
-1.	Go to https://github.com/bluerobotics/BlueRobotics_MS5837_Library
+1.	Go to https://github.com/bluerobotics/BlueRobotics_MS5837_Library.
 2.	Select the Clone or download button. Click on Download Zip.
 3.	Navigate to your downloads folder through Windows Explorer.
 4.	Right click on the BlueRobotics_MS5837_Library-master folder. Select extract all.
@@ -158,9 +161,10 @@ The pressure sensor requires the MS5837 library. To access the library:
 6.	Navigate to Windows (C:) > Program Files (x86) > Arduino > libraries. Click on select folder.
 7.	The MS5837 library can now be included by the operating code.
 
+
 ##### DeadOn RTC Library
 The DeadOn RTC requires the SparkFunDS3234RTC library. To access the library:
-1.	Go to https://github.com/sparkfun/SparkFun_DS3234_RTC_Arduino_Library
+1.	Go to https://github.com/sparkfun/SparkFun_DS3234_RTC_Arduino_Library.
 2.	Select the Clone or download button. Click on Download Zip.
 3.	Navigate to your downloads folder through Windows Explorer.
 4.	Right click on the SparkFun_DS3234_RTC_Arduino_Library-master folder. Select extract all.
@@ -170,7 +174,13 @@ The DeadOn RTC requires the SparkFunDS3234RTC library. To access the library:
 
 If you are using different sensors, make sure to use the right libraries!
 
+
 ### Breadboard Testing
+
+
+
+
+
 :+1: Most of the  parts should already be breadboard compatible, but there are a couple that you will need to solder header pins to. If you followed along with the parts list, you should have enough extra to practice soldering. Start by breaking off a strip of protoboard and 4 or five header pins from the main strip. Place the small header strip into the protoboard and practice connecting the two. You'll use less solder than you first expect and will happen pretty quickly!  Don't forget to check the you have the appropriate temperature for the solder you are using. Please use protective eyewear and appropriate clothing. Once you are confident with your newfound soldering skills, solder header pins to the DeadOn RTC and any other parts that need it.
 
 [Picture of DeadOn RTC with header pins here.]
