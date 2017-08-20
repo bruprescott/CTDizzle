@@ -14,7 +14,7 @@ The CTDizzle and OpenCTD have a lot in common. Some information, code, and scrip
  |08/06/17| Added downcast filter for R script.
  |08/10/17| Officially switched to MKRZero. No more planned updates for Qduino build. Edited parts list and pinout guide to reflect change.
  |08/11/17| Added depth and salinity calculations to MKRZero_OpCode. Updated MATLAB tool.
- |08/19/17| Changed atmospheric pressure assumption to 1013 mbar.
+ |08/19/17| Changed atmospheric pressure assumption to 1013 mbar. Organized directories. User manual overhaul.
  
  
 ## Planned Updates
