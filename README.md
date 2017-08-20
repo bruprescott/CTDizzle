@@ -10,6 +10,7 @@ The CTDizzle and OpenCTD have a lot in common. Some information, code, and scrip
 
 |Date|Note|
 |:---:|:---|
+ |11/13/17| Added RTC.|
  |02/17/17| Added temperature compensation for EC EZO.|
  |04/14/17| Data now output in .CSV instead of .TXT.
  |05/20/17| Added new file creation on power cycle. Data files are now named RAWCTDXX.csv (where XX is a number in sequence starting at 00).
