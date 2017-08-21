@@ -253,11 +253,11 @@ Once everything checks out and your breadboard tests are successful, you can beg
 #### Switch/Purge End Cap Preparation
 Select one end cap and flange as your switch/purge end cap. Connect them together with the six M2 screws. Don't worry about installing the o-ring just yet. Once connected, use sandpaper to prepare the inner surface of the flange and end cap. After preparing the end cap, clean each surface with isopropyl alcohol. By scuffing up the internal surface, you are increading the bonding capacity of the urethane you will later apply.
 
-![Picture of prepared end cap here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/TapedFlange.jpg)
+![Picture of prepared end cap here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/2.PNG)
 
 Remove the face plate from the flange. Install the switch and pressure 
 
-![Picture of installed bulkheads here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/PressureCap2.jpg)
+![Picture of installed bulkheads here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/1.PNG)
 
 #### Conductivity and Pressure Sensor End Cap
 
@@ -277,45 +277,49 @@ Protective Equipment: Nitrile Gloves, Safety Mask
 
 :+1: The urethane you are using is called Urethane 75a. It is specifically designed for potting of electronics and cables that are placed in seawater.
 
-[Picture of Urethane station here.]
+![Picture of Urethane here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/5.PNG)
 
 In seperate cups, pour equal amounts of each urethane component. You should use a minimum of three ounces of each. Using less may not be enough to generate the exothermic reaction needed for the curing process. Pour two components into one cup. Slowly mix with the stirring stick for two minutes and take care not to introduce bubbles. You will have five total minutes of working time. At around three minutes, the mixture will become thicker and more difficult to pour.
 
 To get rid of bubbles, you can use a vacuum chamber.
 
-Here are some (videos)[https://www.masterbond.com/resources/video-library?tid=354] on how to mix and apply two part epoxies.
+Here are some [videos](https://www.masterbond.com/resources/video-library?tid=354) on how to mix and apply two part epoxies.
 
-[Picture of mixture here.]
+![No Urethane](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/7.PNG)
 
 Next, pour the urethane into each end cap until it reaches the brim of the flange. 
 
-[Picture of urethane and end caps here.]
+![Picture of urethane and end caps here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/6.PNG)
+![Pic2](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/4.PNG)
 
 Allow to cure for 24 hours. 
 
 
-### Protoboard Soldering
+### Completing the Circuit
 
 While your end caps are curing, you can begin to solder the electrical components together.
 
-First, orient the MKRZero on the protoboard so that the SD card faces the switch end cap. Below that, install the RTC, and below the RTC, install the EC EZO.  Using 22 AWG solid core wire, solder wires to the corresponding pins of the MKRZero, RTC, and EC EZO. It is recommended that you test this setup in case there are any ground faults.
+If using the 2" version of the pressure case, soldering everything to a protoboard may make space cramped inside. It might be easier to solder components directly together. You will need to remove the headers already installed on the MKRZero and the DeadOn RTC. You'll also have to bend the headers on the EC EZO to allow easier soldering of the pins. 
 
-[Picture of main protoboard here.]
+![Get bent](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/EZOBend.jpg)
 
 It isn't necessary, but installing a quick disconnect for the sensors helps when you need to reprogram, charge, or pull data from the protoboard. If desired, you can also solder the temperature and pressure JST plugs to the MKRZero. Make a note of which wire goes where, because after your urethane is done curing, you will want to make sure you have the right wires hooked up!
 
-[Picture of main protoboard with JST here.]
+Cut the EC probe cable, leaving approximately six inches of cable. Strip the wires and tin the leads.
 
-Now is the time to decide if you want to cut the EC probe cable. Leaving the BNC connector has a couple advantages. It makes it easier to disconnect from the protoboard and there is no confusion over the probe communication. A downside to this is that there is a lot of excess cable. There is probably room for this excess cable in the internal space, but it may be cramped. 
+![Probe Leads](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/ProbeLeads.jpg)
 
-- If you decide to cut the cable, follow the Atlas-Scientific guide to cable cutting. Recall that Atlas-Scientific will not accept returns of probes with cut cables. Once cut, solder one half of the 2-pin JST connector to the probe leads, and the other half to the corresponding pins on the EC EZO. 
+Note that Atlas-Scientific no longer covers probe faults after you cut the cable. 
+
+Solder everything together as described by the pinout guide. 
+
+![Picture of main protoboard with JST here.])(https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/CrappyWiring.PNG)
+
 
 
 #### Switch Cable Extension
-In order to externally turn off the OpenCTD, we need to install a switch. It is not recommended that you cut the battery cables to install the switch, as this may have an impact on the charging of the battery. Instead, use a JST extension cable to tie the switch into. First, cut the ground line of the extension cable at roughly the midpoint. Solder a switch lead onto each end of the ground line. 
+In order to externally turn off the CTDizzle, we need to install a switch. It is not recommended that you cut the battery cables to install the switch, as this may have an impact on the charging of the battery. Instead, use a JST extension cable to tie the switch into. First, cut the ground line of the extension cable at roughly the midpoint. Solder a switch lead onto each end of the ground line. 
 - Take care when soldering, as the wire will heat up quickly when maintaining contact with the soldering iron. This may result in deformation of the JST connector and you will not be able to use it. 
-
-[Picture of extension here.]
 
 
 ### Final Case Construction
@@ -332,7 +336,7 @@ After you have soldered everything and tested the data output, you can finish co
 9. Reinstall the switch and plug. 
 10. Turn on the device and look for the LEDs on the EC EZO. 
 
-[Picture of completed device here.]
+![Picture of completed device here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Complete.jpg)
 
 ## Corrosion
 :+1: The screws used in the end caps are made of 316 SS and the main body of the unit is made of aluminum.
