@@ -190,7 +190,7 @@ Tools: Soldering Iron, Hemostats, Wire Strippers, Breadboard, Third Hand
 
 Protective Equipment: Eye Protection, Nitrile Gloves
 
-:+1: Most of the parts are already breadboard compatible, but you will need to solder header pins to the DeadOn RTC. If you aren't familiar with soldering, take the time to practice with some header pins and protoboard. There should be enough extra. You'll use less solder than you first expect and it will happen pretty quickly. Once you think you are ready, solder some header pins to the DeadOn RTC! It isn't necessary, but if you want your solder job to be nice and shiny, you can use a soft bristle brush and some alcohol to wipe away the excess flux. 
+:+1: Most of the parts are already breadboard compatible, but you will need to solder header pins to the DeadOn RTC. If you aren't familiar with soldering, take the time to practice with some header pins and protoboard. It is recommended that you use hemostats to cleanly break the header pins. There should be enough extra. You'll use less solder than you first expect and it will happen pretty quickly. Once you think you are ready, solder some header pins to the DeadOn RTC! It isn't necessary, but if you want your solder job to be nice and shiny, you can use a soft bristle brush and some alcohol to wipe away the excess flux. 
 
 ![Picture of DeadOn RTC with header pins here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SolderedRTC.jpg)
 *DeadOn RTC with soldered headers.*
@@ -214,11 +214,11 @@ Connect everything together as outlined in the pinout guide. After you double ch
 ![Picture of setup with jumper wires here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/MessyWires.jpg)
 *Board setup with jumper wires.*
 
-Open the serial monitor (Ctrl+M). If you have everything set up correctly, you should see data printing to the screen in the form of:
-Date (mm/dd/yyyy), Time (HH:mm:ss), Conductivity (uS/cm), Temperature (degC), Absolute Pressure (mbar), Salinty (PSU,circuit), Depth (m), Salinity (PSU,sketch) 
+Open the serial monitor (Ctrl+Shift+M). If you have everything set up correctly, you should see data printing to the screen in the form of:
+Date (mm/dd/yyyy), Time (HH:mm:ss), Conductivity (uS/cm), Temperature (degC), Absolute Pressure (mbar), Depth (m), Salinity (PSU) 
 
 ![Picture of output.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SerialOutput.PNG)
-*Salinity is printed twice for comparision between EC EZO and sketch derived values. Initial tests suggest that the differences is significant.*
+*Salinity is printed twice for comparision between EC EZO and sketch derived values. Initial tests suggest that the differences is significant. The most recent OpCode sketch has the EC EZO Sal function removed.*
 
 The date should be representative of the date that your computer is set to. The time should be close to the time that your computer is set to, but may be behind by about 30 seconds. This is due to upload delay. If your time is drastically off or incoherent, remove the battery and power cycle the system. Note that the autotime function will need to be commented out of the code for the final sketch upload or else your CTD will revert to the same time on a power cycle.
 
