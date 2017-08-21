@@ -1,12 +1,12 @@
-/*Version 1.7
-
+/*
 This sketch is a combination of code written by the folks at Adafruit, Atlas-Scientific, Blue Robotics, Oceanography For Everyone, and SparkFun.
 It is used by the CTDizzle Mk4 and based around the Arduino MKRZero. 
 Contact Ian Black for questions or comments regarding this sketch. 
 Email: blackia@oregonstate.edu
 
-This sketch will print data to a .CSV with 8 columns:
-Date , Time , EC , T , P , Depth(sketch derived) , Salinity(sketch derived) 
+This sketch will print data to a .CSV with 7 columns:
+Date , Time , EC , T , P , Depth(sketch derived) , Sal(sketch derived) 
+Salinity is printed twice for comparison between the EC EZO derived and sketch derived values.
 
 ISSUES
 Does not consider latitudinal variation in gravity. Assumes g=9.806 m/s^2 
@@ -144,7 +144,7 @@ void loop() {     //And around we go.
     }
 
   psensor.read();  //Read what the pressure is.
-  GaugeP=(psensor.pressure()-1013)/100;   //GaugeP is in decibars. Assumes atmospheric pressure is 1013 mbar.
+  GaugeP=(psensor.pressure()-1013)/100;   //GaugeP is in decibars. Assumes atmospheric pressure is 1000 mbar.
   delay(10);
   Depth = (((((COEFF1*GaugeP+COEFF2)*(GaugeP)-COEFF3)*(GaugeP)+COEFF4)*(GaugeP))/g);   //Depth is in meters.
   delay(10);
@@ -186,11 +186,11 @@ void loop() {     //And around we go.
         datafile.print('0');}  //Print a zero for aesthetics.
     datafile.print(String(rtc.second())); //Print date to SD card.
     datafile.print(",");   //Comma delimited.
-    datafile.print(f_ec);   //Print the floating point EC.
+    datafile.print(EC);   //Print the floating point EC.
     datafile.print(",");
     datafile.print(tsensor.temperature());   //Print temperature to SD card.
     datafile.print(",");
-    datafile.print(psensor.pressure());   //Print absolute pressure to SD card.
+    datafile.print(psensor.pressure());   //Print pressure to SD card.
     datafile.print(",");
     datafile.print(Depth);    //Print depth to SD card.
     datafile.print(",");
@@ -201,7 +201,7 @@ void loop() {     //And around we go.
     Serial.print(",");   //Comma delimited.
     Serial.print(String(rtc.hour()) + ":" + String(rtc.minute())+":"+String(rtc.second()));  //Print hours, minutes, seconds to serial monitor.
     Serial.print(",");
-    Serial.print(f_ec);   //Print the floating point EC to serial monitor.
+    Serial.print(EC);   //Print the floating point EC to serial monitor.
     Serial.print(",");
     Serial.print(tsensor.temperature());   //Print temperature to serial monitor.
     Serial.print(",");
