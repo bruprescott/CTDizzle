@@ -69,8 +69,8 @@ void setup() {      //Start your engines.
   psensor.setModel(MS5837::MS5837_30BA);    //Define the model of the pressure sensor.
   psensor.setFluidDensity(FluidDensity); //Set approximate fluid density for pressure sensor.
 
-  delay(970);   //Wait half a second before continuing.
-}   //Setup takes ~1 second to complete.
+  delay(1970);   //Wait half a second before continuing.
+}   //Setup takes ~2 second to complete.
 
 
 
