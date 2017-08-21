@@ -25,3 +25,4 @@ This page will continue to be updated as resources are discovered.
 - [SeaBird Appnote 82](http://www.seabird.com/document/an82-guide-specifying-ctd)
 - [SeaBird Appnote 90](http://www.seabird.com/document/an90-absolute-salinity-and-teos-10-sea-birds-implementation)
 - [Algorithms for computation of fundamental properties of seawater](http://www.jodc.go.jp/info/ioc_doc/UNESCO_tech/059832eb.pdf)
+- [SBE Data Processing Manual](http://www.seabird.com/sites/default/files/documents/SBEDataProcessing_7.26.7.pdf)
