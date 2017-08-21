@@ -218,7 +218,7 @@ Open the serial monitor (Ctrl+Shift+M). If you have everything set up correctly,
 Date (mm/dd/yyyy), Time (HH:mm:ss), Conductivity (uS/cm), Temperature (degC), Absolute Pressure (mbar), Depth (m), Salinity (PSU) 
 
 ![Picture of output.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SerialOutput.PNG)
-*Salinity is printed twice for comparision between EC EZO and sketch derived values. Initial tests suggest that the differences is significant. The most recent OpCode sketch has the EC EZO Sal function removed.*
+*Salinity is printed twice in this picture for comparision between EC EZO and sketch derived values. Initial tests suggest that the differences is significant. The most recent OpCode sketch has the EC EZO Sal function removed.*
 
 The date should be representative of the date that your computer is set to. The time should be close to the time that your computer is set to, but may be behind by about 30 seconds. This is due to upload delay. If your time is drastically off or incoherent, remove the battery and power cycle the system. Note that the autotime function will need to be commented out of the code for the final sketch upload or else your CTD will revert to the same time on a power cycle.
 
@@ -240,7 +240,7 @@ Protective Equipment: Nitrile Gloves
 
 :+1: Unlike the factory calibrated temperature and pressure sensors, the conductivity kit requires a user calibration. First, you will need to leave your complete setup and calibration solutions in a temperature controlled room over night (such as a cold storage room or cafeteria refrigerator).
 
-[Picture of calibration setup here.]
+![Picture of calibration setup here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/CalSetup.jpg)
 
  :+1: The next morning, take your calibration procedure and computer to your setup. Follow along with the calibration procedure found in the documentation folder Conductivity is highly dependent on temperature, so it is important that you be as precise as possible! Using the provided plots, determine the temperature of the room and corresponding conductivity value to the nearest 100 uS/cm. Don't forget to bring a parka!
 
@@ -253,11 +253,11 @@ Once everything checks out and your breadboard tests are successful, you can beg
 #### Switch/Purge End Cap Preparation
 Select one end cap and flange as your switch/purge end cap. Connect them together with the six M2 screws. Don't worry about installing the o-ring just yet. Once connected, use sandpaper to prepare the inner surface of the flange and end cap. After preparing the end cap, clean each surface with isopropyl alcohol. By scuffing up the internal surface, you are increading the bonding capacity of the urethane you will later apply.
 
-[Picture of prepared end cap here.]
+![Picture of prepared end cap here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/TapedFlange.jpg)
 
 Remove the face plate from the flange. Install the switch and pressure 
 
-[Picture of installed bulkheads here.]
+![Picture of installed bulkheads here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/PressureCap2.jpg)
 
 #### Conductivity and Pressure Sensor End Cap
 
@@ -266,9 +266,6 @@ Tools: Sandpaper, Round File
 Protective Equipment: Nitriles Gloves
 
 Next, do the same thing with the other end cap. The conductivity sensor has too large a diameter for the pre-drilled holes, so you will need to drill out one of the holes to 15/32". It may be a tight fit for the probe, so use a round file to make it the right size.
-
-[Picture of drilled out hole here.]
-
 
 After you have prepared each end cap, you can re-connect them to the flanges. Make sure everything is clean. Wrap the O-Ring grooves of the flange in tape to prevent any spillage from the next step.
 
