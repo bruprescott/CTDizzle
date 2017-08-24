@@ -330,7 +330,7 @@ Solder everything together as described by the pinout guide. If you want to avoi
 In order to externally turn off the CTDizzle, we need to install a switch. It is not recommended that you cut the battery cables to install the switch, as this may have an impact on the charging of the battery. Instead, use a JST extension cable to tie the switch into. First, cut the ground line of the extension cable at roughly the midpoint. Solder a switch lead onto each end of the ground line. 
 - Take care when soldering, as the wire will heat up quickly when maintaining contact with the soldering iron. This may result in deformation of the JST connector and you will not be able to use it. Alternatively, you can use cold splice connectors.
 
-[Picture of Switch cable here.]
+![Picture of Switch cable here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SwitchCable.jpg)
 
 
 ### Final Case Construction
