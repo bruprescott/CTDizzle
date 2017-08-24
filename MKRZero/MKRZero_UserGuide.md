@@ -43,9 +43,6 @@
 7. [Battery Charging Procedure](#battery-charging-procedure)
 8. [Data Download and Analysis](#data-download-and-analysis)
 	- [Accessing and Plotting the Data](#accessing-and-plotting-the-data)
-	- [Is the Data Reasonable?](#is-the-data-reasonable?)
-		- [Yaquina Bay](#example:-yaquina-bay)
-		- [Oregon Shelf](#example:-the-oregon-shelf]
 
 ## Introduction
 
@@ -323,7 +320,7 @@ Note that Atlas-Scientific no longer covers probe faults after you cut the cable
 
 Solder everything together as described by the pinout guide. If you want to avoid using a ton of heat shrink, you can use UY2 cold splice connectors.
 
-![Picture of main protoboard with JST here.])(https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/CrappyWiring.PNG)
+![Picture of main protoboard with JST here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/CrappyWiring.PNG)
 
 
 #### Switch Cable 
@@ -409,16 +406,10 @@ This is done by removing the switch and vent endcap and removing the microSD car
   - Through the provided R script.
   - Through the provided Microsoft Excel spreadsheet (in progress).
   - Through your processing program of choice. RAWCTD files are comma-seperated.
+  
 5. Once you are finished looking at the data, delete the RAWCTD files in the main directory of the SD card. This keeps things from getting cluttered. 
+
 6. Reinstall the microSD card and end cap. If you think the O-rings look a little dirty, clean and apply silicone grease before continuing. 
-
-
-### :+1: Is the data reasonable? (In Progress)
-
-#### Example: Yaquina Bay
-
-#### Example: The Oregon Shelf
-
 
 
 
