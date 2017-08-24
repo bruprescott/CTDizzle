@@ -193,6 +193,8 @@ If you are using different sensors, make sure to use the right libraries!
 
 :+1: If you mess up, don't forget that you will have a solder sucker on hand!
 
+[SparkFun's Guide to Soldering Through-Holes](https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering)
+
 ![Picture of DeadOn RTC with header pins here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SolderedRTC.jpg)
 *DeadOn RTC with soldered headers.*
 
