@@ -27,7 +27,7 @@
 		- [Setting Up the Arduino MKRZero](#setting-up-the-arduino-mkrzero)
 		- [Formatting the SD Card](#formatting-the-sd-card)
 		- [Setting Up the Required Libraries](#setting-up-the-required-libraries)
-	- [Breadboard Testing]
+	- [Breadboard Testing])(#breadboard-testing)
 		- [Calibrating Conductivity](#calibrating-conductivity)
 	- [Case Construction and Potting](#case-construction-and-potting)
 		- [Switch End Cap](#switch-end-cap)
@@ -35,7 +35,7 @@
 		- [Applying the Urethane](#applying-the-urethane)
 	- [Completing the Circuit](#completing-the-circuit)
 		- [Switch Cable](#switch-cable)
-	- [Final Case Construction](#final-case-construction
+	- [Final Case Construction](#final-case-construction)
 5. [Corrosion](#corrosion)
 6. [Pre-deployment Procedure](#pre-deployment-procedure)
 7. [Deployment Procedure](#deployment-procedure)
