@@ -29,7 +29,6 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |[2-Quart Urethane 75a](https://www.aeromarineproducts.com/product/urethane-75a-encapsulating-compound/)|AeroMarine|$65.00|If too spendy, try Loctite Marine 2-Ton Epoxy. Be careful to not create bubbles.
 |[Assorted 22 AWG - Solid Core Wire](https://www.sparkfun.com/products/11367)|SparkFun|$16.95|
 |[Heat Shrink Kit](https://www.sparkfun.com/products/9353)|SparkFun|$7.95|
-|[Silicon Grease](http://www.bluerobotics.com/store/tools/tool-silicone-grease-10g-r1/)|Blue Robotics|$3|
 |[Kester 44 Solder](https://www.amazon.com/Kester-Rosin-Core-Solder-Spool/dp/B00068IJWC/ref=sr_1_4?ie=UTF8&qid=1496867514&sr=8-4&keywords=kester+44)|Amazon|$33.43|1 lb of solder. Not necessary unless you want to solder more than the OpenCTD.
 |[Desiccant Packs (10g)](https://www.amazon.com/Desiccant-Indicating-Chloride-Moisture-Absorbent/dp/B01MPYB16J/ref=sr_1_1?s=hi&ie=UTF8&qid=1496867597&sr=1-1&keywords=10g+desiccant)|Amazon|$8.99|Plenty of replacements.
 |Masking Tape|
@@ -37,6 +36,7 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |Black Tape|
 |70% Isopropyl Alcohol|
 |Kimwipes|
+
 
 
 #### Tools List
@@ -53,6 +53,7 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |Drillbit - 15/32"|Size for Atlas Scientific EC Probe|
 |microUSB Cable|Data-capable Android phone charger works too.|
 |Round File|Used to size drilled hole.|
+
 
 
 #### Not Necessary But Helpful Items
