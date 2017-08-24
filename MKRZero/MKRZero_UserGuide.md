@@ -186,9 +186,14 @@ If you are using different sensors, make sure to use the right libraries!
 
 ### Breadboard Testing
 
-Tools: Soldering Iron, Hemostats, Wire Strippers, Breadboard, Third Hand
+|Tools|Protective Equipment|
+|:---:|:---:|
+|Soldering Iron|Eye Pro
+|Hemostats|Nitrile Gloves
+|Wire Strippers|
+|Breadboard
+|Third Hand
 
-Protective Equipment: Eye Protection, Nitrile Gloves
 
 :+1: Most of the parts are already breadboard compatible, but you will need to solder header pins to the DeadOn RTC. If you aren't familiar with soldering, take the time to practice with some header pins and protoboard. It is recommended that you use hemostats to cleanly break the header pins. There should be enough extra. You'll use less solder than you first expect and it will happen pretty quickly. Once you think you are ready, solder some header pins to the DeadOn RTC! It isn't necessary, but if you want your solder job to be nice and shiny, you can use a soft bristle brush and some alcohol to wipe away the excess flux. 
 
