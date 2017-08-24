@@ -6,7 +6,6 @@ Email: blackia@oregonstate.edu
 
 This sketch will print data to a .CSV with 7 columns:
 Date , Time , EC , T , P , Depth(sketch derived) , Sal(sketch derived) 
-Salinity is printed twice for comparison between the EC EZO derived and sketch derived values.
 
 ISSUES
 Does not consider latitudinal variation in gravity. Assumes g=9.806 m/s^2 
@@ -23,7 +22,7 @@ Skip to line 139 for loop.
 #include <Wire.h>   //Used by temperature and pressure sensors.
 #include "TSYS01.h" //Used by temperature sensor.
 #include "MS5837.h" //Used by pressure sensor.
-#include <SparkFunDS3234RTC.h>
+#include <SparkFunDS3234RTC.h>  //Used by RTC.
 
 //Common variables you are most likely to change based on your needs.
 #define FluidDensity 1024   //Density in kg/m^3. This varies with water conditions and location.
@@ -135,16 +134,16 @@ void setup() {      //Start your engines.
 void loop() {     //And around we go.
     rtc.update();   //Update the time.
     
-    if (Serial1.available()>0){
-      received_from_sensor=Serial1.readBytesUntil(13,EC_data,48);
+    if (Serial1.available()>0){   //If communication with the EC EZO is available...
+      received_from_sensor=Serial1.readBytesUntil(13,EC_data,48);   //Read the incoming data...
       EC_data[received_from_sensor]=0;
     }
-    if ((EC_data[0] >= 48) && (EC_data[0] <= 57)){
+    if ((EC_data[0] >= 48) && (EC_data[0] <= 57)){  
       print_EC_data(); //If incoming EZO data is a digit and not a letter, parse it. 
     }
 
   psensor.read();  //Read what the pressure is.
-  GaugeP=(psensor.pressure()-1013)/100;   //GaugeP is in decibars. Assumes atmospheric pressure is 1000 mbar.
+  GaugeP=(psensor.pressure()-1013)/100;   //GaugeP is in decibars. Assumes atmospheric pressure is 1013 mbar.
   delay(10);
   Depth = (((((COEFF1*GaugeP+COEFF2)*(GaugeP)-COEFF3)*(GaugeP)+COEFF4)*(GaugeP))/g);   //Depth is in meters.
   delay(10);
@@ -152,7 +151,6 @@ void loop() {     //And around we go.
   tsensor.read();  //Read what the temperature is and hold it.
   T=tsensor.temperature(); //Define the temperature as a floating point to make salinity calculation a little easier.
   delay(10);
-
 
   R = ((f_ec/1000)/CStandard);    //PSS-78 calculations.
   RpNumerator = (A1*GaugeP)*(A2*pow(GaugeP,2))+(A3*pow(GaugeP,3));
