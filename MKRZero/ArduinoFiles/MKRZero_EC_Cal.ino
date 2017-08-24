@@ -6,16 +6,16 @@ byte rx_byte = 0;        //Stores incoming byte.
 
 void setup() {    //Start your engines.
   Serial.begin(9600);    //Baud rate to 9600.
-  Serial1.begin(9600);  //EC EZO baud rate to 9600
+  Serial1.begin(9600);  //Communication with the EC EZO at 9600 bps.
 }
 
 void loop() {
-  if (Serial.available()) {     //If a command is sent to the EC EZO from the serial monitor.
-    rx_byte = Serial.read();  //The byte becomes that command.
-    Serial1.write(rx_byte);   //The byte is sent to the EC EZO.
+  if (Serial.available()) {     //If a command is sent to the EC EZO from the serial monitor...
+    rx_byte = Serial.read();  //the byte becomes that command...
+    Serial1.write(rx_byte);   //then the byte is sent to the EC EZO.
   }
-  if (Serial1.available()) {   //If a information is sent to the MKRZero from the EC EZO.
-    rx_byte = Serial1.read();    //The byte becomes the data from the EC EZO.
-    Serial.write(rx_byte);    //The incoming value or response is displayed in the serial monitor.
+  if (Serial1.available()) {   //If a information is sent to the MKRZero from the EC EZO...
+    rx_byte = Serial1.read();    //the byte becomes the data from the EC EZO...
+    Serial.write(rx_byte);    //then the incoming value or response is displayed in the serial monitor.
   }
 }
