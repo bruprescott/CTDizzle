@@ -21,19 +21,21 @@
 	- [Why Conductivity, Temperature, and Depth?](#why-conductivity,-temperature,-and-depth?)
 	- [The CTDizzle Mk4](#the-ctdizzle-mk4)
 	- [Specifications](#specifications)
-1. [Build Instructions](#build-instruction)
+2 [Build Instructions](#build-instruction)
 	- [Software Setup](#software-setup)
 		- [Setting Up the Arduino IDE](#setting-up-the-arduino-ide)
 		- [Setting Up the Arduino MKRZero](#setting-up-the-arduino-mkrzero)
 		- [Formatting the SD Card](#formatting-the-sd-card)
 		- [Setting Up the Required Libraries](#setting-up-the-required-libraries)
 	- [Breadboard Testing]
-	- [Bench Test]
-		- [Calibrating the EC EZO]
-	- [Case Construction and Potting]
-		- [End Cap and Flange Preparation]
-	- [Protoboard Soldering]
-		- [Switch Cable Extension] 
+		- [Calibrating Conductivity](#calibrating-conductivity)
+	- [Case Construction and Potting](#case-construction-and-potting)
+		- [Switch End Cap](#switch-end-cap)
+		- [Conductivity/Temperature End Cap](#conductivity/temperature-end-cap)
+		- [Applying the Urethane](#applying-the-urethane)
+	- [Completing the Circuit](#completing-the-circuit)
+		- [Switch Cable](#switch-cable)
+	- [Final Case Construction](#final-case-construction
 5. [Corrosion](#corrosion)
 6. [Pre-deployment Procedure](#pre-deployment-procedure)
 7. [Deployment Procedure](#deployment-procedure)
@@ -41,13 +43,10 @@
 9. [Battery Charging Procedure](#battery-charging-procedure)
 10. [Data Download and Analysis](#data-download-and-analysis)
 	- [Accessing and Plotting the Data](#accessing-and-plotting-the-data)
-	-[Is the Data Reasonable?](#is-the-data-reasonable?)
+	- [Is the Data Reasonable?](#is-the-data-reasonable?)
 		- [Yaquina Bay](#example:-yaquina-bay)
 		- [Oregon Shelf](#example:-the-oregon-shelf]
-11. [Using the MATLAB Plotter]
 
-
-	
 ## Introduction
 
 Oceanographic equipment is often expensive and inaccessible for students and citizen scientists. The OpenCTD is a relatively cheap, buildable device that allows individuals to easily collect conductivity, temperature, and pressure data. It is still being refined and doesn't quite produce research quality data, but in its current state it is a great tool for teaching and learning. 
@@ -94,9 +93,9 @@ This is the fourth rendition of the CTDizzle. Its construction is a little diffe
 * Temperature Accuracy: +/- 0.1 C
 * Pressure Accuracy: +/- 100 mbar
 * Max Sampling Rate: 1 Hz
-* Battery Life: ~ 100 hours
+* Battery Life: ~ 100 hours (3.7v 4400 mAh)
 
-Battery life ultimately depends on the battery that you use. This build uses a 3.7v 44000 mAh LiPo, but you can find larger or smaller batteries that will fit your needs. It is recommended that you stick with the 3.7v LiPo JST-PH connector family. 
+Battery life ultimately depends on the battery that you use. A 3.7 6000mAh LiPo will give you approximately 160 hours of battery life when sampling at 1 Hz. It is recommended that you stick with the 3.7v LiPo JST-PH connector family. 
 
 
 ## Build Instructions
@@ -187,12 +186,11 @@ If you are using different sensors, make sure to use the right libraries!
 
 |Tools|Protective Equipment|
 |:---:|:---:|
-|Soldering Iron|Eye Pro
-|Hemostats|Nitrile Gloves
+|Soldering Iron|Eye Pro|
+|Hemostats|Nitrile Gloves|
 |Wire Strippers|
-|Breadboard
-|Third Hand
-
+|Breadboard|
+|Third Hand|
 
 :+1: Most of the parts are already breadboard compatible, but you will need to solder header pins to the DeadOn RTC. If you aren't familiar with soldering, take the time to practice with some header pins and protoboard. It is recommended that you use hemostats to cleanly break the header pins. There should be enough extra. You'll use less solder than you first expect and it will happen pretty quickly. Once you think you are ready, solder some header pins to the DeadOn RTC! It isn't necessary, but if you want your solder job to be nice and shiny, you can use a soft bristle brush and some alcohol to wipe away the excess flux. 
 
@@ -237,10 +235,11 @@ Depth is sketch-derived using the empirical equation outlined in [UNESCO Marine 
 Salinity is also sketch-derived per the same paper. 
 
 
-### Calibrating the Conductivity Sensor
+### Calibrating Conductivity
 
-Tools: Small Plastic Cup (x2)
-Protective Equipment: Nitrile Gloves
+|Tools|Protective Equipment|
+|:---:|:---:|
+|Small Plastic Cup|Nitrile Gloves|
 
 :+1: Unlike the factory calibrated temperature and pressure sensors, the conductivity kit requires a user calibration. First, you will need to leave your complete setup and calibration solutions in a temperature controlled room over night (such as a cold storage room or cafeteria refrigerator).
 
@@ -254,38 +253,45 @@ After you have confirmed proper calibration of the probe, it won't need another 
 ### Case Construction and Potting
 Once everything checks out and your breadboard tests are successful, you can begin to put the pressure case together.
 
-#### Switch/Purge End Cap Preparation
-Select one end cap and flange as your switch/purge end cap. Connect them together with the six M2 screws. Don't worry about installing the o-ring just yet. Once connected, use sandpaper to prepare the inner surface of the flange and end cap. After preparing the end cap, clean each surface with isopropyl alcohol. By scuffing up the internal surface, you are increading the bonding capacity of the urethane you will later apply.
+|Tools|Protective Equipment|
+|:---:|:---:|
+|Plastic Cups|Eye Pro|
+|Plastic Stir Rod|Nitrile Gloves|
+|Sand Paper|Safety Mask|
+|Tape|
+|Round File|
+
+
+#### Switch End Cap 
+
+Designate one end cap and flange set as your switch/pressure sensor (S/P) end cap and the other your conductivity/temperature (C/T) end cap.
+
+For each set, connect the two pieces together using the six M2 screws. Don't worry about installing the O-Ring just yet. Once connected, use sandpaper to prepare the inner surface of each flange and end cap set. Abrasion of the surface will allow the urethane you will apply later to bond more readily to the metal surface. Use a low grit sandpaper to remove anodization until you begin to see bare aluminum.
+
+Here are some [videos](https://www.masterbond.com/resources/video-library?tid=354) on how to mix and apply two part epoxies.
 
 ![Picture of prepared end cap here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/2.PNG)
 
-Remove the face plate from the flange. Install the switch and pressure 
+Remove the face plate from the flange. Use isopropyl alcohol to clean the surface thoroughly. Install the switch and pressure 
 
 ![Picture of installed bulkheads here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/1.PNG)
 
-#### Conductivity and Pressure Sensor End Cap
 
-Tools: Sandpaper, Round File
+#### Conductivity/Temperature End Cap
 
-Protective Equipment: Nitriles Gloves
+Next, do the same thing with the other end cap. The conductivity sensor has too large a diameter for the pre-drilled holes, so you will need to drill out one of the holes to 15/32". It may be a tight fit for the probe, so use a round file to make it the right size. Once you have the proper hole size, insert the probe so that it sticks out of the end cap approximately 2". To keep it in place, rig up a stand that will hold the probe in the right spot, or super glue it into place from the outside. 
 
-Next, do the same thing with the other end cap. The conductivity sensor has too large a diameter for the pre-drilled holes, so you will need to drill out one of the holes to 15/32". It may be a tight fit for the probe, so use a round file to make it the right size.
-
-After you have prepared each end cap, you can re-connect them to the flanges. Make sure everything is clean. Wrap the O-Ring grooves of the flange in tape to prevent any spillage from the next step.
+After you have prepared each end cap, you can re-connect them to the flanges. Make sure everything is clean. Wrap the O-Ring grooves of the flange in tape to prevent any spillage getting into the grooves during the next step.
 
 #### Applying the Urethane
 
-Tools: Plastic Cups, Stirring Stick
-
-Protective Equipment: Nitrile Gloves, Safety Mask
-
-:+1: The urethane you are using is called Urethane 75a. It is specifically designed for potting of electronics and cables that are placed in seawater.
+:+1: The urethane you are using is called Urethane 75a. It is specifically designed for potting of electronics and cables that are placed in seawater. It is important to use plastic tools during mixing so as not to introduce moisture to the urethane. Using wood or paper mixing tools runs the risk of upsetting the curing process. 
 
 ![Picture of Urethane here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/5.PNG)
 
 In seperate cups, pour equal amounts of each urethane component. You should use a minimum of three ounces of each. Using less may not be enough to generate the exothermic reaction needed for the curing process. Pour two components into one cup. Slowly mix with the stirring stick for two minutes and take care not to introduce bubbles. You will have five total minutes of working time. At around three minutes, the mixture will become thicker and more difficult to pour.
 
-To get rid of bubbles, you can use a vacuum chamber.
+To get rid of bubbles, you can also use a vacuum chamber.
 
 Here are some [videos](https://www.masterbond.com/resources/video-library?tid=354) on how to mix and apply two part epoxies.
 
@@ -303,7 +309,7 @@ Allow to cure for 24 hours.
 
 While your end caps are curing, you can begin to solder the electrical components together.
 
-If using the 2" version of the pressure case, soldering everything to a protoboard may make space cramped inside. It might be easier to solder components directly together. You will need to remove the headers already installed on the MKRZero and the DeadOn RTC. You'll also have to bend the headers on the EC EZO to allow easier soldering of the pins. 
+:+1: If using the 2" version of the pressure case, soldering everything to a protoboard may make things inside the case a little cramped. It might be easier to solder components directly together. You will need to remove the headers already installed on the MKRZero and the DeadOn RTC. Use the provided solder sucker to make removal of the headers easier. You'll also have to bend the headers on the EC EZO to allow easier soldering of the pins. 
 
 ![Get bent](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/EZOBend.jpg)
 
@@ -315,37 +321,37 @@ Cut the EC probe cable, leaving approximately six inches of cable. Strip the wir
 
 Note that Atlas-Scientific no longer covers probe faults after you cut the cable. 
 
-Solder everything together as described by the pinout guide. 
+Solder everything together as described by the pinout guide. If you want to avoid using a ton of heat shrink, you can use UY2 cold splice connectors.
 
 ![Picture of main protoboard with JST here.])(https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/CrappyWiring.PNG)
 
 
-
-#### Switch Cable Extension
+#### Switch Cable 
 In order to externally turn off the CTDizzle, we need to install a switch. It is not recommended that you cut the battery cables to install the switch, as this may have an impact on the charging of the battery. Instead, use a JST extension cable to tie the switch into. First, cut the ground line of the extension cable at roughly the midpoint. Solder a switch lead onto each end of the ground line. 
-- Take care when soldering, as the wire will heat up quickly when maintaining contact with the soldering iron. This may result in deformation of the JST connector and you will not be able to use it. 
+- Take care when soldering, as the wire will heat up quickly when maintaining contact with the soldering iron. This may result in deformation of the JST connector and you will not be able to use it. Alternatively, you can use cold splice connectors.
+
+[Picture of Switch cable here.]
 
 
 ### Final Case Construction
 After you have soldered everything and tested the data output, you can finish constructing the case.
 
 1. Ensure the flanges are clean. Grease the flange O-rings for the sensor end cap and install them.
-2. Install the sensor end cap onto the acrylic tube. 
-3. Sort the wires.
+2. Install the C/T end cap into the tube.
+3. Sort the wires, board, and battery.
 4. Connect the MKRZero to the battery via the JST extension. Ensure that the switch is off or removed. 
 5. Place a desiccant pack in the pressure case. 
 6. Connect your sensors to the protoboard. Place the protoboard and battery in the tube. It is recommended that you tape the battery to the protoboard. 
 7. Pack the aluminum tube with some sort of packing material if there is some play in the internal wiring and components. 
-8. Remove the purge plug from the switch and vent end cap. Install the switch and vent end cap on the acrylic tube.
-9. Reinstall the switch and plug. 
-10. Turn on the device and look for the LEDs on the EC EZO. 
+8. Connect the pressure and switch leads.
+9. Turn on the device using the switch. Note that the MKRZero does not turn on the LEDs when using battery power.
+10. Turn off the device. Pull the card and check to see if a file is created and data is being output.
 
 ![Picture of completed device here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Complete.jpg)
 
 ## Corrosion
 :+1: The screws used in the end caps are made of 316 SS and the main body of the unit is made of aluminum.
 When two dissimilar metals interact in seawater, galvanic corrosion can occur. The metal on the lower end of the galvanic scale (aluminum in this case) will begin to corrode after an extended period of time. Cathodic protection is one method to mitigating the corrosion of the end caps. This can be done by installing an anode (commonly made of zinc). 
-
 
 ## Predeployment Procedure
 The deployment plan of your OpenCTD plays a role in the sampling regime.
