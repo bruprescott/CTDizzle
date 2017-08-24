@@ -286,7 +286,7 @@ After you have prepared each end cap, you can re-connect them to the flanges. Ma
 
 ![Picture of Urethane here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/5.PNG)
 
-In seperate cups, pour equal amounts of each urethane component. You should use a minimum of three ounces of each. Using less may not be enough to generate the exothermic reaction needed for the curing process. Pour two components into one cup. Slowly mix with the stirring stick for two minutes and take care not to introduce bubbles. You will have five total minutes of working time. At around three minutes, the mixture will become thicker and more difficult to pour.
+Pour equal amounts of each urethane component into seperate cups. You should use a minimum of three ounces of each. Using less may not be enough to generate the exothermic reaction needed for the curing process. Pour two components into one cup. Slowly mix with the stirring stick for two minutes and take care not to introduce bubbles. You will have five total minutes of working time. At around three minutes, the mixture will become thicker and more difficult to pour. Mixing too quickly can generate too much heat and reduce your overall working time. 
 
 To get rid of bubbles, you can also use a vacuum chamber.
 
