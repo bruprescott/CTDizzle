@@ -1,19 +1,27 @@
 # CTDizzle User Manual
 
-:+1: This emoji indicates sections that are directed toward the high school students I will be working with during my research project. Many sections will have information that is relevant to the Oregon coast.
+:+1: This emoji indicates sections that are directed toward the high school students I will be working with during my research project. Some of the sections may have information that is related to the Oregon coast. Updates will be made often as new information, methods, and procedures are discovered.
 
-Some sections are still in progress.
+## Other Links
+[Parts List](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Parts_List.md)
+
+[Code](https://github.com/CTDizzle/CTDizzle/tree/master/MKRZero/ArduinoFiles)
+
+[Pinout Guide](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Pinouts.md)
+
+[Resources and Literature](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Resources.md)
+
+[EC Cal Procedure](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/EC_Cal_Procedure.docx)
 
 
 ## Contents
 
-1. [Links to Other Documentation](#links)
-2. [Introduction](#introduction)
+1. [Introduction](#introduction)
 	- [Before You Get Started](#before-you-get-started)
 	- [Why Conductivity, Temperature, and Depth?](#why-conductivity,-temperature,-and-depth?)
 	- [The CTDizzle Mk4](#the-ctdizzle-mk4)
 	- [Specifications](#specifications)
-4. [Build Instructions](#build-instruction)
+1. [Build Instructions](#build-instruction)
 	- [Software Setup](#software-setup)
 		- [Setting Up the Arduino IDE](#setting-up-the-arduino-ide)
 		- [Setting Up the Arduino MKRZero](#setting-up-the-arduino-mkrzero)
@@ -39,17 +47,6 @@ Some sections are still in progress.
 11. [Using the MATLAB Plotter]
 
 
-## Links
-[Parts List](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Parts_List.md)
-
-[Code](https://github.com/CTDizzle/CTDizzle/tree/master/MKRZero/ArduinoFiles)
-
-[Pinout Guide](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Pinouts.md)
-
-[Resources and Literature](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Resources.md)
-
-[EC Cal Procedure](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/EC_Cal_Procedure.docx)
-
 	
 ## Introduction
 
@@ -63,11 +60,11 @@ _Variations of the original OpenCTD. Photo taken by Andrew Thaler._
 
 ### Before You Get Started
 
-This guide was written so that you can build your very own CTDizzle. If you are confused on a topic, or require additional information, please do not hesitate to contact the author.
+This guide was written so that you can build your very own CTDizzle. If you are confused on a topic, or require additional information, please do not hesitate to contact the author if you are unable to find what you need in your own research. 
 
 There are likely cheaper and better sensor options out there. This guide only covers the parts outlined in the parts list. If you decide to use different sensors or parts, it is your responsibility to ensure that all parts are compatible with your setup.
 
-It should be noted that this guide assumes that you are running everything through Windows. As such, there is no Linux or mac OS support for the MATLAB and R processing scripts at this time. Please make sure that you are able to find an equivalent program for the steps that use third-party programs.
+It should be noted that this guide assumes that you are running everything through Windows. As such, there is no Linux or macOS support for the MATLAB and R processing scripts at this time. Please make sure that you are able to find an equivalent program or script modification for the steps that use third-party programs.
 
 
 ### :+1: Why Conductivity, Temperature, and Depth?
@@ -86,7 +83,9 @@ The CTD is the workhorse tool of oceanography. By building your own, I hope that
 
 This is the fourth rendition of the CTDizzle. Its construction is a little different from the original CTD, as it uses some different sensors and parts. It costs about 700 USD to build and doesn't require any tools that can't be easily found at your local hardware store. If you have all the parts and tools on hand, you should be able to build it in a weekend!
 
-:+1: The Mk4 has been constructed using the Blue Robotics 2" and 3" watertight enclosures. Each size has its advantages and disadvantages. The 2" version is much smaller, but there isn't a lot of wiggle room within the case, so upgrades and additions are much more difficult. The 3" version has a lot of internal room, so you can use a larger battery or add another sensor, but it takes up much more space if you plan to attach the device to a ROV or crab pot. 
+:+1: The primary difference between the Mk3 and Mk3 is the transition from the Qduino Mini to the MKRZero. The MKRZero boasts significantly more storage space, so sketches can be much more complex. With the addition of the MKRZero, the microSD module is no longer needed as the MKRZero has an onboard SD module. 
+
+:+1: The Mk4 can be built using the 2" or 3" watertight enclosures. Each type has its advantages and disadvantages. The 2" version is much more compact and is easily attached to small platforms such as crab pots or ROVs, however, internal space is limited so battery life is much less and adding extra components is unlikely. The 3" version has much more internal space than the 2" version, and as such can hold a larger battery making extended field tests a possibility. You can also add other sensors if desired, so long as the MKRZero can support additions. The downside to the 3" version is that it is much larger. 
 
 
 ### Specifications
