@@ -27,7 +27,7 @@
 		- [Setting Up the Arduino MKRZero](#setting-up-the-arduino-mkrzero)
 		- [Formatting the SD Card](#formatting-the-sd-card)
 		- [Setting Up the Required Libraries](#setting-up-the-required-libraries)
-	- [Breadboard Testing])(#breadboard-testing)
+	- [Breadboard Testing](#breadboard-testing)
 		- [Calibrating Conductivity](#calibrating-conductivity)
 	- [Case Construction and Potting](#case-construction-and-potting)
 		- [Switch End Cap](#switch-end-cap)
