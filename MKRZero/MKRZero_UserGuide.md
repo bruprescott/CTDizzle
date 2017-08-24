@@ -304,6 +304,13 @@ Allow to cure for 24 hours.
 
 ### Completing the Circuit
 
+|Tools|Protective Equipment|
+|:---:|:---:|
+|Soldering Iron|Eye Pro|
+|Hemostats|Nitrile Gloves|
+|Wire Strippers|
+|Third Hand|
+
 While your end caps are curing, you can begin to solder the electrical components together.
 
 :+1: If using the 2" version of the pressure case, soldering everything to a protoboard may make things inside the case a little cramped. It might be easier to solder components directly together. You will need to remove the headers already installed on the MKRZero and the DeadOn RTC. Use the provided solder sucker to make removal of the headers easier. You'll also have to bend the headers on the EC EZO to allow easier soldering of the pins. 
@@ -331,6 +338,13 @@ In order to externally turn off the CTDizzle, we need to install a switch. It is
 
 
 ### Final Case Construction
+
+|Tools|Protective Equipment|
+|:---:|:---:|
+|O-Ring Pick|Nitrile Gloves|
+|Hemostats|
+|2mm Hex Wrench|
+
 After you have soldered everything and tested the data output, you can finish constructing the case.
 
 1. Ensure the flanges are clean. Grease the flange O-rings for the sensor end cap and install them.
@@ -393,7 +407,6 @@ It is recommended that you do not charge the battery through the JST switch cabl
 
 ## Data Download and Analysis
 
-
 ### Accessing and Plotting the Data
 Currently, the user is required to open the device to access the data. **Make sure the device is dry before continuing.**
 This is done by removing the switch and vent endcap and removing the microSD card. Take care when removing the end cap, as it is important to keep the O-rings clean. 
@@ -410,9 +423,3 @@ This is done by removing the switch and vent endcap and removing the microSD car
 5. Once you are finished looking at the data, delete the RAWCTD files in the main directory of the SD card. This keeps things from getting cluttered. 
 
 6. Reinstall the microSD card and end cap. If you think the O-rings look a little dirty, clean and apply silicone grease before continuing. 
-
-
-
-
-
-	
