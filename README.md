@@ -30,3 +30,4 @@ The CTDizzle and OpenCTD have a lot in common. Some information, code, and scrip
 - GUI for the MATLAB tool.
 - Downcast for MATLAB tool.
 - Cleaner plots.
+- Config file on SD card.
