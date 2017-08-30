@@ -220,8 +220,8 @@ Connect everything together as outlined in the pinout guide. After you double ch
 Open the serial monitor (Ctrl+Shift+M). If you have everything set up correctly, you should see data printing to the screen in the form of:
 Date (mm/dd/yyyy), Time (HH:mm:ss), Conductivity (uS/cm), Temperature (degC), Absolute Pressure (mbar), Depth (m), Salinity (PSU) 
 
-![Picture of output.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SerialOutput.PNG)
-*Salinity is printed twice in this picture for comparision between EC EZO and sketch derived values. Initial tests suggest that the differences is significant. The most recent OpCode sketch has the EC EZO Sal function removed.*
+![Picture of output.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SerialMonitorOutput.PNG)
+*Date,Time,EC,T,P,Depth,Salinity*
 
 The date should be representative of the date that your computer is set to. The time should be close to the time that your computer is set to, but may be behind by about 30 seconds. This is due to upload delay. If your time is drastically off or incoherent, remove the battery and power cycle the system. Note that the autotime function will need to be commented out of the code for the final sketch upload or else your CTD will revert to the same time on a power cycle.
 
@@ -235,6 +235,16 @@ Depth is sketch-derived using the empirical equation outlined in [UNESCO Marine 
 
 Salinity is also sketch-derived per the same paper. 
 
+Don't forget to check the output on the SD card! 
+Opening up the SD card in windows explorer should give you a window similar to this..
+
+![USB](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/USBPopup.PNG)
+*Note that a good way to see if you collected data is to look at the file size. Files with ~5 kb are representative of a deployment that lasted a few minutes. The file with ~4000 kb is representative of a deployment that lasted about 24 hours.* 
+
+Opening up one of the .csv files will give you...
+
+![CSV](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/CSVOutput.PNG)
+*The data format is the same as the format in the serial monitor. This was opened in MS Excel/*
 
 ### Calibrating Conductivity
 
