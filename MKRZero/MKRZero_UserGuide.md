@@ -203,8 +203,8 @@ Next you need to prepare the temperature and pressure sensors. Remove the DF13 c
 ![Picture of exposed wire here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Pressure.jpg)
 *Trimmed pressure sensor wires.*
 
-:+1: Both the temperature and pressure sensors use I2C to communicate with the MKRZero. In the final product, similar wires will be soldered to the same pin. Each device has a unique address, so the MKRZero is capable of differentiating between the two. 
-After you have striped the wires, you can solder together the same colored wires of the sensors. It is recommended that you intertwine the wires to make things less messy. If you aren't confident with your soldering ability yet, feel free to practice with some other wire.
+:+1: Both the temperature and pressure sensors use I2C to communicate with the MKRZero. In the final product, similar wires can be soldered to the same pin. Each device has a unique address, so the MKRZero is capable of differentiating between the two. 
+After you have striped the wires, you can connect them together during the bench test phase. It is recommended that you intertwine the wires to make things less messy. Don't forget to tin the wire ends to prevent loose strands. If you aren't confident with your soldering ability yet, feel free to practice with some other wire.
 
 Now is the time to set things up on the breadboard!
 Place the MKRZero, EC EZO, and DeadOn RTC on the breadboard. Don't forget to install the SD card and coin cell!
