@@ -25,9 +25,10 @@ The CTDizzle and OpenCTD have a lot in common. Some information, code, and scrip
  
  
 ## Planned Updates
+- Need to add default temperature set during setup phase of program. Needs to be tested before added.
 - Density output in RAWCTD files.
 - Sound velocity output in RAWCTD files.
 - GUI for the MATLAB tool.
-- Downcast for MATLAB tool.
+- Downcast/upcast for MATLAB tool.
 - Cleaner plots.
 - Config file on SD card.
