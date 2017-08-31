@@ -433,8 +433,7 @@ It is recommended that you do not charge the battery through the JST switch cabl
 ## Data Download and Analysis
 
 ### Accessing and Plotting the Data
-Currently, the user is required to open the device to access the data. **Make sure the device is dry before continuing.**
-This is done by removing the switch and vent endcap and removing the microSD card. Take care when removing the end cap, as it is important to keep the O-rings clean. 
+Currently, the user is required to open the device and pull the microSD card to access the data. **Make sure the device is dry before continuing.** Take care when removing the end cap, as it is important to keep the O-rings clean. 
 
 1. Connect the microSD card to your computer using an adapter.
 2. Transfer the RAWCTD files you are interested in to your computer. It may be necessary to open these to check for dates and times. One way to differentiate between actual data and a test file is the file size.
@@ -448,3 +447,7 @@ This is done by removing the switch and vent endcap and removing the microSD car
 5. Once you are finished looking at the data, delete the RAWCTD files in the main directory of the SD card. This keeps things from getting cluttered. 
 
 6. Reinstall the microSD card and end cap. If you think the O-rings look a little dirty, clean and apply silicone grease before continuing. 
+
+#### Downcast vs Upcast (For Profile Deployments)
+
+For near real-time data, Sea-Bird recommends that you look at the data that is collected while the device is travelling down the water column (downcast). This is so that the body of an instrument does not inhibit the flow of water through the sensors or induce mixing that may result in misleading values. 
