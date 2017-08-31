@@ -444,7 +444,7 @@ Currently, the user is required to open the device and pull the microSD card to 
 4. There are several methods to process and analyze the data...
   - Through the provided MATLAB script.
   - Through the provided R script.
-  - Through the provided Microsoft Excel spreadsheet (in progress).
+  - Through the provided [Google spreadsheet](https://docs.google.com/spreadsheets/d/1aZhM47wCaqce_ChUhZ3tBHn-EBdLj1RdgtKbndEPGLw/edit#gid=2010253537) (in progress).
   - Through your processing program of choice. RAWCTD files are comma-seperated.
   
 5. Once you are finished looking at the data, delete the RAWCTD files in the main directory of the SD card. This keeps things from getting cluttered. 
