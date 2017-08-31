@@ -363,8 +363,7 @@ In order to externally turn off the CTDizzle, we need to install a switch. It is
 
 First, cut the cable at the midpoint and trim each end so that about two inches remains on each side. Using a cold splice connector, reconnect the VCC (red) line. Then connect a switch lead to each of the ground leads using another two cold splice connectors. 
 
-First, cut the ground line of the extension cable at roughly the midpoint. Solder a switch lead onto each end of the ground line. 
-- Take care when soldering, as the wire will heat up quickly when maintaining contact with the soldering iron. This may result in deformation of the JST connector and you will not be able to use it. Alternatively, you can use cold splice connectors.
+
 
 ![Picture of Switch cable here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SwitchCable.jpg)
 *Example of a switch cable with cold splice connectors.*
