@@ -213,7 +213,7 @@ Place the MKRZero, EC EZO, and DeadOn RTC on the breadboard. Don't forget to ins
 ![Picture of setup here](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/BareBreadboard.jpg)
 *Board setup before all the messy jumper wires.*
 
-Connect everything together as outlined in the pinout guide. After you double check you connections it is time to fire it up!Connect your MKRZero to the computer and upload the MKRZero_OpCode.
+Connect everything together as outlined in the pinout guide. After you double check you connections it is time to fire it up! Connect your MKRZero to the computer and upload the MKRZero_OpCode.
 
 ![Picture of setup with jumper wires here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/MessyWires.jpg)
 *Board setup with jumper wires.*
@@ -253,7 +253,7 @@ Opening up one of the .csv files will give you...
 |:---:|:---:|
 |Small Plastic Cup|Nitrile Gloves|
 
-:+1: Unlike the factory calibrated temperature and pressure sensors, the conductivity kit requires a user calibration. First, you will need to leave your complete setup and calibration solutions in a temperature controlled room over night (such as a cold storage room or cafeteria refrigerator).
+:+1: Unlike the factory calibrated temperature and pressure sensors, the conductivity kit requires a user calibration. First, you will need to leave your complete setup and calibration solutions in a temperature controlled room over night. You might also be able to complete this by leaving everything in a refrigerator over night. Try turning on the device to see how temperature changes over several hours!
 
 ![Picture of calibration setup here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/CalSetup.jpg)
 *Super high-tech calibration setup in a cold room.*
@@ -304,25 +304,26 @@ After you have prepared each end cap, you can re-connect them to the flanges. Ma
 ![Picture of Urethane here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/5.PNG)
 *Blurry picture of the urethane bottles.*
 
-Pour equal amounts of each urethane component into seperate cups. You should use a minimum of three ounces of each. Using less may not be enough to generate the exothermic reaction needed for the curing process. Pour two components into one cup. Slowly mix with the stirring stick for two minutes and take care not to introduce bubbles. You will have five total minutes of working time. At around three minutes, the mixture will become thicker and more difficult to pour. Mixing too quickly can generate too much heat and reduce your overall working time. 
+The urethane should have come with a small packet detailing the best practices of use for the material. The most important things to do are to ensure that the surfaces the urethane will contact are sufficiently abraded and that there is no moisture. Moisture induces bubbles which ultimately weakens the waterproofing capabilities of the urethane. 
 
-To get rid of bubbles, you can also use a vacuum chamber.
+Pour equal amounts of each urethane component into seperate cups. You should use a minimum of three ounces of each. Using less may not be enough to generate the exothermic reaction needed for the curing process. Pour two components into one cup. Slowly mix with the stirring stick for two minutes and take care not to introduce bubbles. You will have five total minutes of working time. At around three minutes, the mixture will become thicker and more difficult to pour. Mixing too quickly can generate too much heat and reduce your overall working time. 
 
 Here are some [videos](https://www.masterbond.com/resources/video-library?tid=354) on how to mix and apply two part epoxies.
 
 ![No Urethane](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/7.PNG)
 *Conductivity and temperature sensors ready to be potted.*
 
-Next, pour the urethane into each end cap until it reaches the brim of the flange. 
+Next, pour the urethane into each end cap until it reaches the brim of the flange. Tap the edges of the flange with a clean plastic stir rod to remove any bubbles.
 
 ![Picture of urethane and end caps here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/6.PNG)
 *Poured urethane.*
+
 
 ![Pic2](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/4.PNG)
 *Poured urethane.*
 
 
-Allow to cure for 24 hours. 
+Allow to cure for a minimum of 12 hours.
 
 
 ### Completing the Circuit
@@ -336,7 +337,9 @@ Allow to cure for 24 hours.
 
 While your end caps are curing, you can begin to solder the electrical components together.
 
-:+1: If using the 2" version of the pressure case, soldering everything to a protoboard may make things inside the case a little cramped. It might be easier to solder components directly together. You will need to remove the headers already installed on the MKRZero and the DeadOn RTC. Use the provided solder sucker to make removal of the headers easier. You'll also have to bend the headers on the EC EZO to allow easier soldering of the pins. 
+If using the 2" version of the pressure case, soldering everything to a protoboard may make things inside the case a little cramped. It might be easier to solder components directly together. You will need to remove the headers already installed on the MKRZero and the DeadOn RTC. Use the provided solder sucker to make removal of the headers easier. You'll also have to bend the headers on the EC EZO to allow easier soldering of the pins. 
+
+Alternatively, you can try to set everything up on the MKR Protoboard. You can try to arrange everything in the housing, including the boards, wires, battery, and desiccant, but it may take some expert Tetris skills. 
 
 ![Get bent](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/EZOBend.jpg)
 *Bent pins of the EC EZO.*
@@ -356,7 +359,11 @@ Solder everything together as described by the pinout guide. If you want to avoi
 *Mess of wires.*
 
 #### Switch Cable 
-In order to externally turn off the CTDizzle, we need to install a switch. It is not recommended that you cut the battery cables to install the switch, as this may have an impact on the charging of the battery. Instead, use a JST extension cable to tie the switch into. First, cut the ground line of the extension cable at roughly the midpoint. Solder a switch lead onto each end of the ground line. 
+In order to externally turn off the CTDizzle, we need to install a switch. It is not recommended that you cut the battery cables to install the switch, as this may have an impact on the charging of the battery. Instead, use a JST extension cable to tie the switch into. 
+
+First, cut the cable at the midpoint and trim each end so that about two inches remains on each side. Using a cold splice connector, reconnect the VCC (red) line. Then connect a switch lead to each of the ground leads using another two cold splice connectors. 
+
+First, cut the ground line of the extension cable at roughly the midpoint. Solder a switch lead onto each end of the ground line. 
 - Take care when soldering, as the wire will heat up quickly when maintaining contact with the soldering iron. This may result in deformation of the JST connector and you will not be able to use it. Alternatively, you can use cold splice connectors.
 
 ![Picture of Switch cable here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SwitchCable.jpg)
