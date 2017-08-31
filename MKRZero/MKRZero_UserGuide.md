@@ -391,8 +391,11 @@ When two dissimilar metals interact in seawater, galvanic corrosion can occur. T
 
 ## Predeployment Procedure
 The deployment plan of your OpenCTD plays a role in the sampling regime.
-- If you plan to take profiles, it should be set to sample as frequently as possible.
-- If you plan to leave the OpenCTD in the same location for several hours or days, it should be set to sample every minute to fifteen minutes. Doing this will increase the battery life. Another way to increase the battery life is by turning off the EC EZO LEDs. Instructions on how to do this can be found in the EZ EZO Datasheet.
+- If you plan to take profiles, it should be set to sample as frequently as possible. The loop section of your code should restart about once per second.
+- If you plan to leave the OpenCTD in the same location for several hours or days, it should be set to sample less frequently, anywhere between one minute to fifteen minutes depending on the deployment length. For example, if you are going to leave it out for a few days, sampling once every five minutes might be the way to go. 
+
+:+1: To determine how long your battery will last, you need to take your battery mAh and divide it by your peak amperage. I've found that when all sensors are sampling, the draw is about 35 mA.
+
 
 ## Deployment Procedure
 The device should be fully assembled and the proper sampling regime selected prior to reaching the study site. 
