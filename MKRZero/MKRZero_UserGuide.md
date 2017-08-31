@@ -2,7 +2,7 @@
 
 :+1: This emoji indicates sections that are directed toward the high school students I will be working with during my research project. Some of the sections may have information that is related to the Oregon coast. Updates will be made often as new information, methods, and procedures are discovered.
 
-## Other Links
+## Links to the Rest of the Repository
 [Parts List](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Parts_List.md)
 
 [Code](https://github.com/CTDizzle/CTDizzle/tree/master/MKRZero/ArduinoFiles)
@@ -13,6 +13,7 @@
 
 [EC Cal Procedure](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/EC_Cal_Procedure.docx)
 
+[Data Processing](https://github.com/CTDizzle/CTDizzle/tree/master/Data%20Processing)
 
 ## Contents
 
@@ -56,23 +57,23 @@ _Variations of the original OpenCTD. Photo taken by Andrew Thaler._
 
 ### Before You Get Started
 
-This guide was written so that you can build your very own CTDizzle. If you are confused on a topic, or require additional information, please do not hesitate to contact the author if you are unable to find what you need in your own research. 
+This guide was written so that you can build your very own CTDizzle. If you are confused on a topic, or require additional information, please do not hesitate to contact Ian Black (blackia@oregonstate.edu) if you are unable to find what you need in your own research. 
 
 There are likely cheaper and better sensor options out there. This guide only covers the parts outlined in the parts list. If you decide to use different sensors or parts, it is your responsibility to ensure that all parts are compatible with your setup.
 
 It should be noted that this guide assumes that you are running everything through Windows. As such, there is no Linux or macOS support for the MATLAB and R processing scripts at this time. Please make sure that you are able to find an equivalent program or script modification for the steps that use third-party programs.
 
 
-### Why Conductivity, Temperature, and Depth?
+### Why Conductivity, Temperature, and Depth? :+1:
 
-:+1: Temperature itself is incredibly useful as so many other ocean properties and phenomena are impacted by it.
+Temperature itself is incredibly useful as so many other ocean properties and phenomena are impacted by it.
 One study suggests that rockfish prefer to hang out in a certain water temperature range. Commercial trawls in Alaska and Oregon have reported a greater abundance of the fish in temperatures ranging between 4 and 7 degC ([Vestfals, 2010](http://ir.library.oregonstate.edu/xmlui/handle/1957/12047?show=full)). Many other studies show that temperature also impacts the growth rate, welfare, and reproductive potential of other marine organisms. Temperature also influences factors such as water density, pH, and how much gas seawater can hold. By monitoring ocean temperature over space and time, scientists are able to come up with connections between temperature and other aspects of our oceans.
 
-:+1: Conductivity by itself isn't a particularly useful, but when combined with temperature and pressure through some empirical calculations, you can get values such as salinity, density, and sound velocity. Salinity is essentially the concentration of dissolved salts in the water. Salty, cold water is more dense than fresh, warm water, and this is easily seen in the Columbia River plume. During the winter, the Columbia River outputs a lot of freshwater. This freshwater can form a layer that is about 20m thick and extends almost 300km offshore ([Saldias et al, 2016](http://onlinelibrary.wiley.com/doi/10.1002/2015JC011431/full)). The density of this plume is low enough that there have been cases where gliders have become stuck between the layers!
+Conductivity by its lonesome isn't a particularly useful, but when combined with temperature and pressure through some empirical calculations, you can get values such as salinity, density, and sound velocity. Salinity is essentially the concentration of dissolved salts in the water. Salty, cold water is more dense than fresh, warm water, and this is easily seen in the Columbia River plume. During the winter, the Columbia River outputs a lot of freshwater. This freshwater can form a layer that is about 20m thick and extends almost 300km offshore ([Saldias et al, 2016](http://onlinelibrary.wiley.com/doi/10.1002/2015JC011431/full)). The density of this plume is low enough that there have been cases where gliders have become stuck between the layers!
 
-:+1: Depth is sometimes difficult to measure. The average depth of the ocean is 4000m, with the deepest part reaching almost 11000m. That would be a long tape measure! Scientists have come up with a variety of methods for measuring depth, such as sonar measurments, satellite altimetry, and pressure readings. The CTD uses pressure to determine water depth, which is easily calculated through an empirical formula.
+Depth is sometimes difficult to measure. The average depth of the ocean is 4000m, with the deepest part reaching almost 11000m. That would be a long tape measure! Scientists have come up with a variety of methods for measuring depth, such as sonar measurments, satellite altimetry, and pressure readings. The CTD uses pressure to determine water depth, which is easily calculated through an empirical formula.
 
-:+1: The CTD is the workhorse tool of oceanography. By building your own, I hope that you gain an appreciation for the science, how it is collected and used, and what it tells us about our oceans.
+The CTD is the workhorse tool of oceanography. By building your own, I hope that you gain an appreciation for the science, how it is collected and used, and what it tells us about our oceans.
 
 
 ### The CTDizzle Mk4
