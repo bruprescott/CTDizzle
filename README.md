@@ -22,6 +22,7 @@ The CTDizzle and OpenCTD have a lot in common. Some information, code, and scrip
  |08/11/17| Added depth and salinity calculations to MKRZero_OpCode. Updated MATLAB tool.
  |08/19/17| Changed atmospheric pressure assumption to 1013 mbar. Organized directories. User manual overhaul.
  |08/24/17| Updated user manual.
+ |09/01/17| Added EC calibration spreadsheet.
  
  
 ## Planned Updates
