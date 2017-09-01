@@ -259,6 +259,8 @@ Opening up one of the .csv files will give you...
 *Super high-tech calibration setup in a cold room.*
 
  :+1: The next morning, take your calibration procedure and computer to your setup. Follow along with the calibration procedure found in the documentation folder Conductivity is highly dependent on temperature, so it is important that you be as precise as possible! Using the provided plots, determine the temperature of the room and corresponding conductivity value to the nearest 100 uS/cm. Don't forget to bring a parka!
+ 
+Here is a new [Google spreadsheet](https://docs.google.com/spreadsheets/d/1NTyalpajds06tLAo7uXbJdM82hv5m03zCGFynGOxZ1g/edit?usp=sharing) that will help determine the conductivity values to input for your calibration temperature.
 
 After you have confirmed proper calibration of the probe, it won't need another calibration for a year. You can now cut the cable if you do not plan to implement the BNC connectors into your design. Please note that cutting the cable voids the Atlas-Scientific warranty, so it important to first test the probe to see if it works. 
 
