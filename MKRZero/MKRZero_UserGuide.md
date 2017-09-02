@@ -80,20 +80,19 @@ The CTD is the workhorse tool of oceanography. By building your own, I hope that
 
 This is the fourth rendition of the CTDizzle. Its construction is a little different from the original CTD, as it uses some different sensors and parts. It costs about 700 USD to build and doesn't require any tools that can't be easily found at your local hardware store. If you have all the parts and tools on hand, you should be able to build it in a weekend!
 
-:+1: The primary difference between the Mk3 and Mk4 is the transition from the Qduino Mini to the MKRZero. The MKRZero boasts significantly more storage space, so sketches can be much more complex. With the addition of the MKRZero, the microSD module is no longer needed as the MKRZero has an onboard SD module. 
+![Versions](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Versions.jpg)
+*Left to Right: CTDizzle Mk1, Mk3, and Mk4. The Mk2 is currently being used as a doorstop somewhere.*
 
-:+1: The Mk4 can be built using the 2" or 3" watertight enclosures. Each type has its advantages and disadvantages. The 2" version is much more compact and is easily attached to small platforms such as crab pots or ROVs, however, internal space is limited so battery life is much less and adding extra components is unlikely. The 3" version has much more internal space than the 2" version, and as such can hold a larger battery making extended field tests a possibility. You can also add other sensors if desired, so long as the MKRZero can support additions. The downside to the 3" version is that it is much larger. 
 
-
-### Specifications
+#### Specifications
 * Max Depth: 120m
 * Conductivity Accuracy: <1% after calibration
 * Temperature Accuracy: +/- 0.1 C
 * Pressure Accuracy: +/- 100 mbar
 * Max Sampling Rate: 1 Hz
-* Battery Life: ~ 100 hours (3.7v 4400 mAh)
+* Battery Life: ~ 60 hours sampling at 1 Hz (3.7v 2200 mAh)
 
-Battery life ultimately depends on the battery that you use. A 3.7 6000mAh LiPo will give you approximately 160 hours of battery life when sampling at 1 Hz. It is recommended that you stick with the 3.7v LiPo JST-PH connector family. 
+Battery life ultimately depends on the battery that you use. It is recommended that you stick with the 3.7v LiPo JST-PH connector family. 
 
 
 ## Build Instructions
