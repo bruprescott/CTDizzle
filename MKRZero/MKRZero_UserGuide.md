@@ -422,7 +422,7 @@ If profiling with the unit, it is suggested that it be left in the top few meter
 If planning to leave the unit at a particular site for an extended period of time, it is recommended that the user ensure that the device is properly secured and **ON** prior to leaving the site. 
 
 ## Recovery Procedure
-1.	After recovering the unit, turn the main switch counter-clockwise until the EC EZO LEDs turn off (usually ½ to 1 rotation). Do not turn it any further or you may risk introducing water to the internals.
+1.	After recovering the unit, turn the main switch counter-clockwise for 1 full rotation. Do not turn it any further or you may risk introducing water to the internals.
 2.	Spray the unit down with fresh water if possible. 
 3.	If biofouling has accrued on the device, carefully remove the tape used to protect the case. If tape was not used to prevent biofouling, carefully use a soft bristle brush or plastic paint scraper to remove any fouling on the case. 
 
@@ -439,7 +439,7 @@ If another stationary deployment is planned, the battery will likely need to be 
 1. Turn off the CTD.
 2. Remove the switch/purge end cap. 
 3. Remove the main electronics board and disconnect the battery switch cable.
-4. Plug the battery directly into the MKRZero.
+4. Plug the battery directly into the MKRZero or other LiPo charger if available.
 5. Connect the MKRZero to your computer or compatible wall outlet.
 
 The MKRZero has the ability to charge a single-cell lithium ion battery when connected to a computer or microUSB outlet adapter. Simply plug in the battery to the MKRZero and connect the unit to a computer via microUSB. An orange LED should appear, indicating that the battery is charging. Even though the battery has a built in overcharge and damage prevention circuit, it is important that you do not charge your battery for too long.
