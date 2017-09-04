@@ -187,11 +187,9 @@ If you are using different sensors, make sure to use the right libraries!
 |Breadboard|
 |Third Hand|
 
-:+1: Most of the parts are already breadboard compatible, but you will need to solder header pins to the DeadOn RTC. If you aren't familiar with soldering, take the time to practice with some header pins and protoboard. It is recommended that you use hemostats to cleanly break the header pins. There should be enough extra. You'll use less solder than you first expect and it will happen pretty quickly. Once you think you are ready, solder some header pins to the DeadOn RTC! It isn't necessary, but if you want your solder job to be nice and shiny, you can use a soft bristle brush and some alcohol to wipe away the excess flux. 
+Most of the parts are already breadboard compatible, but you will need to solder header pins to the DeadOn RTC. If you aren't familiar with soldering, take the time to practice with some header pins and protoboard. It is recommended that you use hemostats or tweezers to cleanly break the header pins. You'll use less solder than you first expect and it will happen pretty quickly. Once you think you are ready, solder some header pins to the DeadOn RTC! It isn't necessary, but if you want your solder job to be nice and shiny, you can use a soft bristle brush and some alcohol to wipe away the excess flux. 
 
-:+1: If you mess up, don't forget that you will have a solder sucker on hand!
-
-[SparkFun's Guide to Soldering Through-Holes](https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering)
+Here is [SparkFun's Guide to Soldering Through-Holes](https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering) if you need a tutorial.
 
 ![Picture of DeadOn RTC with header pins here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SolderedRTC.jpg)
 *DeadOn RTC with soldered headers.*
@@ -201,7 +199,7 @@ Next you need to prepare the temperature and pressure sensors. Remove the DF13 c
 ![Picture of exposed wire here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Pressure.jpg)
 *Trimmed pressure sensor wires.*
 
-:+1: Both the temperature and pressure sensors use I2C to communicate with the MKRZero. In the final product, similar wires can be soldered to the same pin. Each device has a unique address, so the MKRZero is capable of differentiating between the two. 
+Both the temperature and pressure sensors use I2C to communicate with the MKRZero. In the final product, similar wires can be soldered to the same pin. Each device has a unique address, so the MKRZero is capable of differentiating between the two. 
 After you have striped the wires, you can connect them together during the bench test phase. It is recommended that you intertwine the wires to make things less messy. Don't forget to tin the wire ends to prevent loose strands. If you aren't confident with your soldering ability yet, feel free to practice with some other wire.
 
 Now is the time to set things up on the breadboard!
@@ -210,12 +208,15 @@ Place the MKRZero, EC EZO, and DeadOn RTC on the breadboard. Don't forget to ins
 ![Picture of setup here](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/BareBreadboard.jpg)
 *Board setup before all the messy jumper wires.*
 
-Connect everything together as outlined in the pinout guide. After you double check you connections it is time to fire it up! Connect your MKRZero to the computer and upload the MKRZero_OpCode.
+Connect everything together as outlined in the pinout guide. Remember that VCC in this scenario is 3.3v. Under no circumstances should you connect the temperature sensor, pressure sensor, or DeadOn RTC to the 5v supply on the MKRZero. You run the risk of frying your electronics, and then you would be out ~$144!
+
+After you double check you connections it is time to fire it up! Connect your MKRZero to the computer and upload the MKRZero_OpCode.
 
 ![Picture of setup with jumper wires here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/MessyWires.jpg)
 *Board setup with jumper wires.*
 
 Open the serial monitor (Ctrl+Shift+M). If you have everything set up correctly, you should see data printing to the screen in the form of:
+
 Date (mm/dd/yyyy), Time (HH:mm:ss), Conductivity (uS/cm), Temperature (degC), Absolute Pressure (mbar), Depth (m), Salinity (PSU) 
 
 ![Picture of output.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SerialMonitorOutput.PNG)
@@ -244,18 +245,21 @@ Opening up one of the .csv files will give you...
 ![CSV](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/CSVOutput.PNG)
 *The data format is the same as the format in the serial monitor. This was opened in MS Excel/*
 
+
 ### Calibrating Conductivity
 
 |Tools|Protective Equipment|
 |:---:|:---:|
 |Small Plastic Cup|Nitrile Gloves|
 
-:+1: Unlike the factory calibrated temperature and pressure sensors, the conductivity kit requires a user calibration. First, you will need to leave your complete setup and calibration solutions in a temperature controlled room over night. You might also be able to complete this by leaving everything in a refrigerator over night. Try turning on the device to see how temperature changes over several hours!
+Unlike the factory calibrated temperature and pressure sensors, the conductivity kit requires a user calibration. First, you will need to leave your complete setup and calibration solutions in a temperature controlled room over night. You might also be able to complete this by leaving everything in a refrigerator. If you want to observe how the temperature fluctuates over several hours, power your setup with a battery and leave it running!
 
 ![Picture of calibration setup here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/CalSetup.jpg)
 *Super high-tech calibration setup in a cold room.*
 
- :+1: The next morning, take your calibration procedure and computer to your setup. Follow along with the calibration procedure found in the documentation folder Conductivity is highly dependent on temperature, so it is important that you be as precise as possible! Using the provided plots, determine the temperature of the room and corresponding conductivity value to the nearest 100 uS/cm. Don't forget to bring a parka!
+The next morning, take your calibration procedure and computer to your setup. Follow along with the calibration procedure found in the documentation folder. Conductivity is highly dependent on temperature, so it is important that you be as precise as possible! Using the provided plots or spreadsheet, determine the temperature of the room and corresponding conductivity value to the nearest 100 uS/cm. Don't forget to bring a parka!
+
+You'll also need to make note of the temperature you calibrated the conductivity probe at (to the nearest degree), as this value will be manually input into the operating code later.
  
 Here is a new [Google spreadsheet](https://docs.google.com/spreadsheets/d/1NTyalpajds06tLAo7uXbJdM82hv5m03zCGFynGOxZ1g/edit?usp=sharing) that will help determine the conductivity values to input for your calibration temperature.
 
@@ -278,7 +282,7 @@ Once everything checks out and your breadboard tests are successful, you can beg
 
 Designate one end cap and flange set as your switch/pressure sensor (S/P) end cap and the other your conductivity/temperature (C/T) end cap.
 
-For each set, connect the two pieces together using the six M2 screws. Don't worry about installing the O-Ring just yet. Once connected, use sandpaper to prepare the inner surface of each flange and end cap set. Abrasion of the surface will allow the urethane you will apply later to bond more readily to the metal surface. Use a low grit sandpaper to remove anodization until you begin to see bare aluminum.
+For each set, connect the two pieces together using the six M2 screws. Don't worry about installing the O-Ring just yet. Once connected, use sandpaper to prepare the inner surface of each flange and end cap set. Alternatively, use a marker to outline where the two pieces meet. Abrasion of the surface will allow the urethane you will apply later to bond more readily to the metal surface. Use a low grit sandpaper to remove anodization until you begin to see bare aluminum. Try not to abrade the O-ring groove.
 
 Here are some [videos](https://www.masterbond.com/resources/video-library?tid=354) on how to mix and apply two part epoxies.
 
@@ -292,27 +296,27 @@ Remove the face plate from the flange. Use isopropyl alcohol to clean the surfac
 
 #### Conductivity/Temperature End Cap
 
-Do the same thing with the other end cap. The conductivity sensor has too large a diameter for the pre-drilled holes, so you will need to drill out one of the holes to 15/32". It may be a tight fit for the probe, so use a round file to make it the right size. Once you have the proper hole size, insert the probe so that it sticks out of the end cap approximately 2". To keep it in place, rig up a stand that will hold the probe in the right spot, or super glue it into place from the outside. 
+Do the same thing with the other end cap. The conductivity sensor has too large a diameter for the pre-drilled holes, so you will need to drill out one of the holes to 12mm or 15/32". It may be a tight fit for the probe, so use a round file to make it the right size. Once you have the proper hole size, insert the probe so that it sticks out of the end cap approximately 2-3". To keep it in place, rig up a stand that will hold the probe in the right spot, or super glue it into place from the outside. Tape over the probe hole to prevent any material from entering the sensing area.
 
 After you have prepared each end cap, you can re-connect them to the flanges. Make sure everything is clean. Wrap the O-Ring grooves of the flange in tape to prevent any spillage getting into the grooves during the next step.
 
 #### Applying the Urethane
 
-:+1: The urethane you are using is called Urethane 75a. It is specifically designed for potting of electronics and cables that are placed in seawater. It is important to use plastic tools during mixing so as not to introduce moisture to the urethane. Using wood or paper mixing tools runs the risk of upsetting the curing process. 
+The urethane you are using is called Urethane 75a. It is specifically designed for potting of electronics and cables that are placed in seawater. It is important to use plastic tools during mixing so as not to introduce moisture to the urethane. Using wood or paper mixing tools will upset the cure process.
 
 ![Picture of Urethane here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/5.PNG)
 *Blurry picture of the urethane bottles.*
 
 The urethane should have come with a small packet detailing the best practices of use for the material. The most important things to do are to ensure that the surfaces the urethane will contact are sufficiently abraded and that there is no moisture. Moisture induces bubbles which ultimately weakens the waterproofing capabilities of the urethane. 
 
-Pour equal amounts of each urethane component into seperate cups. You should use a minimum of three ounces of each. Using less may not be enough to generate the exothermic reaction needed for the curing process. Pour two components into one cup. Slowly mix with the stirring stick for two minutes and take care not to introduce bubbles. You will have five total minutes of working time. At around three minutes, the mixture will become thicker and more difficult to pour. Mixing too quickly can generate too much heat and reduce your overall working time. 
+Pour equal amounts of each urethane component into seperate cups. You should pour enough so that the combined amount is at least 3 oz. Using less may not be enough to generate the exothermic reaction needed for the curing process. Pour two components into one cup. Slowly mix with the stirring stick for two minutes and take care not to introduce bubbles. You will have five total minutes of working time. At around three minutes, the mixture will become thicker and more difficult to pour. Mixing too quickly can generate too much heat and reduce your overall working time. 
 
 Here are some [videos](https://www.masterbond.com/resources/video-library?tid=354) on how to mix and apply two part epoxies.
 
 ![No Urethane](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/7.PNG)
 *Conductivity and temperature sensors ready to be potted.*
 
-Next, pour the urethane into each end cap until it reaches the brim of the flange. Tap the edges of the flange with a clean plastic stir rod to remove any bubbles.
+Pour the urethane into each end cap until it reaches the brim of the flange. Tap the edges of the flange with a clean plastic stir rod to shake up any bubbles attached to the walls. 
 
 ![Picture of urethane and end caps here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/6.PNG)
 *Poured urethane.*
