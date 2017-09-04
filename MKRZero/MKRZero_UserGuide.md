@@ -1,8 +1,6 @@
 # CTDizzle User Manual
 
-:+1: This emoji indicates sections that are directed toward the high school students I will be working with during my research project. Some of the sections may have information that is related to the Oregon coast. Updates will be made often as new information, methods, and procedures are discovered.
-
-## Links to the Rest of the Repository
+## Links 
 [Parts List](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Parts_List.md)
 
 [Code](https://github.com/CTDizzle/CTDizzle/tree/master/MKRZero/ArduinoFiles)
@@ -64,7 +62,7 @@ There are likely cheaper and better sensor options out there. This guide only co
 It should be noted that this guide assumes that you are running everything through Windows. As such, there is no Linux or macOS support for the MATLAB and R processing scripts at this time. Please make sure that you are able to find an equivalent program or script modification for the steps that use third-party programs.
 
 
-### Why Conductivity, Temperature, and Depth? :+1:
+### Why Conductivity, Temperature, and Depth?
 
 Temperature itself is incredibly useful as so many other ocean properties and phenomena are impacted by it.
 One study suggests that rockfish prefer to hang out in a certain water temperature range. Commercial trawls in Alaska and Oregon have reported a greater abundance of the fish in temperatures ranging between 4 and 7 degC ([Vestfals, 2010](http://ir.library.oregonstate.edu/xmlui/handle/1957/12047?show=full)). Many other studies show that temperature also impacts the growth rate, welfare, and reproductive potential of other marine organisms. Temperature also influences factors such as water density, pH, and how much gas seawater can hold. By monitoring ocean temperature over space and time, scientists are able to come up with connections between temperature and other aspects of our oceans.
@@ -376,6 +374,10 @@ First, cut the cable at the midpoint and trim each end so that about two inches 
 |O-Ring Pick|Nitrile Gloves|
 |Hemostats|
 |2mm Hex Wrench|
+
+The CTD is going to depths where pressure is roughly 200 psi. This pressure is experienced from all directions. The optimal shape for a pressure case would be spherical, but it is often difficult to fabricate spheres, so the next best option is to use a cylindrical case. If you have a spherical and a cylindrical case with the same wall thickness, the cylinder will typically have half the strength as the sphere. Cylindrical pressure cases are typically closed off by hemispherical (rounded) or torispherical (flat) end caps.
+
+Rectangular pressure cases, while much easier to manufacture, can't really withstand pressure as well as cylindrical cases. There are more failure points and the odd shape of the O-Rings increases the potential of more leak points. Force is being exerted on the pressure case in all directions, and with a rectangular case, there are more points where the case can fail as some areas are not as well supported (think corners vs. walls).
 
 After you have soldered everything and tested the data output, you can finish constructing the case.
 
