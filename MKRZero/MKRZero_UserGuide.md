@@ -76,10 +76,10 @@ The CTD is the workhorse tool of oceanography. By building your own, I hope that
 
 ### The CTDizzle Mk4
 
-This is the fourth rendition of the CTDizzle. Its construction is a little different from the original CTD, as it uses some different sensors and parts. It costs about 700 USD to build and doesn't require any tools that can't be easily found at your local hardware store. If you have all the parts and tools on hand, you should be able to build it in a weekend!
+This is the fourth rendition of the CTDizzle. Its construction is a little different from the original OpenCTD, as it uses some different sensors and parts. It costs about 700 USD to build and doesn't require any tools that can't be easily found at your local hardware store. If you have all the parts and tools on hand, you should be able to build it in a weekend!
 
 ![Versions](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Versions.jpg)
-*Left to Right: CTDizzle Mk1, Mk3, and Mk4. The Mk2 is currently being used as a doorstop somewhere.*
+*Left to Right: CTDizzle Mk1, Mk3, and Mk4. The Mk2 is currently being used as a doorstop*
 
 
 #### Specifications
@@ -194,13 +194,12 @@ Here is [SparkFun's Guide to Soldering Through-Holes](https://learn.sparkfun.com
 ![Picture of DeadOn RTC with header pins here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SolderedRTC.jpg)
 *DeadOn RTC with soldered headers.*
 
-Next you need to prepare the temperature and pressure sensors. Remove the DF13 connects from each sensor. Then strip away roughly 1cm of insulation on each of the wires. Tin the ends of the wires to prevent loose strands. 
+Next you need to prepare the temperature and pressure sensors. Remove the DF13 connects from each sensor. Then strip away roughly 1cm of insulation on each of the wires and tin the ends to prevent loose strands.
 
 ![Picture of exposed wire here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Pressure.jpg)
 *Trimmed pressure sensor wires.*
 
-Both the temperature and pressure sensors use I2C to communicate with the MKRZero. In the final product, similar wires can be soldered to the same pin. Each device has a unique address, so the MKRZero is capable of differentiating between the two. 
-After you have striped the wires, you can connect them together during the bench test phase. It is recommended that you intertwine the wires to make things less messy. Don't forget to tin the wire ends to prevent loose strands. If you aren't confident with your soldering ability yet, feel free to practice with some other wire.
+Both the temperature and pressure sensors use I2C to communicate with the MKRZero and share the same pinouts. Each device has a unique address, so the MKRZero is capable of differentiating between the two. For the bench testing phase, it is okay to connect similar wires with a single alligator clip.
 
 Now is the time to set things up on the breadboard!
 Place the MKRZero, EC EZO, and DeadOn RTC on the breadboard. Don't forget to install the SD card and coin cell!
@@ -208,12 +207,15 @@ Place the MKRZero, EC EZO, and DeadOn RTC on the breadboard. Don't forget to ins
 ![Picture of setup here](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/BareBreadboard.jpg)
 *Board setup before all the messy jumper wires.*
 
-Connect everything together as outlined in the pinout guide. Remember that VCC in this scenario is 3.3v. Under no circumstances should you connect the temperature sensor, pressure sensor, or DeadOn RTC to the 5v supply on the MKRZero. You run the risk of frying your electronics, and then you would be out ~$144!
+Connect everything together as outlined in the pinout guide. Remember that VCC in this scenario is 3.3v. Under no circumstances should you connect the temperature sensor, pressure sensor, or DeadOn RTC to the 5v supply on the MKRZero. You will likely fry the electronics, and then you would be out ~$144! 
 
-After you double check you connections it is time to fire it up! Connect your MKRZero to the computer and upload the MKRZero_OpCode.
+Most of the modules can be connected with the standard M/M jumper wire. For the temperature and pressure sensors you will need to use some alligator clips to make the proper connections. The EC probe will need to connected to the EC circuit via the BNC connector. Note that the BNC connector will need to be cut later, but for the bench test and calibration stages, it is okay to leave it on.
 
 ![Picture of setup with jumper wires here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/MessyWires.jpg)
 *Board setup with jumper wires.*
+
+After you double check the connections it is time to fire it up! Connect your MKRZero to the computer and upload the MKRZero_OpCode.
+Make sure the rtc.autotime() function is uncommented for the first upload. After the first upload, comment out the rtc.autotime() function and re-upload. We do this so that the RTC maintains the time instead of reverting back to the original upload time evertime it loses power.
 
 Open the serial monitor (Ctrl+Shift+M). If you have everything set up correctly, you should see data printing to the screen in the form of:
 
@@ -222,20 +224,20 @@ Date (mm/dd/yyyy), Time (HH:mm:ss), Conductivity (uS/cm), Temperature (degC), Ab
 ![Picture of output.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SerialMonitorOutput.PNG)
 *Date,Time,EC,T,P,Depth,Salinity*
 
-The date should be representative of the date that your computer is set to. The time should be close to the time that your computer is set to, but may be behind by about 30 seconds. This is due to upload delay. If your time is drastically off or incoherent, remove the battery and power cycle the system. Note that the autotime function will need to be commented out of the code for the final sketch upload or else your CTD will revert to the same time on a power cycle.
+The date and time should be close to the time that your computer is set to. It may be off by about 30-60 seconds due to upload delay.  If your time is drastically off or incoherent, remove the battery and power cycle the system. Note that the autotime function will need to be commented out of the code for the final sketch upload or else your CTD will revert to the same time on a power cycle.
 
-The conductivity value should be zero. If it is not present in the output, try switching the Tx and Rx lines. Alternatively, you can change the pins in the code. Note in the above image the EC is reporting a nonzero value due to noise. Noisiness can be test by placing the probe in some tap water. 
+The conductivity value should be zero. If it is not present in the output, try switching the Tx and Rx lines. If for some reason you begin to see ASCII or random letters in your EC output, try putting the probe in a cup of tap water. Sometimes the EC circuit can be upset by the electrical noise of the probe. 
 
 The temperature should be representative of the ambient temperature of the room you are performing the test in. It may be handy to have a thermometer nearby to check this. The temperature probe is factory calibrated, but if further calibration is needed, a two-point calibration is recommended.
 
 The pressure sensor should be spitting out values between 1000 and 1050 depending on your elevation and sensor accuracy. At sea level, atmospheric pressure is around 1013 mbar. The pressure sensor is factory calibrated, but if values appear to be drastically off, first check your pinout connections. If still incorrect, contact the manufacturer. 
 
-Depth is sketch-derived using the empirical equation outlined in [UNESCO Marine 44](http://unesdoc.unesco.org/images/0005/000598/059832eb.pdf). For the CTDizzle, there is no consideration for latitude, so gravity is assumed to be 9.806 m/s^2. It is also assumed that atmospheric pressure is 1013 mbar.
+Depth is sketch-derived using the empirical equation outlined in [UNESCO Marine 44](http://unesdoc.unesco.org/images/0005/000598/059832eb.pdf). For the CTDizzle, there is no consideration for latitude, so gravity is assumed to be 9.806 m/s^2. It is also assumed that atmospheric pressure is 1013 mbar. For your bench tests you can ignore this value.
 
-Salinity is also sketch-derived per the same paper. 
+Salinity is also sketch-derived per the same paper. You can also ignore this value during bench tests.
 
-Don't forget to check the output on the SD card! 
-Opening up the SD card in windows explorer should give you a window similar to this..
+Don't forget to check the output on the SD card! Pull the card, put it in and adapter and plug it into your computer. 
+Opening up the SD card in Windows explorer should give you a window similar to this..
 
 ![USB](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/USBPopup.PNG)
 *Note that a good way to see if you collected data is to look at the file size. Files with ~5 kb are representative of a deployment that lasted a few minutes. The file with ~4000 kb is representative of a deployment that lasted about 24 hours.* 
@@ -243,7 +245,9 @@ Opening up the SD card in windows explorer should give you a window similar to t
 Opening up one of the .csv files will give you...
 
 ![CSV](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/CSVOutput.PNG)
-*The data format is the same as the format in the serial monitor. This was opened in MS Excel/*
+*The data format is the same as the format in the serial monitor. This was opened in MS Excel.*
+
+Once you are finished checking everything, reinstall the microSD card. Now it is time to calibrate the conductivity probe!
 
 
 ### Calibrating Conductivity
@@ -257,13 +261,13 @@ Unlike the factory calibrated temperature and pressure sensors, the conductivity
 ![Picture of calibration setup here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/CalSetup.jpg)
 *Super high-tech calibration setup in a cold room.*
 
-The next morning, take your calibration procedure and computer to your setup. Follow along with the calibration procedure found in the documentation folder. Conductivity is highly dependent on temperature, so it is important that you be as precise as possible! Using the provided plots or spreadsheet, determine the temperature of the room and corresponding conductivity value to the nearest 100 uS/cm. Don't forget to bring a parka!
+Once you are certain that your calibration solution has been in a stable environment for some time, grab a calibration procedure and connect the MKRZero to your computer. Follow along with the calibration procedure step by step. It is important that you note the temperature of the solution to the nearest hundredth of a degree. You can do this with a separate temperature probe if you have one on hand, or you can assume that the temperature your CTD is recording is representative of the solution if the solution has been in the room for a few hours. 
 
-You'll also need to make note of the temperature you calibrated the conductivity probe at (to the nearest degree), as this value will be manually input into the operating code later.
- 
+Conductivity is highly dependent on temperature, so it is important that you be as precise as possible! Using the provided spreadsheet or plots, take your calibration temperature and find the corresponding conductivity value to the nearest 100 uS/cm. You'll use these values in the calibration procedure. Don't forget to write down your calibration temperature (to the nearest hundredth), as it will later need to be manual input into the operating code.
+
 Here is a new [Google spreadsheet](https://docs.google.com/spreadsheets/d/1NTyalpajds06tLAo7uXbJdM82hv5m03zCGFynGOxZ1g/edit?usp=sharing) that will help determine the conductivity values to input for your calibration temperature.
 
-After you have confirmed proper calibration of the probe, it won't need another calibration for a year. You can now cut the cable if you do not plan to implement the BNC connectors into your design. Please note that cutting the cable voids the Atlas-Scientific warranty, so it important to first test the probe to see if it works. 
+After you have confirmed proper calibration of the probe, it won't need another calibration for a year. You can now cut the cable down to 6-8" in length. Please note that cutting the cable voids the Atlas-Scientific warranty, so it important to first test the probe to see if it works. After you have cut the cable, you can remove the protective cap (the one with the serial number on it) as it takes up unnecessary room in the pressure case.
 
 
 ### Case Construction and Potting
