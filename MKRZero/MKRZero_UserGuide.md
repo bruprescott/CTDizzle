@@ -340,14 +340,23 @@ Allow to cure for a minimum of 12 hours.
 
 While your end caps are curing, you can begin to solder the electrical components together.
 
-If using the 2" version of the pressure case, soldering everything to a protoboard may make things inside the case a little cramped. It might be easier to solder components directly together. You will need to remove the headers already installed on the MKRZero and the DeadOn RTC. Use the provided solder sucker to make removal of the headers easier. You'll also have to bend the headers on the EC EZO to allow easier soldering of the pins. 
+There are two options for soldering everything together. You can solder everything together with free wire, which may get a little messy but offers more flexibility in the tight pressure case. The other option is to place everything on a nifty MKRZero protoboard.
 
-Alternatively, you can try to set everything up on the MKR Protoboard. You can try to arrange everything in the housing, including the boards, wires, battery, and desiccant, but it may take some expert Tetris skills. 
+![GNDVCC](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/GNDVCC.jpg)
 
-![Get bent](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/EZOBend.jpg)
-*Bent pins of the EC EZO.*
+You'll want to arrange the RTC and EC EZO so that you can easily solder corresponding pins. You also want to minimize the width of the protoboard package. One thing to keep in mind is that you will want the SD card pointed in the direction of the switch/pressure end cap. 
 
-It isn't necessary, but installing a quick disconnect for the sensors helps when you need to reprogram, charge, or pull data from the protoboard. If desired, you can also solder the temperature and pressure JST plugs to the MKRZero. Make a note of which wire goes where, because after your urethane is done curing, you will want to make sure you have the right wires hooked up!
+![Split](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Split.jpg)
+
+In this case, the pressure sensor will be connected to the 4-Pin JST connector located on the RTC side of the protoboard, and the temperature and conductivity probe will be connected to the 6-Pin JST connector located on the EC EZO side of the protoboard.
+
+![JST6](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/JST6.jpg)
+
+![Split2](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Split2.jpg)
+
+There is no set orientation for wiring everything up. It is recommended that you test the connectivity of every connection to make sure you aren't creating any shorts. Make a note of which wire goes where, because after your urethane is done curing, you will want to make sure you have the right wires hooked up! Solder everything together as described by the pinout guide. If you want to avoid using a ton of heat shrink, you can use UY2 cold splice connectors. There is no specific orientation for the EC probe leads to the EC EZO.
+
+![JSTPressure](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/JST2Pressure.jpg)
 
 Cut the EC probe cable, leaving approximately six inches of cable. Strip the wires and tin the leads.
 
@@ -356,10 +365,11 @@ Cut the EC probe cable, leaving approximately six inches of cable. Strip the wir
 
 Note that Atlas-Scientific no longer covers probe faults after you cut the cable. 
 
-Solder everything together as described by the pinout guide. If you want to avoid using a ton of heat shrink, you can use UY2 cold splice connectors. There is no specific orientation for the EC probe leads to the EC EZO.
+![RTCEZO](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/RTCEZO2.jpg)
 
-![Picture of main protoboard with JST here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/CrappyWiring.PNG)
-*Mess of wires.*
+![Picture of main protoboard with JST here.](![MainZero](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/MainZero.jpg)
+
+
 
 #### Switch Cable 
 In order to externally turn off the CTDizzle, we need to install a switch. It is not recommended that you cut the battery cables to install the switch, as this may have an impact on the charging of the battery. Instead, use a JST extension cable to tie the switch into. 
@@ -395,6 +405,8 @@ After you have soldered everything and tested the data output, you can finish co
 8. Connect the pressure and switch leads.
 9. Turn on the device using the switch. Note that the MKRZero does not turn on the LEDs when using battery power.
 10. Turn off the device. Pull the card and check to see if a file is created and data is being output.
+
+![MKRZeroOut](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/TopOpen.jpg)
 
 ![Picture of completed device here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Complete.jpg)
 *The CTDizzle Mk4.*
