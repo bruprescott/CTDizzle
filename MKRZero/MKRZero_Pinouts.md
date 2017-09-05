@@ -19,7 +19,7 @@ SQW is not needed unless you want to implement an alarm function.
 |:--------------------:|:--------------------:|
 |CS|28|
 
-SD capabilities are native to this board.
+SD capabilities are native to this board. No soldering needed here. This pin is called out in the operating code.
 
 |TSYS01 Temperature Sensor|MKRZero|	
 |:------------:|:------------:|	
@@ -45,7 +45,7 @@ SD capabilities are native to this board.
 |GND|GND|	
 
 TX on one side connects to RX on the other. TX should never attach to TX.
-If connecting VCC to VCC, the EC EZO may report undervoltage.
+If connecting VCC to VCC, the EC EZO may report undervoltage. Testing and calibration may need to be done seperately if this issue continues.
 
 
 |Atlas-Scientific EC K1.0 Probe|EC EZO|	
@@ -53,4 +53,4 @@ If connecting VCC to VCC, the EC EZO may report undervoltage.
 |Red|PRB1|	
 |Black|PRB2|	
 
-It is possible to use the BNC adapter in this build and is recommended.
+After you cut the EC probe cable, the lead to PRB orientation does not matter.
