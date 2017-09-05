@@ -350,25 +350,21 @@ You'll want to arrange the RTC and EC EZO so that you can easily solder correspo
 
 In this case, the pressure sensor will be connected to the 4-Pin JST connector located on the RTC side of the protoboard, and the temperature and conductivity probe will be connected to the 6-Pin JST connector located on the EC EZO side of the protoboard.
 
-![JST6](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/JST6.jpg)
-
 ![Split2](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Split2.jpg)
 
-There is no set orientation for wiring everything up. It is recommended that you test the connectivity of every connection to make sure you aren't creating any shorts. Make a note of which wire goes where, because after your urethane is done curing, you will want to make sure you have the right wires hooked up! Solder everything together as described by the pinout guide. If you want to avoid using a ton of heat shrink, you can use UY2 cold splice connectors. There is no specific orientation for the EC probe leads to the EC EZO.
+There is no set orientation for wiring everything up, nor is there a predetermined wire length for connections (although I recommend leaving about 6" of wire on the EC probe and temperature sensors). It is recommended that you test the connectivity of every connection to make sure you aren't creating any shorts. Make a note of which wire goes where, because after your urethane is done curing, you will want to make sure you have the right wires hooked up! Solder everything together as described by the pinout guide. If you want to avoid using a ton of heat shrink, you can use UY2 cold splice connectors. There is no specific orientation for the EC probe leads to the EC EZO. You'll want to make sure you are soldering corresponding wires for the JST connectors.
 
 ![JSTPressure](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/JST2Pressure.jpg)
-
-Cut the EC probe cable, leaving approximately six inches of cable. Strip the wires and tin the leads.
-
-![Probe Leads](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/ProbeLeads.jpg)
-*Cut EC probe cable.*
-
-Note that Atlas-Scientific no longer covers probe faults after you cut the cable. 
+*An example of a JST connector on the pressure sensor.*
 
 ![RTCEZO](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/RTCEZO2.jpg)
+*Everything set up facing the RTC and EC EZO.*
 
-![Picture of main protoboard with JST here.](![MainZero](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/MainZero.jpg)
+In order to get everything to fit, I ended up trimming the header pins on each of the modules. Once you have them ordered, you can trim them to a length that works for you. 
 
+
+[MainZero](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/MainZero.jpg)
+*Everything set up facing the MKRZero.
 
 
 #### Switch Cable 
