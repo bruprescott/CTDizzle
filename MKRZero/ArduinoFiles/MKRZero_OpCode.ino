@@ -6,15 +6,13 @@ Email: blackia@oregonstate.edu
 
 This sketch will print data to a .CSV with 7 columns:
 Date , Time , EC , T , P , Depth(sketch derived) , Sal(sketch derived) 
+Salinity is printed twice for comparison between the EC EZO derived and sketch derived values.
 
 ISSUES
 Does not consider latitudinal variation in gravity. Assumes g=9.806 m/s^2 
 Assumes atmospheric pressure is 1013 mbar.
 These impact the depth and salinity calculations ever so slightly.
 
-Skip to line 28 for common variables.
-Skip to line 93 for setup.
-Skip to line 139 for loop.
 */
 
 #include <SD.h>   //Used by SD module.
@@ -22,19 +20,21 @@ Skip to line 139 for loop.
 #include <Wire.h>   //Used by temperature and pressure sensors.
 #include "TSYS01.h" //Used by temperature sensor.
 #include "MS5837.h" //Used by pressure sensor.
-#include <SparkFunDS3234RTC.h>  //Used by RTC.
+#include <SparkFunDS3234RTC.h>
 
 //Common variables you are most likely to change based on your needs.
 #define FluidDensity 1024   //Density in kg/m^3. This varies with water conditions and location.
 #define SD_chipselect 28    //Chip select for the MKRZero.
 #define g 9.806   //Gravity in m/s^2. Varies with latitude.
 #define RTC_chipselect 7    //Chip select for the DeadOn RTC.
+#define calTemp 14.50   //EC calibration temperature to the nearest hundredth of a degree.
 //End of common variables. 
 
 float EC_float = 0; //Visit Atlas-Scientific for documentation on EZ EZO.
 char EC_data[48];
 byte received_from_sensor = 0;
 byte string_received = 0;
+String inputstring = "";
 char *EC; //Char pointer used in string parsing.  
 float f_ec;  //Turns SAL into a floating point for calculations.    
 #define A1 2.070*pow(10,-5)  //Following variables are used to calculate salinity.
@@ -115,35 +115,40 @@ void setup() {      //Start your engines.
   }
     
   delay(100);     //Wait 100 milliseconds before continuing. 
-  
   tsensor.init();   //Initialize the temperature sensor.
   delay(70);     //Wait 70 milliseconds before continuing. 
-  
   psensor.init();   //Initialize the pressure sensor.
   delay(100);    //Wait 100 milliseconds before continuing. 
   psensor.setModel(MS5837::MS5837_30BA);    //Define the model of the pressure sensor.
   psensor.setFluidDensity(FluidDensity); //Set approximate fluid density for pressure sensor. Varies with location.
 
   //rtc.autoTime();   //After an initial upload, the RTC will keep the same time as your computer. Comment out this line and re-upload to have the RTC maintain time.
-  
-  delay(1690);   //Wait 1690 milliseconds before continuing.
+
+  if (Serial1.available() > 0) {     //If comms are established with the EC EZO.
+    inputstring = Serial1.readStringUntil(13);     //The Atlas EC EZO reads the incoming string until a <CR> is received.
+    Serial1.print('T');    
+    Serial1.print(',');
+    Serial1.print(calTemp,2);     //Change the default temp on the EC EZO to your predefined temperature.
+    Serial1.println('\r');     //Add a <CR> to send the command.  
+    inputstring = "";         //Make sure the string is clear.
+  }   
+  delay(1680);   //Wait 1690 milliseconds before continuing.
 } //Setup time is approximately 3 seconds.
 
 
 
 void loop() {     //And around we go.
     rtc.update();   //Update the time.
-    
-    if (Serial1.available()>0){   //If communication with the EC EZO is available...
-      received_from_sensor=Serial1.readBytesUntil(13,EC_data,48);   //Read the incoming data...
+    if (Serial1.available()>0){   //If comms with the EC EZO are established
+      received_from_sensor=Serial1.readBytesUntil(13,EC_data,48);   //Read the incoming data.
       EC_data[received_from_sensor]=0;
     }
-    if ((EC_data[0] >= 48) && (EC_data[0] <= 57)){  
+    if ((EC_data[0] >= 48) && (EC_data[0] <= 57)){
       print_EC_data(); //If incoming EZO data is a digit and not a letter, parse it. 
     }
 
   psensor.read();  //Read what the pressure is.
-  GaugeP=(psensor.pressure()-1013)/100;   //GaugeP is in decibars. Assumes atmospheric pressure is 1013 mbar.
+  GaugeP=(psensor.pressure()-1013)/100;   //GaugeP is in decibars. Assumes atmospheric pressure is 1000 mbar.
   delay(10);
   Depth = (((((COEFF1*GaugeP+COEFF2)*(GaugeP)-COEFF3)*(GaugeP)+COEFF4)*(GaugeP))/g);   //Depth is in meters.
   delay(10);
@@ -160,7 +165,6 @@ void loop() {     //And around we go.
   RT=R/(rT*Rp);
   Salinity = (a0+(a1*pow(RT,0.5))+(a2*RT)+(a3*pow(RT,1.5))+(a4*pow(RT,2))+(a5*pow(RT,2.5)))+((T-15)/(1+k*(T-15)))*(b0+(b1*pow(RT,0.5))+(b2*RT)+(b3*pow(RT,1.5))+(b4*pow(RT,2))+(b5*pow(RT,2.5)));
   
-
    if (datafile) {
     if(rtc.month()<10){
        datafile.print('0');}    //Print a zero for aesthetics.
@@ -208,13 +212,14 @@ void loop() {     //And around we go.
     Serial.print(Depth);    //Print depth to serial monitor.
     Serial.print(",");
     Serial.println(Salinity);    //Print sketch derived salinity to serial monitor.
-
   }
   else{
     Serial.println("Something went wrong.");  //If the file is not created or appended, display this message.
   }
   delay(960);
 }
+
+
 
 void print_EC_data(void) {   //Called to parse the incoming data. Strings come in the form of EC,TDS,SAL,GRAV.  
   EC = strtok(EC_data, ",");                                     
