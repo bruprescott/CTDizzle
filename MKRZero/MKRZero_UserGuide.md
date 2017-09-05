@@ -276,6 +276,7 @@ Once everything checks out and your breadboard tests are successful, you can beg
 |Sand Paper|Safety Mask|
 |Tape|
 |Round File|
+|2mm Hex Wrench|
 
 
 #### Switch End Cap 
@@ -363,7 +364,7 @@ There is no set orientation for wiring everything up, nor is there a predetermin
 In order to get everything to fit, I ended up trimming the header pins on each of the modules. Once you have them ordered, you can trim them to a length that works for you. 
 
 
-[MainZero](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/MainZero.jpg)
+![MainZero](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/MainZero.jpg)
 *Everything set up facing the MKRZero.
 
 
@@ -383,7 +384,7 @@ First, cut the cable at the midpoint and trim each end so that about two inches 
 |:---:|:---:|
 |O-Ring Pick|Nitrile Gloves|
 |Hemostats|
-|2mm Hex Wrench|
+
 
 The CTD is going to depths where pressure is roughly 200 psi. This pressure is experienced from all directions. The optimal shape for a pressure case would be spherical, but it is often difficult to fabricate spheres, so the next best option is to use a cylindrical case. If you have a spherical and a cylindrical case with the same wall thickness, the cylinder will typically have half the strength as the sphere. Cylindrical pressure cases are typically closed off by hemispherical (rounded) or torispherical (flat) end caps.
 
