@@ -6,7 +6,8 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |Part|Vendor|Price|Note|
 |:---|:---|:---|:---|
 |[MKRZero](https://store.arduino.cc/usa/arduino-mkrzero)|Arduino USA|$21.90|
-|[3.7V 4400mAh Li-Ion Battery](https://www.adafruit.com/product/354)|Adafruit|$19.95|Last for about 100 hours if sampling at 1Hz|
+|[MKR ProtoShield](https://store.arduino.cc/usa/mkr-proto-shield)|Arduino USA|$6.99|
+|[3.7V 2200mAh Li-Ion Battery](https://www.adafruit.com/product/1781)|Adafruit|$9.95|Last for about 60 hours if sampling at 1Hz|
 |[Conductivity Kit 1.0](https://www.sparkfun.com/products/12908)|SparkFun|$195.71|Includes EC EZO, probe, and calibration solutions.|
 |[Celsius Fast-Response Temp Sensor](https://www.bluerobotics.com/store/electronics/celsius-sensor-r1/)|Blue Robotics|$56|+/- 0.1 C accuracy|
 |[Bar30 High-Res Depth Sensor](https://www.bluerobotics.com/store/electronics/bar30-sensor-r1/)|Blue Robotics|$68|
@@ -17,7 +18,7 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |[Water Tight Enclosure Switch](http://www.bluerobotics.com/store/electronics/switch-10-5a-r1/)|Blue Robotics|$14|
 |[Snappable Protoboard](https://www.sparkfun.com/products/13268)|SparkFun|$7.95|
 |[4-Pin JST SM Plug Set](https://www.adafruit.com/product/578)|adafruit|$1.50|Allows removal of protoboard from unit.
-|[2-Pin JST SM Plug Set](https://www.adafruit.com/product/2880)|adafruit|$0.75|Allows removal of protoboard from unit.
+|[6-Pin JST SM Plug Set](https://www.adafruit.com/product/1665)|adafruit|$1.50|Allows removal of protoboard from unit.
 |[JST-PH Battery Extension Cable](https://www.adafruit.com/product/1131)|adafruit|$1.95|Allow easy use of external switch.
 |[Cold Splice Connectors](https://www.adafruit.com/product/1496)|Adafruit|$2.95|Reduces need for pesky heat shrink.
 
@@ -25,11 +26,11 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 #### Consumables List
 |Item|Vendor|Price|Note|
 |:---|:---|:---|:---|
-|[Breakaway Header - Straight (x3)](https://www.sparkfun.com/products/116)|SparkFun|$4.50|
-|[2-Quart Urethane 75a](https://www.aeromarineproducts.com/product/urethane-75a-encapsulating-compound/)|AeroMarine|$65.00|If too spendy, try Loctite Marine 2-Ton Epoxy. Be careful to not create bubbles.
+|[Breakaway Header - Straight (x2)](https://www.sparkfun.com/products/116)|SparkFun|$3.00|
+|[2-Quart Urethane 75a](https://www.aeromarineproducts.com/product/urethane-75a-encapsulating-compound/)|AeroMarine|$65.00|If too spendy, try Loctite Marine 2-Ton Epoxy. Be careful to not create bubbles. Make sure surfaces are sufficiently abraded.
 |[Assorted 22 AWG - Solid Core Wire](https://www.sparkfun.com/products/11367)|SparkFun|$16.95|
 |[Heat Shrink Kit](https://www.sparkfun.com/products/9353)|SparkFun|$7.95|
-|[Kester 44 Solder](https://www.amazon.com/Kester-Rosin-Core-Solder-Spool/dp/B00068IJWC/ref=sr_1_4?ie=UTF8&qid=1496867514&sr=8-4&keywords=kester+44)|Amazon|$33.43|1 lb of solder. Not necessary unless you want to solder more than the OpenCTD.
+|[Kester 44 Solder 0.8mm](https://www.amazon.com/Kester-Rosin-Core-Solder-Spool/dp/B00068IJWC/ref=sr_1_4?ie=UTF8&qid=1496867514&sr=8-4&keywords=kester+44)|Amazon|$33.43|1 lb of solder. Not necessary unless you want to solder more than the OpenCTD.
 |[Desiccant Packs (10g)](https://www.amazon.com/Desiccant-Indicating-Chloride-Moisture-Absorbent/dp/B01MPYB16J/ref=sr_1_1?s=hi&ie=UTF8&qid=1496867597&sr=1-1&keywords=10g+desiccant)|Amazon|$8.99|Plenty of replacements.
 |Masking Tape|
 |Sandpaper|
@@ -43,14 +44,14 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |Tool|Note|
 |:---|:---|
 |Needle Hemostats|Flat edges minimize marring of items.|
-|2.5mm Hex Wrench|Used for end cap installation/removal|
+|2mm Hex Wrench|Used for end cap installation/removal|
 |Solder Station|Hakko appears to make decent soldering irons if you do not have one on hand. 
 |Multimeter|Not necessary, but useful for checking connectivity and current.
 |Breadboard|
 |Jumper Wires|
 |Wire Stripper|
 |Drill or Mill|
-|Drillbit - 15/32"|Size for Atlas Scientific EC Probe|
+|Drillbit - 15/32" or 12mm|Size for Atlas Scientific EC Probe|
 |microUSB Cable|Data-capable Android phone charger works too.|
 |Round File|Used to size drilled hole.|
 
