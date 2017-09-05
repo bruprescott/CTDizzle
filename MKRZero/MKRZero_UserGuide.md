@@ -29,7 +29,7 @@
 	- [Breadboard Testing](#breadboard-testing)
 		- [Calibrating Conductivity](#calibrating-conductivity)
 	- [Case Construction and Potting](#case-construction-and-potting)
-		- [Switch End Cap](#switch-end-cap)
+		- [Switch End Cap](#switch/presure-end-cap)
 		- [Conductivity/Temperature End Cap](#conductivity/temperature-end-cap)
 		- [Applying the Urethane](#applying-the-urethane)
 	- [Completing the Circuit](#completing-the-circuit)
@@ -283,27 +283,32 @@ Once everything checks out and your breadboard tests are successful, you can beg
 |2mm Hex Wrench|
 
 
-#### Switch End Cap 
+#### Switch/Pressure End Cap 
 
-Designate one end cap and flange set as your switch/pressure sensor (S/P) end cap and the other your conductivity/temperature (C/T) end cap.
+Designate one end cap and flange set as your switch/pressure sensor end cap and the other your conductivity/temperature end cap.
 
-For each set, connect the two pieces together using the six M2 screws. Don't worry about installing the O-Ring just yet. Once connected, use sandpaper to prepare the inner surface of each flange and end cap set. Alternatively, use a marker to outline where the two pieces meet. Abrasion of the surface will allow the urethane you will apply later to bond more readily to the metal surface. Use a low grit sandpaper to remove anodization until you begin to see bare aluminum. Try not to abrade the O-ring groove.
+For each set, connect the two pieces together using the six M2 screws. Don't worry about installing the O-Ring just yet. Once connected, use sandpaper to prepare the inner surface of each flange and end cap set. Alternatively, use a marker to outline where the two pieces meet and sand accordingly. Abrasion of the surface will allow the urethane you will apply later to bond more readily to the metal surface. Use a low grit sandpaper to remove anodization until you begin to see bare aluminum. Try not to abrade the O-ring groove.
 
-Here are some [videos](https://www.masterbond.com/resources/video-library?tid=354) on how to mix and apply two part epoxies.
+Here are some [videos](https://www.masterbond.com/resources/video-library?tid=354) on how to prepare a bonding surface.
 
 ![Picture of prepared end cap here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/2.PNG)
 *Flange with the internal side abraded.*
 
-Remove the face plate from the flange. Use isopropyl alcohol to clean the surface thoroughly. Install the switch and pressure 
+Remove the face plate from the flange. Use isopropyl alcohol to clean the surface thoroughly. Install the switch and pressure bulkheads, with O-rings, using the penetrator wrenches. Don't forget to abrade the inner bulkheads as well!
 
 ![Picture of installed bulkheads here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/1.PNG)
 *Picture of the pressure and switch bulkheads installed.*
 
+
+
 #### Conductivity/Temperature End Cap
 
-Do the same thing with the other end cap. The conductivity sensor has too large a diameter for the pre-drilled holes, so you will need to drill out one of the holes to 12mm or 15/32". It may be a tight fit for the probe, so use a round file to make it the right size. Once you have the proper hole size, insert the probe so that it sticks out of the end cap approximately 2-3". To keep it in place, rig up a stand that will hold the probe in the right spot, or super glue it into place from the outside. Tape over the probe hole to prevent any material from entering the sensing area.
+Do the same thing with the other end cap. After sufficient abrasion, install the temperature sensor in the end cap.
+
+The conductivity sensor has too large a diameter for the pre-drilled holes, so you will need to drill out **one** of the holes to 12mm or 15/32". It may be a tight fit for the probe, so use a round file to make it the right size. Once you have the proper hole size, insert the probe so that it sticks out of the end cap approximately 2-3". To keep it in place, rig up a stand that will hold the probe in the right spot, or hot glue it into place from the outside. Tape over the probe hole to prevent any material from entering the sensing area.
 
 After you have prepared each end cap, you can re-connect them to the flanges. Make sure everything is clean. Wrap the O-Ring grooves of the flange in tape to prevent any spillage getting into the grooves during the next step.
+
 
 #### Applying the Urethane
 
@@ -323,13 +328,13 @@ Here are some [videos](https://www.masterbond.com/resources/video-library?tid=35
 
 Pour the urethane into each end cap until it reaches the brim of the flange. Tap the edges of the flange with a clean plastic stir rod to shake up any bubbles attached to the walls. 
 
+Note that in some fashion the switch also acts as a purge plug. So you may only want to fill up to the bottom of the switch portion that you screw into the bulkhead.
+
 ![Picture of urethane and end caps here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/6.PNG)
 *Poured urethane.*
 
-
 ![Pic2](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/4.PNG)
 *Poured urethane.*
-
 
 Allow to cure for a minimum of 12 hours.
 
@@ -375,9 +380,7 @@ In order to get everything to fit, I ended up trimming the header pins on each o
 #### Switch Cable 
 In order to externally turn off the CTDizzle, we need to install a switch. It is not recommended that you cut the battery cables to install the switch, as this may have an impact on the charging of the battery. Instead, use a JST extension cable to tie the switch into. 
 
-First, cut the cable at the midpoint and trim each end so that about two inches remains on each side. Using a cold splice connector, reconnect the VCC (red) line. Then connect a switch lead to each of the ground leads using another two cold splice connectors. 
-
-
+First, cut the cable at the midpoint and trim each end so that about two inches remains on each side. Using a cold splice connector, reconnect the VCC (red) line. Then connect a switch lead (blue wires in the switch bag) to each of the ground leads using another two cold splice connectors. 
 
 ![Picture of Switch cable here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SwitchCable.jpg)
 *Example of a switch cable with cold splice connectors.*
@@ -389,32 +392,36 @@ First, cut the cable at the midpoint and trim each end so that about two inches 
 |O-Ring Pick|Nitrile Gloves|
 |Hemostats|
 
-
-The CTD is going to depths where pressure is roughly 200 psi. This pressure is experienced from all directions. The optimal shape for a pressure case would be spherical, but it is often difficult to fabricate spheres, so the next best option is to use a cylindrical case. If you have a spherical and a cylindrical case with the same wall thickness, the cylinder will typically have half the strength as the sphere. Cylindrical pressure cases are typically closed off by hemispherical (rounded) or torispherical (flat) end caps.
+The CTD is going to depths where pressure is roughly 200 psi. This pressure is experienced from all directions. The optimal shape for a pressure case would be spherical, but it is often difficult to fabricate spheres, so the next best option is to use a cylindrical case. If you have a spherical and a cylindrical case with the same wall thickness, the cylinder will typically have half the strength as the sphere. Cylindrical pressure cases are typically closed off by hemispherical (rounded) or torispherical (flat) end caps. We are using the Blue Robotics aluminum tube case for to main reasons, the compatibility of sensors and the ease of access.
 
 Rectangular pressure cases, while much easier to manufacture, can't really withstand pressure as well as cylindrical cases. There are more failure points and the odd shape of the O-Rings increases the potential of more leak points. Force is being exerted on the pressure case in all directions, and with a rectangular case, there are more points where the case can fail as some areas are not as well supported (think corners vs. walls).
 
+The depth limiting factor for this CTD build is the conductivity probe, which the manufacturer states can only withstand a maximum of 200 PSI.
+
 After you have soldered everything and tested the data output, you can finish constructing the case.
 
-1. Ensure the flanges are clean. Grease the flange O-rings for the sensor end cap and install them.
-2. Install the C/T end cap into the tube.
+1. Ensure the flanges are clean. Grease the flange O-rings for the conductivity/temp end cap and install them.
+2. Install the conductivity/temp end cap into the tube, ensuring the 6pin JST is connected.
 3. Sort the wires, board, and battery.
 4. Connect the MKRZero to the battery via the JST extension. Ensure that the switch is off or removed. 
 5. Place a desiccant pack in the pressure case. 
-6. Connect your sensors to the protoboard. Place the protoboard and battery in the tube. It is recommended that you tape the battery to the protoboard. 
+6. Connect your pressure sensor to the protoboard via the 4-pin JST. Connect the switch to the switch cable. 
 7. Pack the aluminum tube with some sort of packing material if there is some play in the internal wiring and components. 
-8. Connect the pressure and switch leads.
-9. Turn on the device using the switch. Note that the MKRZero does not turn on the LEDs when using battery power.
-10. Turn off the device. Pull the card and check to see if a file is created and data is being output.
+8. Turn on the device using the switch. Note that the MKRZero does not turn on the LEDs when using battery power.
+9. Turn off the device. Pull the card and check to see if a file is created and data is being output.
 
 ![MKRZeroOut](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/TopOpen.jpg)
 
 ![Picture of completed device here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Complete.jpg)
 *The CTDizzle Mk4.*
 
+Congratulations, you just built a working CTD!
+
 ## Corrosion
 :+1: The screws used in the end caps are made of 316 SS and the main body of the unit is made of aluminum.
 When two dissimilar metals interact in seawater, galvanic corrosion can occur. The metal on the lower end of the galvanic scale (aluminum in this case) will begin to corrode after an extended period of time. Cathodic protection is one method to mitigating the corrosion of the end caps. This can be done by installing an anode (commonly made of zinc). 
+
+For now, there isn't a way to connect an anode (mostly due to no one manufacturing a 2mm threaded zinc). It is important to make sure that deployments are short (few days at most) and that the device is washed with freshwater when recovered. 
 
 ## Predeployment Procedure
 The deployment plan of your OpenCTD plays a role in the sampling regime.
