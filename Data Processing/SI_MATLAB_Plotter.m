@@ -12,7 +12,7 @@
 
 [filename, pathname] = uigetfile({'*.csv';'*.txt'},'Select OpenCTD Data'); %Open a search window.
 filepath=fullfile(pathname,filename);   %Holds location of chosen file.
-Data=readtable(filepath,'Delimiter',',','Format','%{MM/dd/uuuu}D %{HH:mm:ss}D %f %f %f','HeaderLines',0,'ReadVariableNames',false); %Read the csv and create a data array.
+Data=readtable(filepath,'Delimiter',',','Format','%{MM/dd/uuuu}D %{HH:mm:ss}D %f %f %f %f %f','HeaderLines',0,'ReadVariableNames',false); %Read the csv and create a data array.
 
 Date=table2array(Data(5:end,1));  %Create a Date array.
 Time=table2array(Data(5:end,2));  %Create a Time array.
