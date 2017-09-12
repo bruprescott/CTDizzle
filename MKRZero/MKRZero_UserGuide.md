@@ -394,11 +394,11 @@ First, cut the cable at the midpoint and trim each end so that about two inches 
 |O-Ring Pick|Nitrile Gloves|
 |Hemostats|
 
-The CTD is going to depths where pressure is roughly 200 psi. This pressure is experienced from all directions. The optimal shape for a pressure case would be spherical, but it is often difficult to fabricate spheres, so the next best option is to use a cylindrical case. If you have a spherical and a cylindrical case with the same wall thickness, the cylinder will typically have half the strength as the sphere. Cylindrical pressure cases are typically closed off by hemispherical (rounded) or torispherical (flat) end caps. We are using the Blue Robotics aluminum tube case for to main reasons, the compatibility of sensors and the ease of access.
+The CTD is going to depths where pressure is roughly 200 psi. This pressure is experienced from all directions. The optimal shape for a pressure case would be spherical, but it is often difficult to fabricate spheres, so the next best option is to use a cylindrical case. If you have a spherical and a cylindrical case with the same wall thickness, the cylinder will typically have half the strength as the sphere. Cylindrical pressure cases are typically closed off by hemispherical (rounded) or torispherical (flat) end caps. We are using the Blue Robotics aluminum tube case for several main reasons, the compatibility of sensors, the ease of access, and the robustness of aluminum over acrylic.
 
 Rectangular pressure cases, while much easier to manufacture, can't really withstand pressure as well as cylindrical cases. There are more failure points and the odd shape of the O-Rings increases the potential of more leak points. Force is being exerted on the pressure case in all directions, and with a rectangular case, there are more points where the case can fail as some areas are not as well supported (think corners vs. walls).
 
-The depth limiting factor for this CTD build is the conductivity probe, which the manufacturer states can only withstand a maximum of 200 PSI.
+The depth limiting factor for this CTD build is the conductivity probe, which the manufacturer states can only withstand a maximum of 200 PSI or ~ 140m water depth.
 
 After you have soldered everything and tested the data output, you can finish constructing the case.
 
