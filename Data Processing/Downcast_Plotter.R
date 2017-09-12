@@ -7,7 +7,7 @@
 #Assumes that the first recorded pressure value is representative of the atmospheric pressure.
 
 setwd('C:/OpenCTD_Data') #Set working directory to user-created folder in C drive named "OpenCTD_Data". You can still search for the file elsewhere through a search window per the script.
-originalcolumns <- c("Date","Time","Conductivity","Temperature","Pressure") #Establish column names for incoming file read.
+originalcolumns <- c("Date","Time","Conductivity","Temperature","Pressure","Depth","Sal") #Establish column names for incoming file read.
 rawdata <- read.csv(file.choose(),header=FALSE,skip=3,col.names=originalcolumns,stringsAsFactors=FALSE)   #Read user transferred file from the user-defined working directory.
 #Removed the first three lines in case of gibberish from EC circuit.
 
