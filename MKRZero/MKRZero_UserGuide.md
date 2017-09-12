@@ -418,7 +418,7 @@ After you have soldered everything and tested the data output, you can finish co
 Congratulations, you just built a working CTD!
 
 ## Corrosion
-:+1: The screws used in the end caps are made of 316 SS and the main body of the unit is made of aluminum.
+The screws used in the end caps are made of 316 SS and the main body of the unit is made of aluminum.
 When two dissimilar metals interact in seawater, galvanic corrosion can occur. The metal on the lower end of the galvanic scale (aluminum in this case) will begin to corrode after an extended period of time. Cathodic protection is one method to mitigating the corrosion of the end caps. This can be done by installing an anode (commonly made of zinc). 
 
 For now, there isn't a way to connect an anode (mostly due to no one manufacturing a 2mm threaded zinc). It is important to make sure that deployments are short (few days at most) and that the device is washed with freshwater when recovered. 
@@ -428,7 +428,7 @@ The deployment plan of your OpenCTD plays a role in the sampling regime.
 - If you plan to take profiles, it should be set to sample as frequently as possible. The loop section of your code should restart about once per second.
 - If you plan to leave the OpenCTD in the same location for several hours or days, it should be set to sample less frequently, anywhere between one minute to fifteen minutes depending on the deployment length. For example, if you are going to leave it out for a few days, sampling once every five minutes might be the way to go. 
 
-:+1: To determine how long your battery will last, you need to take your battery mAh and divide it by your peak amperage. I've found that when all sensors are sampling, the draw is about 35 mA.
+To determine how long your battery will last, you need to take your battery mAh and divide it by your peak amperage. I've found that when all sensors are sampling, the draw is about 35 mA.
 
 
 ## Deployment Procedure
@@ -490,3 +490,4 @@ Currently, the user is required to open the device and pull the microSD card to 
 For near real-time data, Sea-Bird recommends that you look at the data that is collected while the device is travelling down the water column (downcast). This is so that the body of an instrument does not inhibit the flow of water through the sensors or induce mixing that may result in misleading values. This assumes that you have left the device at the surface long enough for it to reach equilibrium with the surrounding water.
 
 If you did not give the unit enough time to reach equilibrium, your upcast data may be more representative of the water properties. 
+
