@@ -265,6 +265,8 @@ Once you are certain that your calibration solution has been in a stable environ
 
 Conductivity is highly dependent on temperature, so it is important that you be as precise as possible! Using the provided spreadsheet or plots, take your calibration temperature and find the corresponding conductivity value to the nearest 100 uS/cm. You'll use these values in the calibration procedure. Don't forget to write down your calibration temperature (to the nearest hundredth), as it will later need to be manual input into the operating code.
 
+In addition to temperature, conductivity of a solution also depends on the concentration of ions, the nature of the ions, and the viscosity of the solution. For our calibration application, we can consider these to be already known or negligible.
+
 Here is a new [Google spreadsheet](https://docs.google.com/spreadsheets/d/1NTyalpajds06tLAo7uXbJdM82hv5m03zCGFynGOxZ1g/edit?usp=sharing) that will help determine the conductivity values to input for your calibration temperature.
 
 After you have confirmed proper calibration of the probe, it won't need another calibration for a year. You can now cut the cable down to 6-8" in length. Please note that cutting the cable voids the Atlas-Scientific warranty, so it important to first test the probe to see if it works. After you have cut the cable, you can remove the protective cap (the one with the serial number on it) as it takes up unnecessary room in the pressure case.
