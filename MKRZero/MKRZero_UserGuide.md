@@ -297,7 +297,7 @@ Here are some [videos](https://www.masterbond.com/resources/video-library?tid=35
 
 The end caps that you have are blank and will need two holes drilled into them. Here are the [Blue Robotics drawings for the 2" end caps](http://docs.bluerobotics.com/assets/images/WTE/drawings/WTE2/WTE2-P-END-CAP-2-2X10MM-R1.png). Additional information can be found in the [Blue Robotics documentation](http://docs.bluerobotics.com/watertight-enclosures/).
 
-Once you have drilled the two 10mm holes, on **one end cap per CTD**, one of the holes will need to be drilled out to 10mm to accomodate the EC probe.
+Once you have drilled the two 10mm holes, on **one end cap per CTD**, one of the holes will need to be drilled out to 12mm to accomodate the EC probe.
 
 
 ![Picture of prepared end cap here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/2.PNG)
