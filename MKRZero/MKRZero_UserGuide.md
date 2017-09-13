@@ -293,6 +293,13 @@ For each set, connect the two pieces together using the six M2 screws. Don't wor
 
 Here are some [videos](https://www.masterbond.com/resources/video-library?tid=354) on how to prepare a bonding surface.
 
+**NOTE FOR THS STUDENTS**
+
+The end caps that you have are blank and will need two holes drilled into them. Here are the [Blue Robotics drawings for the 2" end caps](http://docs.bluerobotics.com/assets/images/WTE/drawings/WTE2/WTE2-P-END-CAP-2-2X10MM-R1.png). Additional information can be found in the [Blue Robotics documentation](http://docs.bluerobotics.com/watertight-enclosures/).
+
+Once you have drilled the two 10mm holes, on **one end cap per CTD**, one of the holes will need to be drilled out to 10mm to accomodate the EC probe.
+
+
 ![Picture of prepared end cap here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/2.PNG)
 *Flange with the internal side abraded.*
 
