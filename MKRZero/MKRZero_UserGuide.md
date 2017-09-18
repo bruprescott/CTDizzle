@@ -209,6 +209,64 @@ Place the MKRZero, EC EZO, and DeadOn RTC on the breadboard. Don't forget to ins
 
 Connect everything together as outlined in the pinout guide. Remember that VCC in this scenario is 3.3v. Under no circumstances should you connect the temperature sensor, pressure sensor, or DeadOn RTC to the 5v supply on the MKRZero. You will likely fry the electronics, and then you would be out ~$144! 
 
+#### Pinouts
+
+MKRZero I/O pins are only 3.3v tolerant.
+
+|DeadOn RTC|MKRZero|	
+|:------------:|:------------:|	
+|GND|GND|	
+|VCC|VCC|	
+|SQW|Not Applicable|
+|CLK|9 (SCL)|
+|MISO|10 (MISO)|	
+|MOSI|8 (MOSI)|	
+|SS|D7|	
+
+SQW is not needed unless you want to implement an alarm function.
+
+
+|Board SD|MKRZero|
+|:--------------------:|:--------------------:|
+|CS|28|
+
+SD capabilities are native to this board. No soldering needed here. This pin is called out in the operating code.
+
+|TSYS01 Temperature Sensor|MKRZero|	
+|:------------:|:------------:|	
+|Red|VCC|	
+|Black|GND|	
+|Green|12 (SCL)|	
+|White|11 (SDA)|	
+
+
+|MS5837 Pressure Sensor|MKRZero|	
+|:------------:|:------------:|	
+|Red|VCC|	
+|Black|GND|	
+|Green|12 (SCL)|	
+|White|11 (SDA)|	
+
+
+|EC EZO|MKRZero|	
+|:------------:|:------------:|	
+|Tx|13|	
+|Rx|14|	
+|VCC|VCC|	
+|GND|GND|	
+
+TX on one side connects to RX on the other. TX should never attach to TX.
+If connecting VCC to VCC, the EC EZO may report undervoltage. Testing and calibration may need to be done seperately if this issue continues.
+
+
+|Atlas-Scientific EC K1.0 Probe|EC EZO|	
+|:------------:|:------------:|
+|Red|PRB1|	
+|Black|PRB2|	
+
+After you cut the EC probe cable, the lead to PRB orientation does not matter.
+
+
 Most of the modules can be connected with the standard M/M jumper wire. For the temperature and pressure sensors you will need to use some alligator clips to make the proper connections. The EC probe will need to connected to the EC circuit via the BNC connector. Note that the BNC connector will need to be cut later, but for the bench test and calibration stages, it is okay to leave it on.
 
 ![Picture of setup with jumper wires here.](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/MessyWires.jpg)
