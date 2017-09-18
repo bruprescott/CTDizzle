@@ -250,8 +250,8 @@ SD capabilities are native to this board. No soldering needed here. This pin is 
 
 |EC EZO|MKRZero|	
 |:------------:|:------------:|	
-|Tx|13|	
-|Rx|14|	
+|Tx|13 (Rx)|	
+|Rx|14 (Tx)|	
 |VCC|VCC|	
 |GND|GND|	
 
