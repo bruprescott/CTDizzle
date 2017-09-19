@@ -209,9 +209,35 @@ Place the MKRZero, EC EZO, and DeadOn RTC on the breadboard. Don't forget to ins
 
 Connect everything together as outlined in the pinout guide. Remember that VCC in this scenario is 3.3v. Under no circumstances should you connect the temperature sensor, pressure sensor, or DeadOn RTC to the 5v supply on the MKRZero. You will likely fry the electronics, and then you would be out ~$144! 
 
-#### Pinouts
+Here is the [Sparkfun Guide to Using a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard).
 
-MKRZero I/O pins are only 3.3v tolerant.
+Here is the [SparkFun Guide to Circuitry](https://learn.sparkfun.com/tutorials/what-is-a-circuit).
+
+
+#### Sensors and Pinouts
+
+You can power the MKRZero through a 5v source or a 3.7v LiPo battery. For breadboard testing, you'll want to hook up the MKRZero to your computer via microUSB cable. It should be noted that most of the accessory boards are only 3.3v tolerant. You should only hook the boards up to VCC.
+
+##### Common Pins
+
+GND - This is your ground pin. Commonly seen as the negative (-) on a battery. It is essential for ensuring that your circuit is complete and safe. If you do not properly ground a device, you increase the risk of damage or electrical shock.
+
+VCC - This is your power supply pin. Commonly seen as the positive (+) on a battery. It is essential for powering the devices.
+
+TX - This is the transmit pin of your device. This is the pin that sends data during serial communication.
+
+RX - This is the receive pin of your devices. This is the pin that receives data during serial communication. If sending data from one device to another, you'll hook up the Tx line of the sending device to the Rx line of the receiving device.
+
+SCL - This is the clock line, which allows the MKRZero to tell the device when to send data.
+
+SDA - This is the data line. It allows the device to send data to the MKRZero.
+
+
+
+##### The DeadOn RTC
+
+The DeadOn RTC (the red board with the battery holder) is what allows the CTD to maintain time even when powered off. You'll want to connect each pin on the RTC to the MKRZero as follows. For VCC and GND, you can connect them to the + and - on the breadboard, as you will need to power multiple boards at once. SQW is not needed because we only want the RTC to keep time. If you wanted to add an alarm, you could implement the SQW pin.
+
 
 |DeadOn RTC|MKRZero|	
 |:------------:|:------------:|	
@@ -223,14 +249,18 @@ MKRZero I/O pins are only 3.3v tolerant.
 |MOSI|8 (MOSI)|	
 |SS|D7|	
 
-SQW is not needed unless you want to implement an alarm function.
 
+##### The SD Card
+
+SD capabilities are native to this board. No soldering or connections needed here. This pin is called out in the operating code. 
 
 |Board SD|MKRZero|
 |:--------------------:|:--------------------:|
 |CS|28|
 
-SD capabilities are native to this board. No soldering needed here. This pin is called out in the operating code.
+##### The Temperature Sensor
+
+The TSYS01 temperature sensor (the aluminum sensor with the cage) communicates with the MKRZero via the I2C communication protocol. You'll notice in the pressure sensor section that the pinouts are the same as the temperature sensor. This is okay, as each sensor has a unique address that allows the MKRZero to tell the difference between the two.
 
 |TSYS01 Temperature Sensor|MKRZero|	
 |:------------:|:------------:|	
@@ -239,6 +269,9 @@ SD capabilities are native to this board. No soldering needed here. This pin is 
 |Green|12 (SCL)|	
 |White|11 (SDA)|	
 
+##### The Pressure Sensor
+
+The MS5837 pressure sensor (the aluminum sensor with the flat top) also communicates with the MKRZero via I2C. For the breadboard testing phase, you can connect the green wires of the pressure and temperature sensor together, the white wires together, etc.. 
 
 |MS5837 Pressure Sensor|MKRZero|	
 |:------------:|:------------:|	
@@ -248,6 +281,10 @@ SD capabilities are native to this board. No soldering needed here. This pin is 
 |White|11 (SDA)|	
 
 
+##### The EC EZO Circuit
+
+The EC EZO (the green board with the epoxy layer) is what controls the EC probe and sends data to the MKRZero. This board communicates via Universal Asynchronous Receiver/Transmitter (UART). This is a complex board, and it is possible to program it seperately using the MKRZero. You will do this later when you calibrate conductivity sensor.
+
 |EC EZO|MKRZero|	
 |:------------:|:------------:|	
 |Tx|13 (Rx)|	
@@ -256,16 +293,17 @@ SD capabilities are native to this board. No soldering needed here. This pin is 
 |GND|GND|	
 
 TX on one side connects to RX on the other. TX should never attach to TX.
-If connecting VCC to VCC, the EC EZO may report undervoltage. Testing and calibration may need to be done seperately if this issue continues.
 
+##### The EC Probe
+
+The EC Probe is not actively powered. Instead, the EC EZO drives a voltage on PRB1. As seawater bridges the gap in the probe, current will pass to PRB2 and the EC EZO will be able to calculate conductivity. 
 
 |Atlas-Scientific EC K1.0 Probe|EC EZO|	
 |:------------:|:------------:|
 |Red|PRB1|	
 |Black|PRB2|	
 
-After you cut the EC probe cable, the lead to PRB orientation does not matter.
-
+After you cut the EC probe cable, the lead to PRB orientation does not matter. It is important that you make sure that the probe leads do not interact. If you are concerned that your pins may short, use a multimeter to check the connectivity. 
 
 Most of the modules can be connected with the standard M/M jumper wire. For the temperature and pressure sensors you will need to use some alligator clips to make the proper connections. The EC probe will need to connected to the EC circuit via the BNC connector. Note that the BNC connector will need to be cut later, but for the bench test and calibration stages, it is okay to leave it on.
 
@@ -286,7 +324,7 @@ The date and time should be close to the time that your computer is set to. It m
 
 The conductivity value should be zero. If it is not present in the output, try switching the Tx and Rx lines. If for some reason you begin to see ASCII or random letters in your EC output, try putting the probe in a cup of tap water. Sometimes the EC circuit can be upset by the electrical noise of the probe. 
 
-The temperature should be representative of the ambient temperature of the room you are performing the test in. It may be handy to have a thermometer nearby to check this. The temperature probe is factory calibrated, but if further calibration is needed, a two-point calibration is recommended.
+The temperature should be representative of the ambient temperature of the room you are performing the test  in. It may be handy to have a thermometer nearby to check this. The temperature probe is factory calibrated, but if further calibration is needed, a two-point calibration is recommended.
 
 The pressure sensor should be spitting out values between 1000 and 1050 depending on your elevation and sensor accuracy. At sea level, atmospheric pressure is around 1013 mbar. The pressure sensor is factory calibrated, but if values appear to be drastically off, first check your pinout connections. If still incorrect, contact the manufacturer. 
 
