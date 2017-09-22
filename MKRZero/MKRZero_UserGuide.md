@@ -10,16 +10,20 @@
 |SD Card Formatting||
 |Arduino Software Setup|
 |Breadboard Testing|
+|Breadboard Test Data Check|
 |Conductivity Calibration|
 |Desolder Female Headers on MKRZero|
 |Solder Male Headers on MKRZero|
 |Protoboard Soldering|
+|Protoboard Data Check|
 |End Cap Holes Drilled|
 |Sensors Installed in End Caps|
 |End Cap Potting|
 |Switch Cable|
 |Battery Charge|
 |Final Case Construction|
+|Final Data Check|
+|Test Deployment|
 
 
 ## Links 
