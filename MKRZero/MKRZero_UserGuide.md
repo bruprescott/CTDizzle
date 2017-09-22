@@ -142,37 +142,22 @@ Several libraries are needed to allow the CTDizzle operating code to work. These
 |SD|SparkFunDS3234RTC|
 
 
-##### TSYS01 Temperature Sensor Library
-The temperature sensor requires the TSYS01 library. To access the library:
-1.	Go to https://github.com/bluerobotics/BlueRobotics_TSYS01_Library.
-2.	Select the Clone or download button. Click on Download Zip.
-3.	Navigate to your downloads folder through Windows Explorer.
-4.	Right click on the BlueRobotics_TSYS01_Library-master folder. Select extract all.
-5.	Select browse.
-6.	Navigate to Windows (C:) > Program Files (x86) > Arduino > libraries. Click on select folder.
-7.	The TSYS01 library can now be included by the operating code.
-
-
-##### MS5837 Pressure Sensor Library
-The pressure sensor requires the MS5837 library. To access the library:
-1.	Go to https://github.com/bluerobotics/BlueRobotics_MS5837_Library.
-2.	Select the Clone or download button. Click on Download Zip.
-3.	Navigate to your downloads folder through Windows Explorer.
-4.	Right click on the BlueRobotics_MS5837_Library-master folder. Select extract all.
-5.	Select browse.
-6.	Navigate to Windows (C:) > Program Files (x86) > Arduino > libraries. Click on select folder.
-7.	The MS5837 library can now be included by the operating code.
+##### TSYS01 Temperature and MS5837 Pressure Sensor Libraries
+The temperature sensor requires the TSYS01 library. The pressure sensor requires the MS5837 library. To access the libraries:
+1. In the Arduino IDE, navigate to Sketch > Include Library > Manage Libraries. 
+2. In the search bar, type "BlueRobotics".
+3. Click on the BlueRobotics TSYS01 Library. Select Install.
+4. Click on the BlueRobotics MS5837 Library. Select Install.
+5. These libraries are now automatically included when using the operating code.
 
 
 ##### DeadOn RTC Library
 The DeadOn RTC requires the SparkFunDS3234RTC library. To access the library:
 1.	Go to https://github.com/sparkfun/SparkFun_DS3234_RTC_Arduino_Library.
 2.	Select the Clone or download button. Click on Download Zip.
-3.	Navigate to your downloads folder through Windows Explorer.
-4.	Right click on the SparkFun_DS3234_RTC_Arduino_Library-master folder. Select extract all.
-5.	Select browse.
-6.	Navigate to Windows (C:) > Program Files (x86) > Arduino > libraries. Click on select folder.
-7.	The SparkFunDS3234RTC library can now be included by the operating code. Note that during future uploads, the Arduino IDE may classify the DeadOn RTC library as “Uncategorized”. The library should still function even though this message appears.
+3. 	In the Arduino IDE, navigate to Sketch > Include Library > Add .ZIP Library.
+4. 	Go to Downloads. Select the SparkFun_DS3234_RTC_Arduino_Library-master folder.
+5. 	The DeadOn RTC library is now available for use. Note that during future uploads, the Arduino IDE may classify the DeadOn RTC library as “Uncategorized”. The library should still function even though this message appears.
 
 If you are using different sensors, make sure to use the right libraries!
 
