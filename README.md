@@ -24,7 +24,7 @@ The CTDizzle and OpenCTD have a lot in common. Some information, code, and scrip
  |08/24/17| Updated user manual.
  |09/01/17| Added EC calibration spreadsheet.
  |09/04/17| Added default temp (to nearest hundredth) set to void setup(). User is required to change calTemp in common variables portion of sketch for this to work. This changes the default temp on the EC EZO to that at which you calibrated the probe.
- 
+ |09/22/17| Updated software install instructions. Added more detail for THS.
  
 ## Planned Updates
 - Density output in RAWCTD files.
