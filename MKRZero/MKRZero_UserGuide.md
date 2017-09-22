@@ -4,26 +4,26 @@
 
 *Not in any particular order.*
 
-|Task|Check|
-|:---:|:---:|
-|Header Soldering|x|
-|SD Card Formatting||
-|Arduino Software Setup|
-|Breadboard Testing|
-|Breadboard Test Data Check|
-|Conductivity Calibration|
-|Desolder Female Headers on MKRZero|
-|Solder Male Headers on MKRZero|
-|Protoboard Soldering|
-|Protoboard Data Check|
-|End Cap Holes Drilled|
-|Sensors Installed in End Caps|
-|End Cap Potting|
-|Switch Cable|
-|Battery Charge|
-|Final Case Construction|
-|Final Data Check|
-|Test Deployment|
+|Task|Complete By|Check|
+|:---:|:---:|:---:|
+|Header Soldering|Sept. 18|X
+|SD Card Formatting|Sept. 22|
+|Arduino Software Setup|Sept. 22|
+|Breadboard Testing|Sept. 26|
+|Breadboard Test Data Check|Sept. 27|
+|Conductivity Calibration|Sept. 29|
+|Switch Cable|Sept. 29|
+|End Cap Holes Drilled|Sept. 30|
+|Desolder Female Headers on MKRZero|Oct. 3|
+|Solder Male Headers on MKRZero|Oct. 3|
+|Sensors Installed in End Caps|Oct. 3
+|End Cap Potting|Oct. 9|
+|Protoboard Soldering|Oct. 10|
+|Protoboard Data Check|Oct. 10|
+|Final Case Construction|Oct.23|
+|Battery Charge|Oct. 24|
+|Final Data Check|Oct. 24|
+|Test Deployment|TBD|
 
 
 ## Links 
