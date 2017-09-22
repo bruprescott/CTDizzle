@@ -201,7 +201,9 @@ Here is the [SparkFun Guide to Circuitry](https://learn.sparkfun.com/tutorials/w
 
 #### Sensors and Pinouts
 
-You can power the MKRZero through a 5v source or a 3.7v LiPo battery. For breadboard testing, you'll want to hook up the MKRZero to your computer via microUSB cable. It should be noted that most of the accessory boards are only 3.3v tolerant. You should only hook the boards up to VCC.
+You can power the MKRZero through a 5v source or a 3.7v LiPo battery. For breadboard testing, you'll want to hook up the MKRZero to your computer via microUSB cable. It should be noted that most of the accessory boards are only 3.3v tolerant. You should only hook the boards up to VCC and not the 5v pin.
+
+For the pinouts, you'll see the name of the boards at the head of each table. You'll want to connect one pin on the left side to the other pin on the right side. Take the CLK pin on the DeadOn RTC for example. You'll want to connect this pin to the SCK (pin 9) on the MKRZero.
 
 ##### Common Pins
 
@@ -229,7 +231,7 @@ The DeadOn RTC (the red board with the battery holder) is what allows the CTD to
 |GND|GND|	
 |VCC|VCC|	
 |SQW|Not Applicable|
-|CLK|9 (SCL)|
+|CLK|9 (SCK)|
 |MISO|10 (MISO)|	
 |MOSI|8 (MOSI)|	
 |SS|D7|	
