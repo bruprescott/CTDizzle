@@ -468,7 +468,7 @@ Allow to cure for a minimum of 12 hours.
 
 While your end caps are curing, you can begin to solder the electrical components together.
 
-There are two options for soldering everything together. You can solder everything together with free wire, which may get a little messy but offers more flexibility in the tight pressure case. The other option is to place everything on a nifty MKRZero protoboard.
+There are two options for soldering everything together. You can solder everything together with free wire, which may get a little messy but offers more flexibility in the tight pressure case. The other option is to place everything on a nifty MKRZero protoboard. Note that where you place the wires is up to you. Do not follow the pictures below.
 
 ![GNDVCC](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/GNDVCC.jpg)
 
