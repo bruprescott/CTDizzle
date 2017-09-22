@@ -11,6 +11,8 @@
 |Arduino Software Setup|
 |Breadboard Testing|
 |Conductivity Calibration|
+|Desolder Female Headers on MKRZero|
+|Solder Male Headers on MKRZero|
 |Protoboard Soldering|
 |End Cap Holes Drilled|
 |Sensors Installed in End Caps|
