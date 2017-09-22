@@ -33,6 +33,7 @@
 
 [Pinout Guide](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Pinouts.md)
 
+### LOOK HERE FOR MORE INFORMATION ON PARTS AND PROCEDURES
 [Resources and Literature](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Resources.md)
 
 [EC Cal Procedure](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/EC_Cal_Procedure.docx)
