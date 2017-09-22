@@ -1,5 +1,25 @@
 # CTDizzle User Manual
 
+## THS Checklist
+
+*Not in any particular order.*
+
+|Task|Check|
+|:---:|:---:|
+|Header Soldering|x|
+|SD Card Formatting||
+|Arduino Software Setup|
+|Breadboard Testing|
+|Conductivity Calibration|
+|Protoboard Soldering|
+|End Cap Holes Drilled|
+|Sensors Installed in End Caps|
+|End Cap Potting|
+|Switch Cable|
+|Battery Charge|
+|Final Case Construction|
+
+
 ## Links 
 [Parts List](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Parts_List.md)
 
