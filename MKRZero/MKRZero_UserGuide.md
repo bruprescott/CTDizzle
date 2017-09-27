@@ -1,5 +1,9 @@
 # CTDizzle User Manual
 
+## 09/27/17 Note to THS
+I forgot to grab the right spare parts, so you may have to wait on the instructions for soldering the final electronics package. In the mean time, you can desolder the female header pins on the MKRZero and solder some male header pins in place. If everyone has the male headers installed on the MKRZero, we can begin soldering things together as a group on Thursday (09/28/17). Another thing people can do is begin to abrade the inside of the end caps and flanges (with the provided sandpaper or a dremel).
+
+
 ## THS Checklist
 
 *Not in any particular order.*
