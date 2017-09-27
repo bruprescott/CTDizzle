@@ -7,10 +7,10 @@
 |Task|Complete By|Check|
 |:---:|:---:|:---:|
 |Header Soldering|Sept. 18|X
-|SD Card Formatting|Sept. 22|
-|Arduino Software Setup|Sept. 22|
-|Breadboard Testing|Sept. 26|
-|Breadboard Test Data Check|Sept. 27|
+|SD Card Formatting|Sept. 22|X
+|Arduino Software Setup|Sept. 22|X
+|Breadboard Testing|Sept. 26|X
+|Breadboard Test Data Check|Sept. 27|X
 |Conductivity Calibration|Sept. 29|
 |Switch Cable|Sept. 29|
 |End Cap Holes Drilled|Sept. 30|
