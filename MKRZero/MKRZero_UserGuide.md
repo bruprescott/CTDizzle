@@ -20,11 +20,11 @@ Another thing people can do is begin to abrade the inside of the end caps and fl
 |Breadboard Testing|Sept. 26|X
 |Breadboard Test Data Check|Sept. 27|X
 |Conductivity Calibration|Sept. 29| This can be done at the end.
-|Switch Cable|Sept. 29|
-|End Cap Holes Drilled|Oct. 2|
+|Switch Cable|Sept. 29|This can be done at the end.
 |Desolder Female Headers on MKRZero|Oct. 3|
 |Solder Male Headers on MKRZero|Oct. 3|
 |Sensors Installed in End Caps|Oct. 3
+|End Cap Holes Drilled|Oct. 5|
 |End Cap Potting|Oct. 9|
 |Protoboard Soldering|Oct. 10|
 |Protoboard Data Check|Oct. 10|
