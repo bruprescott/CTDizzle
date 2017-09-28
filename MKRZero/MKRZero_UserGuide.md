@@ -10,7 +10,6 @@ Another thing people can do is begin to abrade the inside of the end caps and fl
 
 ## THS Checklist
 
-*Not in any particular order.*
 
 |Task|Complete By|Check|
 |:---:|:---:|:---:|
