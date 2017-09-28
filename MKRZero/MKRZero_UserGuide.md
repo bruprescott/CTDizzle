@@ -19,9 +19,9 @@ Another thing people can do is begin to abrade the inside of the end caps and fl
 |Arduino Software Setup|Sept. 22|X
 |Breadboard Testing|Sept. 26|X
 |Breadboard Test Data Check|Sept. 27|X
-|Conductivity Calibration|Sept. 29|
+|Conductivity Calibration|Sept. 29| This can be done at the end.
 |Switch Cable|Sept. 29|
-|End Cap Holes Drilled|Sept. 30|
+|End Cap Holes Drilled|Oct. 2|
 |Desolder Female Headers on MKRZero|Oct. 3|
 |Solder Male Headers on MKRZero|Oct. 3|
 |Sensors Installed in End Caps|Oct. 3
