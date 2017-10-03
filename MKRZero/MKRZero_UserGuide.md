@@ -16,10 +16,10 @@ I've added some more pictures. You can use them as a guide, but please make sure
 |Breadboard Test Data Check|Sept. 27|X
 |Conductivity Calibration|Sept. 29| This can be done at the end.
 |Switch Cable|Sept. 29|This can be done at the end.
-|Desolder Female Headers on MKRZero|Oct. 3|
-|Solder Male Headers on MKRZero|Oct. 3|
-|Sensors Installed in End Caps|Oct. 3
+|Desolder Female Headers on MKRZero|Oct. 3|X
+|Solder Male Headers on MKRZero|Oct. 3|X
 |End Cap Holes Drilled|Oct. 5|
+|Sensors Installed in End Caps|Oct. 9
 |End Cap Potting|Oct. 9|
 |Protoboard Soldering|Oct. 10|
 |Protoboard Data Check|Oct. 10|
