@@ -1,7 +1,7 @@
 # CTDizzle User Manual
 
-## 09/29/17 Note to THS
-Keep up the good work!
+## 10/04/17 Note to THS
+I've added some more pictures. You can use them as a guide, but please make sure you are following the pinout guide (similar to the breadboard testing). Please read the instructions carefully.
 
 
 ## THS Checklist
@@ -469,13 +469,27 @@ Allow to cure for a minimum of 12 hours.
 |Wire Strippers|
 |Third Hand|
 
-While your end caps are curing, you can begin to solder the electrical components together.
+While your end caps are curing, you can begin to solder the electrical components together. You'll want to arrange the RTC and EC EZO so that you can easily solder corresponding pins. You also want to minimize the width of the protoboard package. One thing to keep in mind is that you will want the SD card pointed in the direction of the switch/pressure end cap. 
 
-There are two options for soldering everything together. You can solder everything together with free wire, which may get a little messy but offers more flexibility in the tight pressure case. The other option is to place everything on a nifty MKRZero protoboard. Note that where you place the wires is up to you. Do not follow the pictures below.
 
-![GNDVCC](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/GNDVCC.jpg)
+There are two options for soldering everything together. You can solder everything together with free wire, which may get a little messy but offers more flexibility in the tight pressure case. The other option is to place everything on a nifty MKRZero protoboard. Note that where you place the wires is up to you. You'll be placing the MKRZero on top of the protoboard so that the wiring is placed in between the two boards. **Double check to see if you are connecting pins correctly.**
 
-You'll want to arrange the RTC and EC EZO so that you can easily solder corresponding pins. You also want to minimize the width of the protoboard package. One thing to keep in mind is that you will want the SD card pointed in the direction of the switch/pressure end cap. 
+![a;lskdjfaf](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/RTCEZO2.jpg)
+
+Bend the wires 90 degrees at the tips so that they seat properly in the through holes. You will need to cut the wires to length in order to get them to bridge the right connections.
+
+![BendingWires](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/BendingWires.jpg)
+
+First start by placing the EC EZO and RTC on the protoboard, and solder the pins to the board. Next solder the RTC SS and MOSI pins to the corresponding MKRZero pins. Shown as bare wires at the bottom left of the picture below. Because it is also difficult to solder all the wires to a single GND and VCC pin, you can create a single point on the board where the can meet. As shown in the picture below, all ground wires will bridge to the top of the board, and all VCC wires will bridge to the bottom.
+
+![GNDVCC](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/VCCGND.jpg)
+
+Next, you can solder the RX and TX of the RTC to your TX and RX connections on the MKRZero. You can also solder the CLK and MOSI pins on the RTC to the respective MKRZero pins.  Once you have done that, you can solder the VCC and GND pins of the RTC to your GND and VCC connections. Once you have done that, cut the female end of the 6-pin connector down to about 1 inch in length. Insert the wires from the RTC side of the protoboard, and solder them into place. Next, bridge the two middle wires to the PRB pins on the EC EZO using a ton of solder. (As show on the left side of the picture below. 
+
+![More](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SolderingWires.jpg)
+
+
+
 
 ![Split](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Split.jpg)
 
