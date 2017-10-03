@@ -1,7 +1,7 @@
 # CTDizzle User Manual
 
 ## 10/04/17 Note to THS
-I've added some more pictures. You can use them as a guide, but please make sure you are following the pinout guide (similar to the breadboard testing). Please read the instructions carefully.
+I've added some more pictures. You can use them as a guide, but please make sure you are following the pinout guide (similar to the breadboard testing). Use a multi-meter to help determine if you made the right pin connection. If you solder incorrectly, it will take hours to desolder and fix. Please read the guide and follow the pinouts carefully. Trace the path of the connections in your head! 
 
 
 ## THS Checklist
@@ -471,12 +471,15 @@ Allow to cure for a minimum of 12 hours.
 
 While your end caps are curing, you can begin to solder the electrical components together. You'll want to arrange the RTC and EC EZO so that you can easily solder corresponding pins. You also want to minimize the width of the protoboard package. One thing to keep in mind is that you will want the SD card pointed in the direction of the switch/pressure end cap. 
 
-
 There are two options for soldering everything together. You can solder everything together with free wire, which may get a little messy but offers more flexibility in the tight pressure case. The other option is to place everything on a nifty MKRZero protoboard. Note that where you place the wires is up to you. You'll be placing the MKRZero on top of the protoboard so that the wiring is placed in between the two boards. **Double check to see if you are connecting pins correctly.**
 
 ![a;lskdjfaf](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/RTCEZO2.jpg)
 
-Bend the wires 90 degrees at the tips so that they seat properly in the through holes. You will need to cut the wires to length in order to get them to bridge the right connections.
+First, desolder the female header pins on the MKRZero and solder on some male header pins as show in the picture below.
+
+![Male](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/MKRMale.jpg)
+
+When bridging two connections with a piece of wire, bend the wires 90 degrees at the tips so that they seat properly in the through holes. You will need to cut the wires to length in order to get them to bridge the right connections.
 
 ![BendingWires](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/BendingWires.jpg)
 
@@ -484,18 +487,33 @@ First start by placing the EC EZO and RTC on the protoboard, and solder the pins
 
 ![GNDVCC](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/VCCGND.jpg)
 
-Next, you can solder the RX and TX of the RTC to your TX and RX connections on the MKRZero. You can also solder the CLK and MOSI pins on the RTC to the respective MKRZero pins.  Once you have done that, you can solder the VCC and GND pins of the RTC to your GND and VCC connections. Once you have done that, cut the female end of the 6-pin connector down to about 1 inch in length. Insert the wires from the RTC side of the protoboard, and solder them into place. Next, bridge the two middle wires to the PRB pins on the EC EZO using a ton of solder. (As show on the left side of the picture below. 
+Next, you can solder the RX and TX of the RTC to your TX and RX connections on the MKRZero.
 
-![More](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SolderingWires.jpg)
+![ECEZOTXRX](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SolderWires3.jpg)
 
+You can also solder the CLK and MOSI pins on the RTC to the respective MKRZero pins.
 
+![MOSISCK](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SolderWires4.jpg)
 
+Once you have done that, you can solder the VCC and GND pins of the RTC to your GND and VCC connections. Once you have done that, cut the female end of the 6-pin connector down to about 1 inch in length. Insert the wires from the RTC side of the protoboard, and solder them into place. Next, bridge the two middle wires to the PRB pins on the EC EZO using a ton of solder. (As show on the left side of the picture below. 
 
-![Split](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Split.jpg)
+![More](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/SolderWires2.jpg
+
+Here is an example of what your VCC and GND connections should look like. 
+
+![Bus](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Bus.jpg)
+
+Next, add the male 4-pin connector to the protoboard in a similar fashion as the 6 pin. In the picture below, you'll see that on the 4 pin connector side, the order goes SDA (white), SCL (green), GND, and VCC (from top to bottom). On the 4 pin side, you'll see that the order goes GND, VCC, PRB, PRB, SCL (green), and SDA (white). First, connect the VCC and GND wires of those connectors to the GND and VCC bus connections. Then solder the SDA and SCL connections of each connector to the respective MKRZero pin. 
+
+![All](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/All_Soldered.jpg)
+
+There may be cases where you can't solder directly to the pin, so you may need to solder the wire to the closest throughhole. In that case, you can create a pool of solder that connects the two holes together as shown in the next couple of pictures. 
+
+![Pool](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Solder_pool.jpg)
+
+![Pool2](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Solder_pool_2.jpg)
 
 In this case, the pressure sensor will be connected to the 4-Pin JST connector located on the RTC side of the protoboard, and the temperature and conductivity probe will be connected to the 6-Pin JST connector located on the EC EZO side of the protoboard.
-
-![Split2](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/Split2.jpg)
 
 There is no set orientation for wiring everything up, nor is there a predetermined wire length for connections (although I recommend leaving about 6" of wire on the EC probe and temperature sensors). It is recommended that you test the connectivity of every connection to make sure you aren't creating any shorts. Make a note of which wire goes where, because after your urethane is done curing, you will want to make sure you have the right wires hooked up! Solder everything together as described by the pinout guide. If you want to avoid using a ton of heat shrink, you can use UY2 cold splice connectors. There is no specific orientation for the EC probe leads to the EC EZO. You'll want to make sure you are soldering corresponding wires for the JST connectors.
 
