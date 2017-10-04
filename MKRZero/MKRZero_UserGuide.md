@@ -1,7 +1,9 @@
 # CTDizzle User Manual
 
 ## 10/04/17 Note to THS
-I've added some more pictures. You can use them as a guide, but please make sure you are following the pinout guide (similar to the breadboard testing). Use a multi-meter to help determine if you made the right pin connection. If you solder incorrectly, it will take hours to desolder and fix. Please read the guide and follow the pinouts carefully. Trace the path of the connections in your head! 
+I've added some more pictures. You can use them as a guide, but please make sure you are following the pinout guide (similar to the breadboard testing). Use a multi-meter to help determine if you made the right pin connection. If you solder incorrectly, it will take hours to desolder and fix. Please read the guide and follow the pinouts carefully. Trace the path of the connections in your head!
+
+I am going to make a purchase of some additional parts and tools later this week. Please make a note of any tools or parts you think I should purchase by tomorrow (10/05/17).
 
 
 ## THS Checklist
