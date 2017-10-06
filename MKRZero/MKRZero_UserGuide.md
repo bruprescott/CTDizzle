@@ -23,6 +23,7 @@ Please watch the videos linked in the Applying the Urethane section.
 |End Cap Potting|Oct. 9|
 |Protoboard Soldering|Oct. 10|
 |Protoboard Data Check|Oct. 10|
+|R/V Sikuliaq Tour|Oct. 18|
 |Final Case Construction|Oct.23|
 |Battery Charge|Oct. 24|
 |Final Data Check|Oct. 24|
