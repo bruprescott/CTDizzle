@@ -1,36 +1,9 @@
 # CTDizzle User Manual
 
-## 10/06/17 Note to THS
-Please watch the videos linked in the Applying the Urethane section.
+## Note to THS: 10/17/17
+Tomorrow we will be touring the R/V Sikuliaq. Please wear closed-toed shoes and bring an ID if you are over 18.
 
-
-## THS Checklist
-
-
-|Task|Complete By|Check|
-|:---:|:---:|:---:|
-|Header Soldering|Sept. 18|X
-|SD Card Formatting|Sept. 22|X
-|Arduino Software Setup|Sept. 22|X
-|Breadboard Testing|Sept. 26|X
-|Breadboard Test Data Check|Sept. 27|X
-|Conductivity Calibration|Sept. 29| This can be done at the end.
-|Switch Cable|Sept. 29|This can be done at the end.
-|Desolder Female Headers on MKRZero|Oct. 3|X
-|Solder Male Headers on MKRZero|Oct. 3|X
-|End Cap Holes Drilled|Oct. 5|
-|Sensors Installed in End Caps|Oct. 9
-|End Cap Potting|Oct. 9|
-|Protoboard Soldering|Oct. 10|
-|Protoboard Data Check|Oct. 10|
-|R/V Sikuliaq Tour|Oct. 18|
-|Final Case Construction|Oct.23|
-|Battery Charge|Oct. 24|
-|Final Data Check|Oct. 24|
-|Test Deployment|TBD|
-
-
-## Links (THS: LOOK HERE FOR MORE INFORMATION ON PARTS AND PROCEDURES)
+## Links 
 [Parts List](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Parts_List.md)
 
 [Code](https://github.com/CTDizzle/CTDizzle/tree/master/MKRZero/ArduinoFiles)
@@ -405,8 +378,6 @@ Designate one end cap and flange set as your switch/pressure sensor end cap and 
 For each set, connect the two pieces together using the six M2 screws. Don't worry about installing the O-Ring just yet. Once connected, use sandpaper to prepare the inner surface of each flange and end cap set. Alternatively, use a marker to outline where the two pieces meet and sand accordingly. Abrasion of the surface will allow the urethane you will apply later to bond more readily to the metal surface. Use a low grit sandpaper to remove anodization until you begin to see bare aluminum. Try not to abrade the O-ring groove.
 
 Here are some [videos](https://www.masterbond.com/resources/video-library?tid=354) on how to prepare a bonding surface.
-
-**NOTE FOR THS STUDENTS**
 
 The end caps that you have are blank and will need two holes drilled into them. Here are the [Blue Robotics drawings for the 2" end caps](http://docs.bluerobotics.com/assets/images/WTE/drawings/WTE2/WTE2-P-END-CAP-2-2X10MM-R1.png). Additional information can be found in the [Blue Robotics documentation](http://docs.bluerobotics.com/watertight-enclosures/).
 
