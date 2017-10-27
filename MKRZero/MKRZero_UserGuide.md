@@ -1,8 +1,5 @@
 # CTDizzle User Manual
 
-## Note to THS: 10/23/17
-Please continue soldering work. Tomorrow (10/24) we will dive into an overview and some math related to the CTDs.
-
 ## Links 
 [Parts List](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Parts_List.md)
 
