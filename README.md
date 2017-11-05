@@ -23,12 +23,12 @@ The CTDizzle and OpenCTD have a lot in common. Some information, code, and scrip
  |08/19/17| Changed atmospheric pressure assumption to 1013 mbar. Organized directories. User manual overhaul.
  |08/24/17| Updated user manual.
  |09/01/17| Added EC calibration spreadsheet.
- |09/04/17| Added default temp (to nearest hundredth) set to void setup(). User is required to change calTemp in common variables portion of sketch for this to work. This changes the default temp on the EC EZO to that at which you calibrated the probe.
  |09/22/17| Updated software install instructions. Added more detail for THS.
  |10/03/17| Added more pictures.
+ |11/05/17| Added density anomaly calculation. New datafiles now have 8 columns. (Date,Time,EC,T,P,Depth,Sal,Sigma)
+ 
  
 ## Planned Updates
-- Density output in RAWCTD files.
 - Sound velocity output in RAWCTD files.
 - GUI for the MATLAB tool.
 - Downcast/upcast for MATLAB tool.
