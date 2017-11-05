@@ -124,17 +124,8 @@ void setup() {      //Start your engines.
 
   //rtc.autoTime();   //After an initial upload, the RTC will keep the same time as your computer. Comment out this line and re-upload to have the RTC maintain time.
   
-  delay(100);
-  if (Serial1.available() > 0) {     //If comms are established with the EC EZO.
-    inputstring = Serial1.readStringUntil(13);     //The Atlas EC EZO reads the incoming string until a <CR> is received.
-    Serial1.print('T');    
-    Serial1.print(',');
-    Serial1.print(calTemp,2);     //Change the default temp on the EC EZO to your predefined temperature.
-    Serial1.println('\r');     //Add a <CR> to send the command.  
-    inputstring = "";         //Make sure the string is clear.
-  }   
-  delay(1580);   //Wait 1690 milliseconds before continuing.
-} //Setup time is approximately 3 seconds.
+  delay(2000);   //Wait 2 seconds
+}
 
 
 
