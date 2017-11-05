@@ -22,7 +22,7 @@ The RTC reverts back to the initial upload time after a power cycle if you do no
 #include "MS5837.h" //Used by pressure sensor.
 #include <SparkFunDS3234RTC.h> //Used by the RTC.
 
-#define latitude 45.00   //Expected latitude of deployment in decimal degrees. Used in depth calculation.
+#define latitude 45.00   //Expected latitude of deployment in decimal degrees. Used in gravity calculation.
 #define FluidDensity 1024   //Density in kg/m^3. This varies with water conditions and location.
 #define SD_chipselect 28    //Chip select for the MKRZero.
 #define RTC_chipselect 7    //Chip select for the DeadOn RTC.
@@ -61,7 +61,7 @@ float DensE0=19652.21, DensE1=148.4206, DensE2=-2.327105, DensE3=1.360477e-2, De
 float DensH0=3.239908, DensH1=1.43713e-3, DensH2=1.16092e-4, DensH3=-5.77905e-7;
 float DensK0=8.50935e-5, DensK1=-6.12293e-6, DensK2=5.2787e-8;
 float t2, t3, t4, t5, s32;
-float sigma, Densk, kw, aw, bw, density;
+float sigma, Densk, kw, aw, bw, density, val;
 
 //Pressure to depth conversion callouts.
 float x, gr;
@@ -149,7 +149,8 @@ void loop() {     //And around we go.
   aw = DensH0 + DensH1*t + DensH2*t2 + DensH3*t3;
   bw = DensK0 + DensK1*t + DensK2*t2;
   Densk = kw + (DensFQ0 + DensFQ1*t + DensFQ2*t2 + DensFQ3*t3)*s + (DensG0 + DensG1*t + DensG2*t2)*s32 + (aw + (Densi0 + Densi1*t + Densi2*t2)*s + (DensJ0*s32))*p + (bw + (DensM0 + DensM1*t + DensM2*t2)*s)*p*p;
-  density = 1 - p / Densk;
+  val = 1 - p / Densk;
+  if (val) sigma = sigma / val - 1000.0;
   delay(10);
 
   //Pressure to depth conversion.
@@ -176,30 +177,44 @@ void loop() {     //And around we go.
     datafile.print(",");
     datafile.print(t);   //Print temperature to SD card.
     datafile.print(",");
-    datafile.print(p);   //Print pressure in millibars to SD card.
+    datafile.print(psensor.pressure());   //Print pressure in decibars to SD card.
     datafile.print(",");
     datafile.print(depth);    //Print depth to SD card.
     datafile.print(",");
     datafile.print(s);    //Print sketch derived salinity to SD card.
     datafile.print(",");
-    datafile.println(density);
+    datafile.println(sigma);
     datafile.flush();   //Close the file.
 
-    Serial.print(String(rtc.month()) + "/" + String(rtc.date()) + "/" + String(rtc.year())); //Print date to serial monitor.
+    Serial.print(String(rtc.month()));    //Print month to SD card.
+    Serial.print("/");
+    Serial.print(String(rtc.date()));   //print date to SD card.
+    Serial.print("/");
+    Serial.print(String(rtc.year())); //Print year to SD card.
     Serial.print(",");   //Comma delimited.
-    Serial.print(String(rtc.hour()) + ":" + String(rtc.minute())+":"+String(rtc.second()));  //Print hours, minutes, seconds to serial monitor.
+    if(rtc.hour()<10){
+       Serial.print('0');}   //Print a zero for aesthetics.
+    Serial.print(String(rtc.hour()));   //Print hour to SD card.
+    Serial.print(":");
+    if(rtc.minute()<10){
+        Serial.print('0');}  //Print a zero for aesthetics.
+    Serial.print(String(rtc.minute()));
+    Serial.print(":");
+    if(rtc.second()<10){
+        Serial.print('0');}  //Print a zero for aesthetics.
+    Serial.print(String(rtc.second())); //Print date to SD card.
     Serial.print(",");
     Serial.print(EC);   //Print EC to serial monitor.
     Serial.print(",");
     Serial.print(t);   //Print temperature to serial monitor.
     Serial.print(",");
-    Serial.print(p);   //Print pressure to serial monitor.
+    Serial.print(psensor.pressure());   //Print pressure to serial monitor.
     Serial.print(",");
     Serial.print(depth);    //Print depth to serial monitor.
     Serial.print(",");
     Serial.print(s);    //Print sketch derived salinity to serial monitor.
     Serial.print(",");
-    Serial.println(density);
+    Serial.println(sigma);
   }
   delay(940);
 }
