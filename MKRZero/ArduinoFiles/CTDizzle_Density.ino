@@ -1,7 +1,7 @@
 /*
 This sketch is a combination of code written by the folks at Adafruit, Atlas-Scientific, Blue Robotics, Oceanography For Everyone, Sea-Bird Scientific, and SparkFun.
 It is used by the CTDizzle Mk4 and based around the Arduino MKRZero. 
-Contact Ian Black for any questions regarding this sketch.
+Contact Ian Black with any questions regarding this sketch.
 Email: blackia@oregonstate.edu
 
 This sketch will print data to a .CSV in the form of:
