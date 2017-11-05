@@ -4,7 +4,7 @@ It is used by the CTDizzle Mk4 and based around the Arduino MKRZero.
 Contact Ian Black for any questions regarding this sketch.
 Email: blackia@oregonstate.edu
 
-This sketch will print data to a .CSV with 8 columns:
+This sketch will print data to a .CSV in the form of:
 Date , Time , Conductivity , Temperature , Pressure , Depth , Salinity, Density 
 
 ISSUES
@@ -124,7 +124,7 @@ void loop() {     //And around we go.
       EC_data[received_from_sensor]=0;
     }
     if ((EC_data[0] >= 48) && (EC_data[0] <= 57)){
-      print_EC_data();
+      print_EC_data();  //Parse out the EC from the EC EZO string.
     }
 
   R = ((f_ec/1000)/SalCStandard);    //PSS-78 calculations.
@@ -143,21 +143,21 @@ void loop() {     //And around we go.
   t5 = t*t4;
   if (s <= 0.0) s = 0.000001;
   s32 = pow(s, 1.5);
-  p /= 10.0;
+  p /= 10.0;    //Put pressure in bars.
   sigma = DensA0 + DensA1*t + DensA2*t2 + DensA3*t3 + DensA4*t4 + DensA5*t5 + (DensB0 + DensB1*t + DensB2*t2 + DensB3*t3 + DensB4*t4)*s + (DensC0 + DensC1*t + DensC2*t2)*s32 + DensD0*s*s;
   kw = DensE0 + DensE1*t + DensE2*t2 + DensE3*t3 + DensE4*t4;
   aw = DensH0 + DensH1*t + DensH2*t2 + DensH3*t3;
   bw = DensK0 + DensK1*t + DensK2*t2;
   Densk = kw + (DensFQ0 + DensFQ1*t + DensFQ2*t2 + DensFQ3*t3)*s + (DensG0 + DensG1*t + DensG2*t2)*s32 + (aw + (Densi0 + Densi1*t + Densi2*t2)*s + (DensJ0*s32))*p + (bw + (DensM0 + DensM1*t + DensM2*t2)*s)*p*p;
   val = 1 - p / Densk;
-  if (val) sigma = sigma / val - 1000.0;
+  if (val) sigma = sigma / val - 1000.0;  //Calculate density anomaly.
   delay(10);
 
   //Pressure to depth conversion.
   x = sin(latitude / 57.29578);
   x = x * x;
   gr = 9.780318 * (1.0 + (5.2788e-3 + 2.36e-5 * x) * x) + 1.092e-6 * p;
-  depth = (((-1.82e-15 * p + 2.279e-10) * p - 2.2512e-5) * p + 9.72659) * p;
+  depth = (((-1.82e-15 * p + 2.279e-10) * p - 2.2512e-5) * p + 9.72659) * p;    //Calculate depth.
   delay(10);
   
    if (datafile) {
@@ -183,7 +183,7 @@ void loop() {     //And around we go.
     datafile.print(",");
     datafile.print(s);    //Print sketch derived salinity to SD card.
     datafile.print(",");
-    datafile.println(sigma);
+    datafile.println(sigma);  //Print density anomaly to the SD card.
     datafile.flush();   //Close the file.
 
     Serial.print(String(rtc.month()));    //Print month to SD card.
@@ -197,11 +197,11 @@ void loop() {     //And around we go.
     Serial.print(String(rtc.hour()));   //Print hour to SD card.
     Serial.print(":");
     if(rtc.minute()<10){
-        Serial.print('0');}  //Print a zero for aesthetics.
+        Serial.print('0');}  
     Serial.print(String(rtc.minute()));
     Serial.print(":");
     if(rtc.second()<10){
-        Serial.print('0');}  //Print a zero for aesthetics.
+        Serial.print('0');}  
     Serial.print(String(rtc.second())); //Print date to SD card.
     Serial.print(",");
     Serial.print(EC);   //Print EC to serial monitor.
