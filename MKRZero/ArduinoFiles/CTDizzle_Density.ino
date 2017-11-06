@@ -177,7 +177,7 @@ void loop() {     //And around we go.
     datafile.print(",");
     datafile.print(t);   //Print temperature to SD card.
     datafile.print(",");
-    datafile.print(psensor.pressure());   //Print pressure in decibars to SD card.
+    datafile.print(psensor.pressure());   //Print pressure in millibars to SD card.
     datafile.print(",");
     datafile.print(depth);    //Print depth to SD card.
     datafile.print(",");
