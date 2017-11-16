@@ -1,6 +1,6 @@
 # CTDizzle User Manual
 
-## Links 
+## Other Links 
 [Parts List](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Parts_List.md)
 
 [Code](https://github.com/CTDizzle/CTDizzle/tree/master/MKRZero/ArduinoFiles)
@@ -13,7 +13,7 @@
 
 [Data Processing](https://github.com/CTDizzle/CTDizzle/tree/master/Data%20Processing)
 
-## Contents
+## Manual Contents
 
 1. [Introduction](#introduction)
 	- [Before You Get Started](#before-you-get-started)
