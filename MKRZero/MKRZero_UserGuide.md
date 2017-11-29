@@ -1,5 +1,10 @@
 # CTDizzle User Manual
 
+# THS WATCH THIS VIDEO (11/29/17)
+[SwitchCable](https://youtu.be/gQDw9r8mYlE)
+
+
+
 ## Other Links 
 [Parts List](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Parts_List.md)
 
