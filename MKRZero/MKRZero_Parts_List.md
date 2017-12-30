@@ -27,7 +27,7 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |Item|Vendor|Price|Note|
 |:---|:---|:---|:---|
 |[Breakaway Header - Straight (x2)](https://www.sparkfun.com/products/116)|SparkFun|$3.00|
-|[2-Quart Urethane 75a](https://www.aeromarineproducts.com/product/urethane-75a-encapsulating-compound/)|AeroMarine|$65.00|If too spendy, try Loctite Marine 2-Ton Epoxy. Be careful to not create bubbles. Make sure surfaces are sufficiently abraded.
+|[Loctite Marine Epoxy](https://www.amazon.com/Loctite-Marine-0-85-Fluid-Syringe-1405604/dp/B00KH62K50/ref=sr_1_2?ie=UTF8&qid=1514606377&sr=8-2&keywords=loctite+waterproof)|Amazon|$4.99|You will need about one per end cap if building the 2" version. Buy three just in case.
 |[Assorted 22 AWG - Solid Core Wire](https://www.sparkfun.com/products/11367)|SparkFun|$16.95|
 |[Heat Shrink Kit](https://www.sparkfun.com/products/9353)|SparkFun|$7.95|
 |[Kester 44 Solder 0.8mm](https://www.amazon.com/Kester-Rosin-Core-Solder-Spool/dp/B00068IJWC/ref=sr_1_4?ie=UTF8&qid=1496867514&sr=8-4&keywords=kester+44)|Amazon|$33.43|1 lb of solder. Not necessary unless you want to solder more than the OpenCTD.
