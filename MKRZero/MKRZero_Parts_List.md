@@ -45,11 +45,11 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |:---|:---|
 |Needle Hemostats|Flat edges minimize marring of items.|
 |2mm Hex Wrench|Used for end cap installation/removal|
-|Solder Station|Hakko appears to make decent soldering irons if you do not have one on hand. 
+|Solder Station|The XYTronic 258 is a decent starter solder tool.
 |Multimeter|Not necessary, but useful for checking connectivity and current.
 |Breadboard|
 |Jumper Wires|
-|Wire Stripper|
+|Wire Stripper|Capable of stripping 20-26 gauge wire.
 |Drill or Mill|
 |Drillbit - 15/32" or 12mm|Size for Atlas Scientific EC Probe|
 |microUSB Cable|Data-capable Android phone charger works too.|
