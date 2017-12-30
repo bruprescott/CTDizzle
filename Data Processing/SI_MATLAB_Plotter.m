@@ -1,3 +1,7 @@
+%This need an overhaul. Contact Ian Black (blackia@oregonstate.edu) for possible updates.
+%Not up to date for newest MKRZero OpCode.
+
+
 %If viewing this in MATLAB, use the "deploytool" command to create a standalone application.
 %The executable does not require MATLAB to run, but you will need to install the free MCR runtime.
 %This script will plot profiles and time-series of your raw OpenCTD data, as well as create a new csv of the converted data.
