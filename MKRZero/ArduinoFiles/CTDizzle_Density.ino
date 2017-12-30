@@ -6,6 +6,7 @@ Email: blackia@oregonstate.edu
 
 This sketch will print data to a .CSV in the form of:
 Date , Time , Conductivity , Temperature , Pressure , Depth , Salinity, Density 
+Density is still being tested.
 
 ISSUES
 Assumes atmospheric pressure is 1013 mbar.
