@@ -1,10 +1,5 @@
 # CTDizzle User Manual
 
-# THS WATCH THIS VIDEO (11/29/17)
-[SwitchCable](https://youtu.be/gQDw9r8mYlE)
-
-
-
 ## Other Links 
 [Parts List](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/MKRZero_Parts_List.md)
 
@@ -18,7 +13,7 @@
 
 [Data Processing](https://github.com/CTDizzle/CTDizzle/tree/master/Data%20Processing)
 
-## Manual Contents
+## Guide Contents
 
 1. [Introduction](#introduction)
 	- [Before You Get Started](#before-you-get-started)
