@@ -3,6 +3,12 @@ If you are looking for the build guide to the original OpenCTD, it can be found 
 
 The CTDizzle and OpenCTD have a lot in common. Some information, code, and scripts are shared between the two GitHub accounts. You should check here first for CTDizzle updates. This repository contains the code, resources, and build guide for the CTDizzle based around the MKRZero. You can also find the legacy build guide for the Qduino version, but no additional updates will be made for that setup. 
 
+## To Get Started
+Navigate to the MKRZero folder. There you will find a build guide, pinout guide, parts list, and calibration procedure for the conductivity probe. There is also a folder that houses the Arduino code needed for operation and calibration as well as a documentation folder with additional information.
+
+To get started, select the MKRZero_UserGuide.md file. Good luck!
+
+
 ![BothVersions](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/BothVersions.jpg)
 *The three-inch and two-inch versions of the CTDizzle.*
 
@@ -26,6 +32,7 @@ The CTDizzle and OpenCTD have a lot in common. Some information, code, and scrip
  |09/22/17| Updated software install instructions. Added more detail for THS.
  |10/03/17| Added more pictures.
  |11/05/17| Added density anomaly calculation. New datafiles now have 8 columns. (Date,Time,EC,T,P,Depth,Sal,Sigma)
+ |12/29/17| Minor maintenance.
  
  
 ## Planned Updates
