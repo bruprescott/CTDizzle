@@ -1,6 +1,6 @@
 Here is a list of parts used to build the CTDizzle Mk4, their vendor location, and the approximate cost for each item. You can probably find them elsewhere for cheaper and in less quantity. Some items from this list will provide enough parts for multiple CTDs. Prices do not include shipping, but I've done my best to select as few of vendors as possible.
 
-Please note that you can adapt the CTDizzle to use sensors and boards of your own choosing, but it is your responsibility to ensure that they are compatible.
+Please note that you can adapt the CTDizzle to use sensors and boards of your own choosing, but it is your responsibility to ensure that they are compatible. For example, if you are not concerned about size and want to implement a larger battery, you can use the 3" watertight enclosure, but be aware that you may need to drill your own holes or purchase a couple blank penetrators. 
 
 #### Parts List
 |Part|Vendor|Price|Note|
