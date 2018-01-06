@@ -1,5 +1,5 @@
 # Welcome!
-If you are looking for the build guide to the original OpenCTD, it can be found at the [Oceanography For Everyone GitHub](https://github.com/OceanographyforEveryone/OpenCTD).
+If you are looking for the build guide to the original OpenCTD it can be found at the [Oceanography For Everyone GitHub](https://github.com/OceanographyforEveryone/OpenCTD).
 
 The CTDizzle and OpenCTD have a lot in common. Some information, code, and scripts are shared between the two GitHub accounts. You should check here first for CTDizzle updates. This repository contains the code, resources, and build guide for the CTDizzle based around the MKRZero. The Qduino Mini version is no longer supported, but if you are looking for those resources, please do not hesitate to contact Ian Black (blackia@oregonstate.edu).
 
