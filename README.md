@@ -6,7 +6,7 @@ The CTDizzle and OpenCTD have a lot in common. Some information, code, and scrip
 ## To Get Started
 Navigate to the MKRZero folder. There you will find a build guide, pinout guide, parts list, and calibration procedure for the conductivity probe. There is also a folder that houses the Arduino code needed for operation and calibration as well as a documentation folder with additional information.
 
-For mor information, select the MKRZero_UserGuide.md file. Good luck!
+For a comprehensive build guide, select the MKRZero_UserGuide.md file. Good luck!
 
 
 ![BothVersions](https://github.com/CTDizzle/CTDizzle/blob/master/MKRZero/Documentation/Images/BothVersions.jpg)
