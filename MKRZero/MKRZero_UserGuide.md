@@ -518,7 +518,7 @@ The CTD is going to depths where pressure is roughly 200 psi. This pressure is e
 
 Rectangular pressure cases, while much easier to manufacture, can't really withstand pressure as well as cylindrical cases. There are more failure points and the odd shape of the O-Rings increases the potential of more leak points. Force is being exerted on the pressure case in all directions, and with a rectangular case, there are more points where the case can fail as some areas are not as well supported (think corners vs. walls).
 
-The depth limiting factor for this CTD build is the conductivity probe, which the manufacturer states can only withstand a maximum of 200 PSI or ~ 140m water depth.
+After recent developments, this CTD build is depth restricted to 200m. Atlas-Scientific has recently tested the conductivity probe down to 343m with success. Blue Robotics states that their temperature and pressure sensors can reach 500m without issue. The limiting factor for this CTD build is the mechanical switch used to turn the device on and off. The manufacturer states that the switch has been tested down to 200m without issue. However, the complete build has only been placed down to 80m. The effects of exceeding this limit are unknown and caution should be exercised. 
 
 After you have soldered everything and tested the data output, you can finish constructing the case.
 
