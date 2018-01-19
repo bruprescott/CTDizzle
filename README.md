@@ -33,7 +33,7 @@ For a comprehensive build guide, select the MKRZero_UserGuide.md file. Good luck
  |10/03/17| Added more pictures.
  |11/05/17| Added density anomaly calculation. New datafiles now have 8 columns. (Date,Time,EC,T,P,Depth,Sal,Sigma)
  |12/29/17| Minor maintenance.
- 
+ |01/18/18| Found error in depth calculation. Fixed.
  
 ## Planned Updates
 - Sound velocity output in RAWCTD files.
