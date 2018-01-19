@@ -158,7 +158,7 @@ void loop() {     //And around we go.
   x = sin(latitude / 57.29578);
   x = x * x;
   gr = 9.780318 * (1.0 + (5.2788e-3 + 2.36e-5 * x) * x) + 1.092e-6 * p;
-  depth = (((-1.82e-15 * p + 2.279e-10) * p - 2.2512e-5) * p + 9.72659) * p;    //Calculate depth.
+  depth = ((((-1.82e-15 * p + 2.279e-10) * p - 2.2512e-5) * p + 9.72659) * p)/gr;    //Calculate depth.
   delay(10);
   
    if (datafile) {
