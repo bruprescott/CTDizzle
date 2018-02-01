@@ -16,8 +16,8 @@ For a comprehensive build guide, select the MKRZero_UserGuide.md file. Good luck
 
 |Date|Note|
 |:---:|:---|
- |11/12/16| Switch from DS18B20 to TSYS01. Switch from 14Bar to 30Bar. Switch from HI Probe to Atlas-Scientific kit.
- |11/13/16| Added RTC. Switch from PVC to Blue Robotics case.
+ |11/12/16| Switched from DS18B20 to TSYS01. Switched from 14Bar to 30Bar. Switched from HI Probe to Atlas-Scientific kit.
+ |11/13/16| Added RTC. Switched from PVC to Blue Robotics case.
  |02/17/17| Added temperature compensation for EC EZO.|
  |04/14/17| Data now output in .CSV instead of .TXT.
  |05/20/17| Added new file creation on power cycle. Data files are now named RAWCTDXX.csv (where XX is a number in sequence starting at 00).
@@ -29,11 +29,12 @@ For a comprehensive build guide, select the MKRZero_UserGuide.md file. Good luck
  |08/19/17| Changed atmospheric pressure assumption to 1013 mbar. Organized directories. User manual overhaul.
  |08/24/17| Updated user manual.
  |09/01/17| Added EC calibration spreadsheet.
- |09/22/17| Updated software install instructions. Added more detail for THS.
+ |09/22/17| Updated software install instructions. Added more detail.
  |10/03/17| Added more pictures.
  |11/05/17| Added density anomaly calculation. New datafiles now have 8 columns. (Date,Time,EC,T,P,Depth,Sal,Sigma)
  |12/29/17| Minor maintenance.
  |01/18/18| Found error in depth calculation. Fixed.
+ |01/31/18| Updated MATLAB scripts with latitude window prompt. Implemented EC temp compensation (not tested).
  
 ## Planned Updates
 - Sound velocity output in RAWCTD files.
