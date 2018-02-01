@@ -142,7 +142,6 @@ hold off
 seriesname=char(strcat({NEWFILENAME},{'_TimeSeries'}));
 saveas(gcf,seriesname,'jpeg')
 
-
 %Display table of downcast data.
 f=figure('Name','Table','NumberTitle','off');
 t=uitable(f);
