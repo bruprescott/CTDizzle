@@ -1,9 +1,8 @@
-#This need an overhaul. Contact Ian Black (blackia@oregonstate.edu) for any possible updates.
+#This needs an overhaul. Contact Ian Black (blackia@oregonstate.edu) for any possible updates.
 #This script is not updated for the new MKRZero OpCode.
-
+#--------------------------------------------------------------
 
 #This brief R script will take your raw CTD data and create temperature and salinity downcast profiles.
-#For questions or suggestions, contact Ian Black (blackia@oregonstate.edu).
 #Feel free to modify this script as you see fit. 
 
 #ISSUES
