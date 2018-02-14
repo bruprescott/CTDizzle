@@ -611,5 +611,5 @@ Currently, the user is required to open the device and pull the microSD card to 
 
 For near real-time data, Sea-Bird recommends that you look at the data that is collected while the device is travelling down the water column (downcast). This is so that the body of an instrument does not inhibit the flow of water through the sensors or induce mixing that may result in misleading values. This assumes that you have left the device at the surface long enough for it to reach equilibrium with the surrounding water.
 
-If you did not give the unit enough time to reach equilibrium, your upcast data may be more representative of the water properties. 
+ 
 
