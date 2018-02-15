@@ -1,10 +1,12 @@
 # Welcome!
 If you are looking for the build guide to the original OpenCTD it can be found at the [Oceanography For Everyone GitHub](https://github.com/OceanographyforEveryone/OpenCTD).
 
-The CTDizzle and OpenCTD have a lot in common. Some information, code, and scripts are shared between the two GitHub accounts. You should check here first for CTDizzle updates. This repository contains the code, resources, and build guide for the CTDizzle based around the MKRZero. The Qduino Mini version is no longer supported, but if you are looking for those resources, please do not hesitate to contact Ian Black (blackia@oregonstate.edu).
+The CTDizzle and OpenCTD have a lot in common. Some information, code, and scripts are shared between the two GitHub accounts. You should check here first for CTDizzle updates. 
+
+This repository contains the code, resources, and build guide for the CTDizzle based around the MKRZero. The Qduino Mini version is no longer supported, but if you are looking for those resources, please do not hesitate to contact Ian Black (blackia@oregonstate.edu).
 
 ## To Get Started
-Navigate to the MKRZero folder. There you will find a build guide, pinout guide, parts list, and calibration procedure for the conductivity probe. There is also a folder that houses the Arduino code needed for operation and calibration as well as a documentation folder with additional information.
+Navigate to the MKRZero folder. There you will find a build guide, pinout guide, parts list, and calibration procedure for the conductivity probe. 
 
 For a comprehensive build guide, select the MKRZero_UserGuide.md file. Good luck!
 
