@@ -83,7 +83,8 @@ This is the fourth rendition of the CTDizzle. Its construction is a little diffe
 
 
 #### Specifications
-* Max Depth: 120m
+* Theoretical Max Depth: 200m 
+* Tested Depth: 80m
 * Conductivity Accuracy: <1% after calibration
 * Temperature Accuracy: +/- 0.1 C
 * Pressure Accuracy: +/- 100 mbar
