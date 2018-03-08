@@ -37,6 +37,7 @@ For a comprehensive build guide, select the MKRZero_UserGuide.md file. Good luck
  |12/29/17| Minor maintenance.
  |01/18/18| Found error in depth calculation. Fixed.
  |01/31/18| Updated MATLAB scripts with latitude window prompt. Implemented EC temp compensation (not tested).
+ |03/07/18| Recent deployments show a periodic double printing of EC data, which throws off the rest of the printed line. Reasons unknown. Working on fix. 
  
 ## Planned Updates
 - Sound velocity output in RAWCTD files.
