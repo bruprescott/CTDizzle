@@ -67,7 +67,7 @@ void setup() {      //Start your engines.
 void loop() {     //And around we go.
     rtc.update();   //Update the time.
     psensor.read();  //Read what the pressure is.
-    p=psensor.pressure()+175+1013;
+    p=psensor.pressure();
     tsensor.read();  //Read what the temperature is and hold it.
     t=tsensor.temperature();
     Serial1.print('T'); //Send temperature data to the EC EZO.
@@ -111,7 +111,7 @@ void loop() {     //And around we go.
       datafile.print(",");
       datafile.print(t);   //Print temperature to SD card.
       datafile.print(",");
-      datafile.println(p);   //Print pressure in decibars to SD card.
+      datafile.println(p);   //Print pressure to SD card.
       datafile.flush();   //Close the file.
       Serial1.flush();
     
@@ -137,7 +137,7 @@ void loop() {     //And around we go.
       Serial.print(",");
       Serial.print(t);   //Print temperature to SD card.
       Serial.print(",");
-      Serial.println(p);   //Print pressure in decibars to SD card.
+      Serial.println(p);   //Print pressure to SD card.
       Serial.flush();
     }
   delay(90); //Loop about every second.
