@@ -1,4 +1,5 @@
 //This version will send temperature to the EC EZO.
+//Data is printed to a CSV in the form of Date, Time, EC, T, AbsP
 
 #include <SD.h>   //Used by SD module.
 #include <SPI.h>   //Used by SD module and RTC.
