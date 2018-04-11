@@ -62,7 +62,7 @@ Please note that you can adapt the CTDizzle to use sensors and boards of your ow
 |:---|:---|:---|:---|
 |[Potting Kit](http://www.bluerobotics.com/store/tools/tool-potting-kit-r1/)|Blue Robotics|$10|Keeps epoxy mess to a minimum.
 |[Third Hand](https://www.sparkfun.com/products/9317)|SparkFun|$9.95|
-|[O-Ring Pick](http://www.bluerobotics.com/store/tools/tool-o-ring-pick-r1/)|Blue Robotics|$4|
+|[O-Ring Pick](http://www.bluerobotics.com/store/tools/tool-o-ring-pick-r1/)|Blue Robotics|$4|They sometimes send you one for free if you buy a bunch of stuff.
 |[Penetrator Wrench](http://www.bluerobotics.com/store/tools/tool-penetrator-wrench-r1/)|Blue Robotics|$12|
 |[Calibration Solution K1.0 Set](https://www.atlas-scientific.com/product_pages/chemicals/ec-1_0.html)|Atlas-Scientific|$11|Already included in K1.0 kit, but it doesn't hurt to have extra on hand.|
 
