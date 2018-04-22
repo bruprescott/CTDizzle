@@ -543,11 +543,13 @@ After you have soldered everything and tested the data output, you can finish co
 
 Congratulations, you just built a working CTD!
 
-## Corrosion
+## Corrosion and Wear
 The screws used in the end caps are made of 316 SS and the main body of the unit is made of aluminum.
 When two dissimilar metals interact in seawater, galvanic corrosion can occur. The metal on the lower end of the galvanic scale (aluminum in this case) will begin to corrode after an extended period of time. Cathodic protection is one method to mitigating the corrosion of the end caps. This can be done by installing an anode (commonly made of zinc). 
 
 For now, there isn't a way to connect an anode (mostly due to no one manufacturing a 2mm threaded zinc). It is important to make sure that deployments are short (few days at most) and that the device is washed with freshwater when recovered. 
+
+On a recent test, the gel capsule on the pressure sensor was found to be worn away, presumably from sediment movement. It is recommended that you place a piece of tape over the pressure sensor or some AquaShield grease in the hole.
 
 ## Predeployment Procedure
 The deployment plan of your OpenCTD plays a role in the sampling regime.
