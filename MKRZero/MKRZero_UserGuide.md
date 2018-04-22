@@ -85,7 +85,7 @@ This is the fourth rendition of the CTDizzle. Its construction is a little diffe
 #### Specifications
 * Theoretical Max Depth: 200m 
 * Tested Depth: 80m
-* Conductivity Accuracy: <1% after calibration
+* Conductivity Accuracy: +/- 2% after calibration
 * Temperature Accuracy: +/- 0.1 C
 * Pressure Accuracy: +/- 100 mbar
 * Max Sampling Rate: 1 Hz
@@ -438,6 +438,9 @@ Allow to cure for a minimum of 12 hours.
 |Hemostats|Nitrile Gloves|
 |Wire Strippers|
 |Third Hand|
+
+[Watch this video on the Lineman's Splice](https://www.youtube.com/watch?v=O-ymw7d_nYo)
+
 
 While your end caps are curing, you can begin to solder the electrical components together. You'll want to arrange the RTC and EC EZO so that you can easily solder corresponding pins. You also want to minimize the width of the protoboard package. One thing to keep in mind is that you will want the SD card pointed in the direction of the switch/pressure end cap. 
 
