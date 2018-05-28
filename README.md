@@ -1,4 +1,8 @@
 # Welcome!
+
+NOTE (05/28/18): Recent traffic suggests there might be an interest in the CTDizzle. If you are considering building one, I recommend that you switch to the 3" Blue Robotics case. This will provide room for more epoxy as well as a larger battery.
+
+
 If you are looking for the build guide to the original OpenCTD it can be found at the [Oceanography For Everyone GitHub](https://github.com/OceanographyforEveryone/OpenCTD).
 
 The CTDizzle and OpenCTD have a lot in common. Some information, code, and scripts are shared between the two GitHub accounts. You should check here first for CTDizzle updates. 
