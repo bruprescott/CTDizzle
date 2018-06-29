@@ -1,8 +1,8 @@
 /*
 This sketch allows you to collect temperature and depth data and send it to your phone via the Adafruit Bluefruit LE phone application.
 It does not consider efficiency and will be update as new functions are discovered.
-Some of this code is repurposed from sketches created by Adafruit and Blue Robotics. 
-If building your own sensor, please support them by purchasing parts from their online stores.
+Some of this code is repurposed from sketches created by Adafruit, Arduino, and Blue Robotics. 
+If building your own sensor, please support them by purchasing parts from their online stores or donating.
 For questions or comments regarding this sketch, send an email to Ian Black (blackia@oregonstate.edu).
 */
 
