@@ -1,4 +1,4 @@
-Commands are sent to the sensor via the serial port.
+Commands are sent to the board via the UART function in the Bluefruit LE application.
 They are sent without the quotation marks and are always one letter and capitalized.
 New commands will be implemented over time.
 
@@ -7,6 +7,6 @@ Command "T"
   This should be sent first before data transfer begins.
 	
 Command "S"
-  This is the send command. If successful, it will print Depth,Time to your phone. 
+  This is the send command. If successful, it will stream Depth,Time to your phone. 
   It will only send data collected since you turned it on.
   If you want to look at previous data, you still need to open the sensor and pull the SD card.
