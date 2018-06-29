@@ -1,6 +1,6 @@
 /*
 This sketch allows you to collect temperature and depth data and send it to your phone via the Adafruit Bluefruit LE phone application.
-It does not consider efficiency and will be updated as new functions are discovered.
+It does not consider efficiency and will be update as new functions are discovered.
 Some of this code is repurposed from sketches created by Adafruit and Blue Robotics. 
 If building your own sensor, please support them by purchasing parts from their online stores.
 For questions or comments regarding this sketch, send an email to Ian Black (blackia@oregonstate.edu).
@@ -92,9 +92,6 @@ void setup(){  //Start your engines.
   ble.begin(); //Set up bluetooth connectivity.
   ble.echo(false);  //Turn off echo.
   ble.verbose(false);  //Turn off any debug info from the bluetooth module.
-  while (! ble.isConnected()) { //Wait for connection.
-      delay(500);
-  }
   ble.setMode(BLUEFRUIT_MODE_DATA); //Set to data mode.
   delay(3000); 
 } //Set up time is ~4 seconds
@@ -229,8 +226,9 @@ void loop(){  //And around we go...
     delay(40);
     PrintToFile(); //Print data to SD card and serial monitor.
     delay(1000); //Wait 900 milliseconds.
-    if (ble.available()>0){ //If a connection is made...
+    if(ble.isConnected()){ //If a connection is made, stop collecting data and...
       DataTransfer();  //...wait for several command options from user.
     }
 }//Loop time is just over 1 second.
+
 
