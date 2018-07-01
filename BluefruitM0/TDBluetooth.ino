@@ -1,8 +1,8 @@
 /*
 This sketch allows you to collect temperature and depth data and send it to your phone via the Adafruit Bluefruit LE phone application.
 It does not consider efficiency and will be update as new functions are discovered.
-Some of this code is repurposed from sketches created by Adafruit, Arduino, and Blue Robotics. 
-If building your own sensor, please support them by purchasing parts from their online stores or donating.
+Some of this code is repurposed from sketches created by Adafruit and Blue Robotics. 
+If building your own sensor, please support them by purchasing parts from their online stores.
 For questions or comments regarding this sketch, send an email to Ian Black (blackia@oregonstate.edu).
 */
 
@@ -20,6 +20,7 @@ For questions or comments regarding this sketch, send an email to Ian Black (bla
 //Computational values you might want to change. Not a significant impact on depth calculation for most applications if unknown.
 #define latitude 45.00  //Latitude of deployment in decimal degrees. 
 #define AtmP 1013  //Standard atmospheric pressure in millibars.
+
 
 //Bluetooth stuff. Borrowed from Adafruit and John Park.
 #define BLUEFRUIT_SPI_CS 8
@@ -50,7 +51,7 @@ float t,p;
 float t_f;
 float x,gr,depth,fathoms; 
 
-
+float measuredvbat = analogRead(9);
 
 void setup(){  //Start your engines.
   Serial.begin(115200);
@@ -92,6 +93,9 @@ void setup(){  //Start your engines.
   ble.begin(); //Set up bluetooth connectivity.
   ble.echo(false);  //Turn off echo.
   ble.verbose(false);  //Turn off any debug info from the bluetooth module.
+  while (! ble.isConnected()) { //Wait for connection.
+      delay(500);
+  }
   ble.setMode(BLUEFRUIT_MODE_DATA); //Set to data mode.
   delay(3000); 
 } //Set up time is ~4 seconds
@@ -178,19 +182,28 @@ void PrintToFile(){  //Function for printing data to the SD card and a serial mo
 
 
 
+void loop(){  //And around we go...
+    temp_calc(); //Get the temp and perform conversions.
+    delay(40);
+    depth_calc(); //Get the pressure and perform conversions.
+    delay(40);
+    PrintToFile(); //Print data to SD card and serial monitor.
+    delay(1000); //Wait 900 milliseconds.
+    if (ble.available()>0){ //If a connection is made...
+      DataTransfer();  //...wait for several command options from user.
+    }
+}//Loop time is just over 1 second.
+
+
+
 void DataTransfer(){ //Function options for when a bluetooth connection is made.
-  datafile.flush();  //Clear leftovers.
-  datafile.close();  //Close the main file.
-  recentfile.flush(); //Clear leftovers.
-  recentfile.close(); //Close the temporary file.
-  delay(10);
   while(ble.available()>0){ //While connected via bluetooth...
     int CMD = ble.read();  //...Read any incoming user value.
     switch (CMD){
       case 'T':  //Communication Test Command
         ble.println("Comms Test Successful");
         break;
-      //case 'Q':  //File list only works in IDE serial monitor...
+      //case 'L':  //File list only works in IDE serial monitor...
       //   card.init(SPI_HALF_SPEED,10); 
       //   volume.init(card);
       //  uint32_t volumesize;
@@ -198,13 +211,36 @@ void DataTransfer(){ //Function options for when a bluetooth connection is made.
       //  volumesize *= volume.clusterCount();       
       //  volumesize *= 512;                           
       //  volumesize /= 1024;
-      //  ble.print("Volume size (Mbytes): ");
+      //  ble.print("Volume size (Mbytes): "); //Total volume size of SD card, NOT remaining space.
       //  volumesize /= 1024;
       //  ble.println(volumesize);
       //  root.openRoot(volume);
-      //  root.ls(LS_R | LS_DATE | LS_SIZE);  
+      //  root.ls(LS_R | LS_DATE | LS_SIZE);  //Lists files on SD card.
       //  break;
+      case 'Q': 
+         ble.println("Stopping sensors and closing files...");
+         datafile.flush();  //Clear leftovers.
+         datafile.close();  //Close the main file.
+         delay(10);
+         recentfile.flush(); //Clear leftovers.
+         recentfile.close(); //Close the temporary file.
+         delay(1000);
+         ble.println("Files closed. Ready for next command.");
+         break;
+      case 'V':  //Queries the board and calculates the battery voltage.
+        measuredvbat *= 2; // we divided by 2, so multiply back
+        measuredvbat *= 3.3; // Multiply by 3.3V, our reference voltage
+        measuredvbat /= 1024; // convert to voltage        
+        ble.print("Voltage: " ); 
+        ble.println(measuredvbat);
+        break;
       case 'S':  //The "S" Command.
+        ble.println("Sending data from the most recent file in..."); 
+        ble.print("3...");
+        delay(1000);
+        ble.print("2...");
+        delay(1000);
+        ble.println("1...");
         File mostrecentfile=SD.open("LAST.CSV"); //Reopens the temporary file...
           if(mostrecentfile){
             while(mostrecentfile.available()){
@@ -216,19 +252,5 @@ void DataTransfer(){ //Function options for when a bluetooth connection is made.
     }
   }  
 }
-
-
-
-void loop(){  //And around we go...
-    temp_calc(); //Get the temp and perform conversions.
-    delay(40);
-    depth_calc(); //Get the pressure and perform conversions.
-    delay(40);
-    PrintToFile(); //Print data to SD card and serial monitor.
-    delay(1000); //Wait 900 milliseconds.
-    if(ble.isConnected()){ //If a connection is made, stop collecting data and...
-      DataTransfer();  //...wait for several command options from user.
-    }
-}//Loop time is just over 1 second.
 
 
