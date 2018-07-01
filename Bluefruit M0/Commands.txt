@@ -3,10 +3,16 @@ They are sent without the quotation marks and are always one letter and capitali
 New commands will be implemented over time.
 
 Command "T"
-	This is the test command. If successful, the line "Comms Test Successful" will appear. 
+  This is the test command. If successful, the line "Comms Test Successful" will appear. 
   This should be sent first before data transfer begins.
+  
+Command "Q"
+  This is the quit command. It will print a message that says "Stopping sensors and closing files...", then it will stop data collection     and close any open files, then it will print the message "Files closed. Ready for next command."
+  
+Command "V"
+  This is the voltage check command. It will query the board for the battery voltage and will print it to your phone. At a full charge, the voltage may be around 4.2v. Typical is 3.7v. At 3.2v, the protection circuit on the battery will kick in and the device will shut down. This may result in the last sample taken being lost.  
 	
 Command "S"
-  This is the send command. If successful, it will stream Depth,Time to your phone. 
+  This is the send command. If successful, it will stream Depth,Temperature to your phone. 
   It will only send data collected since you turned it on.
   If you want to look at previous data, you still need to open the sensor and pull the SD card.
