@@ -21,5 +21,5 @@ Command "I"
   This is the information command. It will display a reminder of what the plot line colors mean. For now, temperature is in Fahrenheit and depth is in fathoms.
   
 Command "A"
-  This command checks the atmospheric pressure reading to ensure that a stable reading was taken.
+  This command checks the atmospheric pressure reading to ensure that a stable reading was taken. Used in the pressure to depth conversion.
   
