@@ -1,6 +1,6 @@
 /*
 This sketch allows you to collect temperature and depth data and send it to your phone via the Adafruit Bluefruit LE phone application.
-It does not consider efficiency and will be updated as new functions are discovered.
+It does not consider efficiency and will be update as new functions are discovered.
 Some of this code is repurposed from sketches created by Adafruit and Blue Robotics. 
 If building your own sensor, please support them by purchasing parts from their online stores.
 For questions or comments regarding this sketch, send an email to Ian Black (blackia@oregonstate.edu).
@@ -19,7 +19,6 @@ For questions or comments regarding this sketch, send an email to Ian Black (bla
 
 //Computational values you might want to change. Not a significant impact on depth calculation for most applications if unknown.
 #define latitude 45.00  //Latitude of deployment in decimal degrees. 
-#define AtmP 1013  //Standard atmospheric pressure in millibars.
 
 
 //Bluetooth stuff. Borrowed from Adafruit and John Park.
@@ -52,6 +51,14 @@ float t_f;
 float x,gr,depth,fathoms; 
 
 float measuredvbat = analogRead(9);
+
+int AtmP;
+int PressureZero(){ //Read the first pressure recording and save it.
+   psensor.read();
+   AtmP=psensor.pressure();
+   return AtmP;
+}
+
 
 void setup(){  //Start your engines.
   Serial.begin(115200);
@@ -90,6 +97,8 @@ void setup(){  //Start your engines.
   psensor.setModel(MS5837::MS5837_30BA);    //Define the pressure sensor model.
   psensor.setFluidDensity(1028);  //Set the approximate fluid density of deployment. Global ocean average is 1035.
 
+  PressureZero();
+  
   ble.begin(); //Set up bluetooth connectivity.
   ble.echo(false);  //Turn off echo.
   ble.verbose(false);  //Turn off any debug info from the bluetooth module.
@@ -175,7 +184,8 @@ void PrintToFile(){  //Function for printing data to the SD card and a serial mo
     //recentfile.print(",");   
     recentfile.print(fathoms);   //Print depth to LAST.CSV
     recentfile.print(",");
-    recentfile.println(t_f);   //Print Fahrenheit to LAST.CSV
+    recentfile.print(t_f);   //Print Fahrenheit to LAST.CSV
+    recentfile.println();
     recentfile.flush();   //Flush the file.
     }
 }
@@ -184,15 +194,15 @@ void PrintToFile(){  //Function for printing data to the SD card and a serial mo
 
 void loop(){  //And around we go...
     temp_calc(); //Get the temp and perform conversions.
-    delay(40);
+    delay(100);
     depth_calc(); //Get the pressure and perform conversions.
-    delay(40);
+    delay(100);
     PrintToFile(); //Print data to SD card and serial monitor.
-    delay(1000); //Wait 900 milliseconds.
+    delay(800); //Wait 800 milliseconds.
     if (ble.available()>0){ //If a connection is made...
       DataTransfer();  //...wait for several command options from user.
     }
-}//Loop time is just over 1 second.
+}//Loop time is ~ 1 second.
 
 
 
@@ -200,10 +210,17 @@ void DataTransfer(){ //Function options for when a bluetooth connection is made.
   while(ble.available()>0){ //While connected via bluetooth...
     int CMD = ble.read();  //...Read any incoming user value.
     switch (CMD){
-      case 'T':  //Communication Test Command
+      case 'T':{  //Communication Test Command
         ble.println("Comms Test Successful");
-        break;
-      //case 'L':  //File list only works in IDE serial monitor...
+        break;}
+        
+      case 'I':{
+        ble.println("For The Plotter");
+        ble.println("Red represents depth in fathoms.");
+        ble.println("Blue represents temperature in Fahrenheit.");
+        break;}
+        
+      //case 'L':{  //File list only works in IDE serial monitor...
       //   card.init(SPI_HALF_SPEED,10); 
       //   volume.init(card);
       //  uint32_t volumesize;
@@ -216,41 +233,66 @@ void DataTransfer(){ //Function options for when a bluetooth connection is made.
       //  ble.println(volumesize);
       //  root.openRoot(volume);
       //  root.ls(LS_R | LS_DATE | LS_SIZE);  //Lists files on SD card.
-      //  break;
-      case 'Q': 
+      //  break;}
+      
+      case 'Q':{ 
          ble.println("Stopping sensors and closing files...");
          datafile.flush();  //Clear leftovers.
          datafile.close();  //Close the main file.
-         delay(10);
+         delay(1000);
          recentfile.flush(); //Clear leftovers.
          recentfile.close(); //Close the temporary file.
          delay(1000);
-         ble.println("Files closed. Ready for next command.");
-         break;
-      case 'V':  //Queries the board and calculates the battery voltage.
+         ble.println("Files closed.");
+         ble.println("Ready for next command.");
+         break;}
+
+      case'A':{
+        ble.print("Atmospheric Pressure: ");
+        ble.println(AtmP);
+        break;}
+        
+      case 'V':{  //Queries the board and calculates the battery voltage.
         measuredvbat *= 2; // we divided by 2, so multiply back
         measuredvbat *= 3.3; // Multiply by 3.3V, our reference voltage
         measuredvbat /= 1024; // convert to voltage        
-        ble.print("Voltage: " ); 
+        ble.print("Battery Voltage: " ); 
         ble.println(measuredvbat);
-        break;
-      case 'S':  //The "S" Command.
-        ble.println("Sending data from the most recent file in..."); 
-        ble.print("3...");
-        delay(1000);
-        ble.print("2...");
-        delay(1000);
-        ble.println("1...");
+        if (measuredvbat<3.50 && measuredvbat>3.30){
+           ble.println("It is recommended that you recharge or swap the battery after this next deployment.");  
+        }
+        if (measuredvbat<=3.30){
+          ble.println("Batter voltage dangerously low."); 
+          delay(1000);
+          ble.println("Recharge or swap the battery immediately.");
+        }
+        break;}
+
+      case 'S':{  //The "S" Command.
+        ble.println("Sending data from the most recent file in 1 second."); 
         File mostrecentfile=SD.open("LAST.CSV"); //Reopens the temporary file...
+        delay(1000);
           if(mostrecentfile){
             while(mostrecentfile.available()){
               ble.write(mostrecentfile.read());  //...and sends it to your phone.
             }
             mostrecentfile.close();  //Close it.
           }
-        break;
+        break;}
+        
+      case 'P':{
+        ble.println("Sending data from the most recent file in 20 seconds."); 
+        ble.println("Switch to plotter view now.");
+        File mostrecentfile=SD.open("LAST.CSV"); //Reopens the temporary file...
+        delay(20000);
+          if(mostrecentfile){
+            while(mostrecentfile.available()){
+              ble.write(mostrecentfile.read());  //...and sends it to your phone.
+            }
+            mostrecentfile.close();  //Close it.
+          }
+        break;}
     }
   }  
 }
-
 
