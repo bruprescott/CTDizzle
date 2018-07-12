@@ -18,7 +18,7 @@ Command "P"
   This is the plot command. It is the exact same as the send command, but has a 20 second delay to allow the user to switch to the     	   plotter function of the Bluefruit app.
   
 Command "I"
-  This is the information command. It will display a reminder of what the plot lines mean.
+  This is the information command. It will display a reminder of what the plot line colors mean. For now, temperature is in Fahrenheit and depth is in fathoms.
   
 Command "A"
   This command checks the atmospheric pressure reading to ensure that a stable reading was taken.
