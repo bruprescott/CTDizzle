@@ -1,12 +1,9 @@
 # Welcome!
-
-07/11/2018: Major update coming soon!
-
 If you are looking for the build guide to the original OpenCTD it can be found at the [Oceanography For Everyone GitHub](https://github.com/OceanographyforEveryone/OpenCTD).
 
 The CTDizzle and OpenCTD have a lot in common. Some information, code, and scripts are shared between the two GitHub accounts. You should check here first for CTDizzle updates. 
 
-This repository contains the code, resources, and build guide for the CTDizzle based around the MKRZero. The Qduino Mini version is no longer supported, but if you are looking for those resources, please do not hesitate to contact Ian Black (blackia@oregonstate.edu).
+This repository contains the code, resources, and build guide for CTDizzles based around the Arduino MKRZero and the Adafruit Bluefruit M0. The Qduino Mini version is no longer supported, but if you are looking for those resources, please do not hesitate to contact Ian Black (blackia@oregonstate.edu).
 
 ## To Get Started
 Navigate to the MKRZero folder. There you will find a build guide, pinout guide, parts list, and calibration procedure for the conductivity probe. 
@@ -41,6 +38,7 @@ For a comprehensive build guide, select the MKRZero_UserGuide.md file. Good luck
  |01/18/18| Found error in depth calculation. Fixed.
  |01/31/18| Updated MATLAB scripts with latitude window prompt. Implemented EC temp compensation (not tested).
  |03/07/18| Recent deployments show a periodic double printing of EC data, which throws off the rest of the printed line. Reasons unknown. Working on fix. 
+ |07/24/18| Switched the Adafruit Bluefruit M0. Allows for data viewing via mobile device.
  
 ## Planned Updates
 - Sound velocity output in RAWCTD files.
