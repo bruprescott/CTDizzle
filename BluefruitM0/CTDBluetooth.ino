@@ -32,9 +32,6 @@ Conduino https://github.com/kpdangelo/OpenCTDwithConduino
 #endif
 
 /*----------Stuff you might want to change.---------*/
-bool Set_RTC = false;  //If false, the RTC does not compile sketch time, and maintains the last time it was set to. 
-                       //If true, it will compile to the sketch time.
-                       //It needs to be set to false and the sketch re-uploaded to keep time.
 #define latitude 45.00    //This is your deployment latitude. It is used in the pressure to depth conversion.
 #define address 100     //This is the I2C address of the EC EZO.
 String BROADCAST_NAME = "CTDizzle Mk5";  //You can name your CTD anything!
@@ -93,9 +90,9 @@ void setup(){  //Start your engines.
   Wire.begin();
   delay(500);
   rtc.begin();
-  if(Set_RTC == true);{  //This sets the clock time.
-    rtc.adjust(DateTime(__DATE__, __TIME__));
-    }  
+  
+    //rtc.adjust(DateTime(__DATE__, __TIME__));
+
   DateTime now = rtc.now();
   delay(250);
   pinMode(10, OUTPUT);
