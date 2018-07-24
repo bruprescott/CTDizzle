@@ -208,6 +208,8 @@ void get_conductivity(){
     }
 }
 
+
+
 void calc_salinity(){
    R = ((ec_float/1000)/SalCStandard);    //PSS-78 calculations.
    RpNumerator = ( SalA1*Decibars)*( SalA2*pow(Decibars,2))+( SalA3*pow(Decibars,3));
@@ -217,6 +219,8 @@ void calc_salinity(){
    RT=R/(rT*Rp);
    Salinity = ( Sala0+( Sala1*pow(RT,0.5))+( Sala2*RT)+( Sala3*pow(RT,1.5))+( Sala4*pow(RT,2))+( Sala5*pow(RT,2.5)))+((Celsius-15)/(1+ Salk*(Celsius-15)))*( Salb0+( Salb1*pow(RT,0.5))+( Salb2*RT)+( Salb3*pow(RT,1.5))+( Salb4*pow(RT,2))+( Salb5*pow(RT,2.5)));
 }
+
+
 
 void PrintToFile(){  //Function for printing data to the SD card and a serial monitor.
    DateTime now = rtc.now();
