@@ -90,9 +90,7 @@ void setup(){  //Start your engines.
   Wire.begin();
   delay(500);
   rtc.begin();
-  
-    //rtc.adjust(DateTime(__DATE__, __TIME__));
-
+  rtc.adjust(DateTime(__DATE__, __TIME__));
   DateTime now = rtc.now();
   delay(250);
   pinMode(10, OUTPUT);
@@ -176,12 +174,12 @@ void send_temperature(){
 
 
 void get_conductivity(){
-  byte i = 0;  
   Wire.beginTransmission(address); 
   Wire.write(114);   //ASCII for r.                                            
-  Wire.endTransmission();      
-  delay(600);  //Wait 600 milliseconds.
-  Wire.requestFrom(address, 48, 1); //Get the data string from the EC EZO.
+  Wire.endTransmission();    
+  delay(600);  
+  Wire.requestFrom(address, 48, 1); //Get the data string from the EC EZO. 
+  Wire.read();  
   while (Wire.available()) {  //If information is being received.//
       in_char = Wire.read();  //read it.
       ec_data[i] = in_char;   //Turn it into an array.               
@@ -192,8 +190,7 @@ void get_conductivity(){
         break;                                 //exit the while loop.
         }
       }
-  if (isDigit(ec_data[0])) {
-    byte i = 0;                             
+  if (isDigit(ec_data[0])) {                         
     ec = strtok(ec_data, ",");     
     tds = strtok(NULL, ",");         
     sal = strtok(NULL, ",");       
@@ -205,8 +202,6 @@ void get_conductivity(){
     }
 }
 
-
-
 void calc_salinity(){
    R = ((ec_float/1000)/SalCStandard);    //PSS-78 calculations.
    RpNumerator = ( SalA1*Decibars)*( SalA2*pow(Decibars,2))+( SalA3*pow(Decibars,3));
@@ -216,8 +211,6 @@ void calc_salinity(){
    RT=R/(rT*Rp);
    Salinity = ( Sala0+( Sala1*pow(RT,0.5))+( Sala2*RT)+( Sala3*pow(RT,1.5))+( Sala4*pow(RT,2))+( Sala5*pow(RT,2.5)))+((Celsius-15)/(1+ Salk*(Celsius-15)))*( Salb0+( Salb1*pow(RT,0.5))+( Salb2*RT)+( Salb3*pow(RT,1.5))+( Salb4*pow(RT,2))+( Salb5*pow(RT,2.5)));
 }
-
-
 
 void PrintToFile(){  //Function for printing data to the SD card and a serial monitor.
    DateTime now = rtc.now();
@@ -234,7 +227,7 @@ void PrintToFile(){  //Function for printing data to the SD card and a serial mo
     datafile.print(":");
     datafile.print(now.second(),DEC); //Print date to SD card.
     datafile.print(",");   //Comma delimited.
-    datafile.print(ec_float);   //Options: ec_float, Salinity
+    datafile.print(Salinity);   //Options: ec_float, Salinity <- PSS-78 derived, sal_float <- EC EZO derived
     datafile.print(",");
     datafile.print(Celsius);   //Options: Celsius, Fahrenheit, Kelvin
     datafile.print(",");
@@ -253,7 +246,7 @@ void PrintToFile(){  //Function for printing data to the SD card and a serial mo
     ble.print(":");
     ble.print(now.second(),DEC); //Print date to your phone.
     ble.print(",");
-    ble.print(ec_float);  
+    ble.print(Salinity);  
     ble.print(",");
     ble.print(Celsius);   
     ble.print(",");
@@ -261,7 +254,7 @@ void PrintToFile(){  //Function for printing data to the SD card and a serial mo
    }
 
    if(recentfile){
-    recentfile.print(ec_float);  
+    recentfile.print(Salinity);  
     recentfile.print(",");
     recentfile.print(Celsius);   
     recentfile.print(",");
@@ -359,7 +352,9 @@ void CommandMode(){ //Function options for when a bluetooth connection is made.
         ble.println(" mbars");    
         ble.print("Air Temperature: ");
         ble.print(AirTemp);
-        ble.println(" degC");   
+        ble.println(" degC");  
+        ble.print("Latitude Set in Sketch: ");
+        ble.println(latitude); 
         break;}
     }
   }  
