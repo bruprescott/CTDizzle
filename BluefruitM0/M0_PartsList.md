@@ -10,7 +10,8 @@
 
 
 #### Other Electronics List
-
+|Part|Vendor|Price|Note|
+|:---|:---|:---|:---|
 |[Short Feather Headers Kit - Female](https://www.adafruit.com/product/2940)|Adafruit|$2|
 |[Short Feather Headers Kit - Male](https://www.adafruit.com/product/3002)|Adafruit|$1|
 |[Featherwing Doubler](https://www.adafruit.com/product/2890)|Adafruit|$8|
