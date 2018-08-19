@@ -1,4 +1,4 @@
-Mk1 and Mk2 were pressure case variations of the original OpenCTD. Electronics and code were kept the same, thus no relevant files in this repository. 
+Mk1 and Mk2 were pressure case variations of the original OpenCTD. Electronics and code were kept the same, thus no relevant folders in this repository. 
 
 The Mk3 was also based off of the OpenCTD, but included an RTC, a different pressure case, and modified code for new pressure and temperature sensors. Build details can be found in the Mk3 folder.
 
