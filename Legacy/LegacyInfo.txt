@@ -1,0 +1,8 @@
+Mk1 and Mk2 were pressure case variations of the original OpenCTD. Electronics were kept the same. 
+
+The Mk3 was also based off of the OpenCTD, but included an RTC, a different pressure case, and modified code for new pressure and temperature sensors.
+
+The Mk4 was an electronics redesign of the Mk3, where the switch from the Qduino Mini to the MKRZero was made.
+
+The newest version is the CTDizzle Mk5, where Bluetooth Low Energy was implemented with the switch to the Adafruit Bluefruit M0 Feather.
+
