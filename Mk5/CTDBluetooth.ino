@@ -2,6 +2,7 @@
 This sketch allows you to collect conductivity, temperature, and depth data and send it to your phone via the Adafruit Bluefruit phone application.
 The application is available for both Android and iOS devices.
 The current output of the phone plots is conductivity (uS/cm), temperature (C), absolute pressure (millibars). There exist functions to change these to units of choice.
+This sketch does not consider efficiency and will be updated as new functions and commands are implemented.
 Some of this code is repurposed from sketches created by Adafruit and Blue Robotics. 
 If building your own sensor, please support them by purchasing parts from their online stores.
 For questions or comments regarding this sketch or the Arduino-based CTD project, send an email to Ian Black (blackia@oregonstate.edu).
