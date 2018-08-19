@@ -38,11 +38,6 @@ For a comprehensive build guide, select the MKRZero_UserGuide.md file. Good luck
  |01/18/18| Found error in depth calculation. Fixed.
  |01/31/18| Updated MATLAB scripts with latitude window prompt. Implemented EC temp compensation (not tested).
  |03/07/18| Recent deployments show a periodic double printing of EC data, which throws off the rest of the printed line. Reasons unknown. Working on fix. 
- |07/24/18| Switched the Adafruit Bluefruit M0. Allows for data viewing via mobile device.
- 
-## Planned Updates
-- Sound velocity output in RAWCTD files.
-- GUI for the MATLAB tool.
-- Downcast/upcast for MATLAB tool.
-- Cleaner plots.
-- Config file on SD card.
+ |07/24/18| Switched to the Adafruit Bluefruit M0. Allows for data viewing via mobile device.
+ |08/19/18| Formatted repository. Newest version is located in the Mk5 folder. The Legacy folder contains build information for past versions.
+
