@@ -1,5 +1,5 @@
 # Welcome!
-This repository contains the build information for the CTDizzle, a simple to construct salinity and temperature sensor.
+This repository contains the build information for the CTDizzle; a simple to construct salinity and temperature sensor.
 
 The newest version is the CTDizzle Mk5. This version of the CTD is based around the Adafruit Bluefruit M0 Feather and allows a user to communicate with the CTD via Bluetooth.
 
