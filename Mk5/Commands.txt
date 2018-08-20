@@ -1,6 +1,5 @@
 Commands are sent to the board via the UART function in the Bluefruit LE application.
 They are sent without the quotation marks and are always one letter and capitalized.
-New commands will be implemented over time.
 
 Command "T"
   This is the test command. If successful, the line "Comms Test Successful" will appear. This should be sent first before data transfer begins.
