@@ -9,7 +9,7 @@
 |[Isolated EC EZO Carrier](https://www.atlas-scientific.com/product_pages/components/single_carrier_iso.html)|Atlas Scientific|$48|
 
 
-#### Other Electronics List
+#### Other Parts List
 |Part|Vendor|Price|Note|
 |:---|:---|:---|:---|
 |[Short Feather Headers Kit - Female](https://www.adafruit.com/product/2940)|Adafruit|$2|
