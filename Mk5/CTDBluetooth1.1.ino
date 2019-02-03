@@ -6,7 +6,6 @@ This sketch does not consider efficiency and will be updated as new functions an
 Some of this code is repurposed from sketches created by Adafruit and Blue Robotics. 
 If building your own sensor, please support them by purchasing parts from their online stores.
 For questions or comments regarding this sketch or the Arduino-based CTD project, send an email to Ian Black (blackia@oregonstate.edu).
-
 Don't forget to check out these other open source CTD variants!
 Arduino-based Sonde  https://github.com/glockridge/MooredApplication
 OpenCTD https://github.com/OceanographyforEveryone/OpenCTD
@@ -116,7 +115,7 @@ void setup(){  //Start your engines.
   psensor.init();   //Initialize the pressure sensor.
   delay(250);
   psensor.setModel(MS5837::MS5837_30BA);    //Define the pressure sensor model.
-  psensor.setFluidDensity(1028);  //Set the approximate fluid density of deployment. Global ocean average is 1035. Coastal/estuarine waters between 1024-1035.
+  psensor.setFluidDensity(1024);  //Set the approximate fluid density of deployment. Global ocean average is 1035. Coastal/estuarine waters between 1024-1035.
   PressureZero();
   AirTemperature();
   ble.begin(); //Set up bluetooth connectivity.
@@ -320,6 +319,8 @@ void CommandMode(){ //Function options for when a bluetooth connection is made.
           ble.println("Battery voltage dangerously low."); 
           delay(1000);
           ble.println("Recharge or swap the battery immediately.");
+          delay(1000);
+          ble.println("No really, if you go any lower you run the risk of damaging your battery.");
         }
         break;}
 
@@ -351,6 +352,18 @@ void CommandMode(){ //Function options for when a bluetooth connection is made.
       case 'I':{
         ble.print("Device ID: ");
         ble.println(BROADCAST_NAME); 
+        ble.print("Datetime: ");;
+        ble.print(now.month(),DEC);    //Print month to your phone.
+        ble.print("/");
+        ble.print(now.day(),DEC);   //print date to your phone.
+        ble.print("/");
+        ble.print(now.year(),DEC); //Print year to your phone.
+        ble.print(",");   //Comma delimited.
+        ble.print(now.hour(),DEC);   //Print hour to your phone.
+        ble.print(":");
+        ble.print(now.minute(),DEC);
+        ble.print(":");
+        ble.println(now.second(),DEC); //Print date to your phone.
         ble.print("Atmospheric Pressure: ");
         ble.print(AtmP);
         ble.println(" mbars");    
@@ -363,4 +376,3 @@ void CommandMode(){ //Function options for when a bluetooth connection is made.
     }
   }  
 }
-
