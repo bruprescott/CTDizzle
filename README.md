@@ -33,4 +33,4 @@ If you have any questions about the CTDizzle, contact Ian Black (blackia@oregons
  |07/24/18| Switched to the Adafruit Bluefruit M0. Allows for data viewing via mobile device.
  |07/25/18| Implemented temperature compensation for EC EZO with reading fix.
  |08/19/18| Formatted repository. Newest CTDizzle version is located in the Mk5 folder. The Legacy folder contains build information for past versions.
-
+|02/02/2019| Added information displayed for I command. Added warnings for low battery readout.
