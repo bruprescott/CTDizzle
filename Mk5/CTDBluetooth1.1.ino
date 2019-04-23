@@ -286,6 +286,7 @@ void loop(){  //And around we go...
 
 
 void CommandMode(){ //Function options for when a bluetooth connection is made.
+  DateTime now = rtc.now();
   while(ble.available()>0){ //While connected via bluetooth...
     int CMD = ble.read();  //...Read any incoming user value.    
     switch (CMD){     
