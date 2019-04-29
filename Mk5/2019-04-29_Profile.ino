@@ -325,7 +325,6 @@ void PrintToFile(){  //Function for printing data to the SD card and a serial mo
 
 
 
-
 void loop(){  //And around we go...
     get_temperature(); //Get the temp and perform conversions.
     send_temperature(); //Send the temperature to the EC EZO.
