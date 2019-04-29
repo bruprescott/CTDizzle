@@ -34,3 +34,4 @@ If you have any questions about the CTDizzle, contact Ian Black (blackia@oregons
  |07/25/18| Implemented temperature compensation for EC EZO with reading fix.
  |08/19/18| Formatted repository. Newest CTDizzle version is located in the Mk5 folder. The Legacy folder contains build information for past versions.
 |02/02/2019| Added information displayed for I command. Added warnings for low battery readout.
+|04/29/2019| Added header line, battery voltage, and two salinity derivations to files created on the SD card. Added EC EZO LED functions for detecting SD card. Sketch in Mk5 folder is set up for 1Hz sampling. 
