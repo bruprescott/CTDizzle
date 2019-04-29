@@ -17,6 +17,6 @@ Command "P"
   This is the plot command. It is the exact same as the send command, but has a 20 second delay to allow the user to switch to the     	   plotter function of the Bluefruit app.
   
 Command "I"
-  This is the information command. It will display the Device ID that you set in the Arduino sketch, the first recorded pressure reading, and the first recorded temperature reading. If turned on above water, these could be considered values for atmospheric pressure and air temperature.
+  This is the information command. It will display the Device ID that you set in the Arduino sketch, the current time, the first recorded pressure reading, and the first recorded temperature reading. If turned on above water, these could be considered values for atmospheric pressure and air temperature.
   
   
