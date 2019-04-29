@@ -1,11 +1,12 @@
 /*
-This sketch allows you to collect conductivity, temperature, and depth data and send it to your phone via the Adafruit Bluefruit phone application.
+This sketch allows you to collect conductivity, temperature, and depth data and stream it to your phone via the Adafruit Bluefruit phone application.
 The application is available for both Android and iOS devices.
-The current output of the phone plots is conductivity (uS/cm), temperature (C), absolute pressure (millibars). There exist functions to change these to units of choice.
 This sketch does not consider efficiency and will be updated as new functions and commands are implemented.
-Some of this code is repurposed from sketches created by Adafruit and Blue Robotics. 
+Some of this code is repurposed from sketches created by Adafruit, Atlas Scientific, and Blue Robotics. 
 If building your own sensor, please support them by purchasing parts from their online stores.
+
 For questions or comments regarding this sketch or the Arduino-based CTD project, send an email to Ian Black (blackia@oregonstate.edu).
+
 Don't forget to check out these other open source CTD variants!
 Arduino-based Sonde  https://github.com/glockridge/MooredApplication
 OpenCTD https://github.com/OceanographyforEveryone/OpenCTD
@@ -82,23 +83,23 @@ float AirTemperature(){  //Determines air temperature if the user turns the unit
 
 
 
-void PrintHeaders(){
-   if(datafile){ //If the file created earlier does in fact exist...
+void PrintHeaders(){ //Prints a header line to the CSV for column identification.
+   if(datafile){ 
     datafile.print("Date");  
     datafile.print(",");
     datafile.print("PST");  
     datafile.print(",");
-    datafile.print("AbsPres"); 
+    datafile.print("abspres"); 
     datafile.print(",");   
-    datafile.print("Dbars"); 
+    datafile.print("dbars"); 
     datafile.print(",");
-    datafile.print("Meters");
+    datafile.print("meters");
     datafile.print(",");
     datafile.print("degC"); 
     datafile.print(",");
-    datafile.print("EC");
+    datafile.print("ec");
     datafile.print(",");
-    datafile.print("EZOSal");
+    datafile.print("EZOsal");
     datafile.print(",");
     datafile.print("PSS-78");
     datafile.print(",");
@@ -115,7 +116,7 @@ void setup(){  //Start your engines.
   rtc.begin();
   delay(100);
   pinMode(10, OUTPUT);
-  //rtc.adjust(DateTime(__DATE__, __TIME__));
+  //rtc.adjust(DateTime(__DATE__, __TIME__));  //Uncomment this line to set time to computer time. Recomment and reupload to maintain RTC time.
   DateTime now = rtc.now();
   delay(250);
   if (SD.begin(10)) { //Create a file with the current month, day, hour, and minute as the file name.
@@ -136,7 +137,7 @@ void setup(){  //Start your engines.
       }
     }
   else {  
-    Wire.beginTransmission(address); //Turn on the EC EZO LED.
+    Wire.beginTransmission(address); //Turn on the EC EZO LED if a SD card is not detected.
     Wire.write(76);  //ASCII for L
     Wire.write(44);  //ASCII for ,
     Wire.write(49);  //ASCII for 1
@@ -144,7 +145,7 @@ void setup(){  //Start your engines.
     return;
   }
 
-  PrintHeaders();
+  PrintHeaders(); //Print the header line(s) to the file.
 
   tsensor.init();   //Initialize the temp sensor.
   delay(250);     
@@ -173,7 +174,7 @@ void setup(){  //Start your engines.
 
 void get_pressure_depth(){  //Conversion from pressure to depth.  See AN69 by Seabird Scientific.
   psensor.read();  //Read the pressure sensor.
-  AbsPressure=psensor.pressure();
+  AbsPressure = psensor.pressure();
   AbsPressure = AbsPressure + 21; //Offset for this particular pressure sensor. Measured against baro sensor on RV Sikuliaq. Verified by CE02SHSM baro sensor.
   Decibars = (psensor.pressure()- AtmP)/100;   
   x = sin(latitude / 57.29578);
@@ -188,9 +189,9 @@ void get_pressure_depth(){  //Conversion from pressure to depth.  See AN69 by Se
 
 void get_temperature(){ 
   tsensor.read();
-  Celsius=tsensor.temperature();
-  Fahrenheit=Celsius*1.8+32;     
-  Kelvin=Celsius+273.15;     
+  Celsius = tsensor.temperature();
+  Fahrenheit = Celsius*1.8+32;     
+  Kelvin = Celsius+273.15;     
 }
 
 
@@ -215,14 +216,14 @@ void get_conductivity(){
   delay(600);  
   Wire.requestFrom(address, 48, 1); //Get the data string from the EC EZO. 
   Wire.read();  
-  while (Wire.available()) {  //If information is being received...//
-      in_char = Wire.read();  //...read it.
-      ec_data[i] = in_char;   //Turn it into an array.               
-      i += 1;                                  //incur the counter for the array element.
-      if (in_char == 0) {                      //if we see that we have been sent a null command.
-        i = 0;                                 //reset the counter i to 0.
-        Wire.endTransmission();                //end the I2C data transmission.
-        break;                                 //exit the while loop.
+  while (Wire.available()) { 
+      in_char = Wire.read();  
+      ec_data[i] = in_char;               
+      i += 1;                              
+      if (in_char == 0) {                     
+        i = 0;                               
+        Wire.endTransmission();                
+        break;                                 
         }
       }
   if (isDigit(ec_data[0])) {                         
@@ -239,7 +240,7 @@ void get_conductivity(){
 
 
 
-void calc_salinity(){  //PSS-78 calculations.
+void calc_salinity(){  //PSS-78
    R = ((ec_float/1000)/SalCStandard);   
    RpNumerator = ( SalA1*Decibars)*( SalA2*pow(Decibars,2))+( SalA3*pow(Decibars,3));
    RpDenominator = 1*( SalB1*Celsius)+( SalB2*pow(Celsius,2))+( SalB3*R)+( SalB4*Celsius*R);
@@ -249,12 +250,15 @@ void calc_salinity(){  //PSS-78 calculations.
    Salinity = ( Sala0+( Sala1*pow(RT,0.5))+( Sala2*RT)+( Sala3*pow(RT,1.5))+( Sala4*pow(RT,2))+( Sala5*pow(RT,2.5)))+((Celsius-15)/(1+ Salk*(Celsius-15)))*( Salb0+( Salb1*pow(RT,0.5))+( Salb2*RT)+( Salb3*pow(RT,1.5))+( Salb4*pow(RT,2))+( Salb5*pow(RT,2.5)));
 }
 
+
+
 void get_voltage(){
   vbatt = analogRead(9);
   vbatt *= 2;
   vbatt *= 3.3;
   vbatt /= 1024;
 }
+
 
 
 void PrintToFile(){  //Function for printing data to the SD card and a serial monitor.
@@ -307,6 +311,7 @@ void PrintToFile(){  //Function for printing data to the SD card and a serial mo
     ble.print(",");
     ble.println(Salinity);  
   }
+  
    if(recentfile){  //For the phone plotted file...
     recentfile.print(Decibars);  
     recentfile.print(",");
